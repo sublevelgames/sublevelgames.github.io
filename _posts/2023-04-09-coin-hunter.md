@@ -21,3 +21,9 @@ colors: ["primary", "info", "info"]
 Coin Hunter is an idle game where you can upgrade robots and boards to collect more coins.
 
 Gather more coins to upgrade robots, coins, etc.
+
+<small>robot graphic asset from ["Redshrike and KrizEvil"](https://opengameart.org/content/mech-48x48) from opengameart.org</small>
+
+<small>menu icon from [bdragon1727](https://itch.io/profile/bdragon1727)'s [https://bdragon1727.itch.io/pixel-ui-button-icon-platformer](https://bdragon1727.itch.io/pixel-ui-button-icon-platformer)</small>
+
+<small>artifact icon from [SciGho](https://ninjikin.itch.io/)'s [https://ninjikin.itch.io/treasure](https://ninjikin.itch.io/treasure)</small>
