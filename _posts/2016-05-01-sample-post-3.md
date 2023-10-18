@@ -1,9 +1,26 @@
 ---
 layout: post
-title:  "Sample Post"
-categories: jekyll update
+title:  Pill Escape
+categories: game
+image: /images/pipe-match.png
+excerpt: Pill Escape is a puzzle game inspired by the rush-hour style, where your goal is to slide the blue pill to the exit.
+tags: ["Web", "Puzzle", "Slide"]
+colors: ["primary", "info", "info"]
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non iaculis risus. Phasellus vitae nunc ac lectus finibus porttitor. Sed vel enim vulputate, euismod neque maximus, tincidunt turpis. Aenean accumsan leo eget dui porta pulvinar. Sed tincidunt, nisi non efficitur tempus, enim lectus aliquam arcu, at dignissim ligula ex eu quam. Suspendisse gravida dapibus ultrices. Vivamus convallis nulla nisl, a imperdiet felis pellentesque in. Nulla facilisi. Integer aliquet sed orci eu tempor. Sed viverra ullamcorper commodo.
+<span class="badge badge-primary">Web</span>
+<span class="badge badge-info">Puzzle</span>
+<span class="badge badge-info">Slide</span>
 
-Morbi vestibulum sem eget maximus feugiat. Curabitur vehicula magna in molestie dignissim. Nam gravida leo non purus cursus, id accumsan justo tincidunt. Donec accumsan purus mauris, vitae luctus magna faucibus vitae. Nullam tincidunt urna scelerisque, hendrerit mi ac, sagittis ligula. Curabitur convallis eros eu fringilla maximus. Donec lobortis scelerisque enim eu molestie. Duis ac mi quis risus auctor vulputate.
+## [lagged.com](https://lagged.com/play/6096/)
+
+## [newgrounds.com](https://www.newgrounds.com/portal/view/862830)
+
+## [itch.io](https://sublevelgames.itch.io/pill-escape)
+
+## [y8.com](https://y8.com/games/pill_escape)
+
+Pill Escape is a puzzle game inspired by the rush-hour style, where your goal is to slide the blue pill to the exit.
+
+Mouse drag to move pills💊.
+You cannot move the wall🧱.
