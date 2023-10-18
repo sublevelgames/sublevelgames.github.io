@@ -168,22 +168,22 @@ Below elements can be used just by adding certain classes to regular html elemen
     </div>
 </div>
 
-## Labels
+## badges
 
-<span class="label label-default">Default</span>
-<span class="label label-primary">Primary</span>
-<span class="label label-success">Success</span>
-<span class="label label-warning">Warning</span>
-<span class="label label-danger">Danger</span>
-<span class="label label-info">Info</span>
+<span class="badge badge-default">Default</span>
+<span class="badge badge-primary">Primary</span>
+<span class="badge badge-success">Success</span>
+<span class="badge badge-warning">Warning</span>
+<span class="badge badge-danger">Danger</span>
+<span class="badge badge-info">Info</span>
 
 {% highlight html %}
-<span class="label label-default">Default</span>
-<span class="label label-primary">Primary</span>
-<span class="label label-success">Success</span>
-<span class="label label-warning">Warning</span>
-<span class="label label-danger">Danger</span>
-<span class="label label-info">Info</span>
+<span class="badge badge-default">Default</span>
+<span class="badge badge-primary">Primary</span>
+<span class="badge badge-success">Success</span>
+<span class="badge badge-warning">Warning</span>
+<span class="badge badge-danger">Danger</span>
+<span class="badge badge-info">Info</span>
 {% endhighlight %}
 
 
@@ -203,29 +203,16 @@ Below elements can be used just by adding certain classes to regular html elemen
 </div>
 {% endhighlight %}
 
-## Panels
+## cards
 
 <div class="row">
     <div class="col-md-4">
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h3 class="panel-title">Panel primary</h3>
+        <div class="card card-primary">
+          <div class="card-heading">
+            <h3 class="card-title">card primary</h3>
           </div>
-          <div class="panel-body">
-            Panel content
-          </div>
-        </div>
-    </div>
-
-
-
-   <div class="col-md-4">
-        <div class="panel panel-success">
-          <div class="panel-heading">
-            <h3 class="panel-title">Panel success</h3>
-          </div>
-          <div class="panel-body">
-            Panel content
+          <div class="card-body">
+            card content
           </div>
         </div>
     </div>
@@ -233,12 +220,25 @@ Below elements can be used just by adding certain classes to regular html elemen
 
 
    <div class="col-md-4">
-        <div class="panel panel-warning">
-          <div class="panel-heading">
-            <h3 class="panel-title">Panel warning</h3>
+        <div class="card card-success">
+          <div class="card-heading">
+            <h3 class="card-title">card success</h3>
           </div>
-          <div class="panel-body">
-            Panel content
+          <div class="card-body">
+            card content
+          </div>
+        </div>
+    </div>
+
+
+
+   <div class="col-md-4">
+        <div class="card card-warning">
+          <div class="card-heading">
+            <h3 class="card-title">card warning</h3>
+          </div>
+          <div class="card-body">
+            card content
           </div>
         </div>
     </div>
@@ -246,12 +246,12 @@ Below elements can be used just by adding certain classes to regular html elemen
 
 <div class="row">
     <div class="col-md-4">
-        <div class="panel panel-danger">
-          <div class="panel-heading">
-            <h3 class="panel-title">Panel danger</h3>
+        <div class="card card-danger">
+          <div class="card-heading">
+            <h3 class="card-title">card danger</h3>
           </div>
-          <div class="panel-body">
-            Panel content
+          <div class="card-body">
+            card content
           </div>
         </div>
     </div>
@@ -259,12 +259,12 @@ Below elements can be used just by adding certain classes to regular html elemen
 
 
    <div class="col-md-4">
-        <div class="panel panel-info">
-          <div class="panel-heading">
-            <h3 class="panel-title">Panel info</h3>
+        <div class="card card-info">
+          <div class="card-heading">
+            <h3 class="card-title">card info</h3>
           </div>
-          <div class="panel-body">
-            Panel content
+          <div class="card-body">
+            card content
           </div>
         </div>
     </div>
@@ -274,14 +274,14 @@ Below elements can be used just by adding certain classes to regular html elemen
 </div>
 
 {% highlight html %}
-<div class="panel panel-primary">
-    <div class="panel-heading">
-    <h3 class="panel-title">Panel primary</h3>
+<div class="card card-primary">
+    <div class="card-heading">
+    <h3 class="card-title">card primary</h3>
     </div>
-    <div class="panel-body">
-    Panel content
+    <div class="card-body">
+    card content
     </div>
 </div>
 {% endhighlight %}
 
-Change class ``panel-primary`` to ``panel-warning``, ``panel-success`` and so on to get other panels.
+Change class ``card-primary`` to ``card-warning``, ``card-success`` and so on to get other cards.
