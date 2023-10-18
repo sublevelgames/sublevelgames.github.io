@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Pipe Match
+title: Pipe Match
 categories: game
 image: /images/pipe-match.png
 excerpt: Pipe Match is a rotating card game where the goal is to connect all pipes to the end.
@@ -12,16 +12,16 @@ colors: ["primary", "info", "info"]
 <span class="badge badge-info">Puzzle</span>
 <span class="badge badge-info">Rotate</span>
 
-## [coolmathgames.com](https://www.coolmathgames.com/0-daily-pipe-match)
+## [🧮coolmathgames.com](https://www.coolmathgames.com/0-daily-pipe-match)
 - This version offers daily puzzles. To play previous puzzles, click on the calendar and choose a past day.
 
-## [lagged.com](https://lagged.com/play/6142/)
+## [🎯lagged.com](https://lagged.com/play/6142/)
 
-## [newgrounds.com](https://www.newgrounds.com/portal/view/861345)
+## [🎨newgrounds.com](https://www.newgrounds.com/portal/view/861345)
 
-## [itch.io](https://sublevelgames.itch.io/pipe-match)
+## [🎮itch.io](https://sublevelgames.itch.io/pipe-match)
 
-## [y8.com](https://y8.com/games/pipe_match)
+## [🕹️y8.com](https://y8.com/games/pipe_match)
 
 Pipe Match is a rotating card game where the goal is to connect all pipes to the end.
 

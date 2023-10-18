@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Cookie Match
+title: Cookie Match
 categories: game
 image: /images/cookie-match.png
 excerpt: Cookie Match is a sliding puzzle game where you must match each cookie to its corresponding cutter.

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Fruits Match
+title: Fruits Match
 categories: game
 image: /images/fruits-match.png
 excerpt: Fruits Match is a match-three game where you collect three matching tiles to clear them.
@@ -12,14 +12,14 @@ colors: ["primary", "info", "info"]
 <span class="badge badge-info">Puzzle</span>
 <span class="badge badge-info">Match-3</span>
 
-## [lagged.com](https://lagged.com/play/6140/)
+## [🎯lagged.com](https://lagged.com/play/6140/)
 - This version is mobile-optimized, while versions of other websites are not.
 
-## [newgrounds.com](https://www.newgrounds.com/portal/view/859761)
+## [🎨newgrounds.com](https://www.newgrounds.com/portal/view/859761)
 
-## [itch.io](https://sublevelgames.itch.io/fruits-match)
+## [🎮itch.io](https://sublevelgames.itch.io/fruits-match)
 
-## [y8.com](https://y8.com/games/fruits_match_tiles)
+## [🕹️y8.com](https://y8.com/games/fruits_match_tiles)
 
 Fruits Match is a match-three game where you collect three matching tiles to clear them.
 
