@@ -17,7 +17,7 @@ excerpt: Fruits Match is a match-three game where you collect three matching til
 
 ## [itch.io](https://sublevelgames.itch.io/fruits-match)
 
-## [y8.com](https://ko.y8.com/games/fruits_match_tiles)
+## [y8.com](https://y8.com/games/fruits_match_tiles)
 
 Fruits Match is a match-three game where you collect three matching tiles to clear them.
 
