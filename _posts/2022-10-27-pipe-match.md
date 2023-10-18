@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Pipe Match
+title: 💧Pipe Match
 categories: game
 image: /images/pipe-match.png
 excerpt: Pipe Match is a rotating card game where the goal is to connect all pipes to the end.

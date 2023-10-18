@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Pill Escape
+title: 💊Pill Escape
 categories: game
 image: /images/pill-escape.png
 excerpt: Pill Escape is a puzzle game inspired by the rush-hour style, where your goal is to slide the blue pill to the exit.

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Fruits Match
+title: 🥝Fruits Match
 categories: game
 image: /images/fruits-match.png
 excerpt: Fruits Match is a match-three game where you collect three matching tiles to clear them.
