@@ -4,13 +4,13 @@ title: 💊Pill Escape
 categories: game
 image: /images/pill-escape.png
 excerpt: Pill Escape is a puzzle game inspired by the rush-hour style, where your goal is to slide the blue pill to the exit.
-tags: ["🌐Web", "🧩Puzzle", "Slide"]
+tags: ["🌐Web", "🧩Puzzle", "🛷Slide"]
 colors: ["primary", "info", "info"]
 ---
 
 <span class="badge badge-primary">🌐Web</span>
 <span class="badge badge-info">🧩Puzzle</span>
-<span class="badge badge-info">Slide</span>
+<span class="badge badge-info">🛷Slide</span>
 
 ## [🎯lagged.com](https://lagged.com/play/6096/)
 
