@@ -4,13 +4,13 @@ title: 🍪Cookie Match
 categories: game
 image: /images/cookie-match.png
 excerpt: Cookie Match is a sliding puzzle game where you must match each cookie to its corresponding cutter.
-tags: ["Steam", "Web", "Puzzle", "Slide"]
+tags: ["🦾Steam", "🌐Web", "🧩Puzzle", "Slide"]
 colors: ["success", "primary", "info", "info"]
 ---
 
-<span class="badge badge-success">Steam</span>
-<span class="badge badge-primary">Web</span>
-<span class="badge badge-info">Puzzle</span>
+<span class="badge badge-success">🦾Steam</span>
+<span class="badge badge-primary">🌐Web</span>
+<span class="badge badge-info">🧩Puzzle</span>
 <span class="badge badge-info">Slide</span>
 
 ## [🦾Steam](https://store.steampowered.com/app/2268310/Cookie_Match_Enhanced_Edition/)

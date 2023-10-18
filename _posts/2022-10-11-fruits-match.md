@@ -4,13 +4,13 @@ title: 🥝Fruits Match
 categories: game
 image: /images/fruits-match.png
 excerpt: Fruits Match is a match-three game where you collect three matching tiles to clear them.
-tags: ["Web", "Puzzle", "Match-3"]
+tags: ["🌐Web", "🧩Puzzle", "🍭Match-3"]
 colors: ["primary", "info", "info"]
 ---
 
-<span class="badge badge-primary">Web</span>
-<span class="badge badge-info">Puzzle</span>
-<span class="badge badge-info">Match-3</span>
+<span class="badge badge-primary">🌐Web</span>
+<span class="badge badge-info">🧩Puzzle</span>
+<span class="badge badge-info">🍭Match-3</span>
 
 ## [🎯lagged.com](https://lagged.com/play/6140/)
 - This version is mobile-optimized, while versions of other websites are not.
