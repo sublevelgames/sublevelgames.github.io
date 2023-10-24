@@ -13,19 +13,19 @@ colors: ["success", "primary", "info", "info"]
 <span class="badge badge-info">🧩Puzzle</span>
 <span class="badge badge-info">🛷Slide</span>
 
-## [🦾Steam](https://store.steampowered.com/app/2268310/Cookie_Match_Enhanced_Edition/)
+<a href="https://store.steampowered.com/app/2268310/Cookie_Match_Enhanced_Edition/" class="btn btn-primary btn-lg">🦾Steam</a>
 - This is the Enhanced Edition of the game, featuring new gameplay elements and a total of 200 new maps.
 
-## [🧮coolmathgames.com](https://www.coolmathgames.com/0-cookie-match)
+<a href="https://www.coolmathgames.com/0-cookie-match" class="btn btn-primary btn-lg">🧮coolmathgames.com</a>
 
-## [🎯lagged.com](https://lagged.com/play/6069/)
+<a href="https://lagged.com/play/6069/" class="btn btn-primary btn-lg">🎯lagged.com</a>
 - We've added 100 new maps, and the difficulty progression is now smoother.
 
-## [🎨newgrounds.com](https://www.newgrounds.com/portal/view/865946)
+<a href="https://www.newgrounds.com/portal/view/865946" class="btn btn-primary btn-lg">🎨newgrounds.com</a>
 
-## [🎮itch.io](https://sublevelgames.itch.io/cookie-match)
+<a href="https://sublevelgames.itch.io/cookie-match" class="btn btn-primary btn-lg">🎮itch.io</a>
 
-## [🕹️y8.com](https://y8.com/games/cookie_match)
+<a href="https://y8.com/games/cookie_match" class="btn btn-primary btn-lg">🕹️y8.com</a>
 
 Cookie Match is a sliding puzzle game where you must match each cookie to its corresponding cutter.
 

@@ -12,13 +12,13 @@ colors: ["primary", "info", "info"]
 <span class="badge badge-info">🧩Puzzle</span>
 <span class="badge badge-info">🛷Slide</span>
 
-## [🎯lagged.com](https://lagged.com/play/6096/)
+<a href="https://lagged.com/play/6096/" class="btn btn-primary btn-lg">🎯lagged.com</a>
 
-## [🎨newgrounds.com](https://www.newgrounds.com/portal/view/862830)
+<a href="https://www.newgrounds.com/portal/view/862830" class="btn btn-primary btn-lg">🎨newgrounds.com</a>
 
-## [🎮itch.io](https://sublevelgames.itch.io/pill-escape)
+<a href="https://sublevelgames.itch.io/pill-escape" class="btn btn-primary btn-lg">🎮itch.io</a>
 
-## [🕹️y8.com](https://y8.com/games/pill_escape)
+<a href="https://y8.com/games/pill_escape" class="btn btn-primary btn-lg">🕹️y8.com</a>
 
 Pill Escape is a puzzle game inspired by the rush-hour style, where your goal is to slide the blue pill to the exit.
 

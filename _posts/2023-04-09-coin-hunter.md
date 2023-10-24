@@ -12,11 +12,11 @@ colors: ["primary", "info", "info"]
 <span class="badge badge-info">📈Idle</span>
 <span class="badge badge-info">📊Simulation</span>
 
-## [🎨newgrounds.com](https://www.newgrounds.com/portal/view/880263)
+<a href="https://www.newgrounds.com/portal/view/880263" class="btn btn-primary btn-lg">🎨newgrounds.com</a>
 
-## [🎮itch.io](https://sublevelgames.itch.io/coin-hunter)
+<a href="https://sublevelgames.itch.io/coin-hunter" class="btn btn-primary btn-lg">🎮itch.io</a>
 
-## [🕹️y8.com](https://y8.com/games/coin_hunter)
+<a href="https://y8.com/games/coin_hunter" class="btn btn-primary btn-lg">🕹️y8.com</a>
 
 Coin Hunter is an idle game where you can upgrade robots and boards to collect more coins.
 
