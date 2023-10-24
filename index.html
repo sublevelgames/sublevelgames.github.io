@@ -20,6 +20,7 @@ layout: default
                   <span class="badge badge-{{ post.colors[forloop.index0] }}">{{ tag }}</span>
                 {% endfor %}
               {% endif %}
+              <p></p>
               <p>{{ post.excerpt | strip_html | strip_newlines | truncate: 150 }}</p>
             </div>
           </div>
