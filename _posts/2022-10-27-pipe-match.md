@@ -23,6 +23,8 @@ colors: ["primary", "info", "info"]
 
 <a href="https://y8.com/games/pipe_match" class="btn btn-primary btn-lg">🕹️y8.com</a>
 
+<a href="https://gamemonetize.com/pipe-match-game" class="btn btn-primary btn-lg">▶️gamemonetize.com</a>
+
 Pipe Match is a rotating card game where the goal is to connect all pipes to the end.
 
 Click on a pipe to rotate it clockwise. Pipes that are faded out are not connected and pipes with a dark gray background can't be moved. To undo a previous move, click the rotating arrow button. To restart the whole puzzle, click the arrow in the circle.
