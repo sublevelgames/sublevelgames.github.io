@@ -27,6 +27,8 @@ colors: ["success", "primary", "info", "info"]
 
 <a href="https://y8.com/games/cookie_match" class="btn btn-primary btn-lg">🕹️y8.com</a>
 
+<a href="https://gamemonetize.com/cookie-match-game" class="btn btn-primary btn-lg">▶️gamemonetize.com</a>
+
 Cookie Match is a sliding puzzle game where you must match each cookie to its corresponding cutter.
 
 If you move the cookies off the edge of the board or into knives, they'll be destroyed. Use the tubs of butter as barriers to keep the cookies in one piece.
