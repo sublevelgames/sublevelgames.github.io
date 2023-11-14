@@ -16,6 +16,8 @@ colors: ["success", "primary", "info", "info"]
 <a href="https://store.steampowered.com/app/2268310/Cookie_Match_Enhanced_Edition/" class="btn btn-primary btn-lg">🦾Steam</a>
 - This is the Enhanced Edition of the game, featuring new gameplay elements and a total of 200 new maps.
 
+<a href="https://cookiematch.netlify.app/" class="btn btn-primary btn-lg">🌐website(demo)</a>
+
 <a href="https://www.coolmathgames.com/0-cookie-match" class="btn btn-primary btn-lg">🧮coolmathgames.com</a>
 
 <a href="https://lagged.com/play/6069/" class="btn btn-primary btn-lg">🎯lagged.com</a>
