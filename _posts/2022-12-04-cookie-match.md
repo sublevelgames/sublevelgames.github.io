@@ -15,6 +15,7 @@ colors: ["danger", "success", "primary", "info", "info"]
 <span class="badge badge-info">🛷Slide</span>
 
 <a href="https://play.google.com/store/apps/details?id=app.netlify.cookiematch.twa" class="btn btn-primary btn-lg">📱Google Play</a>
+- This is a paid mobile version of the game that doubles the maps from the Steam version (200 → 400) and makes the difficulty easier.
 
 <a href="https://store.steampowered.com/app/2268310/Cookie_Match_Enhanced_Edition/" class="btn btn-primary btn-lg">🦾Steam</a>
 - This is the Enhanced Edition of the game, featuring new gameplay elements and a total of 200 new maps.
