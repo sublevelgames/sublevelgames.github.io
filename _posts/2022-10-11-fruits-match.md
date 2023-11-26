@@ -13,7 +13,7 @@ colors: ["primary", "info", "info"]
 <span class="badge badge-info">🍭Match-3</span>
 
 <a href="https://lagged.com/play/6140/" class="btn btn-primary btn-lg">🎯lagged.com</a>
-- This version is mobile-optimized, while versions of other websites are not.
+- This version is mobile-optimized.
 
 <a href="https://www.newgrounds.com/portal/view/859761" class="btn btn-primary btn-lg">🎨newgrounds.com</a>
 
@@ -22,8 +22,10 @@ colors: ["primary", "info", "info"]
 <a href="https://y8.com/games/fruits_match_tiles" class="btn btn-primary btn-lg">🕹️y8.com</a>
 
 <a href="https://gamemonetize.com/fruit-match-game" class="btn btn-primary btn-lg">▶️gamemonetize.com</a>
+- This version is mobile-optimized.
 
 <a href="https://gamedistribution.com/games/fruits-match" class="btn btn-primary btn-lg">▶️gamedistribution.com</a>
+- This version is mobile-optimized.
 
 Fruits Match is a match-three game where you collect three matching tiles to clear them.
 
