@@ -21,7 +21,7 @@ colors: ["primary", "info", "info"]
 
 <a href="https://y8.com/games/fruits_match_tiles" class="btn btn-primary btn-lg">🕹️y8.com</a>
 
-<a href="https://gamemonetize.com/fruit-match-game" class="btn btn-primary btn-lg">▶️gamemonetize.com</a>
+<a href="https://html5.gamemonetize.co/vos6pgamgcwxmmgnnb0ri7te4gscn20q/" class="btn btn-primary btn-lg">▶️gamemonetize.com</a>
 - This version is mobile-optimized.
 
 <a href="https://gamedistribution.com/games/fruits-match" class="btn btn-primary btn-lg">▶️gamedistribution.com</a>

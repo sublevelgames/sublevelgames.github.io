@@ -33,7 +33,7 @@ colors: ["danger", "success", "primary", "info", "info"]
 
 <a href="https://y8.com/games/cookie_match" class="btn btn-primary btn-lg">🕹️y8.com</a>
 
-<a href="https://gamemonetize.com/cookie-match-game" class="btn btn-primary btn-lg">▶️gamemonetize.com</a>
+<a href="https://html5.gamemonetize.co/rvgj4wbimpenxgkx3pw7bl9hrmmxnvyh/" class="btn btn-primary btn-lg">▶️gamemonetize.com</a>
 - We've added 150 new maps, and the difficulty progression is now smoother.
 
 Cookie Match is a sliding puzzle game where you must match each cookie to its corresponding cutter.

@@ -20,7 +20,7 @@ colors: ["primary", "info", "info"]
 
 <a href="https://y8.com/games/pill_escape" class="btn btn-primary btn-lg">🕹️y8.com</a>
 
-<a href="https://gamemonetize.com/pill-escape-game" class="btn btn-primary btn-lg">▶️gamemonetize.com</a>
+<a href="https://html5.gamemonetize.co/et97l2u6zn3g6jjr2c8azhcm1c95hx7b/" class="btn btn-primary btn-lg">▶️gamemonetize.com</a>
 
 Pill Escape is a puzzle game inspired by the rush-hour style, where your goal is to slide the blue pill to the exit.
 
