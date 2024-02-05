@@ -12,19 +12,19 @@ colors: ["primary", "info", "info"]
 <span class="badge badge-info">🧩Puzzle</span>
 <span class="badge badge-info">🍭Match-3</span>
 
-<a href="https://lagged.com/play/6140/" class="btn btn-primary btn-lg">🎯lagged.com</a>
+<a href="https://lagged.com/play/6140/" class="btn btn-primary btn-lg">Play at 🎯lagged.com</a>
 - This version is mobile-optimized.
 
-<a href="https://www.newgrounds.com/portal/view/859761" class="btn btn-primary btn-lg">🎨newgrounds.com</a>
+<a href="https://www.newgrounds.com/portal/view/859761" class="btn btn-primary btn-lg">Play at 🎨newgrounds.com</a>
 
-<a href="https://sublevelgames.itch.io/fruits-match" class="btn btn-primary btn-lg">🎮itch.io</a>
+<a href="https://sublevelgames.itch.io/fruits-match" class="btn btn-primary btn-lg">Play at 🎮itch.io</a>
 
-<a href="https://y8.com/games/fruits_match_tiles" class="btn btn-primary btn-lg">🕹️y8.com</a>
+<a href="https://y8.com/games/fruits_match_tiles" class="btn btn-primary btn-lg">Play at 🕹️y8.com</a>
 
-<a href="https://html5.gamemonetize.co/vos6pgamgcwxmmgnnb0ri7te4gscn20q/" class="btn btn-primary btn-lg">▶️gamemonetize.com</a>
+<a href="https://html5.gamemonetize.co/vos6pgamgcwxmmgnnb0ri7te4gscn20q/" class="btn btn-primary btn-lg">Play at ▶️gamemonetize.com</a>
 - This version is mobile-optimized.
 
-<a href="https://gamedistribution.com/games/fruits-match" class="btn btn-primary btn-lg">▶️gamedistribution.com</a>
+<a href="https://gamedistribution.com/games/fruits-match" class="btn btn-primary btn-lg">Play at ▶️gamedistribution.com</a>
 - This version is mobile-optimized.
 
 Fruits Match is a match-three game where you collect three matching tiles to clear them.
