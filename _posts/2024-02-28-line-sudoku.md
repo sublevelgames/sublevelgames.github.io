@@ -3,7 +3,7 @@ layout: post
 title: "🔢Line Sudoku"
 categories: game
 image: /images/line-sudoku.png
-excerpt: Match three cards by matching or having all different attributes.
+excerpt: Fill a grid with unique numbers in rows, columns, and streams of connected cells.
 tags: ["🌐Web", "🧩Puzzle", "🔢Sudoku"]
 colors: ["primary", "info", "info"]
 ---
