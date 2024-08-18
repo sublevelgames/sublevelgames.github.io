@@ -14,4 +14,6 @@ colors: ["primary", "info", "info"]
 
 <a href="https://lagged.com/play/6861/" class="btn btn-primary btn-lg">Play at 🎯lagged.com</a>
 
+<a href="https://www.coolmathgames.com/0-line-sudoku" class="btn btn-primary btn-lg">Play at 🧮coolmathgames.com</a>
+
 A captivating logic-based puzzle game that challenges players to fill in a grid with numbers in such a way that each row, column, and stream (a connected sequence of cells) contains unique digits without repetition. Similar to Sudoku, Line Sudoku offers varying levels of difficulty, from easy to expert, ensuring a stimulating experience for players of all skill levels.
