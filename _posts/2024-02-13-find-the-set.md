@@ -14,4 +14,6 @@ colors: ["primary", "info", "info"]
 
 <a href="https://lagged.com/play/6826/" class="btn btn-primary btn-lg">Play at 🎯lagged.com</a>
 
+<a href="https://www.gamepix.com/play/find-the-set" class="btn btn-primary btn-lg">Play at ▶️gamepix.com</a>
+
 The objective is simple: match three cards either with all identical attributes (back color, polygon color, and polygon shape) or all different attributes. Players must strategize to carefully observe and analyze the attributes of each card to make the right combinations.
