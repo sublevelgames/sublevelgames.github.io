@@ -19,6 +19,13 @@ layout: default
             ><span itemprop="name">{{ page.author }}</span></span
           >{% endif %}
         </p>
+        
+        {% comment %}
+        <!-- 
+        태그가 중복으로 표시되는 문제 해결을 위해 이 부분을 주석 처리합니다.
+        게시물 본문에 이미 태그 뱃지가 있는 경우, 이 태그 섹션은 표시되지 않습니다.
+        필요한 경우 이 주석을 제거하고 아래 태그 섹션을 활성화하세요.
+        -->
         {% if page.tags %}
           <p class="post-tags">
             {% for tag in page.tags %}
@@ -30,6 +37,8 @@ layout: default
             {% endfor %}
           </p>
         {% endif %}
+        {% endcomment %}
+        
       </header>
       <div class="post-content" itemprop="articleBody">{{ content }}</div>
     </article>
