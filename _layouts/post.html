@@ -22,7 +22,8 @@ layout: default
         {% if page.tags %}
           <p class="post-tags">
             {% for tag in page.tags %}
-              {% assign tag_slug = tag | replace: ' ', '-' | downcase %}
+              {% assign tag_text = tag | slice: 1, tag.size %}
+              {% assign tag_slug = tag_text | slugify %}
               <a href="{{ site.baseurl }}/tags/{{ tag_slug }}/" class="tag-link">
                 <span class="badge badge-{{ page.colors[forloop.index0] }}">{{ tag }}</span>
               </a>
