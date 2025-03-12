@@ -60,3 +60,15 @@ plugins:
   - jekyll-paginate
   - jekyll-seo-tag
 
+# Tag page settings
+collections:
+  tags:
+    output: true
+    permalink: /tags/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: tags
+    values:
+      layout: tag

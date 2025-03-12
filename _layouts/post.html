@@ -19,6 +19,16 @@ layout: default
             ><span itemprop="name">{{ page.author }}</span></span
           >{% endif %}
         </p>
+        {% if page.tags %}
+          <p class="post-tags">
+            {% for tag in page.tags %}
+              {% assign tag_slug = tag | replace: ' ', '-' | downcase %}
+              <a href="{{ site.baseurl }}/tags/{{ tag_slug }}/" class="tag-link">
+                <span class="badge badge-{{ page.colors[forloop.index0] }}">{{ tag }}</span>
+              </a>
+            {% endfor %}
+          </p>
+        {% endif %}
       </header>
       <div class="post-content" itemprop="articleBody">{{ content }}</div>
     </article>
