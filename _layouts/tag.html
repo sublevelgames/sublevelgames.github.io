@@ -13,7 +13,14 @@ layout: default
         {% if post_tag_without_emoji == tag_without_emoji %}
           <div class="col-12 col-md-6 col-lg-4">
            <a href="{{ post.url | prepend: site.baseurl }}" class="index-anchor">
-            <div class="card rounded overflow-hidden">  
+            <div class="card rounded overflow-hidden">
+              {% assign now = 'now' | date: '%s' %}
+              {% assign two_weeks = 1209600 %}
+              {% assign post_date = post.date | date: '%s' | plus: 0 %}
+              {% assign date_diff = now | minus: post_date %}
+              {% if date_diff < two_weeks %}
+                <div class="new-badge">NEW</div>
+              {% endif %}
               <div class="image">
                 {% if post.image %}
                 <img src="{{post.image | relative_url}}" alt="{{post.title}}">

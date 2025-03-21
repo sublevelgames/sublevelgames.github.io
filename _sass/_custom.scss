@@ -1,0 +1,21 @@
+/* NEW badge for recent posts */
+.new-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ff3860;
+    color: white;
+    font-weight: bold;
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    pointer-events: none;
+    /* 클릭을 방해하지 않도록 함 */
+}
+
+/* 카드에 상대적 위치 지정 */
+.card {
+    position: relative;
+}
