@@ -16,4 +16,6 @@ colors: ["primary", "info", "info"]
 
 <a href="https://www.gamepix.com/play/find-the-set" class="btn btn-primary btn-lg">Play at ▶️gamepix.com</a>
 
+<a href="https://html5.gamemonetize.co/n7hoa1t36i9lx3gc6isv255w706btl1q/" class="btn btn-primary btn-lg">Play at ▶️gamemonetize.com</a>
+
 The objective is simple: match three cards either with all identical attributes (back color, polygon color, and polygon shape) or all different attributes. Players must strategize to carefully observe and analyze the attributes of each card to make the right combinations.
