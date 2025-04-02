@@ -14,4 +14,6 @@ colors: ["primary", "info", "info"]
 
 <a href="https://www.gamepix.com/play/minichess" class="btn btn-primary btn-lg">Play at ▶️gamepix.com</a>
 
+<a href="https://sublevelgames.itch.io/mini-chess" class="btn btn-primary btn-lg">Play at 🎮itch.io</a>
+
 Mini Chess is a fast-paced take on the classic game, played on 4×4 to 6×6 boards. It offers quick yet deep strategic play, with varying difficulties for all skill levels. Perfect for short, tactical matches on any device.
