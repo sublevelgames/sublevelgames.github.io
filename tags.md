@@ -4,9 +4,9 @@ title: Tags
 permalink: /tags/
 ---
 
-# 모든 태그 목록
+# All Tags
 
-<div class="row">
+<div class="tags-container">
 {% for tag_page in site.tags %}
   {% assign tag = tag_page.tag %}
   {% assign tag_without_emoji = tag | slice: 1, tag.size %}
@@ -22,15 +22,9 @@ permalink: /tags/
     {% endfor %}
   {% endfor %}
   
-  <div class="col-md-3 mb-3">
-    <a href="{{ site.baseurl }}/tags/{{ tag_slug }}/" class="tag-link">
-      <div class="card">
-        <div class="card-body text-center">
-          <span class="badge badge-primary">{{ tag }}</span>
-          <span class="badge badge-secondary">{{ post_count }}</span>
-        </div>
-      </div>
-    </a>
-  </div>
+  <a href="{{ site.baseurl }}/tags/{{ tag_slug }}/" class="tag-card">
+    <div class="tag-name">{{ tag }}</div>
+    <div class="tag-count">{{ post_count }}</div>
+  </a>
 {% endfor %}
 </div>
