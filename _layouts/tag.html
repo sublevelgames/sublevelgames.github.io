@@ -11,9 +11,9 @@ layout: default
       {% for post_tag in post.tags %}
         {% assign post_tag_without_emoji = post_tag | slice: 1, post_tag.size %}
         {% if post_tag_without_emoji == tag_without_emoji %}
-          <div class="col-12 col-md-6 col-lg-4">
+          <div class="col-12 col-md-6 col-lg-4 mb-4">
            <a href="{{ post.url | prepend: site.baseurl }}" class="index-anchor">
-            <div class="card rounded overflow-hidden">
+            <div class="card rounded overflow-hidden h-100 shadow-sm">
               {% assign now = 'now' | date: '%s' %}
               {% assign two_weeks = 1209600 %}
               {% assign post_date = post.date | date: '%s' | plus: 0 %}
@@ -23,18 +23,19 @@ layout: default
               {% endif %}
               <div class="image">
                 {% if post.image %}
-                <img src="{{post.image | relative_url}}" alt="{{post.title}}">
+                <img src="{{post.image | relative_url}}" alt="{{post.title}}" class="card-img-top">
                 {% endif %}
                 <div class="card-body">
-                  <h2 class="panel-title">{{ post.title | truncate: 25 }}</h2>
+                  <h2 class="card-title h5">{{ post.title | truncate: 25 }}</h2>
                   <p class="p-0 my-1 mx-0"><span class="post-meta"><small>{{ post.date | date: "%b %-d, %Y" }}</small></span></p>
                   {% if post.tags %}
+                    <div class="mb-2">
                     {% for tag in post.tags %}
                       <span class="badge badge-{{ post.colors[forloop.index0] }}">{{ tag }}</span>
                     {% endfor %}
+                    </div>
                   {% endif %}
-                  <p></p>
-                  <p>{{ post.excerpt | strip_html | strip_newlines | truncate: 150 }}</p>
+                  <p class="card-text">{{ post.excerpt | strip_html | strip_newlines | truncate: 150 }}</p>
                 </div>
               </div>
             </div>
@@ -47,7 +48,8 @@ layout: default
 
   <div class="row justify-content-center mt-4">
     <div class="col-md-4">
-      <a href="{{ '/' | relative_url }}" class="btn btn-primary btn-block">Back to All Posts</a>
+      <a href="{{ '/' | relative_url }}" class="btn btn-primary">All Posts</a>
+      <a href="{{ '/tags/' | relative_url }}" class="btn btn-outline-primary">All Tags</a>
     </div>
   </div>
 </div>
