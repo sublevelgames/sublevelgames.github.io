@@ -4,13 +4,15 @@ title: Tags
 permalink: /tags/
 ---
 
-# All Tags
+## All Tags
 
 <div class="tags-container">
-{% for tag_page in site.tags %}
+{% assign all_tags = site.tags | sort: 'tag' %}
+{% assign tag_counts = '' | split: '' %}
+
+{% for tag_page in all_tags %}
   {% assign tag = tag_page.tag %}
   {% assign tag_without_emoji = tag | slice: 1, tag.size %}
-  {% assign tag_slug = tag_without_emoji | slugify %}
   
   {% assign post_count = 0 %}
   {% for post in site.posts %}
@@ -21,6 +23,19 @@ permalink: /tags/
       {% endif %}
     {% endfor %}
   {% endfor %}
+  
+  {% capture tag_with_count %}{{ post_count }}#{{ tag }}#{{ tag_without_emoji }}{% endcapture %}
+  {% assign tag_counts = tag_counts | push: tag_with_count %}
+{% endfor %}
+
+{% assign sorted_tag_counts = tag_counts | sort | reverse %}
+
+{% for tag_item in sorted_tag_counts %}
+  {% assign tag_parts = tag_item | split: '#' %}
+  {% assign post_count = tag_parts[0] %}
+  {% assign tag = tag_parts[1] %}
+  {% assign tag_without_emoji = tag_parts[2] %}
+  {% assign tag_slug = tag_without_emoji | slugify %}
   
   <a href="{{ site.baseurl }}/tags/{{ tag_slug }}/" class="tag-card">
     <div class="tag-name">{{ tag }}</div>
