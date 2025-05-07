@@ -20,21 +20,15 @@ permalink: /tags/
       {% assign post_tag_without_emoji = post_tag | slice: 1, post_tag.size %}
       {% if post_tag_without_emoji == tag_without_emoji %}
         {% assign post_count = post_count | plus: 1 %}
-        {% if forloop.first %}
-          {% assign color = post.colors[forloop.index0] | default: "primary" %}
-        {% endif %}
       {% endif %}
     {% endfor %}
   {% endfor %}
   
-  {% assign tag_info = tag | append: "#" | append: tag_without_emoji | append: "#" | append: post_count | append: "#" | append: color %}
+  {% assign tag_info = tag | append: "#" | append: tag_without_emoji | append: "#" | append: post_count %}
   {% assign tag_data = tag_data | push: tag_info %}
 {% endfor %}
 
 {% assign highest_count = 0 %}
-{% assign tags_by_count = "" | split: "," %}
-
-{% comment %}Find the highest count first{% endcomment %}
 {% for tag_info in tag_data %}
   {% assign parts = tag_info | split: "#" %}
   {% assign count = parts[2] | plus: 0 %}
@@ -43,7 +37,6 @@ permalink: /tags/
   {% endif %}
 {% endfor %}
 
-{% comment %}Create sorted list starting from highest count{% endcomment %}
 {% for i in (1..1000) %}
   {% assign current_count = highest_count | minus: i | plus: 1 %}
   {% if current_count <= 0 %}
@@ -55,12 +48,11 @@ permalink: /tags/
     {% assign tag = parts[0] %}
     {% assign tag_without_emoji = parts[1] %}
     {% assign count = parts[2] | plus: 0 %}
-    {% assign color = parts[3] | default: "primary" %}
+    {% assign tag_slug = tag_without_emoji | slugify %}
     
     {% if count == current_count %}
-      {% assign tag_slug = tag_without_emoji | slugify %}
       <a href="{{ site.baseurl }}/tags/{{ tag_slug }}/" class="tag-card">
-        <div class="tag-name badge-{{ color }}">{{ tag }}</div>
+        <div class="tag-name {{ tag_slug }}-tag">{{ tag }}</div>
         <div class="tag-count">{{ count }}</div>
       </a>
     {% endif %}

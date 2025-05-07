@@ -45,99 +45,57 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 20px;
-  background: #f8f9fa;
-  border-radius: 8px;
   text-decoration: none;
-  color: #333;
-  border: 1px solid #dee2e6;
-  min-width: 180px;
-  transition: all 0.3s ease;
   margin-bottom: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #dee2e6;
+  transition: all 0.3s ease;
   
   &:hover {
-    background: #e9ecef;
     transform: translateY(-3px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    text-decoration: none;
+    opacity: 0.9;
   }
 }
 
 .tag-name {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 500;
+  padding: 8px 15px;
+  color: white;
   display: flex;
   align-items: center;
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.25rem;
-  
-  // 이모지와 텍스트 사이 간격
-  .emoji {
-    margin-right: 8px;
-  }
+  background-color: #17A2B8; // 기본 색상
 }
 
 .tag-count {
-  background: transparent;
-  color: #007bff;
-  border: 1px solid #007bff;
-  border-radius: 20px;
-  min-width: 28px;
-  height: 28px;
-  padding: 0 10px;
+  background: #007bff;
+  color: white;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: bold;
   font-size: 0.9rem;
+  margin: 0 10px;
 }
 
-// All Tags 제목 스타일링
-.all-tags-title {
-  margin-bottom: 30px;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 15px;
-  font-size: 2rem;
-  font-weight: 600;
-}
-
-// 태그 색상 유지
-.badge-primary {
+// 태그 색상 정의 - 특정 태그만 별도 색상 적용
+.web-tag {
   background-color: #007bff;
-  color: white;
 }
 
-.badge-secondary {
-  background-color: #6c757d;
-  color: white;
-}
-
-.badge-success {
-  background-color: #28a745;
-  color: white;
-}
-
-.badge-danger {
+.mobile-tag {
   background-color: #dc3545;
-  color: white;
 }
 
-.badge-warning {
-  background-color: #ffc107;
-  color: #212529;
+.jam-tag {
+  background-color: #FFC107;
 }
 
-.badge-info {
-  background-color: #17a2b8;
-  color: white;
-}
-
-.badge-light {
-  background-color: #f8f9fa;
-  color: #212529;
-}
-
-.badge-dark {
-  background-color: #343a40;
-  color: white;
+.steam-tag {
+  background-color: #28A745;
 }
