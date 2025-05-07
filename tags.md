@@ -24,7 +24,18 @@ permalink: /tags/
     {% endfor %}
   {% endfor %}
   
-  {% capture tag_with_count %}{{ post_count }}#{{ tag }}#{{ tag_without_emoji }}{% endcapture %}
+  {% assign padded_count = '' %}
+  {% if post_count < 10 %}
+    {% assign padded_count = '000' | append: post_count %}
+  {% elsif post_count < 100 %}
+    {% assign padded_count = '00' | append: post_count %}
+  {% elsif post_count < 1000 %}
+    {% assign padded_count = '0' | append: post_count %}
+  {% else %}
+    {% assign padded_count = post_count %}
+  {% endif %}
+  
+  {% capture tag_with_count %}{{ padded_count }}#{{ tag }}#{{ tag_without_emoji }}{% endcapture %}
   {% assign tag_counts = tag_counts | push: tag_with_count %}
 {% endfor %}
 
@@ -32,10 +43,12 @@ permalink: /tags/
 
 {% for tag_item in sorted_tag_counts %}
   {% assign tag_parts = tag_item | split: '#' %}
-  {% assign post_count = tag_parts[0] %}
+  {% assign padded_count = tag_parts[0] %}
   {% assign tag = tag_parts[1] %}
   {% assign tag_without_emoji = tag_parts[2] %}
   {% assign tag_slug = tag_without_emoji | slugify %}
+  
+  {% assign post_count = padded_count | plus: 0 %}
   
   <a href="{{ site.baseurl }}/tags/{{ tag_slug }}/" class="tag-card">
     <div class="tag-name">{{ tag }}</div>
