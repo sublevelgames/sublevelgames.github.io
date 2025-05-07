@@ -15,6 +15,8 @@ colors: ["danger", "primary", "info", "info"]
 
 <a href="https://play.google.com/store/apps/details?id=com.DefaultCompany.EmojiSort" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
 
+<a href="https://apps.apple.com/us/app/emoji-sort-quiz/id6745425234" class="btn btn-primary btn-lg">Play at 🍎App Store</a>
+
 <a href="https://html5.gamemonetize.co/g3gdro0n97mr5ar67bdj01z64283fh8k/" class="btn btn-primary btn-lg">Play at ▶️gamemonetize.com</a>
 
 <a href="https://sublevelgames.itch.io/emoji-sort" class="btn btn-primary btn-lg">Play at 🎮itch.io</a>
