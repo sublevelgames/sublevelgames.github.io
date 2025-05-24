@@ -86,105 +86,135 @@ layout: default
 <!-- TOC Generation Script -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  // Generate Table of Contents
-  const headings = document.querySelectorAll('.post-content h1, .post-content h2, .post-content h3, .post-content h4');
-  const tocList = document.getElementById('toc-list');
-  const tocContainer = document.querySelector('.blog-toc');
-  
-  console.log('Found headings:', headings.length); // Debug log
-  
-  if (headings.length === 0) {
-    tocContainer.style.display = 'none';
-    return;
-  }
-  
-  headings.forEach(function(heading, index) {
-    // Add ID to heading if it doesn't have one
-    if (!heading.id) {
-      const headingText = heading.textContent.trim().toLowerCase()
-        .replace(/[^\w\s-]/g, '') // Remove special characters
-        .replace(/\s+/g, '-') // Replace spaces with hyphens
-        .substring(0, 50); // Limit length
-      heading.id = headingText || 'heading-' + index;
+  // Wait a bit for content to fully load
+  setTimeout(function() {
+    // Try the exact selector from the HTML structure
+    const headings = document.querySelectorAll('.post-content h1, .post-content h2, .post-content h3, .post-content h4');
+    const tocList = document.getElementById('toc-list');
+    const tocContainer = document.querySelector('.blog-toc');
+    
+    console.log('Found headings:', headings.length);
+    console.log('All headings on page:', document.querySelectorAll('h1, h2, h3, h4').length);
+    console.log('Post content exists:', document.querySelector('.post-content') !== null);
+    
+    if (headings.length === 0) {
+      console.log('No headings found in .post-content, hiding TOC');
+      if (tocContainer) {
+        tocContainer.style.display = 'none';
+      }
+      return;
     }
     
-    // Create TOC item
-    const li = document.createElement('li');
-    const a = document.createElement('a');
-    a.href = '#' + heading.id;
-    a.textContent = heading.textContent;
-    a.className = 'toc-link';
+    // Clear any existing manual TOC
+    tocList.innerHTML = '';
     
-    // Add nesting based on heading level
-    if (heading.tagName === 'H3' || heading.tagName === 'H4') {
-      const nestedUl = document.createElement('ul');
-      const nestedLi = document.createElement('li');
-      nestedLi.appendChild(a);
-      nestedUl.appendChild(nestedLi);
-      li.appendChild(nestedUl);
-    } else {
-      li.appendChild(a);
+    // Filter out the main title if it's duplicated in content
+    const contentHeadings = Array.from(headings).filter(function(heading, index) {
+      // Skip if it's the same as the page title
+      const pageTitle = document.querySelector('.post-title');
+      if (pageTitle && heading.textContent.trim() === pageTitle.textContent.trim()) {
+        return false;
+      }
+      return true;
+    });
+    
+    console.log('Content headings after filtering:', contentHeadings.length);
+    
+    if (contentHeadings.length === 0) {
+      if (tocContainer) {
+        tocContainer.style.display = 'none';
+      }
+      return;
     }
     
-    tocList.appendChild(li);
-  });
-  
-  // Smooth scrolling for TOC links
-  document.querySelectorAll('.toc-link').forEach(function(link) {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      const targetId = this.getAttribute('href').substring(1);
-      const targetElement = document.getElementById(targetId);
+    contentHeadings.forEach(function(heading, index) {
+      // Add ID to heading if it doesn't have one
+      if (!heading.id) {
+        const headingText = heading.textContent.trim().toLowerCase()
+          .replace(/[^\w\s-]/g, '') // Remove special characters
+          .replace(/\s+/g, '-') // Replace spaces with hyphens
+          .substring(0, 50); // Limit length
+        heading.id = headingText || 'heading-' + index;
+      }
       
-      if (targetElement) {
-        const offsetTop = targetElement.offsetTop - 100; // Account for fixed headers
-        window.scrollTo({
-          top: offsetTop,
-          behavior: 'smooth'
-        });
+      // Create TOC item
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = '#' + heading.id;
+      a.textContent = heading.textContent;
+      a.className = 'toc-link';
+      
+      // Add nesting based on heading level
+      if (heading.tagName === 'H3' || heading.tagName === 'H4') {
+        li.style.marginLeft = '1rem';
+        a.style.fontSize = '0.85rem';
+        a.style.color = '#888';
       }
-    });
-  });
-  
-  // Highlight current section in TOC
-  function highlightCurrentSection() {
-    const scrollPosition = window.scrollY + 150;
-    let currentSection = null;
-    
-    headings.forEach(function(heading) {
-      if (heading.offsetTop <= scrollPosition) {
-        currentSection = heading;
-      }
+      
+      li.appendChild(a);
+      tocList.appendChild(li);
     });
     
-    // Remove active class from all links
+    console.log('TOC generated with', contentHeadings.length, 'items');
+    
+    // Smooth scrolling for TOC links
     document.querySelectorAll('.toc-link').forEach(function(link) {
-      link.classList.remove('active');
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+          const offsetTop = targetElement.offsetTop - 100;
+          window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+          });
+        }
+      });
     });
     
-    // Add active class to current section
-    if (currentSection) {
-      const activeLink = document.querySelector(`a[href="#${currentSection.id}"]`);
-      if (activeLink) {
-        activeLink.classList.add('active');
+    // Highlight current section in TOC
+    function highlightCurrentSection() {
+      const scrollPosition = window.scrollY + 150;
+      let currentSection = null;
+      
+      contentHeadings.forEach(function(heading) {
+        if (heading.offsetTop <= scrollPosition) {
+          currentSection = heading;
+        }
+      });
+      
+      // Remove active class from all links
+      document.querySelectorAll('.toc-link').forEach(function(link) {
+        link.classList.remove('active');
+      });
+      
+      // Add active class to current section
+      if (currentSection) {
+        const activeLink = document.querySelector(`a[href="#${currentSection.id}"]`);
+        if (activeLink) {
+          activeLink.classList.add('active');
+        }
       }
     }
-  }
-  
-  // Update active section on scroll (throttled)
-  let ticking = false;
-  function updateTOC() {
-    if (!ticking) {
-      requestAnimationFrame(function() {
-        highlightCurrentSection();
-        ticking = false;
-      });
-      ticking = true;
+    
+    // Update active section on scroll (throttled)
+    let ticking = false;
+    function updateTOC() {
+      if (!ticking) {
+        requestAnimationFrame(function() {
+          highlightCurrentSection();
+          ticking = false;
+        });
+        ticking = true;
+      }
     }
-  }
-  
-  window.addEventListener('scroll', updateTOC);
-  highlightCurrentSection(); // Initial call
+    
+    window.addEventListener('scroll', updateTOC);
+    highlightCurrentSection(); // Initial call
+    
+  }, 1000); // Increased timeout to 1 second
 });
 </script>
 
