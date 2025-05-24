@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog_post
 title: "🎮 Armor Games Data Analysis: Past and Present of Web Gaming Market"
 categories: blog_post
 image: /images/armor-games-analysis.jpg
