@@ -62,7 +62,7 @@ While the original data contained 154 various categories, meta-information unrel
 
 Through this process, **138 pure genre tags** were extracted.
 
-![Top 15 Game Genre Tags](aga01.png)
+![Top 15 Game Genre Tags](/images/aga01.png)
 
 
 ## Final Dataset
