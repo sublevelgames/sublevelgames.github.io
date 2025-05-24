@@ -1,0 +1,131 @@
+<!-- Jekyll-based TOC Generation -->
+{% capture toc_content %}
+{% assign headings = content | split: '<h' %}
+{% assign toc_items = '' %}
+{% assign heading_count = 0 %}
+
+{% for heading_part in headings %}
+  {% if forloop.index > 1 %}
+    {% assign heading_level = heading_part | slice: 0, 1 | plus: 0 %}
+    {% if heading_level >= 1 and heading_level <= 6 %}
+      {% assign heading_count = heading_count | plus: 1 %}
+      {% assign heading_text_start = heading_part | split: '>' | first | size | plus: 1 %}
+      {% assign heading_full = heading_part | split: '>' | shift | join: '>' %}
+      {% assign heading_text = heading_full | split: '</h' | first | strip_html | strip %}
+      
+      {% assign heading_id = heading_text | downcase | replace: ' ', '-' | replace: '.', '' | replace: ':', '' | replace: '(', '' | replace: ')', '' | replace: ',', '' | replace: '?', '' | replace: '!', '' | replace: '"', '' | replace: "'", '' | replace: '&', 'and' | replace: '#', '' | replace: '%', '' | truncate: 50, '' %}
+      
+      {% if heading_id == '' %}
+        {% assign heading_id = 'heading-' | append: heading_count %}
+      {% endif %}
+      
+      {% assign indent = '' %}
+      {% assign level_count = heading_level | minus: 1 %}
+      {% for i in (1..level_count) %}
+        {% assign indent = indent | append: '  ' %}
+      {% endfor %}
+      
+      {% assign font_size = 1.1 | minus: heading_level | times: 0.08 %}
+      {% if font_size < 0.85 %}{% assign font_size = 0.85 %}{% endif %}
+      
+      {% assign color = '#5a6c7d' %}
+      {% assign weight = '400' %}
+      {% if heading_level <= 2 %}
+        {% assign color = '#2c3e50' %}
+        {% assign weight = '600' %}
+      {% endif %}
+      
+      {% capture toc_item %}
+{{ indent }}<li style="margin-left: {{ level_count | times: 0.8 }}rem; margin-bottom: 0.3rem; list-style: none;">
+{{ indent }}  <a href="#{{ heading_id }}" class="toc-link" style="color: {{ color }}; font-weight: {{ weight }}; font-size: {{ font_size }}rem; text-decoration: none; display: block; padding: 0.2rem 0; border-radius: 3px; transition: all 0.2s ease;">{{ heading_text }}</a>
+{{ indent }}</li>
+      {% endcapture %}
+      
+      {% assign toc_items = toc_items | append: toc_item %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+{% endcapture %}
+
+{% if heading_count > 0 %}
+<div class="blog-toc" style="background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 0.5rem; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+  <h4 style="margin-top: 0; margin-bottom: 1rem; color: #2c3e50; font-size: 1.1rem; font-weight: 600; border-bottom: 2px solid #007bff; padding-bottom: 0.5rem;">📖 Table of Contents</h4>
+  <ul style="margin: 0; padding: 0; list-style: none;">
+{{ toc_items }}
+  </ul>
+</div>
+
+<script>
+// Add smooth scrolling to Jekyll-generated TOC links
+document.addEventListener('DOMContentLoaded', function() {
+  var tocLinks = document.querySelectorAll('.toc-link');
+  
+  tocLinks.forEach(function(link) {
+    link.addEventListener('mouseenter', function() {
+      this.style.backgroundColor = '#f8f9fa';
+      this.style.color = '#007bff';
+      this.style.paddingLeft = '0.5rem';
+    });
+    
+    link.addEventListener('mouseleave', function() {
+      this.style.backgroundColor = 'transparent';
+      this.style.paddingLeft = '0';
+      // Restore original color based on heading level
+      var level = this.getAttribute('data-level') || '3';
+      this.style.color = level <= 2 ? '#2c3e50' : '#5a6c7d';
+    });
+    
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      var targetId = this.getAttribute('href').substring(1);
+      var target = document.getElementById(targetId);
+      
+      if (target) {
+        target.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'start' 
+        });
+        
+        // Highlight effect
+        target.style.backgroundColor = '#fff3cd';
+        target.style.transition = 'background-color 0.3s ease';
+        setTimeout(function() {
+          target.style.backgroundColor = '';
+        }, 1500);
+      }
+    });
+  });
+});
+
+// Debug function
+window.debugTOC = function() {
+  console.log('Jekyll TOC Debug:');
+  console.log('TOC container:', document.querySelector('.blog-toc'));
+  console.log('TOC links:', document.querySelectorAll('.toc-link').length);
+  console.log('Headings in content:', document.querySelectorAll('.post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6').length);
+};
+</script>
+
+<!-- Add IDs to headings in content -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var postContent = document.querySelector('.post-content');
+  if (postContent) {
+    var headings = postContent.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    var headingCount = 0;
+    
+    headings.forEach(function(heading) {
+      headingCount++;
+      if (!heading.id) {
+        var headingText = heading.textContent.trim()
+          .toLowerCase()
+          .replace(/[^\w\s-]/g, '')
+          .replace(/\s+/g, '-')
+          .substring(0, 50);
+        heading.id = headingText || ('heading-' + headingCount);
+      }
+    });
+  }
+});
+</script>
+{% endif %}
