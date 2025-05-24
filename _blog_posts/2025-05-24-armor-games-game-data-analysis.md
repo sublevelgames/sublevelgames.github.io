@@ -62,6 +62,9 @@ While the original data contained 154 various categories, meta-information unrel
 
 Through this process, **138 pure genre tags** were extracted.
 
+![Top 15 Game Genre Tags](aga01.png)
+
+
 ## Final Dataset
 
 After preprocessing, **999 games total** and **138 pure genre tags** became the analysis targets. The yearly distribution varies from 192 games in 2018 to 35 games in 2025 (since we're still in mid-2025), and based on this data, I will analyze trends and patterns in the web gaming market.
