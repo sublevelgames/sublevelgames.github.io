@@ -61,11 +61,14 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
-# Tag page settings
+# Collections
 collections:
   tags:
     output: true
     permalink: /tags/:path/
+  blog_posts:
+    output: true
+    permalink: /blogs/:name/
 
 defaults:
   - scope:
@@ -73,3 +76,12 @@ defaults:
       type: tags
     values:
       layout: tag
+  - scope:
+      path: ""
+      type: blog_posts
+    values:
+      layout: post
+      categories: blog_post
+
+# Exclude blog_post category from main pagination
+# This will be handled by filtering in the templates

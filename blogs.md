@@ -12,8 +12,7 @@ permalink: /blogs/
 
 <div class="blog-posts">
   <div class="row">
-    {% assign blog_posts = site.posts | where: "categories", "blog_post" %}
-    {% for post in blog_posts %}   
+    {% for post in site.blog_posts %}   
       <div class="col-12 col-md-6 col-lg-4 mb-4">
        <a href="{{ post.url | prepend: site.baseurl }}" class="index-anchor">
         <div class="card rounded overflow-hidden">
@@ -50,7 +49,7 @@ permalink: /blogs/
       </div>
     {% endfor %}
     
-    {% if blog_posts.size == 0 %}
+    {% if site.blog_posts.size == 0 %}
       <div class="col-12">
         <div class="blog-empty-state">
           <div class="alert alert-info" role="alert">
@@ -69,7 +68,7 @@ permalink: /blogs/
 ## 📋 Posts by Category
 
 <div class="blog-categories">
-  {% assign blog_posts = site.posts | where: "categories", "blog_post" %}
+  {% assign blog_posts = site.blog_posts %}
   {% assign categories = blog_posts | map: "tags" | join: "," | split: "," | uniq | sort %}
 
   {% if categories.size > 0 %}
@@ -109,7 +108,7 @@ permalink: /blogs/
 ## 🏷️ Tags
 
 <div class="blog-tags">
-  {% assign blog_posts = site.posts | where: "categories", "blog_post" %}
+  {% assign blog_posts = site.blog_posts %}
   {% assign all_tags = blog_posts | map: "tags" | join: "," | split: "," | uniq | sort %}
 
   <div class="row">
