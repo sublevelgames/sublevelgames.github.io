@@ -212,6 +212,10 @@ The genres with highest development activity reveal industry focus areas:
 
 The data reveals a maturing market where traditional genres like Strategy and Adventure maintain massive player bases, while newer categories like Escape and Top Down achieve exceptional quality scores. Platform and Puzzle games emerge as the most actively developed genres, suggesting strong developer confidence and sustainable player interest.
 
+## Past vs Present Comparison (2018-2022 vs 2023-2025)
+
+To understand how the web gaming market is changing, I'll compare the past 5 years (2018-2022) with the recent 3 years (2023-2025).
+
 ### Genre Rating Trends
 
 Tracking quality changes of each genre over time:
@@ -251,10 +255,6 @@ Through this analysis, developers can understand:
 - When specific genres enjoyed booms
 - Historical performance patterns of genres they want to develop
 
-## Past vs Present Comparison (2018-2022 vs 2023-2025)
-
-To understand how the web gaming market is changing, I'll compare the past 5 years (2018-2022) with the recent 3 years (2023-2025).
-
 ### Game Performance Matrix Comparison
 
 #### Past (2018-2022)
@@ -269,22 +269,22 @@ To understand how the web gaming market is changing, I'll compare the past 5 yea
 
 Interestingly, the proportion of high-quality games has actually increased. While overall average ratings have declined, there are more games of excellent quality. This may indicate polarization in game quality.
 
-### Hidden Gem Discovery
+## Hidden Gem Discovery
 
 Through data analysis, let's find games that are relatively unknown despite their high quality.
 
 **High-rated Low-play Games - 8.9+ points, bottom 25% play count (27,617 plays or less)**
 
-- **Detective Bass: Fish Out of Water** (9.3 points, 27,132 plays)
-- **Fill Up The Hole** (9.2 points, 22,428 plays)
-- **Move Box** (9.1 points, 27,490 plays)
-- **SYNTAXIA** (9.1 points, 20,120 plays)
-- **Rotate Box** (9.0 points, 24,418 plays)
-- **BRDG** (9.0 points, 26,778 plays)
-- **Nova: Cloudwalker's Tale** (8.9 points, 25,855 plays)
-- **Sum Lines** (8.9 points, 23,923 plays)
-- **Race Against a Duck** (8.9 points, 27,085 plays)
-- **Menace from the Deep Demo** (8.9 points, 17,464 plays)
+- **[Detective Bass: Fish Out of Water](https://armorgames.com/detective-bass-fish-out-of-water-game/19405)** (9.3 points, 27,132 plays)
+- **[Fill Up The Hole](https://armorgames.com/fill-up-the-hole-game/19567)** (9.2 points, 22,428 plays)
+- **[Move Box](https://armorgames.com/move-box-game/19139)** (9.1 points, 27,490 plays)
+- **[SYNTAXIA](https://armorgames.com/syntaxia-game/19546)** (9.1 points, 20,120 plays)
+- **[Rotate Box](https://armorgames.com/rotate-box-game/19321)** (9.0 points, 24,418 plays)
+- **[BRDG](https://armorgames.com/brdg-game/18867)** (9.0 points, 26,778 plays)
+- **[Nova: Cloudwalker's Tale](https://armorgames.com/nova-cloudwalkers-tale-game/19275)** (8.9 points, 25,855 plays)
+- **[Sum Lines](https://armorgames.com/sum-lines-game/19312)** (8.9 points, 23,923 plays)
+- **[Race Against a Duck](https://armorgames.com/race-against-a-duck-game/19429)** (8.9 points, 27,085 plays)
+- **[Menace from the Deep Demo](https://armorgames.com/menace-from-the-deep-demo-game/19442)** (8.9 points, 17,464 plays)
 
 The common point of these games is innovative game mechanisms and original ideas. Games that made new attempts rather than simply variations of existing genres are receiving high evaluations.
 
