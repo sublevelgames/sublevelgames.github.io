@@ -174,9 +174,49 @@ Analyzing each genre's average rating and total plays reveals interesting patter
 - **[CLICKER](https://armorgames.com/category/clicker-games)**: 7.71 average rating, 31,477,409 total plays (22 games)
 - **[ADVENTURE](https://armorgames.com/category/adventure-games)**: 7.62 average rating, 33,380,957 total plays (208 games)
 
+### Recent Trends: Genre Evolution (2023-2025)
+
+The gaming landscape has continued evolving in recent years, with 51 qualifying genres (≥3 games each) showing distinct patterns in the 2023-2025 period. This analysis reveals how player preferences and developer focus have shifted in the modern web gaming era.
+
+![Genre Performance Matrix(2023-2025) - Quality vs Popularity by Genre](/images/aga09.png)
+
+#### Quality Leaders in Recent Gaming
+
+The highest-rated genres of recent years demonstrate sophisticated game design and player satisfaction:
+
+- **[ESCAPE](https://armorgames.com/category/escape-games)**: Leading with 8.65 average rating despite modest 91,042 total plays across 4 games, peaking in 2024
+- **[TOP DOWN](https://armorgames.com/category/top-down-games)**: Strong 8.02 average rating with 583,261 total plays across 9 games, peaked in 2023
+- **[TOWER DEFENSE](https://armorgames.com/category/tower-defense-games)**: Maintaining quality at 7.73 average rating with 574,494 total plays across 6 games, showing growth into 2025
+- **[POINT & CLICK](https://armorgames.com/category/point-click-games)**: Classic genre sustaining 7.63 average rating with 171,718 plays across 7 games, peaked in 2023
+- **[ROBOT](https://armorgames.com/category/robot-games)**: Niche but polished at 7.50 average rating with 119,847 plays across 4 games, peaked in 2023
+
+#### Popularity Champions: Volume Leaders
+
+Recent high-traffic genres show where the player base concentrates:
+
+- **[STRATEGY](https://armorgames.com/category/strategy-games)**: Dominating with 3,482,821 total plays across 42 games, though with moderate 6.57 average rating, peaked in 2023
+- **[ADVENTURE](https://armorgames.com/category/adventure-games)**: Strong runner-up with 2,493,771 total plays across 40 games and improving 6.92 average rating, peaked in 2024
+- **[PLATFORM](https://armorgames.com/category/platform-games)**: Solid performance with 1,183,929 total plays across 46 games and healthy 7.29 average rating, peaked in 2023
+- **[PUZZLE](https://armorgames.com/category/puzzle-games)**: Consistent favorite with 1,030,126 total plays across 44 games and decent 7.10 average rating, peaked in 2024
+- **[SHOOTING](https://armorgames.com/category/shooting-games)**: Concentrated appeal with 855,592 total plays across 16 games and 6.97 average rating, peaked in 2023
+
+#### Production Powerhouses: Most Active Genres
+
+The genres with highest development activity reveal industry focus areas:
+
+- **[PLATFORM](https://armorgames.com/category/platform-games)**: Leading production with 46 games, achieving strong 7.29 average rating and substantial 1,183,929 total plays
+- **[PUZZLE](https://armorgames.com/category/puzzle-games)**: Close second with 44 games, maintaining 7.10 average rating and impressive 1,030,126 total plays  
+- **[STRATEGY](https://armorgames.com/category/strategy-games)**: High volume at 42 games driving massive 3,482,821 total plays, though with lower 6.57 average rating
+- **[ADVENTURE](https://armorgames.com/category/adventure-games)**: Steady production of 40 games yielding strong 2,493,771 total plays and improving 6.92 average rating
+- **[PUZZLE-SKILL](https://armorgames.com/category/puzzle-skill-games)**: Growing category with 31 games, 6.74 average rating and 750,038 total plays, peaked in 2024
+
+The data reveals a maturing market where traditional genres like Strategy and Adventure maintain massive player bases, while newer categories like Escape and Top Down achieve exceptional quality scores. Platform and Puzzle games emerge as the most actively developed genres, suggesting strong developer confidence and sustainable player interest.
+
 ### Genre Rating Trends
 
 Tracking quality changes of each genre over time:
+
+![Genre Rating Changes (2023-2025 vs 2018-2022)](/images/aga10.png)
 
 #### Improving Genres
 
@@ -214,48 +254,6 @@ Through this analysis, developers can understand:
 ## Past vs Present Comparison (2018-2022 vs 2023-2025)
 
 To understand how the web gaming market is changing, I'll compare the past 5 years (2018-2022) with the recent 3 years (2023-2025).
-
-### Overall Quality Changes
-
-#### Rating Comparison
-
-- **Past Average**: 7.426 points
-- **Recent Average**: 6.883 points
-- **Change**: -0.543 points
-
-A consistent downward trend is observed. This supports the previously mentioned "rising user evaluation standards" hypothesis. As users' expectations for web games have increased, games of the same quality are receiving more demanding evaluations.
-
-#### Game Count Changes
-
-- **Past Period**: 788 games total (158 games per year average)
-- **Recent Period**: 211 games total (70 games per year average)
-
-Game release volume has decreased to less than half. This can be interpreted as quality-focused curation strengthening or market maturation.
-
-### Genre Trend Changes
-
-#### Rising Genres
-
-1. **[IDLE](https://armorgames.com/category/idle-games)**: Past 7.2 → Recent 7.8 points (+0.6 points)
-2. **[STRATEGY](https://armorgames.com/category/strategy-games)**: Past 7.1 → Recent 7.6 points (+0.5 points)
-3. **[RPG](https://armorgames.com/category/rpg-games)**: Past 7.3 → Recent 7.7 points (+0.4 points)
-
-These genres are characterized by deep gameplay and long-term play requirements. This suggests that web game users want more immersive experiences beyond simple casual games.
-
-#### Declining Genres
-
-1. **[ARCADE](https://armorgames.com/category/arcade-games)**: Past 7.4 → Recent 6.9 points (-0.5 points)
-2. **[ACTION](https://armorgames.com/category/action-games)**: Past 7.2 → Recent 6.8 points (-0.4 points)
-3. **[PLATFORM](https://armorgames.com/category/platform-games)**: Past 7.3 → Recent 7.0 points (-0.3 points)
-
-Traditional [action](https://armorgames.com/category/action-games)/[arcade](https://armorgames.com/category/arcade-games) genres show relative decline. This could be due to competition with mobile games or lack of innovation.
-
-#### Stable Genres
-
-1. **[PUZZLE](https://armorgames.com/category/puzzle-games)**: Past 7.3 → Recent 7.2 points (-0.1 points)
-2. **[ADVENTURE](https://armorgames.com/category/adventure-games)**: Past 7.4 → Recent 7.3 points (-0.1 points)
-
-[Puzzle](https://armorgames.com/category/puzzle-games) and [adventure](https://armorgames.com/category/adventure-games) genres maintain relatively stable performance, solidifying their position as core genres for web games.
 
 ### Game Performance Matrix Comparison
 
