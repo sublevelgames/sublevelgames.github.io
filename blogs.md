@@ -2,6 +2,7 @@
 layout: default
 title: Blogs
 permalink: /blogs/
+comments: true
 ---
 
 <div class="container-fluid">
