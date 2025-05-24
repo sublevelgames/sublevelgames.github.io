@@ -2,13 +2,12 @@
 layout: default
 title: Blogs
 permalink: /blogs/
-comments: true
 ---
 
 <div class="container-fluid">
   <div class="row">
     <div class="col-12">
-      # 📝 Blog Posts
+      <h1>📝 Blog Posts</h1>
 
       <div class="blog-header">
         <p class="blog-description">A collection of articles about game development and data analysis insights.</p>
@@ -67,9 +66,9 @@ comments: true
         </div>
       </div>
 
-      ---
+      <hr>
 
-      ## 📋 Posts by Category
+      <h2>📋 Posts by Category</h2>
 
       <div class="blog-categories">
         {% assign blog_posts = site.blog_posts %}
@@ -107,9 +106,9 @@ comments: true
         {% endif %}
       </div>
 
-      ---
+      <hr>
 
-      ## 🏷️ Tags
+      <h2>🏷️ Tags</h2>
 
       <div class="blog-tags">
         {% assign blog_posts = site.blog_posts %}
@@ -147,7 +146,7 @@ comments: true
         </div>
       </div>
 
-      ---
+      <hr>
 
       <div class="blog-about">
         <h4 class="alert-heading">💡 About This Blog</h4>

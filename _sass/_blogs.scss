@@ -6,6 +6,7 @@
     border: 1px solid #dee2e6;
     height: 100%;
     min-height: 400px; // 최소 높이 설정
+    position: relative; // NEW 뱃지 위치 설정을 위해
     
     &:hover {
       transform: translateY(-5px);
@@ -66,18 +67,23 @@
     margin-top: auto;
   }
 
+  // 블로그 전용 NEW 뱃지 스타일
   .new-badge {
     position: absolute;
-    top: 15px; // 위치 조정
+    top: 15px;
     right: 15px;
     background: linear-gradient(45deg, #ff6b6b, #ee5a6f);
     color: white;
-    padding: 6px 12px; // 패딩 증가
-    border-radius: 15px;
-    font-size: 0.8rem; // 폰트 크기 증가
+    padding: 4px 8px; // 더 작은 패딩
+    border-radius: 12px;
+    font-size: 0.7rem; // 더 작은 폰트
     font-weight: bold;
     z-index: 10;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    pointer-events: none; // 클릭 이벤트 차단
+    max-width: 50px; // 최대 너비 제한
+    text-align: center;
+    white-space: nowrap; // 텍스트 줄바꿈 방지
   }
 }
 
