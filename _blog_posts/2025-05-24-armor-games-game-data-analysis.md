@@ -62,8 +62,6 @@ While the original data contained 154 various categories, meta-information unrel
 
 Through this process, **138 pure genre tags** were extracted.
 
-![Top 15 Game Genre Tags](/images/aga01.png)
-
 
 ## Final Dataset
 
@@ -126,6 +124,8 @@ Analysis of yearly rating changes reveals a consistent downward trend:
 
 Particularly notable is the sharp decline starting from 2024, with average ratings dropping about 0.57 points from 2018 to 2025.
 
+![Rating Trends Over Time](/images/aga06.png)
+
 This can be interpreted as follows:
 
 - Rising evaluation standards: Users' expectations for web games have increased
@@ -146,11 +146,15 @@ Analysis results show the most frequently used top genre tags:
 4. **[ADVENTURE](https://armorgames.com/category/adventure-games)**: 208 games (20.8%)
 5. **[PUZZLE PLATFORMER](https://armorgames.com/category/puzzle-platformer-games)**: 159 games (15.9%)
 
+![Top 15 Game Genre Tags](/images/aga01.png)
+
 Interestingly, [puzzle](https://armorgames.com/category/puzzle-games)-related genres overwhelmingly take first place. Simply combining [PUZZLE-SKILL](https://armorgames.com/category/puzzle-skill-games) and [PUZZLE](https://armorgames.com/category/puzzle-games) reaches 58% of all games. However, analyzing the data more carefully: 175 games have only PUZZLE-SKILL, 85 games have only PUZZLE, and 160 games have both tags, so the union calculation gives 420 games, 42.0% of the total. Still not a low figure. This shows that [puzzle games](https://armorgames.com/category/puzzle-games), which are easily accessible and enjoyable in short periods, remain core content for web games due to their characteristics.
 
 ### Genre Performance Matrix: Quality vs Popularity
 
 Analyzing each genre's average rating and total plays reveals interesting patterns:
+
+![Genre Performance Matrix - Quality vs Popularity by Genre](/images/aga07.png)
 
 #### High Quality + High Popularity Genres
 
@@ -198,6 +202,8 @@ Tracking quality changes of each genre over time:
 ### Yearly Genre Quality Heatmap
 
 Visualizing rating changes of major genres from 2018 to 2025 in a heatmap allows us to see at a glance which years each genre performed best.
+
+![Rating Heatmap - Genres vs Years](/images/aga08.png)
 
 Through this analysis, developers can understand:
 
