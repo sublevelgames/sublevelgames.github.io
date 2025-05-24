@@ -85,137 +85,146 @@ layout: default
 
 <!-- TOC Generation Script -->
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Wait a bit for content to fully load
-  setTimeout(function() {
-    // Try the exact selector from the HTML structure
-    const headings = document.querySelectorAll('.post-content h1, .post-content h2, .post-content h3, .post-content h4');
-    const tocList = document.getElementById('toc-list');
+// Multiple event listeners to ensure execution
+function generateTOC() {
+  console.log('=== TOC Generation Attempt ===');
+  
+  const postContent = document.querySelector('.post-content');
+  const tocList = document.getElementById('toc-list');
+  
+  if (!postContent || !tocList) {
+    console.log('Required elements not found, retrying...');
+    return false;
+  }
+  
+  const headings = postContent.querySelectorAll('h1, h2, h3, h4');
+  console.log('Found headings:', headings.length);
+  
+  if (headings.length === 0) {
     const tocContainer = document.querySelector('.blog-toc');
-    
-    console.log('Found headings:', headings.length);
-    console.log('All headings on page:', document.querySelectorAll('h1, h2, h3, h4').length);
-    console.log('Post content exists:', document.querySelector('.post-content') !== null);
-    
-    if (headings.length === 0) {
-      console.log('No headings found in .post-content, hiding TOC');
-      if (tocContainer) {
-        tocContainer.style.display = 'none';
-      }
-      return;
+    if (tocContainer) tocContainer.style.display = 'none';
+    return true;
+  }
+  
+  // Clear existing content
+  tocList.innerHTML = '';
+  
+  // Generate TOC with proper hierarchy
+  headings.forEach(function(heading, index) {
+    // Create ID if needed
+    if (!heading.id) {
+      const headingText = heading.textContent.trim().toLowerCase()
+        .replace(/[^\w\s-]/g, '')
+        .replace(/\s+/g, '-')
+        .substring(0, 50);
+      heading.id = headingText || 'heading-' + index;
     }
     
-    // Clear any existing manual TOC
-    tocList.innerHTML = '';
+    // Create TOC item
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    a.href = '#' + heading.id;
+    a.textContent = heading.textContent;
+    a.className = 'toc-link';
     
-    // Filter out the main title if it's duplicated in content
-    const contentHeadings = Array.from(headings).filter(function(heading, index) {
-      // Skip if it's the same as the page title
-      const pageTitle = document.querySelector('.post-title');
-      if (pageTitle && heading.textContent.trim() === pageTitle.textContent.trim()) {
-        return false;
-      }
-      return true;
-    });
+    // Style based on heading level
+    const level = parseInt(heading.tagName.substring(1)); // Extract number from H1, H2, etc.
     
-    console.log('Content headings after filtering:', contentHeadings.length);
-    
-    if (contentHeadings.length === 0) {
-      if (tocContainer) {
-        tocContainer.style.display = 'none';
-      }
-      return;
-    }
-    
-    contentHeadings.forEach(function(heading, index) {
-      // Add ID to heading if it doesn't have one
-      if (!heading.id) {
-        const headingText = heading.textContent.trim().toLowerCase()
-          .replace(/[^\w\s-]/g, '') // Remove special characters
-          .replace(/\s+/g, '-') // Replace spaces with hyphens
-          .substring(0, 50); // Limit length
-        heading.id = headingText || 'heading-' + index;
-      }
-      
-      // Create TOC item
-      const li = document.createElement('li');
-      const a = document.createElement('a');
-      a.href = '#' + heading.id;
-      a.textContent = heading.textContent;
-      a.className = 'toc-link';
-      
-      // Add nesting based on heading level
-      if (heading.tagName === 'H3' || heading.tagName === 'H4') {
+    switch(level) {
+      case 1:
+        li.style.marginLeft = '0';
+        li.style.marginBottom = '0.75rem';
+        a.style.fontSize = '1rem';
+        a.style.fontWeight = '600';
+        a.style.color = '#333';
+        break;
+      case 2:
         li.style.marginLeft = '1rem';
+        li.style.marginBottom = '0.5rem';
+        a.style.fontSize = '0.9rem';
+        a.style.fontWeight = '500';
+        a.style.color = '#555';
+        break;
+      case 3:
+        li.style.marginLeft = '2rem';
+        li.style.marginBottom = '0.25rem';
         a.style.fontSize = '0.85rem';
+        a.style.fontWeight = '400';
+        a.style.color = '#777';
+        break;
+      case 4:
+        li.style.marginLeft = '3rem';
+        li.style.marginBottom = '0.25rem';
+        a.style.fontSize = '0.8rem';
+        a.style.fontWeight = '400';
         a.style.color = '#888';
-      }
-      
-      li.appendChild(a);
-      tocList.appendChild(li);
-    });
+        break;
+    }
     
-    console.log('TOC generated with', contentHeadings.length, 'items');
-    
-    // Smooth scrolling for TOC links
-    document.querySelectorAll('.toc-link').forEach(function(link) {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        const targetElement = document.getElementById(targetId);
+    // Add click handler
+    a.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.getElementById(heading.id);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         
-        if (targetElement) {
-          const offsetTop = targetElement.offsetTop - 100;
-          window.scrollTo({
-            top: offsetTop,
-            behavior: 'smooth'
-          });
-        }
-      });
+        // Update active state
+        document.querySelectorAll('.toc-link').forEach(link => link.classList.remove('active'));
+        this.classList.add('active');
+      }
     });
     
-    // Highlight current section in TOC
-    function highlightCurrentSection() {
-      const scrollPosition = window.scrollY + 150;
-      let currentSection = null;
-      
-      contentHeadings.forEach(function(heading) {
-        if (heading.offsetTop <= scrollPosition) {
-          currentSection = heading;
-        }
-      });
-      
-      // Remove active class from all links
-      document.querySelectorAll('.toc-link').forEach(function(link) {
-        link.classList.remove('active');
-      });
-      
-      // Add active class to current section
-      if (currentSection) {
-        const activeLink = document.querySelector(`a[href="#${currentSection.id}"]`);
-        if (activeLink) {
-          activeLink.classList.add('active');
-        }
+    li.appendChild(a);
+    tocList.appendChild(li);
+  });
+  
+  console.log('TOC generated successfully with', headings.length, 'items');
+  
+  // Add scroll highlighting
+  function updateActiveSection() {
+    const scrollPosition = window.scrollY + 100;
+    let activeHeading = null;
+    
+    headings.forEach(function(heading) {
+      if (heading.offsetTop <= scrollPosition) {
+        activeHeading = heading;
+      }
+    });
+    
+    document.querySelectorAll('.toc-link').forEach(link => link.classList.remove('active'));
+    
+    if (activeHeading) {
+      const activeLink = document.querySelector(`a[href="#${activeHeading.id}"]`);
+      if (activeLink) {
+        activeLink.classList.add('active');
       }
     }
-    
-    // Update active section on scroll (throttled)
-    let ticking = false;
-    function updateTOC() {
-      if (!ticking) {
-        requestAnimationFrame(function() {
-          highlightCurrentSection();
-          ticking = false;
-        });
-        ticking = true;
-      }
-    }
-    
-    window.addEventListener('scroll', updateTOC);
-    highlightCurrentSection(); // Initial call
-    
-  }, 1000); // Increased timeout to 1 second
+  }
+  
+  window.addEventListener('scroll', updateActiveSection);
+  updateActiveSection(); // Initial call
+  
+  return true;
+}
+
+// Try multiple times with different events
+document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(generateTOC, 100);
 });
+
+window.addEventListener('load', function() {
+  setTimeout(generateTOC, 100);
+});
+
+// Fallback - try after additional delay
+setTimeout(function() {
+  generateTOC();
+}, 2000);
+
+// Additional fallback for when everything else is loaded
+if (document.readyState === 'complete') {
+  setTimeout(generateTOC, 100);
+}
 </script>
 
 {% include fb-script.html %}

@@ -1,6 +1,6 @@
 ---
 layout: blog_post
-title: "🎮 Armor Games Data Analysis: Past and Present of Web Gaming Market"
+title: "⚔️Armor Games Data Analysis: Past and Present of Web Gaming Market"
 image: /images/armor-games-analysis.jpg
 excerpt: Deep dive into web gaming market trends through 2018-2025 Armor Games data. Analyzing game quality evolution, genre popularity, and comparing past vs present insights.
 tags: ["📊Data", "🎮Game", "📈Analytics", "🌐Web Games", "💰Market Research"]
@@ -105,7 +105,11 @@ Looking at the relationships between game success indicators:
 - Play Count ↔ Favorites: 0.712 (strong positive correlation)
 - Rating ↔ Favorites: 0.298 (moderate positive correlation)
 
+![Correlation Matrix of Game Features](/images/aga04.png)
+
 Interestingly, high ratings don't necessarily lead to high play counts. This suggests that game quality and popularity are separate factors.
+
+![Play Count vs Rating](/images/aga05.png)
 
 ### User Evaluation Trends: "Are Users Getting More Critical?"
 
