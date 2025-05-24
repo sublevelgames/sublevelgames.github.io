@@ -292,21 +292,21 @@ The common point of these games is innovative game mechanisms and original ideas
 
 ## Key Insights Summary
 
-1. **Rising User Standards**
+### 1. **Rising User Standards**
 
 The slight decline in average ratings should be interpreted as rising user evaluation standards rather than game quality deterioration. This signifies the maturation of the web gaming market.
 
-2. **Genre Evolution**
+### 2. **Genre Evolution**
 
 - Rising: [IDLE](https://armorgames.com/category/idle-games), [STRATEGY](https://armorgames.com/category/strategy-games), [RPG](https://armorgames.com/category/rpg-games) - genres with deep gameplay
 - Declining: [ARCADE](https://armorgames.com/category/arcade-games), [ACTION](https://armorgames.com/category/action-games) - traditional action genres
 - Stable: [PUZZLE](https://armorgames.com/category/puzzle-games), [ADVENTURE](https://armorgames.com/category/adventure-games) - core genres of web games
 
-3. **Quality Polarization**
+### 3. **Quality Polarization**
 
 While overall averages declined, the proportion of high-quality games increased, showing a polarization phenomenon in quality.
 
-4. **Importance of Innovation**
+### 4. **Importance of Innovation**
 
 The common point of hidden gems is innovative mechanisms and originality. New attempts are the key to success rather than simple imitation of existing genres.
 
