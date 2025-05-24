@@ -1,0 +1,219 @@
+// Styles for blog pages and blog post cards
+
+.blog-posts {
+  .card {
+    transition: all 0.3s ease;
+    border: 1px solid #dee2e6;
+    height: 100%;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      border-color: #007bff;
+    }
+  }
+
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .card:hover .card-img-top {
+    transform: scale(1.05);
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .panel-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #333;
+    line-height: 1.3;
+  }
+
+  .post-meta {
+    color: #6c757d;
+    font-size: 0.875rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .tag-container {
+    margin-bottom: 1rem;
+    
+    .badge {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.5rem;
+      margin-right: 0.25rem;
+      margin-bottom: 0.25rem;
+    }
+  }
+
+  .post-excerpt {
+    flex-grow: 1;
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-top: auto;
+  }
+
+  .new-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: linear-gradient(45deg, #ff6b6b, #ee5a6f);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+}
+
+// Blog page header
+.blog-header {
+  margin-bottom: 2rem;
+  
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .blog-description {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+}
+
+// Category and tags sections
+.blog-categories, .blog-tags {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  
+  h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 0.5rem;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    
+    li {
+      margin-bottom: 0.5rem;
+      
+      a {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: 500;
+        
+        &:hover {
+          color: #0056b3;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.blog-tags {
+  .list-unstyled {
+    li {
+      margin-bottom: 0.75rem;
+      
+      a {
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+        
+        .badge {
+          margin-right: 0.5rem;
+          font-size: 0.8rem;
+        }
+        
+        &:hover {
+          .badge {
+            opacity: 0.8;
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+  }
+}
+
+// About section
+.blog-about {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 12px;
+  padding: 2rem;
+  
+  .alert-heading {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+  
+  hr {
+    border-color: rgba(255,255,255,0.3);
+    margin: 1.5rem 0;
+  }
+}
+
+// Empty state
+.blog-empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+  
+  .alert {
+    border: 2px dashed #dee2e6;
+    background: transparent;
+    
+    .alert-heading {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .blog-posts {
+    .panel-title {
+      font-size: 1.1rem;
+    }
+    
+    .card-body {
+      padding: 1rem;
+    }
+  }
+  
+  .blog-header h1 {
+    font-size: 2rem;
+  }
+  
+  .blog-categories, .blog-tags {
+    padding: 1rem;
+  }
+}
