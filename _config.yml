@@ -80,8 +80,7 @@ defaults:
       path: ""
       type: blog_posts
     values:
-      layout: post
-      categories: blog_post
+      layout: blog_post
 
 # Exclude blog_post category from main pagination
 # This will be handled by filtering in the templates

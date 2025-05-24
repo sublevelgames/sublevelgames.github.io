@@ -1,11 +1,11 @@
 ---
 layout: blog_post
 title: "🎮 Armor Games Data Analysis: Past and Present of Web Gaming Market"
-categories: blog_post
 image: /images/armor-games-analysis.jpg
 excerpt: Deep dive into web gaming market trends through 2018-2025 Armor Games data. Analyzing game quality evolution, genre popularity, and comparing past vs present insights.
 tags: ["📊Data", "🎮Game", "📈Analytics", "🌐Web Games", "💰Market Research"]
 colors: ["info", "info", "info", "info", "info"]
+comments: true
 ---
 
 <span class="badge badge-info">📊Data</span>
@@ -83,10 +83,14 @@ Let's examine the overall status of the 999 games in our analysis.
 - Median: 42,820 plays
 - Since the average is about 3 times higher than the median, we can see that a small number of popular games drive up the overall play count.
 
+![Distribution of Play Counts - Log Scale](/images/aga02.png)
+
 ### Rating Status
 
 - Average rating: 7.31/10 points
 - Shows generally good quality levels, indicating [Armor Games](https://armorgames.com/)' curation effect.
+
+![Distribution of Game Ratings](/images/aga03.png)
 
 ### Favorites
 

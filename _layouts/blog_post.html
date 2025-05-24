@@ -19,19 +19,6 @@ layout: default
             ><span itemprop="name">{{ page.author }}</span></span
           >{% endif %}
         </p>
-        
-        {% if page.tags %}
-          <p class="post-tags">
-            {% for tag in page.tags %}
-              {% assign tag_text = tag | slice: 1, tag.size %}
-              {% assign tag_slug = tag_text | slugify %}
-              <a href="{{ site.baseurl }}/tags/{{ tag_slug }}/" class="tag-link">
-                <span class="badge badge-{{ page.colors[forloop.index0] }}">{{ tag }}</span>
-              </a>
-            {% endfor %}
-          </p>
-        {% endif %}
-        
       </header>
       <div class="post-content" itemprop="articleBody">{{ content }}</div>
     </article>
@@ -74,20 +61,24 @@ layout: default
     <!-- Recent Articles -->
     <div class="recent-articles">
       <h4>📚 Recent Articles</h4>
-      {% assign recent_posts = site.posts | where: "categories", "blog_post" | limit: 5 %}
-      {% for post in recent_posts %}
-        <a href="{{ post.url | prepend: site.baseurl }}" class="recent-post">
-          <div class="post-title">{{ post.title | truncate: 60 }}</div>
-          <div class="post-date">{{ post.date | date: "%b %-d, %Y" }}</div>
-          {% if post.tags %}
-            <div class="post-tags">
-              {% for tag in post.tags limit: 3 %}
-                <span class="badge badge-{{ post.colors[forloop.index0] }}">{{ tag }}</span>
-              {% endfor %}
-            </div>
-          {% endif %}
-        </a>
-      {% endfor %}
+      {% assign recent_posts = site.blog_posts | limit: 5 %}
+      {% if recent_posts.size > 0 %}
+        {% for post in recent_posts %}
+          <a href="{{ post.url | prepend: site.baseurl }}" class="recent-post">
+            <div class="post-title">{{ post.title | truncate: 60 }}</div>
+            <div class="post-date">{{ post.date | date: "%b %-d, %Y" }}</div>
+            {% if post.tags %}
+              <div class="post-tags">
+                {% for tag in post.tags limit: 3 %}
+                  <span class="badge badge-{{ post.colors[forloop.index0] }}">{{ tag }}</span>
+                {% endfor %}
+              </div>
+            {% endif %}
+          </a>
+        {% endfor %}
+      {% else %}
+        <p class="text-muted"><small>No recent articles found.</small></p>
+      {% endif %}
     </div>
   </div>
 </div>
@@ -98,16 +89,23 @@ document.addEventListener('DOMContentLoaded', function() {
   // Generate Table of Contents
   const headings = document.querySelectorAll('.post-content h1, .post-content h2, .post-content h3, .post-content h4');
   const tocList = document.getElementById('toc-list');
+  const tocContainer = document.querySelector('.blog-toc');
+  
+  console.log('Found headings:', headings.length); // Debug log
   
   if (headings.length === 0) {
-    document.querySelector('.blog-toc').style.display = 'none';
+    tocContainer.style.display = 'none';
     return;
   }
   
   headings.forEach(function(heading, index) {
     // Add ID to heading if it doesn't have one
     if (!heading.id) {
-      heading.id = 'heading-' + index;
+      const headingText = heading.textContent.trim().toLowerCase()
+        .replace(/[^\w\s-]/g, '') // Remove special characters
+        .replace(/\s+/g, '-') // Replace spaces with hyphens
+        .substring(0, 50); // Limit length
+      heading.id = headingText || 'heading-' + index;
     }
     
     // Create TOC item
@@ -119,11 +117,15 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Add nesting based on heading level
     if (heading.tagName === 'H3' || heading.tagName === 'H4') {
-      li.style.marginLeft = '1rem';
-      a.style.fontSize = '0.85rem';
+      const nestedUl = document.createElement('ul');
+      const nestedLi = document.createElement('li');
+      nestedLi.appendChild(a);
+      nestedUl.appendChild(nestedLi);
+      li.appendChild(nestedUl);
+    } else {
+      li.appendChild(a);
     }
     
-    li.appendChild(a);
     tocList.appendChild(li);
   });
   
@@ -135,9 +137,10 @@ document.addEventListener('DOMContentLoaded', function() {
       const targetElement = document.getElementById(targetId);
       
       if (targetElement) {
-        targetElement.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
+        const offsetTop = targetElement.offsetTop - 100; // Account for fixed headers
+        window.scrollTo({
+          top: offsetTop,
+          behavior: 'smooth'
         });
       }
     });
@@ -145,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Highlight current section in TOC
   function highlightCurrentSection() {
-    const scrollPosition = window.scrollY + 100;
+    const scrollPosition = window.scrollY + 150;
     let currentSection = null;
     
     headings.forEach(function(heading) {
@@ -168,8 +171,19 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
   
-  // Update active section on scroll
-  window.addEventListener('scroll', highlightCurrentSection);
+  // Update active section on scroll (throttled)
+  let ticking = false;
+  function updateTOC() {
+    if (!ticking) {
+      requestAnimationFrame(function() {
+        highlightCurrentSection();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
+  
+  window.addEventListener('scroll', updateTOC);
   highlightCurrentSection(); // Initial call
 });
 </script>
