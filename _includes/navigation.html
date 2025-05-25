@@ -1,27 +1,59 @@
-<!-- Calculate current date and 2 weeks ago -->
-{% assign now = site.time | date: '%s' %}
-{% assign two_weeks_seconds = 1209600 %}
-{% assign two_weeks_ago = now | minus: two_weeks_seconds %}
+<!-- Safe Navigation with NEW badges - Compatible with Jekyll 3.8 -->
+{% comment %}
+This version uses a simpler date comparison method that works with older Jekyll versions
+{% endcomment %}
 
-<!-- Check for new games (assuming games are in site.games collection) -->
+<!-- Calculate date threshold (2 weeks ago) -->
+{% assign today = 'now' | date: '%s' %}
+{% assign two_weeks_ago = today | minus: 1209600 %}
+
+<!-- Check for new games - using simpler logic -->
 {% assign has_new_games = false %}
-{% for game in site.games %}
-  {% assign game_date = game.date | date: '%s' %}
-  {% if game_date >= two_weeks_ago %}
-    {% assign has_new_games = true %}
-    {% break %}
-  {% endif %}
-{% endfor %}
+{% assign new_games_count = 0 %}
+
+{% if site.games %}
+  {% for game in site.games limit: 50 %}
+    {% if game.date %}
+      {% assign game_timestamp = game.date | date: '%s' %}
+      {% assign game_timestamp_num = game_timestamp | plus: 0 %}
+      {% assign threshold_num = two_weeks_ago | plus: 0 %}
+      {% if game_timestamp_num > threshold_num %}
+        {% assign has_new_games = true %}
+        {% assign new_games_count = new_games_count | plus: 1 %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
 
 <!-- Check for new blog posts -->
 {% assign has_new_blogs = false %}
-{% for post in site.blog_posts %}
-  {% assign post_date = post.date | date: '%s' %}
-  {% if post_date >= two_weeks_ago %}
-    {% assign has_new_blogs = true %}
-    {% break %}
-  {% endif %}
-{% endfor %}
+{% assign new_blogs_count = 0 %}
+
+{% if site.blog_posts %}
+  {% for post in site.blog_posts limit: 50 %}
+    {% if post.date %}
+      {% assign post_timestamp = post.date | date: '%s' %}
+      {% assign post_timestamp_num = post_timestamp | plus: 0 %}
+      {% assign threshold_num = two_weeks_ago | plus: 0 %}
+      {% if post_timestamp_num > threshold_num %}
+        {% assign has_new_blogs = true %}
+        {% assign new_blogs_count = new_blogs_count | plus: 1 %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% elsif site.posts %}
+  {% for post in site.posts limit: 50 %}
+    {% if post.date %}
+      {% assign post_timestamp = post.date | date: '%s' %}
+      {% assign post_timestamp_num = post_timestamp | plus: 0 %}
+      {% assign threshold_num = two_weeks_ago | plus: 0 %}
+      {% if post_timestamp_num > threshold_num %}
+        {% assign has_new_blogs = true %}
+        {% assign new_blogs_count = new_blogs_count | plus: 1 %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
 
 <nav class="container navbar navbar-expand-lg navbar-light bg-transparent">
   <a class="navbar-brand" href={{"/" | relative_url}}>🕹️sublevelgames</a>
@@ -49,7 +81,7 @@
         <a class="nav-link" href={{"/" | relative_url}}>
           Games
           {% if has_new_games %}
-            <span class="new-badge">NEW</span>
+            <span class="new-badge">NEW{% if new_games_count > 1 %}<sup>{{ new_games_count }}</sup>{% endif %}</span>
           {% endif %}
           <span class="sr-only">(current)</span>
         </a>
@@ -58,7 +90,7 @@
         <a class="nav-link" href={{"/blogs/" | relative_url}}>
           Blogs
           {% if has_new_blogs %}
-            <span class="new-badge">NEW</span>
+            <span class="new-badge">NEW{% if new_blogs_count > 1 %}<sup>{{ new_blogs_count }}</sup>{% endif %}</span>
           {% endif %}
         </a>
       </li>
@@ -89,9 +121,11 @@
 </nav>
 
 <style>
-/* NEW Badge Styles */
+/* NEW Badge Styles - Compatible with older browsers */
 .new-badge {
   display: inline-block;
+  background: #ff6b6b;
+  background: -webkit-linear-gradient(45deg, #ff6b6b, #ff8e8e);
   background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
   color: white;
   font-size: 0.65rem;
@@ -102,18 +136,47 @@
   text-transform: uppercase;
   letter-spacing: 0.5px;
   box-shadow: 0 2px 4px rgba(255, 107, 107, 0.3);
-  animation: newBadgePulse 2s ease-in-out infinite;
   position: relative;
   top: -1px;
+  
+  /* Animation - with fallback for older browsers */
+  -webkit-animation: newBadgePulse 2s ease-in-out infinite;
+  animation: newBadgePulse 2s ease-in-out infinite;
+  
+  /* Transition fallback */
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-/* Pulse animation for NEW badge */
-@keyframes newBadgePulse {
+/* Counter styling */
+.new-badge sup {
+  font-size: 0.5rem;
+  margin-left: 1px;
+  font-weight: 800;
+}
+
+/* Pulse animation with prefixes */
+@-webkit-keyframes newBadgePulse {
   0%, 100% {
+    -webkit-transform: scale(1);
     transform: scale(1);
     box-shadow: 0 2px 4px rgba(255, 107, 107, 0.3);
   }
   50% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    box-shadow: 0 3px 8px rgba(255, 107, 107, 0.5);
+  }
+}
+
+@keyframes newBadgePulse {
+  0%, 100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    box-shadow: 0 2px 4px rgba(255, 107, 107, 0.3);
+  }
+  50% {
+    -webkit-transform: scale(1.05);
     transform: scale(1.05);
     box-shadow: 0 3px 8px rgba(255, 107, 107, 0.5);
   }
@@ -121,43 +184,12 @@
 
 /* Hover effects */
 .nav-link:hover .new-badge {
+  background: #ff5252;
+  background: -webkit-linear-gradient(45deg, #ff5252, #ff7979);
   background: linear-gradient(45deg, #ff5252, #ff7979);
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
 }
-
-/* Alternative color schemes - uncomment to use different colors */
-
-/* Blue theme */
-/*
-.new-badge {
-  background: linear-gradient(45deg, #4dabf7, #74c0fc);
-  box-shadow: 0 2px 4px rgba(77, 171, 247, 0.3);
-}
-*/
-
-/* Green theme */
-/*
-.new-badge {
-  background: linear-gradient(45deg, #51cf66, #69db7c);
-  box-shadow: 0 2px 4px rgba(81, 207, 102, 0.3);
-}
-*/
-
-/* Purple theme */
-/*
-.new-badge {
-  background: linear-gradient(45deg, #845ef7, #9775fa);
-  box-shadow: 0 2px 4px rgba(132, 94, 247, 0.3);
-}
-*/
-
-/* Orange theme */
-/*
-.new-badge {
-  background: linear-gradient(45deg, #ff922b, #ffa94d);
-  box-shadow: 0 2px 4px rgba(255, 146, 43, 0.3);
-}
-*/
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -166,23 +198,15 @@
     padding: 1px 4px;
     margin-left: 2px;
   }
-}
-
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-  .new-badge {
-    box-shadow: 0 2px 4px rgba(255, 107, 107, 0.4);
+  
+  .new-badge sup {
+    font-size: 0.45rem;
   }
 }
-</style>
 
-<!-- Debug information (remove in production) -->
-{% comment %}
-Debug Info:
-- Current time: {{ site.time | date: '%Y-%m-%d %H:%M:%S' }}
-- Two weeks ago: {{ two_weeks_ago | date: '%Y-%m-%d %H:%M:%S' }}
-- Has new games: {{ has_new_games }}
-- Has new blogs: {{ has_new_blogs }}
-- Games count: {{ site.games.size }}
-- Blog posts count: {{ site.blog_posts.size }}
-{% endcomment %}
+/* Fallback for browsers without animation support */
+.no-cssanimations .new-badge {
+  -webkit-animation: none;
+  animation: none;
+}
+</style>
