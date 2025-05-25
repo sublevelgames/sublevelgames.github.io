@@ -1,109 +1,14 @@
-<!-- Image Popup Modal -->
-<div id="image-popup-overlay" class="image-popup-overlay">
-  <div class="image-popup-container">
-    <button class="image-popup-close" aria-label="Close popup">&times;</button>
-    <img id="image-popup-img" class="image-popup-img" src="" alt="">
-    <div class="image-popup-caption"></div>
+<!-- Simple Image Popup V3 -->
+<div id="image-popup-overlay" class="image-popup-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.9); z-index: 9999; opacity: 0; transition: opacity 0.3s ease; cursor: pointer;">
+  <div class="image-popup-container" style="position: relative; max-width: 95vw; max-height: 95vh; display: flex; flex-direction: column; align-items: center; cursor: default; margin: auto;">
+    <button class="image-popup-close" style="position: absolute; top: -50px; right: 0; background: rgba(255, 255, 255, 0.9); border: none; border-radius: 50%; width: 40px; height: 40px; font-size: 24px; font-weight: bold; color: #333; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease; z-index: 10001;" aria-label="Close popup">&times;</button>
+    <img id="image-popup-img" class="image-popup-img" src="" alt="" style="max-width: 100%; max-height: 85vh; object-fit: contain; border-radius: 8px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);">
+    <div class="image-popup-caption" style="margin-top: 15px; padding: 10px 20px; background: rgba(0, 0, 0, 0.8); color: white; border-radius: 6px; font-size: 14px; text-align: center; max-width: 100%; word-wrap: break-word; display: none;"></div>
   </div>
 </div>
 
 <style>
-/* Image Popup Styles */
-.image-popup-overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  z-index: 9999;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  cursor: pointer;
-}
-
-.image-popup-overlay.active {
-  display: flex;
-  opacity: 1;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.image-popup-container {
-  position: relative;
-  max-width: 95vw;
-  max-height: 95vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  cursor: default;
-}
-
-.image-popup-img {
-  max-width: 100%;
-  max-height: 85vh;
-  object-fit: contain;
-  border-radius: 8px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-  animation: popupZoom 0.3s ease-out;
-}
-
-.image-popup-close {
-  position: absolute;
-  top: -50px;
-  right: 0;
-  background: rgba(255, 255, 255, 0.9);
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  font-size: 24px;
-  font-weight: bold;
-  color: #333;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s ease;
-  z-index: 10001;
-}
-
-.image-popup-close:hover {
-  background: rgba(255, 255, 255, 1);
-  transform: scale(1.1);
-}
-
-.image-popup-caption {
-  margin-top: 15px;
-  padding: 10px 20px;
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
-  border-radius: 6px;
-  font-size: 14px;
-  text-align: center;
-  max-width: 100%;
-  word-wrap: break-word;
-}
-
-/* Animation for popup appearance */
-@keyframes popupZoom {
-  0% {
-    transform: scale(0.3);
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-/* Make images in content clickable */
+/* Image hover effect */
 .post-content img {
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -115,211 +20,234 @@
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Loading state */
-.image-popup-img.loading {
-  opacity: 0.5;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .image-popup-close {
-    top: -40px;
-    width: 35px;
-    height: 35px;
-    font-size: 20px;
-  }
-  
-  .image-popup-img {
-    max-height: 80vh;
-  }
-  
-  .image-popup-caption {
-    font-size: 13px;
-    padding: 8px 15px;
-    margin-top: 10px;
-  }
-}
-
-@media (max-width: 480px) {
-  .image-popup-overlay.active {
-    padding: 10px;
-  }
-  
-  .image-popup-close {
-    top: -35px;
-    width: 32px;
-    height: 32px;
-    font-size: 18px;
-  }
-  
-  .image-popup-img {
-    max-height: 75vh;
-  }
-}
-
 /* Prevent body scroll when popup is open */
 body.popup-open {
   overflow: hidden;
 }
+
+/* Close button hover */
+.image-popup-close:hover {
+  background: rgba(255, 255, 255, 1) !important;
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .image-popup-close {
+    top: -40px !important;
+    width: 35px !important;
+    height: 35px !important;
+    font-size: 20px !important;
+  }
+}
 </style>
 
-<script>
-(function() {
-  'use strict';
+<script type="text/javascript">
+console.log('🚀 Loading Simple Image Popup V3...');
+
+// Wait for DOM to be ready
+function initSimplePopup() {
+  console.log('🖼️ Initializing Simple Image Popup...');
   
-  let isInitialized = false;
+  // Get popup elements
+  var overlay = document.getElementById('image-popup-overlay');
+  var popupImg = document.getElementById('image-popup-img');
+  var closeBtn = document.querySelector('.image-popup-close');
+  var caption = document.querySelector('.image-popup-caption');
+  var container = document.querySelector('.image-popup-container');
   
-  function initImagePopup() {
-    if (isInitialized) return;
-    
-    console.log('🖼️ Initializing Image Popup...');
-    
-    const overlay = document.getElementById('image-popup-overlay');
-    const popupImg = document.getElementById('image-popup-img');
-    const closeBtn = document.querySelector('.image-popup-close');
-    const caption = document.querySelector('.image-popup-caption');
-    
-    if (!overlay || !popupImg || !closeBtn || !caption) {
-      console.log('Image popup elements not found, retrying...');
-      setTimeout(initImagePopup, 500);
-      return;
-    }
-    
-    // Find all images in post content
-    const postContent = document.querySelector('.post-content');
-    if (!postContent) {
-      console.log('Post content not found, retrying...');
-      setTimeout(initImagePopup, 500);
-      return;
-    }
-    
-    const images = postContent.querySelectorAll('img');
-    console.log(`Found ${images.length} images to make clickable`);
-    
-    // Add click handlers to all images
-    images.forEach(function(img) {
-      // Skip if already has click handler
-      if (img.dataset.popupEnabled) return;
-      
-      img.dataset.popupEnabled = 'true';
-      img.style.cursor = 'pointer';
-      
-      img.addEventListener('click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        
-        // Set popup image source and alt text
-        popupImg.src = this.src;
-        popupImg.alt = this.alt || 'Image';
-        
-        // Set caption
-        const captionText = this.alt || this.title || '';
-        if (captionText) {
-          caption.textContent = captionText;
-          caption.style.display = 'block';
-        } else {
-          caption.style.display = 'none';
-        }
-        
-        // Show popup
-        showPopup();
-      });
-      
-      // Add loading error handler
-      img.addEventListener('error', function() {
-        console.log('Image failed to load:', this.src);
-      });
-    });
-    
-    // Close popup handlers
-    closeBtn.addEventListener('click', function(e) {
-      e.stopPropagation();
-      hidePopup();
-    });
-    
-    overlay.addEventListener('click', function(e) {
-      if (e.target === overlay) {
-        hidePopup();
-      }
-    });
-    
-    // Keyboard handler (ESC key)
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape' && overlay.classList.contains('active')) {
-        hidePopup();
-      }
-    });
-    
-    // Prevent clicks on popup container from closing popup
-    document.querySelector('.image-popup-container').addEventListener('click', function(e) {
-      e.stopPropagation();
-    });
-    
-    isInitialized = true;
-    console.log('✅ Image popup initialized successfully');
-  }
-  
-  function showPopup() {
-    const overlay = document.getElementById('image-popup-overlay');
-    const popupImg = document.getElementById('image-popup-img');
-    
-    if (!overlay || !popupImg) return;
-    
-    // Prevent body scroll
-    document.body.classList.add('popup-open');
-    
-    // Show overlay
-    overlay.style.display = 'flex';
-    
-    // Trigger animation
-    setTimeout(function() {
-      overlay.classList.add('active');
-    }, 10);
-    
-    // Add loading state
-    popupImg.classList.add('loading');
-    
-    // Remove loading state when image loads
-    popupImg.onload = function() {
-      this.classList.remove('loading');
-    };
-    
-    console.log('Image popup opened');
-  }
-  
-  function hidePopup() {
-    const overlay = document.getElementById('image-popup-overlay');
-    
-    if (!overlay) return;
-    
-    // Remove active class for fade out
-    overlay.classList.remove('active');
-    
-    // Hide overlay after animation
-    setTimeout(function() {
-      overlay.style.display = 'none';
-      document.body.classList.remove('popup-open');
-    }, 300);
-    
-    console.log('Image popup closed');
-  }
-  
-  // Initialize when DOM is ready
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initImagePopup);
-  } else {
-    initImagePopup();
-  }
-  
-  // Also try on window load as backup
-  window.addEventListener('load', function() {
-    setTimeout(initImagePopup, 100);
+  console.log('Elements check:', {
+    overlay: !!overlay,
+    popupImg: !!popupImg,
+    closeBtn: !!closeBtn,
+    caption: !!caption,
+    container: !!container
   });
   
-  // Global functions for manual control
-  window.showImagePopup = showPopup;
-  window.hideImagePopup = hidePopup;
-  window.initImagePopup = initImagePopup;
+  if (!overlay || !popupImg || !closeBtn || !caption) {
+    console.log('❌ Popup elements missing, retrying in 500ms...');
+    setTimeout(initSimplePopup, 500);
+    return;
+  }
   
-})();
+  // Find images
+  var images = document.querySelectorAll('.post-content img, article img, .content img');
+  console.log('📸 Found ' + images.length + ' images');
+  
+  if (images.length === 0) {
+    console.log('❌ No images found, retrying in 500ms...');
+    setTimeout(initSimplePopup, 500);
+    return;
+  }
+  
+  // Setup each image
+  for (var i = 0; i < images.length; i++) {
+    setupImage(images[i], i);
+  }
+  
+  // Setup popup controls
+  setupControls(overlay, closeBtn, container);
+  
+  console.log('✅ Simple popup initialized successfully!');
+}
+
+function setupImage(img, index) {
+  console.log('Setting up image ' + (index + 1) + ':', img.src);
+  
+  // Mark as enabled
+  img.setAttribute('data-popup-enabled', 'true');
+  img.style.cursor = 'pointer';
+  
+  // Add click handler
+  img.onclick = function(e) {
+    console.log('📸 Image clicked:', this.src);
+    e.preventDefault();
+    e.stopPropagation();
+    
+    openPopup(this);
+  };
+  
+  // Add touch handler for mobile
+  img.ontouchend = function(e) {
+    console.log('📱 Image touched:', this.src);
+    e.preventDefault();
+    e.stopPropagation();
+    
+    openPopup(this);
+  };
+}
+
+function openPopup(imgElement) {
+  console.log('🔍 Opening popup for:', imgElement.src);
+  
+  var overlay = document.getElementById('image-popup-overlay');
+  var popupImg = document.getElementById('image-popup-img');
+  var caption = document.querySelector('.image-popup-caption');
+  
+  if (!overlay || !popupImg) {
+    console.log('❌ Cannot open popup - elements missing');
+    return;
+  }
+  
+  // Set image
+  popupImg.src = imgElement.src;
+  popupImg.alt = imgElement.alt || 'Image';
+  
+  // Set caption
+  var captionText = imgElement.alt || imgElement.title || '';
+  if (captionText.trim()) {
+    caption.textContent = captionText;
+    caption.style.display = 'block';
+  } else {
+    caption.style.display = 'none';
+  }
+  
+  // Show popup
+  document.body.classList.add('popup-open');
+  overlay.style.display = 'flex';
+  overlay.style.alignItems = 'center';
+  overlay.style.justifyContent = 'center';
+  
+  // Fade in
+  setTimeout(function() {
+    overlay.style.opacity = '1';
+  }, 10);
+  
+  console.log('✅ Popup opened');
+}
+
+function closePopup() {
+  console.log('❌ Closing popup...');
+  
+  var overlay = document.getElementById('image-popup-overlay');
+  if (!overlay) return;
+  
+  // Fade out
+  overlay.style.opacity = '0';
+  
+  // Hide after animation
+  setTimeout(function() {
+    overlay.style.display = 'none';
+    document.body.classList.remove('popup-open');
+  }, 300);
+  
+  console.log('✅ Popup closed');
+}
+
+function setupControls(overlay, closeBtn, container) {
+  // Close button
+  closeBtn.onclick = function(e) {
+    console.log('🔴 Close button clicked');
+    e.stopPropagation();
+    closePopup();
+  };
+  
+  // Click outside to close
+  overlay.onclick = function(e) {
+    if (e.target === overlay) {
+      console.log('🔴 Clicked outside popup');
+      closePopup();
+    }
+  };
+  
+  // Prevent container clicks from closing
+  if (container) {
+    container.onclick = function(e) {
+      e.stopPropagation();
+    };
+  }
+  
+  // ESC key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && overlay.style.opacity === '1') {
+      console.log('🔴 ESC key pressed');
+      closePopup();
+    }
+  });
+}
+
+// Initialize immediately if DOM is ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initSimplePopup);
+} else {
+  initSimplePopup();
+}
+
+// Backup initializations
+window.addEventListener('load', function() {
+  setTimeout(initSimplePopup, 100);
+});
+
+setTimeout(initSimplePopup, 1000);
+setTimeout(initSimplePopup, 2000);
+
+// Global functions for debugging
+window.initSimplePopup = initSimplePopup;
+window.openImagePopup = openPopup;
+window.closeImagePopup = closePopup;
+
+window.debugImages = function() {
+  console.log('=== Image Debug ===');
+  var images = document.querySelectorAll('img');
+  console.log('Total images:', images.length);
+  
+  images.forEach(function(img, i) {
+    console.log('Image ' + i + ':', {
+      src: img.src,
+      popupEnabled: img.getAttribute('data-popup-enabled'),
+      cursor: img.style.cursor,
+      onclick: !!img.onclick
+    });
+  });
+  
+  // Force setup all images
+  images.forEach(function(img, i) {
+    if (!img.getAttribute('data-popup-enabled')) {
+      console.log('Setting up missed image ' + i);
+      setupImage(img, i);
+    }
+  });
+};
+
+console.log('✅ Simple Image Popup V3 script loaded');
 </script>
