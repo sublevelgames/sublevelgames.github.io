@@ -1,7 +1,10 @@
-<!-- Fixed Navigation - Corrected date calculation for Jekyll 3.8 -->
+<!-- Final Navigation - Fixed error and styled as requested -->
 {% comment %}
-Fixed date calculation method that works reliably with Jekyll 3.8
-Uses a simpler approach to count recent posts
+Final version with:
+- Fixed JavaScript syntax error
+- Red color for all counters
+- No margin-left
+- Clean and stable code
 {% endcomment %}
 
 <!-- Count recent games from site.posts (last 2 weeks) -->
@@ -34,7 +37,7 @@ Uses a simpler approach to count recent posts
   {% endfor %}
 {% endif %}
 
-<!-- Alternative: Simple recent post check (fallback) -->
+<!-- Fallback check for very recent posts -->
 {% assign has_recent_games = false %}
 {% assign has_recent_blogs = false %}
 
@@ -76,23 +79,13 @@ Uses a simpler approach to count recent posts
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
         <a class="nav-link" href={{"/" | relative_url}}>
-          Games
-          {% if new_games_count > 0 %}
-            <small class="text-success font-weight-bold">({{ new_games_count }})</small>
-          {% elsif has_recent_games %}
-            <small class="text-success font-weight-bold">(1)</small>
-          {% endif %}
+          Games{% if new_games_count > 0 %}<small class="nav-counter">({{ new_games_count }})</small>{% elsif has_recent_games %}<small class="nav-counter">(1)</small>{% endif %}
           <span class="sr-only">(current)</span>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href={{"/blogs/" | relative_url}}>
-          Blogs
-          {% if new_blogs_count > 0 %}
-            <small class="text-primary font-weight-bold">({{ new_blogs_count }})</small>
-          {% elsif has_recent_blogs %}
-            <small class="text-primary font-weight-bold">(1)</small>
-          {% endif %}
+          Blogs{% if new_blogs_count > 0 %}<small class="nav-counter">({{ new_blogs_count }})</small>{% elsif has_recent_blogs %}<small class="nav-counter">(1)</small>{% endif %}
         </a>
       </li>
       <li class="nav-item">
@@ -108,91 +101,53 @@ Uses a simpler approach to count recent posts
   <script src="https://unpkg.com/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      var sjs = SimpleJekyllSearch({
-        searchInput: document.getElementById('search-input'),
-        resultsContainer: document.getElementById('results-container'),
-        json: '{{ "/search.json" | relative_url }}',
-        searchResultTemplate: '<li><a href="{url}">{title}</a> <small>{tags}</small></li>',
-        noResultsText: 'No results found',
-        limit: 10,
-        fuzzy: false
-      });
+      try {
+        var sjs = SimpleJekyllSearch({
+          searchInput: document.getElementById('search-input'),
+          resultsContainer: document.getElementById('results-container'),
+          json: '{{ "/search.json" | relative_url }}',
+          searchResultTemplate: '<li><a href="{url}">{title}</a> <small>{tags}</small></li>',
+          noResultsText: 'No results found',
+          limit: 10,
+          fuzzy: false
+        });
+      } catch(e) {
+        console.log('Search initialization error:', e);
+      }
     });
   </script>
 </nav>
 
 <style>
-/* Counter styling */
-.nav-link small {
+/* Clean red counter styling */
+.nav-counter {
+  color: #dc3545 !important;
   font-size: 0.75rem;
+  font-weight: 700;
   vertical-align: top;
-  margin-left: 0.25rem;
-  display: inline-block;
-  border-radius: 8px;
-  padding: 0.1rem 0.3rem;
-  line-height: 1.2;
+  display: inline;
+  line-height: 1;
+  margin-left: 0;
+  padding: 0;
 }
 
-.nav-link:hover small {
-  transform: scale(1.05);
-  transition: transform 0.2s ease;
+/* Subtle hover effect */
+.nav-link:hover .nav-counter {
+  color: #c82333 !important;
+  transition: color 0.2s ease;
 }
 
+/* Mobile responsiveness */
 @media (max-width: 768px) {
-  .nav-link small {
+  .nav-counter {
     font-size: 0.7rem;
-    margin-left: 0.2rem;
-    padding: 0.05rem 0.2rem;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .nav-counter {
+    font-weight: 800;
   }
 }
 </style>
-
-<!-- Enhanced Debug Information -->
-<script>
-(function() {
-  // Only log on main pages, not every pagination
-  var shouldLog = window.location.pathname === '/' || 
-                  window.location.pathname === '/blogs/' || 
-                  window.location.pathname.includes('/page') ||
-                  !window.navigationDebugLogged;
-  
-  if (shouldLog) {
-    console.log('🎮 Fixed Navigation Debug:');
-    console.log('Current URL:', window.location.pathname);
-    console.log('Games (site.posts):', {{ site.posts.size | default: 0 }});
-    console.log('Blogs (site.blog_posts):', {{ site.blog_posts.size | default: 0 }});
-    console.log('Current timestamp:', {{ current_timestamp }});
-    console.log('Threshold timestamp:', {{ threshold_timestamp }});
-    console.log('New games count:', {{ new_games_count }});
-    console.log('New blogs count:', {{ new_blogs_count }});
-    console.log('Has recent games (fallback):', {{ has_recent_games }});
-    console.log('Has recent blogs (fallback):', {{ has_recent_blogs }});
-    
-    {% if site.posts.first %}
-    console.log('Latest game:', '{{ site.posts.first.title }}', '{{ site.posts.first.date | date: "%Y-%m-%d" }}');
-    {% endif %}
-    {% if site.blog_posts.first %}
-    console.log('Latest blog:', '{{ site.blog_posts.first.title }}', '{{ site.blog_posts.first.date | date: "%Y-%m-%d" }}');
-    {% endif %}
-    
-    // Manual date check
-    var now = new Date();
-    var twoWeeksAgo = new Date(now.getTime() - (14 * 24 * 60 * 60 * 1000));
-    console.log('JavaScript check - Two weeks ago:', twoWeeksAgo.toISOString().split('T')[0]);
-    
-    {% if site.posts.first %}
-    var lastGameDate = new Date('{{ site.posts.first.date | date: "%Y-%m-%d" }}');
-    console.log('Last game date:', lastGameDate.toISOString().split('T')[0]);
-    console.log('Is game recent?', lastGameDate >= twoWeeksAgo);
-    {% endif %}
-    
-    {% if site.blog_posts.first %}
-    var lastBlogDate = new Date('{{ site.blog_posts.first.date | date: "%Y-%m-%d" }}');
-    console.log('Last blog date:', lastBlogDate.toISOString().split('T')[0]);
-    console.log('Is blog recent?', lastBlogDate >= twoWeeksAgo);
-    {% endif %}
-    
-    window.navigationDebugLogged = true;
-  }
-})();
-</script>
