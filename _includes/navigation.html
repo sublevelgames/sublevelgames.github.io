@@ -1,17 +1,20 @@
-<!-- Safe Navigation - Uses existing structure without breaking anything -->
+<!-- Fixed Navigation - Corrected date calculation for Jekyll 3.8 -->
 {% comment %}
-Uses existing collections:
-- site.posts = Games (shown on main page)
-- site.blog_posts = Blog posts (shown on /blogs/)
+Fixed date calculation method that works reliably with Jekyll 3.8
+Uses a simpler approach to count recent posts
 {% endcomment %}
 
 <!-- Count recent games from site.posts (last 2 weeks) -->
 {% assign new_games_count = 0 %}
+{% assign current_timestamp = 'now' | date: '%s' | plus: 0 %}
+{% assign two_weeks_seconds = 1209600 %}
+{% assign threshold_timestamp = current_timestamp | minus: two_weeks_seconds %}
+
 {% if site.posts %}
-  {% for post in site.posts limit: 20 %}
+  {% for post in site.posts limit: 10 %}
     {% if post.date %}
-      {% assign days_old = 'now' | date: '%s' | minus: post.date | date: '%s' | divided_by: 86400 %}
-      {% if days_old <= 14 %}
+      {% assign post_timestamp = post.date | date: '%s' | plus: 0 %}
+      {% if post_timestamp >= threshold_timestamp %}
         {% assign new_games_count = new_games_count | plus: 1 %}
       {% endif %}
     {% endif %}
@@ -21,14 +24,32 @@ Uses existing collections:
 <!-- Count recent blog posts from site.blog_posts (last 2 weeks) -->
 {% assign new_blogs_count = 0 %}
 {% if site.blog_posts %}
-  {% for post in site.blog_posts limit: 20 %}
+  {% for post in site.blog_posts limit: 10 %}
     {% if post.date %}
-      {% assign days_old = 'now' | date: '%s' | minus: post.date | date: '%s' | divided_by: 86400 %}
-      {% if days_old <= 14 %}
+      {% assign post_timestamp = post.date | date: '%s' | plus: 0 %}
+      {% if post_timestamp >= threshold_timestamp %}
         {% assign new_blogs_count = new_blogs_count | plus: 1 %}
       {% endif %}
     {% endif %}
   {% endfor %}
+{% endif %}
+
+<!-- Alternative: Simple recent post check (fallback) -->
+{% assign has_recent_games = false %}
+{% assign has_recent_blogs = false %}
+
+{% if site.posts.first.date %}
+  {% assign days_since_last_game = 'now' | date: '%s' | minus: site.posts.first.date | date: '%s' | divided_by: 86400 %}
+  {% if days_since_last_game <= 14 %}
+    {% assign has_recent_games = true %}
+  {% endif %}
+{% endif %}
+
+{% if site.blog_posts.first.date %}
+  {% assign days_since_last_blog = 'now' | date: '%s' | minus: site.blog_posts.first.date | date: '%s' | divided_by: 86400 %}
+  {% if days_since_last_blog <= 14 %}
+    {% assign has_recent_blogs = true %}
+  {% endif %}
 {% endif %}
 
 <nav class="container navbar navbar-expand-lg navbar-light bg-transparent">
@@ -58,6 +79,8 @@ Uses existing collections:
           Games
           {% if new_games_count > 0 %}
             <small class="text-success font-weight-bold">({{ new_games_count }})</small>
+          {% elsif has_recent_games %}
+            <small class="text-success font-weight-bold">(1)</small>
           {% endif %}
           <span class="sr-only">(current)</span>
         </a>
@@ -67,6 +90,8 @@ Uses existing collections:
           Blogs
           {% if new_blogs_count > 0 %}
             <small class="text-primary font-weight-bold">({{ new_blogs_count }})</small>
+          {% elsif has_recent_blogs %}
+            <small class="text-primary font-weight-bold">(1)</small>
           {% endif %}
         </a>
       </li>
@@ -97,7 +122,7 @@ Uses existing collections:
 </nav>
 
 <style>
-/* Clean counter styling that won't interfere with existing styles */
+/* Counter styling */
 .nav-link small {
   font-size: 0.75rem;
   vertical-align: top;
@@ -108,13 +133,11 @@ Uses existing collections:
   line-height: 1.2;
 }
 
-/* Subtle hover animation */
 .nav-link:hover small {
   transform: scale(1.05);
   transition: transform 0.2s ease;
 }
 
-/* Ensure it doesn't break mobile layout */
 @media (max-width: 768px) {
   .nav-link small {
     font-size: 0.7rem;
@@ -124,20 +147,52 @@ Uses existing collections:
 }
 </style>
 
-<!-- Debug Information (remove in production) -->
+<!-- Enhanced Debug Information -->
 <script>
-console.log('🎮 Safe Navigation Debug:');
-console.log('Games (site.posts):', {{ site.posts.size | default: 0 }});
-console.log('Blogs (site.blog_posts):', {{ site.blog_posts.size | default: 0 }});
-console.log('New games count:', {{ new_games_count }});
-console.log('New blogs count:', {{ new_blogs_count }});
-console.log('Current structure maintained - no changes to collections');
-
-// Test if recent posts exist
-{% if site.posts.size > 0 %}
-console.log('Recent game:', '{{ site.posts.first.title }}', '{{ site.posts.first.date }}');
-{% endif %}
-{% if site.blog_posts.size > 0 %}
-console.log('Recent blog:', '{{ site.blog_posts.first.title }}', '{{ site.blog_posts.first.date }}');
-{% endif %}
+(function() {
+  // Only log on main pages, not every pagination
+  var shouldLog = window.location.pathname === '/' || 
+                  window.location.pathname === '/blogs/' || 
+                  window.location.pathname.includes('/page') ||
+                  !window.navigationDebugLogged;
+  
+  if (shouldLog) {
+    console.log('🎮 Fixed Navigation Debug:');
+    console.log('Current URL:', window.location.pathname);
+    console.log('Games (site.posts):', {{ site.posts.size | default: 0 }});
+    console.log('Blogs (site.blog_posts):', {{ site.blog_posts.size | default: 0 }});
+    console.log('Current timestamp:', {{ current_timestamp }});
+    console.log('Threshold timestamp:', {{ threshold_timestamp }});
+    console.log('New games count:', {{ new_games_count }});
+    console.log('New blogs count:', {{ new_blogs_count }});
+    console.log('Has recent games (fallback):', {{ has_recent_games }});
+    console.log('Has recent blogs (fallback):', {{ has_recent_blogs }});
+    
+    {% if site.posts.first %}
+    console.log('Latest game:', '{{ site.posts.first.title }}', '{{ site.posts.first.date | date: "%Y-%m-%d" }}');
+    {% endif %}
+    {% if site.blog_posts.first %}
+    console.log('Latest blog:', '{{ site.blog_posts.first.title }}', '{{ site.blog_posts.first.date | date: "%Y-%m-%d" }}');
+    {% endif %}
+    
+    // Manual date check
+    var now = new Date();
+    var twoWeeksAgo = new Date(now.getTime() - (14 * 24 * 60 * 60 * 1000));
+    console.log('JavaScript check - Two weeks ago:', twoWeeksAgo.toISOString().split('T')[0]);
+    
+    {% if site.posts.first %}
+    var lastGameDate = new Date('{{ site.posts.first.date | date: "%Y-%m-%d" }}');
+    console.log('Last game date:', lastGameDate.toISOString().split('T')[0]);
+    console.log('Is game recent?', lastGameDate >= twoWeeksAgo);
+    {% endif %}
+    
+    {% if site.blog_posts.first %}
+    var lastBlogDate = new Date('{{ site.blog_posts.first.date | date: "%Y-%m-%d" }}');
+    console.log('Last blog date:', lastBlogDate.toISOString().split('T')[0]);
+    console.log('Is blog recent?', lastBlogDate >= twoWeeksAgo);
+    {% endif %}
+    
+    window.navigationDebugLogged = true;
+  }
+})();
 </script>
