@@ -1,308 +1,79 @@
-<!-- Working Image Popup - Tested and Confirmed -->
-<div id="image-popup-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.9); z-index: 9999; opacity: 0; transition: opacity 0.3s ease; cursor: pointer;">
-  <div id="popup-container" style="position: relative; max-width: 95vw; max-height: 95vh; display: flex; flex-direction: column; align-items: center; cursor: default; margin: auto;">
-    <button id="popup-close-btn" style="position: absolute; top: -50px; right: 0; background: rgba(255, 255, 255, 0.9); border: none; border-radius: 50%; width: 40px; height: 40px; font-size: 24px; font-weight: bold; color: #333; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 10001; transition: all 0.2s ease;" aria-label="Close popup">&times;</button>
-    <img id="image-popup-img" src="" alt="" style="max-width: 100%; max-height: 85vh; object-fit: contain; border-radius: 8px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);">
-    <div id="image-popup-caption" style="margin-top: 15px; padding: 10px 20px; background: rgba(0, 0, 0, 0.8); color: white; border-radius: 6px; font-size: 14px; text-align: center; max-width: 100%; word-wrap: break-word; display: none;"></div>
+<!-- Ultra Safe Image Popup -->
+<div id="img-popup" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.9);z-index:9999;cursor:pointer;">
+  <div style="position:relative;max-width:95vw;max-height:95vh;margin:auto;display:flex;flex-direction:column;align-items:center;cursor:default;">
+    <button id="img-close" style="position:absolute;top:-50px;right:0;background:rgba(255,255,255,0.9);border:none;border-radius:50%;width:40px;height:40px;font-size:24px;color:#333;cursor:pointer;">&times;</button>
+    <img id="img-display" src="" style="max-width:100%;max-height:85vh;object-fit:contain;border-radius:8px;box-shadow:0 8px 32px rgba(0,0,0,0.5);">
+    <div id="img-caption" style="margin-top:15px;padding:10px 20px;background:rgba(0,0,0,0.8);color:white;border-radius:6px;font-size:14px;text-align:center;display:none;"></div>
   </div>
 </div>
 
 <style>
-/* Image hover effects */
-.post-content img {
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  border-radius: 4px;
+.post-content img { 
+  cursor: pointer; 
+  transition: transform 0.2s ease;
 }
-
-.post-content img:hover {
-  transform: scale(1.02);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* Prevent body scroll when popup is open */
-body.popup-open {
-  overflow: hidden;
-}
-
-/* Close button hover effect */
-#popup-close-btn:hover {
-  background: rgba(255, 255, 255, 1) !important;
-  transform: scale(1.1);
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  #popup-close-btn {
-    top: -40px !important;
-    width: 35px !important;
-    height: 35px !important;
-    font-size: 20px !important;
-  }
-  
-  #image-popup-img {
-    max-height: 80vh !important;
-  }
-  
-  #image-popup-caption {
-    font-size: 13px !important;
-    padding: 8px 15px !important;
-    margin-top: 10px !important;
-  }
-}
-
-@media (max-width: 480px) {
-  #popup-close-btn {
-    top: -35px !important;
-    width: 32px !important;
-    height: 32px !important;
-    font-size: 18px !important;
-  }
-  
-  #image-popup-img {
-    max-height: 75vh !important;
-  }
+.post-content img:hover { 
+  transform: scale(1.02); 
 }
 </style>
 
-<script type="text/javascript">
-(function() {
-  'use strict';
+<script>
+function initImagePopup() {
+  var popup = document.getElementById('img-popup');
+  var display = document.getElementById('img-display');
+  var close = document.getElementById('img-close');
+  var caption = document.getElementById('img-caption');
   
-  console.log('🖼️ Loading Working Image Popup...');
-  
-  let initialized = false;
-  let retryCount = 0;
-  const maxRetries = 10;
-  
-  function initImagePopup() {
-    if (initialized) return;
-    
-    retryCount++;
-    console.log(`🔄 Image popup initialization attempt ${retryCount}/${maxRetries}`);
-    
-    // Wait a bit for DOM to be fully ready
-    setTimeout(function() {
-      setupImagePopup();
-    }, 100);
+  if (!popup || !display || !close || !caption) {
+    setTimeout(initImagePopup, 500);
+    return;
   }
   
-  function setupImagePopup() {
-    // Get popup elements
-    const overlay = document.getElementById('image-popup-overlay');
-    const popupImg = document.getElementById('image-popup-img');
-    const closeBtn = document.getElementById('popup-close-btn');
-    const captionDiv = document.getElementById('image-popup-caption');
-    const container = document.getElementById('popup-container');
-    
-    console.log('🔍 Elements check:', {
-      overlay: !!overlay,
-      popupImg: !!popupImg,
-      closeBtn: !!closeBtn,
-      captionDiv: !!captionDiv,
-      container: !!container
-    });
-    
-    if (!overlay || !popupImg || !closeBtn || !captionDiv || !container) {
-      if (retryCount < maxRetries) {
-        console.log(`❌ Elements not ready, retrying in 500ms...`);
-        setTimeout(initImagePopup, 500);
-      } else {
-        console.error('❌ Failed to initialize popup after max retries');
-      }
-      return;
+  function show(src, cap) {
+    display.src = src;
+    if (cap) {
+      caption.textContent = cap;
+      caption.style.display = 'block';
+    } else {
+      caption.style.display = 'none';
     }
-    
-    // Setup popup control functions
-    function showImagePopup(imgSrc, caption) {
-      console.log('📸 Opening popup for:', imgSrc);
-      
-      // Verify elements still exist
-      const overlay = document.getElementById('image-popup-overlay');
-      const popupImg = document.getElementById('image-popup-img');
-      const captionDiv = document.getElementById('image-popup-caption');
-      
-      if (!overlay || !popupImg || !captionDiv) {
-        console.error('❌ Popup elements missing when trying to open');
-        return;
-      }
-      
-      // Set image
-      popupImg.src = imgSrc;
-      
-      // Set caption
-      if (caption && caption.trim()) {
-        captionDiv.textContent = caption;
-        captionDiv.style.display = 'block';
-      } else {
-        captionDiv.textContent = '';
-        captionDiv.style.display = 'none';
-      }
-      
-      // Show popup
-      document.body.classList.add('popup-open');
-      overlay.style.display = 'flex';
-      overlay.style.alignItems = 'center';
-      overlay.style.justifyContent = 'center';
-      
-      // Fade in
-      setTimeout(function() {
-        overlay.style.opacity = '1';
-      }, 10);
-      
-      console.log('✅ Popup opened successfully');
-    }
-    
-    function hideImagePopup() {
-      console.log('❌ Closing popup...');
-      
-      const overlay = document.getElementById('image-popup-overlay');
-      if (!overlay) return;
-      
-      // Fade out
-      overlay.style.opacity = '0';
-      
-      // Hide after animation
-      setTimeout(function() {
-        overlay.style.display = 'none';
-        document.body.classList.remove('popup-open');
-      }, 300);
-      
-      console.log('✅ Popup closed');
-    }
-    
-    // Setup event handlers
-    closeBtn.addEventListener('click', function(e) {
-      console.log('🔴 Close button clicked');
-      e.stopPropagation();
-      hideImagePopup();
-    });
-    
-    overlay.addEventListener('click', function(e) {
-      if (e.target === overlay) {
-        console.log('🔴 Clicked outside popup');
-        hideImagePopup();
-      }
-    });
-    
-    container.addEventListener('click', function(e) {
-      e.stopPropagation();
-    });
-    
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape' && overlay.style.opacity === '1') {
-        console.log('🔴 ESC key pressed');
-        hideImagePopup();
-      }
-    });
-    
-    // Setup images
-    setupClickableImages(showImagePopup);
-    
-    // Register global functions
-    window.showImagePopup = showImagePopup;
-    window.hideImagePopup = hideImagePopup;
-    window.initImagePopup = initImagePopup;
-    
-    initialized = true;
-    console.log('✅ Image popup initialized successfully!');
+    popup.style.display = 'flex';
+    popup.style.alignItems = 'center';
+    popup.style.justifyContent = 'center';
+    document.body.style.overflow = 'hidden';
   }
   
-  function setupClickableImages(showImagePopup) {
-    // Find images in content
-    const images = document.querySelectorAll('.post-content img, article img, .content img');
-    console.log(`📸 Found ${images.length} images to setup`);
-    
-    if (images.length === 0) {
-      console.log('⚠️ No images found, will retry...');
-      if (retryCount < maxRetries) {
-        setTimeout(initImagePopup, 1000);
-      }
-      return;
-    }
-    
-    // Setup each image
-    images.forEach(function(img, index) {
-      // Skip if already setup
-      if (img.getAttribute('data-popup-enabled') === 'true') {
-        return;
-      }
-      
-      console.log(`🔧 Setting up image ${index + 1}:`, img.src);
-      
-      // Mark as enabled
-      img.setAttribute('data-popup-enabled', 'true');
-      
-      // Style
-      img.style.cursor = 'pointer';
-      img.style.transition = 'transform 0.2s ease, box-shadow 0.2s ease';
-      
-      // Click handler
-      img.addEventListener('click', function(e) {
-        console.log('🖱️ Image clicked:', this.src);
-        e.preventDefault();
-        e.stopPropagation();
-        
-        const caption = this.alt || this.title || '';
-        showImagePopup(this.src, caption);
-      });
-      
-      // Hover effects
-      img.addEventListener('mouseenter', function() {
-        this.style.transform = 'scale(1.02)';
-        this.style.boxShadow = '0 4px 16px rgba(0, 0, 0, 0.2)';
-      });
-      
-      img.addEventListener('mouseleave', function() {
-        this.style.transform = '';
-        this.style.boxShadow = '';
-      });
-      
-      console.log(`✅ Image ${index + 1} setup complete`);
-    });
+  function hide() {
+    popup.style.display = 'none';
+    document.body.style.overflow = '';
   }
   
-  // Debug function
-  window.debugImagePopup = function() {
-    console.log('=== Image Popup Debug ===');
-    console.log('Initialized:', initialized);
-    console.log('Retry count:', retryCount);
-    
-    const images = document.querySelectorAll('img');
-    console.log('Total images:', images.length);
-    
-    images.forEach(function(img, i) {
-      console.log(`Image ${i}:`, {
-        src: img.src,
-        popupEnabled: img.getAttribute('data-popup-enabled'),
-        cursor: img.style.cursor,
-        hasClickHandler: img.onclick !== null
-      });
-    });
-    
-    console.log('Popup elements:', {
-      overlay: !!document.getElementById('image-popup-overlay'),
-      popupImg: !!document.getElementById('image-popup-img'),
-      caption: !!document.getElementById('image-popup-caption'),
-      closeBtn: !!document.getElementById('popup-close-btn')
-    });
+  close.onclick = hide;
+  popup.onclick = function(e) {
+    if (e.target === popup) hide();
   };
   
-  // Multiple initialization strategies
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initImagePopup);
-  } else {
-    initImagePopup();
-  }
-  
-  window.addEventListener('load', function() {
-    setTimeout(initImagePopup, 200);
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && popup.style.display === 'flex') {
+      hide();
+    }
   });
   
-  // Backup attempts
-  setTimeout(initImagePopup, 1000);
-  setTimeout(initImagePopup, 2000);
-  setTimeout(initImagePopup, 3000);
+  var images = document.querySelectorAll('.post-content img');
+  for (var i = 0; i < images.length; i++) {
+    images[i].onclick = function(e) {
+      e.preventDefault();
+      show(this.src, this.alt || this.title);
+    };
+  }
   
-})();
+  window.showImagePopup = show;
+  window.hideImagePopup = hide;
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initImagePopup);
+} else {
+  initImagePopup();
+}
 </script>
