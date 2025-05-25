@@ -1,35 +1,31 @@
-<!-- Simple Navigation with Clean Counters -->
-{% assign new_games = 0 %}
-{% assign new_blogs = 0 %}
+<!-- Safe Navigation - Uses existing structure without breaking anything -->
+{% comment %}
+Uses existing collections:
+- site.posts = Games (shown on main page)
+- site.blog_posts = Blog posts (shown on /blogs/)
+{% endcomment %}
 
-<!-- Count recent games -->
-{% if site.games %}
-  {% for game in site.games limit: 10 %}
-    {% if game.date %}
-      {% assign days = 'now' | date: '%s' | minus: game.date | date: '%s' | divided_by: 86400 %}
-      {% if days <= 14 %}
-        {% assign new_games = new_games | plus: 1 %}
+<!-- Count recent games from site.posts (last 2 weeks) -->
+{% assign new_games_count = 0 %}
+{% if site.posts %}
+  {% for post in site.posts limit: 20 %}
+    {% if post.date %}
+      {% assign days_old = 'now' | date: '%s' | minus: post.date | date: '%s' | divided_by: 86400 %}
+      {% if days_old <= 14 %}
+        {% assign new_games_count = new_games_count | plus: 1 %}
       {% endif %}
     {% endif %}
   {% endfor %}
 {% endif %}
 
-<!-- Count recent blogs -->
+<!-- Count recent blog posts from site.blog_posts (last 2 weeks) -->
+{% assign new_blogs_count = 0 %}
 {% if site.blog_posts %}
-  {% for post in site.blog_posts limit: 10 %}
+  {% for post in site.blog_posts limit: 20 %}
     {% if post.date %}
-      {% assign days = 'now' | date: '%s' | minus: post.date | date: '%s' | divided_by: 86400 %}
-      {% if days <= 14 %}
-        {% assign new_blogs = new_blogs | plus: 1 %}
-      {% endif %}
-    {% endif %}
-  {% endfor %}
-{% elsif site.posts %}
-  {% for post in site.posts limit: 10 %}
-    {% if post.date %}
-      {% assign days = 'now' | date: '%s' | minus: post.date | date: '%s' | divided_by: 86400 %}
-      {% if days <= 14 %}
-        {% assign new_blogs = new_blogs | plus: 1 %}
+      {% assign days_old = 'now' | date: '%s' | minus: post.date | date: '%s' | divided_by: 86400 %}
+      {% if days_old <= 14 %}
+        {% assign new_blogs_count = new_blogs_count | plus: 1 %}
       {% endif %}
     {% endif %}
   {% endfor %}
@@ -59,13 +55,19 @@
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
         <a class="nav-link" href={{"/" | relative_url}}>
-          Games{% if new_games > 0 %} <small class="text-success font-weight-bold">({{ new_games }})</small>{% endif %}
+          Games
+          {% if new_games_count > 0 %}
+            <small class="text-success font-weight-bold">({{ new_games_count }})</small>
+          {% endif %}
           <span class="sr-only">(current)</span>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href={{"/blogs/" | relative_url}}>
-          Blogs{% if new_blogs > 0 %} <small class="text-primary font-weight-bold">({{ new_blogs }})</small>{% endif %}
+          Blogs
+          {% if new_blogs_count > 0 %}
+            <small class="text-primary font-weight-bold">({{ new_blogs_count }})</small>
+          {% endif %}
         </a>
       </li>
       <li class="nav-item">
@@ -95,19 +97,47 @@
 </nav>
 
 <style>
-/* Simple counter styling using Bootstrap classes */
+/* Clean counter styling that won't interfere with existing styles */
 .nav-link small {
   font-size: 0.75rem;
   vertical-align: top;
-  margin-left: 0.2rem;
+  margin-left: 0.25rem;
+  display: inline-block;
+  border-radius: 8px;
+  padding: 0.1rem 0.3rem;
+  line-height: 1.2;
 }
 
-/* Subtle animation */
-.nav-link small {
-  transition: all 0.2s ease;
-}
-
+/* Subtle hover animation */
 .nav-link:hover small {
-  transform: scale(1.1);
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+}
+
+/* Ensure it doesn't break mobile layout */
+@media (max-width: 768px) {
+  .nav-link small {
+    font-size: 0.7rem;
+    margin-left: 0.2rem;
+    padding: 0.05rem 0.2rem;
+  }
 }
 </style>
+
+<!-- Debug Information (remove in production) -->
+<script>
+console.log('🎮 Safe Navigation Debug:');
+console.log('Games (site.posts):', {{ site.posts.size | default: 0 }});
+console.log('Blogs (site.blog_posts):', {{ site.blog_posts.size | default: 0 }});
+console.log('New games count:', {{ new_games_count }});
+console.log('New blogs count:', {{ new_blogs_count }});
+console.log('Current structure maintained - no changes to collections');
+
+// Test if recent posts exist
+{% if site.posts.size > 0 %}
+console.log('Recent game:', '{{ site.posts.first.title }}', '{{ site.posts.first.date }}');
+{% endif %}
+{% if site.blog_posts.size > 0 %}
+console.log('Recent blog:', '{{ site.blog_posts.first.title }}', '{{ site.blog_posts.first.date }}');
+{% endif %}
+</script>
