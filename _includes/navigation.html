@@ -1,3 +1,28 @@
+<!-- Calculate current date and 2 weeks ago -->
+{% assign now = site.time | date: '%s' %}
+{% assign two_weeks_seconds = 1209600 %}
+{% assign two_weeks_ago = now | minus: two_weeks_seconds %}
+
+<!-- Check for new games (assuming games are in site.games collection) -->
+{% assign has_new_games = false %}
+{% for game in site.games %}
+  {% assign game_date = game.date | date: '%s' %}
+  {% if game_date >= two_weeks_ago %}
+    {% assign has_new_games = true %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+<!-- Check for new blog posts -->
+{% assign has_new_blogs = false %}
+{% for post in site.blog_posts %}
+  {% assign post_date = post.date | date: '%s' %}
+  {% if post_date >= two_weeks_ago %}
+    {% assign has_new_blogs = true %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
 <nav class="container navbar navbar-expand-lg navbar-light bg-transparent">
   <a class="navbar-brand" href={{"/" | relative_url}}>🕹️sublevelgames</a>
   <button
@@ -21,18 +46,27 @@
 
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href={{"/" | relative_url}}
-          >Games <span class="sr-only">(current)</span></a
-        >
+        <a class="nav-link" href={{"/" | relative_url}}>
+          Games
+          {% if has_new_games %}
+            <span class="new-badge">NEW</span>
+          {% endif %}
+          <span class="sr-only">(current)</span>
+        </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href={{"/blogs/" | relative_url}} >Blogs</a>
+        <a class="nav-link" href={{"/blogs/" | relative_url}}>
+          Blogs
+          {% if has_new_blogs %}
+            <span class="new-badge">NEW</span>
+          {% endif %}
+        </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href={{"/tags/" | relative_url}} >Tags</a>
+        <a class="nav-link" href={{"/tags/" | relative_url}}>Tags</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href={{"/about/" | relative_url}} >About</a>
+        <a class="nav-link" href={{"/about/" | relative_url}}>About</a>
       </li>
     </ul>
   </div>
@@ -53,3 +87,102 @@
     });
   </script>
 </nav>
+
+<style>
+/* NEW Badge Styles */
+.new-badge {
+  display: inline-block;
+  background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 10px;
+  margin-left: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 4px rgba(255, 107, 107, 0.3);
+  animation: newBadgePulse 2s ease-in-out infinite;
+  position: relative;
+  top: -1px;
+}
+
+/* Pulse animation for NEW badge */
+@keyframes newBadgePulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 2px 4px rgba(255, 107, 107, 0.3);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 3px 8px rgba(255, 107, 107, 0.5);
+  }
+}
+
+/* Hover effects */
+.nav-link:hover .new-badge {
+  background: linear-gradient(45deg, #ff5252, #ff7979);
+  animation-duration: 1s;
+}
+
+/* Alternative color schemes - uncomment to use different colors */
+
+/* Blue theme */
+/*
+.new-badge {
+  background: linear-gradient(45deg, #4dabf7, #74c0fc);
+  box-shadow: 0 2px 4px rgba(77, 171, 247, 0.3);
+}
+*/
+
+/* Green theme */
+/*
+.new-badge {
+  background: linear-gradient(45deg, #51cf66, #69db7c);
+  box-shadow: 0 2px 4px rgba(81, 207, 102, 0.3);
+}
+*/
+
+/* Purple theme */
+/*
+.new-badge {
+  background: linear-gradient(45deg, #845ef7, #9775fa);
+  box-shadow: 0 2px 4px rgba(132, 94, 247, 0.3);
+}
+*/
+
+/* Orange theme */
+/*
+.new-badge {
+  background: linear-gradient(45deg, #ff922b, #ffa94d);
+  box-shadow: 0 2px 4px rgba(255, 146, 43, 0.3);
+}
+*/
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .new-badge {
+    font-size: 0.6rem;
+    padding: 1px 4px;
+    margin-left: 2px;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .new-badge {
+    box-shadow: 0 2px 4px rgba(255, 107, 107, 0.4);
+  }
+}
+</style>
+
+<!-- Debug information (remove in production) -->
+{% comment %}
+Debug Info:
+- Current time: {{ site.time | date: '%Y-%m-%d %H:%M:%S' }}
+- Two weeks ago: {{ two_weeks_ago | date: '%Y-%m-%d %H:%M:%S' }}
+- Has new games: {{ has_new_games }}
+- Has new blogs: {{ has_new_blogs }}
+- Games count: {{ site.games.size }}
+- Blog posts count: {{ site.blog_posts.size }}
+{% endcomment %}
