@@ -87,21 +87,4 @@ layout: default
 
 {% include fb-script.html %}
 {% include image-popup.html %}
-
-<!-- Firebase 조회수 스크립트 추가 -->
-<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
-<script src="{{ site.baseurl }}/js/firebase-config.js"></script>
-<script src="{{ site.baseurl }}/js/blog-view-counter.js"></script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Front Matter에서 정의한 ID 사용
-    const postId = "{{ page.id }}";
-    
-    // 조회수 초기화
-    if (typeof blogViewCounter !== 'undefined') {
-        blogViewCounter.initPostView(postId, 'post-views');
-    }
-});
-</script>
+{% include firebase-scripts.html %}

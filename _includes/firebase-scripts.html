@@ -1,0 +1,46 @@
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+<script src="{{ site.baseurl }}/js/firebase-config.js"></script>
+<script src="{{ site.baseurl }}/js/blog-view-counter.js"></script>
+
+<!-- 자동 실행 스크립트 -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    if (typeof blogViewCounter === 'undefined') {
+        console.error('blogViewCounter not loaded');
+        return;
+    }
+    
+    // 개별 포스트 페이지 처리
+    const postViewElement = document.getElementById('post-views');
+    if (postViewElement) {
+        // data-post-id가 있으면 사용, 없으면 현재 페이지 정보 사용
+        const postId = postViewElement.dataset.postId || 
+                      '{{ page.id }}' || 
+                      window.location.pathname.split('/').filter(p => p).pop();
+        
+        if (postId && postId !== '') {
+            blogViewCounter.initPostView(postId, 'post-views');
+        }
+    }
+    
+    // 블로그 목록 페이지 처리
+    const allViewElements = document.querySelectorAll('[data-post-id]');
+    if (allViewElements.length > 1) {
+        const posts = [];
+        allViewElements.forEach(el => {
+            if (el.dataset.postId && el.id) {
+                posts.push({
+                    id: el.dataset.postId,
+                    elementId: el.id
+                });
+            }
+        });
+        
+        if (posts.length > 0) {
+            blogViewCounter.displayMultiplePostViews(posts);
+        }
+    }
+});
+</script>

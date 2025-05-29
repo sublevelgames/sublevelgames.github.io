@@ -139,6 +139,20 @@ permalink: /blogs/
         </div>
       </div>
 
+      <!-- 인기 포스트를 위한 데이터 저장 -->
+      <div id="posts-data" style="display:none;">
+        {% for post in site.blog_posts %}
+        {% if post.id %}
+        <div data-post-info="{{ post.id }}" 
+            data-title="{{ post.title | escape }}" 
+            data-url="{{ post.url | prepend: site.baseurl }}"
+            data-date="{{ post.date | date: "%b %-d, %Y" }}"
+            data-excerpt="{{ post.excerpt | strip_html | strip_newlines | truncate: 80 | escape }}">
+        </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+
       <hr>
 
       <h2>🏷️ Tags</h2>
@@ -192,81 +206,7 @@ permalink: /blogs/
   </div>
 </div>
 
-<!-- Firebase 조회수 스크립트 -->
-<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
-<script src="{{ site.baseurl }}/js/firebase-config.js"></script>
-<script src="{{ site.baseurl }}/js/blog-view-counter.js"></script>
-
-<script>
-document.addEventListener('DOMContentLoaded', async function() {
-    // 모든 포스트 정보 수집
-    const posts = [
-        {% for post in site.blog_posts %}
-        {% if post.id %}
-        { 
-            id: '{{ post.id }}', 
-            title: {{ post.title | jsonify }},
-            url: '{{ post.url | prepend: site.baseurl }}',
-            date: '{{ post.date | date: "%b %-d, %Y" }}',
-            excerpt: {{ post.excerpt | strip_html | strip_newlines | truncate: 80 | jsonify }}
-        }{% unless forloop.last %},{% endunless %}
-        {% endif %}
-        {% endfor %}
-    ];
-    
-    // 조회수 표시를 위한 요소 ID 매핑
-    const viewElements = [];
-    {% for post in site.blog_posts %}
-    {% if post.id %}
-    viewElements.push({ id: '{{ post.id }}', elementId: 'views-{{ post.id }}' });
-    // 카테고리 섹션의 조회수도 추가
-    viewElements.push({ id: '{{ post.id }}', elementId: 'cat-views-{{ post.id }}' });
-    {% endif %}
-    {% endfor %}
-    
-    // 조회수 표시
-    if (typeof blogViewCounter !== 'undefined' && viewElements.length > 0) {
-        await blogViewCounter.displayMultiplePostViews(viewElements);
-        
-        // 인기 포스트 표시
-        displayPopularPosts(posts);
-    }
-});
-
-async function displayPopularPosts(allPosts) {
-    if (typeof blogViewCounter === 'undefined') return;
-    
-    const popularPosts = await blogViewCounter.getPopularPosts(5);
-    const listElement = document.getElementById('popular-posts-list');
-    
-    if (!listElement || popularPosts.length === 0) return;
-    
-    // ID로 포스트 정보 찾기
-    const postMap = {};
-    allPosts.forEach(post => {
-        postMap[post.id] = post;
-    });
-    
-    listElement.innerHTML = popularPosts.map((post, index) => {
-        const postInfo = postMap[post.id];
-        if (!postInfo) return '';
-        
-        return `
-            <div class="popular-post-item">
-                <span class="popular-rank">${index + 1}</span>
-                <div class="popular-post-content">
-                    <h4><a href="${postInfo.url}">${postInfo.title}</a></h4>
-                    <p class="popular-post-meta">
-                        <small>${postInfo.date} • ${post.views.toLocaleString()} views</small>
-                    </p>
-                    <p class="popular-post-excerpt">${postInfo.excerpt}</p>
-                </div>
-            </div>
-        `;
-    }).join('');
-}
-</script>
+{% include firebase-scripts.html %}
 
 <style>
 /* 조회수 스타일 */
