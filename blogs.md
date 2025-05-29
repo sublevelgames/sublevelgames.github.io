@@ -206,10 +206,10 @@ document.addEventListener('DOMContentLoaded', async function() {
         {% if post.id %}
         { 
             id: '{{ post.id }}', 
-            title: '{{ post.title | escape }}',
+            title: {{ post.title | jsonify }},
             url: '{{ post.url | prepend: site.baseurl }}',
             date: '{{ post.date | date: "%b %-d, %Y" }}',
-            excerpt: '{{ post.excerpt | strip_html | strip_newlines | truncate: 80 | escape }}'
+            excerpt: {{ post.excerpt | strip_html | strip_newlines | truncate: 80 | jsonify }}
         }{% unless forloop.last %},{% endunless %}
         {% endif %}
         {% endfor %}
