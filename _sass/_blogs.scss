@@ -360,3 +360,86 @@
     margin-bottom: 2rem;
   }
 }
+
+// Firebase 조회수 스타일 추가
+.post-views-card {
+  margin-left: 10px;
+  color: #666;
+  font-size: 0.85rem;
+  
+  .view-icon {
+    margin-right: 3px;
+  }
+}
+
+.category-views {
+  color: #999;
+  font-size: 0.85em;
+  margin-left: 5px;
+}
+
+// 인기 포스트 스타일
+.popular-posts-section {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.popular-posts-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.popular-post-item {
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+}
+
+.popular-rank {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #ff6b6b;
+  min-width: 30px;
+}
+
+.popular-post-content {
+  flex: 1;
+  
+  h4 {
+    margin: 0 0 5px 0;
+    font-size: 1.1em;
+    
+    a {
+      color: #333;
+      text-decoration: none;
+      
+      &:hover {
+        color: #0066cc;
+      }
+    }
+  }
+}
+
+.popular-post-meta {
+  color: #666;
+  margin-bottom: 5px;
+  font-size: 0.85rem;
+}
+
+.popular-post-excerpt {
+  color: #555;
+  font-size: 0.9em;
+  margin: 0;
+}
