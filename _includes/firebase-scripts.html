@@ -14,12 +14,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 개별 포스트 페이지 처리
     const postViewElement = document.getElementById('post-views');
-    if (postViewElement) {
-        // data-post-id가 있으면 사용, 없으면 현재 페이지 정보 사용
-        const postId = postViewElement.dataset.postId || 
-                      '{{ page.id }}' || 
-                      window.location.pathname.split('/').filter(p => p).pop();
-        
+    if (postViewElement && !document.querySelector('[data-post-id]')) {
+        // blog_post.html에서는 page.id 사용
+        const postId = '{{ page.id }}';
         if (postId && postId !== '') {
             blogViewCounter.initPostView(postId, 'post-views');
         }
@@ -27,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 블로그 목록 페이지 처리
     const allViewElements = document.querySelectorAll('[data-post-id]');
-    if (allViewElements.length > 1) {
+    if (allViewElements.length > 0) {
         const posts = [];
         allViewElements.forEach(el => {
             if (el.dataset.postId && el.id) {
@@ -41,6 +38,53 @@ document.addEventListener('DOMContentLoaded', function() {
         if (posts.length > 0) {
             blogViewCounter.displayMultiplePostViews(posts);
         }
+        
+        // 인기 포스트 표시 (블로그 목록 페이지에서만)
+        if (document.getElementById('popular-posts-list')) {
+            displayPopularPosts();
+        }
     }
 });
+
+// 인기 포스트 표시 함수
+async function displayPopularPosts() {
+    if (typeof blogViewCounter === 'undefined') return;
+    
+    const popularPosts = await blogViewCounter.getPopularPosts(5);
+    const listElement = document.getElementById('popular-posts-list');
+    
+    if (!listElement || popularPosts.length === 0) return;
+    
+    // 숨겨진 데이터에서 포스트 정보 가져오기
+    const postInfoElements = document.querySelectorAll('[data-post-info]');
+    const postMap = {};
+    
+    postInfoElements.forEach(el => {
+        const id = el.dataset.postInfo;
+        postMap[id] = {
+            title: el.dataset.title,
+            url: el.dataset.url,
+            date: el.dataset.date,
+            excerpt: el.dataset.excerpt
+        };
+    });
+    
+    listElement.innerHTML = popularPosts.map((post, index) => {
+        const postInfo = postMap[post.id];
+        if (!postInfo) return '';
+        
+        return `
+            <div class="popular-post-item">
+                <span class="popular-rank">${index + 1}</span>
+                <div class="popular-post-content">
+                    <h4><a href="${postInfo.url}">${postInfo.title}</a></h4>
+                    <p class="popular-post-meta">
+                        <small>${postInfo.date} • ${post.views.toLocaleString()} views</small>
+                    </p>
+                    <p class="popular-post-excerpt">${postInfo.excerpt}</p>
+                </div>
+            </div>
+        `;
+    }).join('');
+}
 </script>
