@@ -4,7 +4,6 @@
 <script src="{{ site.baseurl }}/js/firebase-config.js"></script>
 <script src="{{ site.baseurl }}/js/blog-view-counter.js"></script>
 
-<!-- 자동 실행 스크립트 -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     if (typeof blogViewCounter === 'undefined') {
@@ -12,17 +11,16 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
     }
     
-    // 개별 포스트 페이지 처리
+    /* 개별 포스트 페이지 처리 */
     const postViewElement = document.getElementById('post-views');
     if (postViewElement && !document.querySelector('[data-post-id]')) {
-        // blog_post.html에서는 page.id 사용
         const postId = '{{ page.id }}';
         if (postId && postId !== '') {
             blogViewCounter.initPostView(postId, 'post-views');
         }
     }
     
-    // 블로그 목록 페이지 처리
+    /* 블로그 목록 페이지 처리 */
     const allViewElements = document.querySelectorAll('[data-post-id]');
     if (allViewElements.length > 0) {
         const posts = [];
@@ -39,14 +37,14 @@ document.addEventListener('DOMContentLoaded', function() {
             blogViewCounter.displayMultiplePostViews(posts);
         }
         
-        // 인기 포스트 표시 (블로그 목록 페이지에서만)
+        /* 인기 포스트 표시 (블로그 목록 페이지에서만) */
         if (document.getElementById('popular-posts-list')) {
             displayPopularPosts();
         }
     }
 });
 
-// 인기 포스트 표시 함수
+/* 인기 포스트 표시 함수 */
 async function displayPopularPosts() {
     if (typeof blogViewCounter === 'undefined') return;
     
@@ -55,7 +53,7 @@ async function displayPopularPosts() {
     
     if (!listElement || popularPosts.length === 0) return;
     
-    // 숨겨진 데이터에서 포스트 정보 가져오기
+    /* 숨겨진 데이터에서 포스트 정보 가져오기 */
     const postInfoElements = document.querySelectorAll('[data-post-info]');
     const postMap = {};
     
