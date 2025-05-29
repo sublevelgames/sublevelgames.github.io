@@ -35,9 +35,10 @@ permalink: /blogs/
                     <p class="post-meta">
                       <small>{{ post.date | date: "%b %-d, %Y" }}</small>
                       {% if post.id %}
+                      {% assign clean_id = post.id | replace: '/blogs/', '' | replace: '/', '-' %}
                       <span class="post-views-card">
                         <i class="view-icon">👁</i> 
-                        <span id="views-{{ post.id }}">0</span>
+                        <span id="views-{{ clean_id }}" data-post-id="{{ clean_id }}">0</span>
                       </span>
                       {% endif %}
                     </p>
@@ -90,7 +91,8 @@ permalink: /blogs/
                 <li>
                   <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
                   {% if post.id %}
-                  <span class="category-views">(<span id="cat-views-{{ post.id }}">0</span> views)</span>
+                  {% assign clean_id = post.id | replace: '/blogs/', '' | replace: '/', '-' %}
+                  <span class="category-views">(<span id="cat-views-{{ clean_id }}" data-post-id="{{ clean_id }}">0</span> views)</span>
                   {% endif %}
                 </li>
               {% endif %}
@@ -104,7 +106,8 @@ permalink: /blogs/
                 <li>
                   <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
                   {% if post.id %}
-                  <span class="category-views">(<span id="cat-views-{{ post.id }}">0</span> views)</span>
+                  {% assign clean_id = post.id | replace: '/blogs/', '' | replace: '/', '-' %}
+                  <span class="category-views">(<span id="cat-views-{{ clean_id }}" data-post-id="{{ clean_id }}">0</span> views)</span>
                   {% endif %}
                 </li>
               {% endif %}
@@ -118,7 +121,8 @@ permalink: /blogs/
                 <li>
                   <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
                   {% if post.id %}
-                  <span class="category-views">(<span id="cat-views-{{ post.id }}">0</span> views)</span>
+                  {% assign clean_id = post.id | replace: '/blogs/', '' | replace: '/', '-' %}
+                  <span class="category-views">(<span id="cat-views-{{ clean_id }}" data-post-id="{{ clean_id }}">0</span> views)</span>
                   {% endif %}
                 </li>
               {% endif %}
@@ -143,7 +147,8 @@ permalink: /blogs/
       <div id="posts-data" style="display:none;">
         {% for post in site.blog_posts %}
         {% if post.id %}
-        <div data-post-info="{{ post.id }}" 
+        {% assign clean_id = post.id | replace: '/blogs/', '' | replace: '/', '-' %}
+        <div data-post-info="{{ clean_id }}" 
             data-title="{{ post.title | escape }}" 
             data-url="{{ post.url | prepend: site.baseurl }}"
             data-date="{{ post.date | date: "%b %-d, %Y" }}"
