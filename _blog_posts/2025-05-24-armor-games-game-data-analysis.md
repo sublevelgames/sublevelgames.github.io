@@ -5,6 +5,7 @@ image: /images/armor-games-analysis.jpg
 excerpt: Deep dive into web gaming market trends through 2018-2025 Armor Games data. Analyzing game quality evolution, genre popularity, and comparing past vs present insights.
 tags: ["📊Data", "🎮Game", "📈Analytics", "🌐Web Games", "💰Market Research"]
 colors: ["info", "info", "info", "info", "info"]
+id: armor-games-game-data-analysis
 comments: true
 ---
 

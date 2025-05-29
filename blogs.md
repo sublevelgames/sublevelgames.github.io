@@ -32,7 +32,15 @@ permalink: /blogs/
                   {% endif %}
                   <div class="card-body">
                     <h2 class="panel-title">{{ post.title | truncate: 50 }}</h2>
-                    <p class="post-meta"><small>{{ post.date | date: "%b %-d, %Y" }}</small></p>
+                    <p class="post-meta">
+                      <small>{{ post.date | date: "%b %-d, %Y" }}</small>
+                      {% if post.id %}
+                      <span class="post-views-card">
+                        <i class="view-icon">👁</i> 
+                        <span id="views-{{ post.id }}">0</span>
+                      </span>
+                      {% endif %}
+                    </p>
                     <div class="tag-container">
                       {% if post.tags %}
                         {% for tag in post.tags %}
@@ -79,7 +87,12 @@ permalink: /blogs/
           <ul>
             {% for post in blog_posts %}
               {% if post.tags contains "🎮Game" %}
-                <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
+                <li>
+                  <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                  {% if post.id %}
+                  <span class="category-views">(<span id="cat-views-{{ post.id }}">0</span> views)</span>
+                  {% endif %}
+                </li>
               {% endif %}
             {% endfor %}
           </ul>
@@ -88,7 +101,12 @@ permalink: /blogs/
           <ul>
             {% for post in blog_posts %}
               {% if post.tags contains "📊Data" %}
-                <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
+                <li>
+                  <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                  {% if post.id %}
+                  <span class="category-views">(<span id="cat-views-{{ post.id }}">0</span> views)</span>
+                  {% endif %}
+                </li>
               {% endif %}
             {% endfor %}
           </ul>
@@ -97,13 +115,28 @@ permalink: /blogs/
           <ul>
             {% for post in blog_posts %}
               {% if post.tags contains "🔧Development" %}
-                <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
+                <li>
+                  <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                  {% if post.id %}
+                  <span class="category-views">(<span id="cat-views-{{ post.id }}">0</span> views)</span>
+                  {% endif %}
+                </li>
               {% endif %}
             {% endfor %}
           </ul>
         {% else %}
           <p><em>Categories will appear here once blog posts are published.</em></p>
         {% endif %}
+      </div>
+
+      <hr>
+
+      <!-- 인기 포스트 섹션 추가 -->
+      <h2>🔥 Popular Posts</h2>
+      <div class="popular-posts-section">
+        <div id="popular-posts-list" class="popular-posts-grid">
+          <!-- JavaScript로 동적 생성 -->
+        </div>
       </div>
 
       <hr>
@@ -158,3 +191,158 @@ permalink: /blogs/
     </div>
   </div>
 </div>
+
+<!-- Firebase 조회수 스크립트 -->
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+<script src="{{ site.baseurl }}/js/firebase-config.js"></script>
+<script src="{{ site.baseurl }}/js/blog-view-counter.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', async function() {
+    // 모든 포스트 정보 수집
+    const posts = [
+        {% for post in site.blog_posts %}
+        {% if post.id %}
+        { 
+            id: '{{ post.id }}', 
+            title: '{{ post.title | escape }}',
+            url: '{{ post.url | prepend: site.baseurl }}',
+            date: '{{ post.date | date: "%b %-d, %Y" }}',
+            excerpt: '{{ post.excerpt | strip_html | strip_newlines | truncate: 80 | escape }}'
+        }{% unless forloop.last %},{% endunless %}
+        {% endif %}
+        {% endfor %}
+    ];
+    
+    // 조회수 표시를 위한 요소 ID 매핑
+    const viewElements = [];
+    {% for post in site.blog_posts %}
+    {% if post.id %}
+    viewElements.push({ id: '{{ post.id }}', elementId: 'views-{{ post.id }}' });
+    // 카테고리 섹션의 조회수도 추가
+    viewElements.push({ id: '{{ post.id }}', elementId: 'cat-views-{{ post.id }}' });
+    {% endif %}
+    {% endfor %}
+    
+    // 조회수 표시
+    if (typeof blogViewCounter !== 'undefined' && viewElements.length > 0) {
+        await blogViewCounter.displayMultiplePostViews(viewElements);
+        
+        // 인기 포스트 표시
+        displayPopularPosts(posts);
+    }
+});
+
+async function displayPopularPosts(allPosts) {
+    if (typeof blogViewCounter === 'undefined') return;
+    
+    const popularPosts = await blogViewCounter.getPopularPosts(5);
+    const listElement = document.getElementById('popular-posts-list');
+    
+    if (!listElement || popularPosts.length === 0) return;
+    
+    // ID로 포스트 정보 찾기
+    const postMap = {};
+    allPosts.forEach(post => {
+        postMap[post.id] = post;
+    });
+    
+    listElement.innerHTML = popularPosts.map((post, index) => {
+        const postInfo = postMap[post.id];
+        if (!postInfo) return '';
+        
+        return `
+            <div class="popular-post-item">
+                <span class="popular-rank">${index + 1}</span>
+                <div class="popular-post-content">
+                    <h4><a href="${postInfo.url}">${postInfo.title}</a></h4>
+                    <p class="popular-post-meta">
+                        <small>${postInfo.date} • ${post.views.toLocaleString()} views</small>
+                    </p>
+                    <p class="popular-post-excerpt">${postInfo.excerpt}</p>
+                </div>
+            </div>
+        `;
+    }).join('');
+}
+</script>
+
+<style>
+/* 조회수 스타일 */
+.post-views-card {
+    margin-left: 10px;
+    color: #666;
+}
+
+.category-views {
+    color: #999;
+    font-size: 0.85em;
+    margin-left: 5px;
+}
+
+/* 인기 포스트 스타일 */
+.popular-posts-section {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.popular-posts-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.popular-post-item {
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.popular-post-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.popular-rank {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ff6b6b;
+    min-width: 30px;
+}
+
+.popular-post-content {
+    flex: 1;
+}
+
+.popular-post-content h4 {
+    margin: 0 0 5px 0;
+    font-size: 1.1em;
+}
+
+.popular-post-content h4 a {
+    color: #333;
+    text-decoration: none;
+}
+
+.popular-post-content h4 a:hover {
+    color: #0066cc;
+}
+
+.popular-post-meta {
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.popular-post-excerpt {
+    color: #555;
+    font-size: 0.9em;
+    margin: 0;
+}
+</style>
