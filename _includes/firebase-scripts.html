@@ -14,7 +14,13 @@ document.addEventListener('DOMContentLoaded', function() {
     /* 개별 포스트 페이지 처리 */
     const postViewElement = document.getElementById('post-views');
     if (postViewElement && !document.querySelector('[data-post-id]')) {
-        const postId = '{{ page.id }}';
+        let postId = '{{ page.id }}';
+        
+        /* /blogs/ 접두어 제거 */
+        if (postId.startsWith('/blogs/')) {
+            postId = postId.replace('/blogs/', '');
+        }
+        
         if (postId && postId !== '') {
             blogViewCounter.initPostView(postId, 'post-views');
         }
