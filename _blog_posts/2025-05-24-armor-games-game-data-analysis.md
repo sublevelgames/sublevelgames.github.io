@@ -25,7 +25,7 @@ The web gaming industry has undergone dramatic changes over the past decade. Ste
 
 ## Analysis Purpose
 
-Recently, my game was accepted on [Armor Games](https://armorgames.com/), which sparked my curiosity.
+Recently, [my game](https://armorgames.com/defense-designer-game/19575) was accepted on [Armor Games](https://armorgames.com/), which sparked my curiosity.
 
 What does [Armor Games](https://armorgames.com/) look like these days? I wanted to understand it through data.
 
