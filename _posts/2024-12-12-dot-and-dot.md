@@ -16,4 +16,6 @@ colors: ["primary", "info", "info"]
 
 <a href="https://www.gamepix.com/play/dot-and-dot" class="btn btn-primary btn-lg">Play at ▶️gamepix.com</a>
 
-Dot and Dot is a vibrant puzzle game where players connect matching dots without crossing paths. With 1000 challenging levels, features like hints, auto-complete, and right-click line removal enhance the experience, testing your logic and spatial skills.
+<a href="https://playgama.com/game/dot-and-dot" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
+
+Dot and Dot is a vibrant puzzle game where players connect matching dots without crossing paths. With 500~2000 challenging levels, features like hints, auto-complete, and right-click line removal enhance the experience, testing your logic and spatial skills.
