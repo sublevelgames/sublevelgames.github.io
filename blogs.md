@@ -40,6 +40,9 @@ permalink: /blogs/
                         <i class="view-icon">👁</i> 
                         <span id="views-{{ clean_id }}" data-post-id="{{ clean_id }}">0</span>
                       </span>
+                      {% if site.disqus.shortname %}
+                      <span class="comments">💬 <a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.url }}">Comments</a></span>
+                      {% endif %}
                       {% endif %}
                     </p>
                     <div class="tag-container">

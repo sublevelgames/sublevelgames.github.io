@@ -85,6 +85,20 @@
     text-align: center;
     white-space: nowrap; // 텍스트 줄바꿈 방지
   }
+
+  .card .comments {
+    margin-left: 10px;
+    color: #666;
+  }
+
+  .card .comments a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .card .comments a:hover {
+    color: #333;
+  }
 }
 
 // Blog page header

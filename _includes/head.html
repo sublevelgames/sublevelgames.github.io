@@ -14,6 +14,10 @@
 
   {% seo %}
 
+  {% if site.disqus.shortname %}
+  <script id="dsq-count-scr" src="//{{ site.disqus.shortname }}.disqus.com/count.js" async></script>
+  {% endif %}
+
   <link
     rel="stylesheet"
     href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
