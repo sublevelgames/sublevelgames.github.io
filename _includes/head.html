@@ -15,7 +15,17 @@
   {% seo %}
 
   {% if site.disqus-shortname and site.disqus == 'yes' %}
-  <script id="dsq-count-scr" src="//{{ site.disqus-shortname }}.disqus.com/count.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+      var script = document.createElement('script');
+      script.src = '//{{ site.disqus-shortname }}.disqus.com/count.js';
+      script.async = true;
+      script.id = 'dsq-count-scr';
+      document.head.appendChild(script);
+      
+      console.log('Disqus count script loaded manually');
+  });
+  </script>
   {% endif %}
 
   <link
