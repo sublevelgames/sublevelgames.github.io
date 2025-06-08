@@ -41,9 +41,7 @@ permalink: /blogs/
                         <span id="views-{{ clean_id }}" data-post-id="{{ clean_id }}">0</span>
                       </span>
                       {% endif %}
-                      {% if site.disqus-shortname and site.disqus == 'yes' %}
                       <span class="comments"> | 💬 <a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.url }}">Comments</a></span>
-                      {% endif %}
                     </p>
                     <div class="tag-container">
                       {% if post.tags %}
