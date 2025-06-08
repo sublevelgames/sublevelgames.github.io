@@ -14,8 +14,8 @@
 
   {% seo %}
 
-  {% if site.disqus.shortname %}
-  <script id="dsq-count-scr" src="//{{ site.disqus.shortname }}.disqus.com/count.js" async></script>
+  {% if site.disqus-shortname and site.disqus == 'yes' %}
+  <script id="dsq-count-scr" src="//{{ site.disqus-shortname }}.disqus.com/count.js" async></script>
   {% endif %}
 
   <link
