@@ -42,7 +42,7 @@ permalink: /blogs/
                       </span>
                       {% endif %}
                       {% if site.disqus-shortname and site.disqus == 'yes' %}
-                      <span class="comments"> | 💬 <a href="{{ post.url }}#disqus_thread">Comments</a></span>
+                      <span class="comments"> | 💬 <a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.url }}">Comments</a></span>
                       {% endif %}
                     </p>
                     <div class="tag-container">
