@@ -215,3 +215,4 @@ permalink: /blogs/
 </div>
 
 {% include firebase-scripts.html %}
+{% include disqus-count.html %}

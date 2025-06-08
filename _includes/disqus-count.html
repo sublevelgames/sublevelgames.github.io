@@ -1,0 +1,20 @@
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var script = document.createElement('script');
+    script.src = '//sublevelgames.disqus.com/count.js';
+    script.async = true;
+    script.id = 'dsq-count-scr';
+    document.head.appendChild(script);
+    
+    console.log('Disqus count script loaded manually');
+    
+    script.onload = function() {
+        console.log('Disqus script loaded successfully');
+        console.log('DISQUSWIDGETS:', typeof DISQUSWIDGETS);
+    };
+    
+    script.onerror = function() {
+        console.log('Disqus script failed to load');
+    };
+});
+</script>
