@@ -18,6 +18,8 @@ colors: ["primary", "info"]
 
 <a href="https://html5.gamemonetize.co/wdff7m73hqjk029wulmw15id0tcjkz43/" class="btn btn-primary btn-lg">Play at ▶️gamemonetize.com</a>
 
+<a href="https://playgama.com/game/othello-five" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
+
 
 Classic Othello with a twist - get 5 in a row to win! 🏆
 
