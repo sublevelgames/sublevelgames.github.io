@@ -4,8 +4,6 @@ title: Tags
 permalink: /tags/
 ---
 
-## All Tags
-
 <div class="tags-container">
 {% assign all_tags = site.tags | sort: 'tag' %}
 {% assign tag_data = "" | split: "," %}
