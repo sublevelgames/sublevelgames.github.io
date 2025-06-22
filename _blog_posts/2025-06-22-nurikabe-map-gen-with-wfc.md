@@ -192,3 +192,33 @@ Below are the connection relationships for tiles 4 and 10 (L tile and T tile) wi
 One final processing step remains. To ensure lines appear as intended, we force empty tiles to appear on the map's outer edges - that is, cells where `x=-1 || x=width || y=-1 || y=height`. This way, tiles inside the map that touch the outer edges will have tiles adjacent to empty tiles, eliminating cases where lines extend outside the map and get cut off.
 
 ![Forcing empty tiles on the map's outer edges](/images/nmg16.png)
+
+With these configured connection relationships, island patterns that match the Modern ruleset are generated well even at large sizes. While original Nurikabe only presents numbers, Logic Islands presents parts of islands and walls as fixed (green dotted lines) for easier difficulty levels.
+
+![12x12 Modern ruleset map example](/images/nmg17.png)
+
+## Minimal
+
+The Minimal ruleset is as follows:
+- Wall connection not required
+- Island connection X
+- Island separation required
+- 2x2 walls allowed (but becomes meaningless due to wall area conditions)
+- 2x2 islands allowed
+- Special rule: All wall areas must have size 3
+
+Due to the special rule, all walls must have an area of 3. Areas connected by lines must equal 3, which in WFC terms means only terminal + middle node + terminal formations are possible. Here, middle nodes are L tiles, vertical lines, and horizontal lines. T tiles aren't necessary either. Therefore, the tiles used are reduced to 11 types, fitting the name "Minimal."
+
+![11 types of tiles used in Minimal ruleset](/images/nmg18.png)
+
+We need to prohibit unnecessary connections in the connection relationships. We prohibit terminal-terminal (because it could create 2-cell areas), L-L, L-straight line, and straight line-straight line connections, and prevent lines from touching each other like in Modern. All tile connection relationships are shown below.
+
+![Connection relationships for all tiles in Minimal ruleset](/images/nmg19.png)
+
+With these configured connection relationships, wall patterns matching the Minimal ruleset are generated well even at large sizes. Notably, we don't need any special processing to satisfy the special rule *all wall areas must have size 3*. Just through WFC's connection relationships alone, all maps are guaranteed to have wall areas of size 3.
+
+![12x9 Minimal ruleset map example](/images/nmg20.png)
+
+## Yin-Yang
+
+
