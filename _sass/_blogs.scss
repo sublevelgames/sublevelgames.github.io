@@ -457,3 +457,159 @@
   font-size: 0.9em;
   margin: 0;
 }
+
+// Markdown table styles for blog posts
+.post-content table,
+article table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  
+  // Header row
+  thead {
+    background-color: #2c3e50;
+    color: white;
+    
+    th {
+      padding: 12px 15px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      border-bottom: 2px solid #1a252f;
+    }
+  }
+  
+  // Table body
+  tbody {
+    tr {
+      transition: background-color 0.2s ease;
+      
+      // Alternating row colors
+      &:nth-child(even) {
+        background-color: #f8f9fa;
+      }
+      
+      &:nth-child(odd) {
+        background-color: #ffffff;
+      }
+      
+      // Hover effect
+      &:hover {
+        background-color: #e9ecef;
+      }
+      
+      td {
+        padding: 12px 15px;
+        border-bottom: 1px solid #dee2e6;
+        font-size: 0.95rem;
+        color: #333;
+        
+        // First column bold
+        &:first-child {
+          font-weight: 600;
+          color: #2c3e50;
+        }
+      }
+      
+      // Remove border from last row
+      &:last-child td {
+        border-bottom: none;
+      }
+    }
+  }
+  
+  // All cells common styling
+  th, td {
+    vertical-align: middle;
+    line-height: 1.5;
+  }
+  
+  // Special styling for checkmarks and crosses
+  td:contains("✅"), td:contains("✔️") {
+    color: #28a745;
+    font-weight: bold;
+  }
+  
+  td:contains("❌") {
+    color: #dc3545;
+    font-weight: bold;
+  }
+  
+  td:contains("Required") {
+    color: #28a745;
+  }
+  
+  td:contains("Forbidden") {
+    color: #dc3545;
+  }
+  
+  td:contains("Allowed") {
+    color: #007bff;
+  }
+}
+
+// Responsive table
+@media (max-width: 768px) {
+  .post-content table,
+  article table {
+    font-size: 0.85rem;
+    
+    thead th {
+      padding: 10px 8px;
+      font-size: 0.8rem;
+    }
+    
+    tbody td {
+      padding: 10px 8px;
+      font-size: 0.85rem;
+    }
+  }
+  
+  // Make table scrollable on mobile
+  .table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 -15px;
+    padding: 0 15px;
+  }
+}
+
+// Additional styling for specific rule tables
+.rule-comparison-table {
+  td {
+    text-align: center;
+    
+    &:first-child {
+      text-align: left;
+    }
+  }
+}
+
+// Special styling for status indicators in tables
+.table-status {
+  &.required {
+    color: #28a745;
+    font-weight: 600;
+  }
+  
+  &.forbidden {
+    color: #dc3545;
+    font-weight: 600;
+  }
+  
+  &.allowed {
+    color: #007bff;
+    font-weight: 600;
+  }
+  
+  &.not-applicable {
+    color: #6c757d;
+    font-style: italic;
+  }
+}

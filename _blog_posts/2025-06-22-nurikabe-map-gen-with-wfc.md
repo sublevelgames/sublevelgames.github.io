@@ -40,7 +40,7 @@ Nurikabe has many derivative rules, each existing as separate games.
 
 Islands of Insight is a fantastic 3D game offering over 10,000 puzzles across 24 types. These puzzles require various skills including reflexes, logic, and observation. Among them, Logic Grid is a game that purely requires logical thinking. Logic Grid breaks down Nurikabe's basic form further, creating various variations by having players complete patterns without numbers, adding exceptions to certain rules, or introducing additional rules.
 
-[Islands of Insight's Logic Grid rule types]
+![Islands of Insight's Logic Grid rule types](/images/nmg03.png)
 
 # Logic Islands' 6 Rule Sets
 
@@ -54,6 +54,7 @@ Logic Islands' 6 rules are as follows:
 | **Minimal** | ❌ | ❌ | ✅ Required | ✔️ Allowed (irrelevant) | ✔️ Allowed | All wall groups must be exactly 3 cells |
 | **Orb** | ❌ | ❌ | ✅ Required | ✔️ Allowed | ❌ Forbidden | - Each island needs 1 orb<br>- Single-cell islands forbidden |
 | **Yin-Yang** | ✅ Required | ✅ Required | ❌ | ❌ Forbidden | ❌ Forbidden | Islands without numbers allowed |
+
 
 Classic, as mentioned above, uses identical rules to the original Nurikabe. Modern allows 2x2 walls but forbids 2x2 islands, creating a fresh map feel. Strict adds wall junction restrictions to Classic - walls cannot have 3 or more neighbors - creating more constrained wall patterns. Minimal removes the wall connectivity requirement and adds a restriction that all wall groups must be exactly 3 cells. Orb requires each island to contain one purple orb and removes the wall connectivity requirement. Finally, Yin-Yang removes numbers from islands but requires all walls to be connected, all islands to be connected, and forbids both 2x2 walls and 2x2 islands, creating map patterns resembling interlocking yin-yang symbols.
 
