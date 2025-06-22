@@ -189,6 +189,6 @@ Below are the connection relationships for tiles 4 and 10 (L tile and T tile) wi
 
 ![Connection relationships for Tile 4 and Tile 10 for Modern](/images/nmg15.png)
 
-One final processing step remains. To ensure lines appear as intended, we force empty tiles to appear on the map's outer edges - that is, cells where x=-1 || x=width || y=-1 || y=height. This way, tiles inside the map that touch the outer edges will have tiles adjacent to empty tiles, eliminating cases where lines extend outside the map and get cut off.
+One final processing step remains. To ensure lines appear as intended, we force empty tiles to appear on the map's outer edges - that is, cells where `x=-1 || x=width || y=-1 || y=height`. This way, tiles inside the map that touch the outer edges will have tiles adjacent to empty tiles, eliminating cases where lines extend outside the map and get cut off.
 
 ![Forcing empty tiles on the map's outer edges](/images/nmg16.png)
