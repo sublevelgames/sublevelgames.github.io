@@ -15,7 +15,8 @@ permalink: /blogs/
 
       <div class="blog-posts">
         <div class="row">
-          {% for post in site.blog_posts %}   
+          {% for post in site.blog_posts %}
+          {% unless post.hidden %}
             <div class="col-12 col-md-6 col-lg-4 mb-4">
              <a href="{{ post.url | prepend: site.baseurl }}" class="index-anchor">
               <div class="card rounded overflow-hidden">
@@ -60,6 +61,7 @@ permalink: /blogs/
               </div>
             </a>
             </div>
+          {% endunless %}
           {% endfor %}
           
           {% if site.blog_posts.size == 0 %}
@@ -88,6 +90,7 @@ permalink: /blogs/
           <h3>🎮 Game Development</h3>
           <ul>
             {% for post in blog_posts %}
+            {% unless post.hidden %}
               {% if post.tags contains "🎮Game" %}
                 <li>
                   <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
@@ -97,12 +100,14 @@ permalink: /blogs/
                   {% endif %}
                 </li>
               {% endif %}
+            {% endunless %}
             {% endfor %}
           </ul>
 
           <h3>📊 Data Analysis</h3>
           <ul>
             {% for post in blog_posts %}
+            {% unless post.hidden %}
               {% if post.tags contains "📊Data" %}
                 <li>
                   <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
@@ -112,12 +117,14 @@ permalink: /blogs/
                   {% endif %}
                 </li>
               {% endif %}
+            {% endunless %}
             {% endfor %}
           </ul>
 
           <h3>🔧 Development Diary</h3>
           <ul>
             {% for post in blog_posts %}
+            {% unless post.hidden %}
               {% if post.tags contains "🔧Development" %}
                 <li>
                   <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
@@ -127,6 +134,7 @@ permalink: /blogs/
                   {% endif %}
                 </li>
               {% endif %}
+            {% endunless %}
             {% endfor %}
           </ul>
         {% else %}
@@ -147,6 +155,7 @@ permalink: /blogs/
       <!-- 인기 포스트를 위한 데이터 저장 -->
       <div id="posts-data" style="display:none;">
         {% for post in site.blog_posts %}
+        {% unless post.hidden %}
         {% if post.id %}
         {% assign clean_id = post.id | replace: '/blogs/', '' | replace: '/', '-' %}
         <div data-post-info="{{ clean_id }}" 
@@ -156,6 +165,7 @@ permalink: /blogs/
             data-excerpt="{{ post.excerpt | strip_html | strip_newlines | truncate: 80 | escape }}">
         </div>
         {% endif %}
+        {% endunless %}
         {% endfor %}
       </div>
 
