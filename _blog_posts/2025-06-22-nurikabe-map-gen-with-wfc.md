@@ -32,11 +32,9 @@ WFC creates new results based on complex connectivity relationships from the sou
 
 Logic Islands is heavily influenced by Nurikabe published by Nikoli and the Logic Puzzles from Islands of Insight developed by Lunarch Studios. Nurikabe is a game where each cell in a grid is designated as either island or wall. Numbers in the grid indicate island sizes, each island must contain exactly one number, all walls must be connected, and no 2x2 wall blocks are allowed. Logic Islands uses these conditions as its Classic rule set.
 
-[Nurikabe diagram]
+![The process of solving nurikabe puzzles, from Nikoli](/images/nmg02.png)
 
 Nurikabe has many derivative rules, each existing as separate games.
-
-[https://www.amazon.com/1000-Nurikabe-Variants-Nurimisaki-10/dp/B0BKSCTX2F]
 
 ## Islands of Insight
 
