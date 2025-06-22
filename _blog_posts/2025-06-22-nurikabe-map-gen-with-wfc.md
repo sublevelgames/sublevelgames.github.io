@@ -30,7 +30,7 @@ WFC creates new results based on complex connectivity relationships from the sou
 
 ## Nurikabe
 
-Logic Islands is heavily influenced by Nurikabe published by Nikoli and the Logic Puzzles from Islands of Insight developed by Lunarch Studios. Nurikabe is a game where each cell in a grid is designated as either island or wall. Numbers in the grid indicate island sizes, each island must contain exactly one number, all walls must be connected, and no 2x2 wall blocks are allowed. Logic Islands uses these conditions as its Classic rule set.
+Logic Islands is heavily influenced by [Nurikabe](https://www.nikoli.co.jp/en/puzzles/nurikabe/) published by Nikoli and the Logic Puzzles from Islands of Insight developed by Lunarch Studios. Nurikabe is a game where each cell in a grid is designated as either island or wall. Numbers in the grid indicate island sizes, each island must contain exactly one number, all walls must be connected, and no 2x2 wall blocks are allowed. Logic Islands uses these conditions as its Classic rule set.
 
 ![The process of solving nurikabe puzzles, from Nikoli](/images/nmg02.png)
 
@@ -38,7 +38,7 @@ Nurikabe has many derivative rules, each existing as separate games.
 
 ## Islands of Insight
 
-Islands of Insight is a fantastic 3D game offering over 10,000 puzzles across 24 types. These puzzles require various skills including reflexes, logic, and observation. Among them, Logic Grid is a game that purely requires logical thinking. Logic Grid breaks down Nurikabe's basic form further, creating various variations by having players complete patterns without numbers, adding exceptions to certain rules, or introducing additional rules.
+[Islands of Insight](https://store.steampowered.com/app/2071500/Islands_of_Insight/) is a fantastic 3D game offering over 10,000 puzzles across 24 types. These puzzles require various skills including reflexes, logic, and observation. Among them, Logic Grid is a game that purely requires logical thinking. Logic Grid breaks down Nurikabe's basic form further, creating various variations by having players complete patterns without numbers, adding exceptions to certain rules, or introducing additional rules.
 
 ![Islands of Insight's Logic Grid rule types](/images/nmg03.png)
 
@@ -56,17 +56,17 @@ Logic Islands' 6 rules are as follows:
 | **Yin-Yang** | ✅ Required | ✅ Required | ❌ | ❌ Forbidden | ❌ Forbidden | Islands without numbers allowed |
 
 
-Classic, as mentioned above, uses identical rules to the original Nurikabe. 
+**Classic**, as mentioned above, uses identical rules to the original Nurikabe. 
 
-Modern allows 2x2 walls but forbids 2x2 islands, creating a fresh map feel. 
+**Modern** allows 2x2 walls but forbids 2x2 islands, creating a fresh map feel. 
 
-Strict adds wall junction restrictions to Classic - walls cannot have 3 or more neighbors - creating more constrained wall patterns. 
+**Strict** adds wall junction restrictions to Classic - walls cannot have 3 or more neighbors - creating more constrained wall patterns. 
 
-Minimal removes the wall connectivity requirement and adds a restriction that all wall groups must be exactly 3 cells. 
+**Minimal** removes the wall connectivity requirement and adds a restriction that all wall groups must be exactly 3 cells. 
 
-Orb requires each island to contain one purple orb and removes the wall connectivity requirement. 
+**Orb** requires each island to contain one purple orb and removes the wall connectivity requirement. 
 
-Finally, Yin-Yang removes numbers from islands but requires all walls to be connected, all islands to be connected, and forbids both 2x2 walls and 2x2 islands, creating map patterns resembling interlocking yin-yang symbols.
+Finally, **Yin-Yang** removes numbers from islands but requires all walls to be connected, all islands to be connected, and forbids both 2x2 walls and 2x2 islands, creating map patterns resembling interlocking yin-yang symbols.
 
 ![Map examples of Logic Islands' 6 Rule Sets](/images/nmg04.png)
 
@@ -83,4 +83,39 @@ For Modern, Minimal, and Yin-Yang, I implemented wall pattern generation using W
 ![Process using WFC for Modern, Minimal, Yin-Yang](/images/nmg06.png)
 
 # Solving Problems with WFC in Detail
+
+When creating wall patterns with WFC, there are two crucial considerations:
+- How to represent wall connectivity requirements?
+- How to represent the prohibition of 2x2 walls?
+
+If we can effectively express these two conditions with WFC, we can significantly reduce the time spent searching for random walls.
+
+For map generation, we commonly used Simple-Tiled WFC. Unlike the more complex Overlapping WFC, Simple-Tiled WFC stores each tile and its connection information, then uses this to generate outputs. In the figure below, Simple-Tiled WFC defines 7 types of tiles (a), uses the connection relationships where roads meet non-roads (b), and generates the result (c).
+
+![Example of Simple-Tiled WFC output generation. Source: https://ieeexplore.ieee.org/abstract/document/10443044/, Tileset: kenney](/images/nmg07.png)
+
+Now let's apply this model to creating wall patterns for Logic Islands. First, we need to define tiles. The basic tiles we'll use are these 15 types:
+
+![15 types of tiles to use](/images/nmg08.png)
+
+I defined the tiles this way because I used a similar method when creating Flow Free game maps, and it was very effective. For those interested in more details, please refer to [this paper](https://www.researchgate.net/publication/378377175_Puzzle-Level_Generation_with_Simple-tiled_and_Graph-based_Wave_Function_Collapse_Algorithms), and also check out [this game](https://sublevelgames.github.io/dot-king/) and [this game](https://sublevelgames.github.io/dot-and-dot/).
+
+To briefly discuss Flow Free map generation, since all given node pairs must be connected and all given surfaces must be filled, we actively used constraints in WFC. After filling the entire game map, we completed the Flow Free map by giving each line a different color.
+
+![Flow Free map generation example](/images/nmg09.png)
+
+Now returning to Logic Islands, let me explain the tiles used here.
+
+Tiles 0 through 3 are terminal nodes. They connect in only one direction, with the other three directions being empty spaces. We can represent this in data as follows:
+
+```javascript
+const tiles = {
+ 0: [0, null, null, null],
+ 1: [null, 0, null, null],
+ 2: [null, null, 0, null],
+ 3: [null, null, null, 0]
+};
+```
+
+
 
