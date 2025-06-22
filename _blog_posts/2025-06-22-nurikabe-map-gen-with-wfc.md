@@ -56,9 +56,19 @@ Logic Islands' 6 rules are as follows:
 | **Yin-Yang** | ✅ Required | ✅ Required | ❌ | ❌ Forbidden | ❌ Forbidden | Islands without numbers allowed |
 
 
-Classic, as mentioned above, uses identical rules to the original Nurikabe. Modern allows 2x2 walls but forbids 2x2 islands, creating a fresh map feel. Strict adds wall junction restrictions to Classic - walls cannot have 3 or more neighbors - creating more constrained wall patterns. Minimal removes the wall connectivity requirement and adds a restriction that all wall groups must be exactly 3 cells. Orb requires each island to contain one purple orb and removes the wall connectivity requirement. Finally, Yin-Yang removes numbers from islands but requires all walls to be connected, all islands to be connected, and forbids both 2x2 walls and 2x2 islands, creating map patterns resembling interlocking yin-yang symbols.
+Classic, as mentioned above, uses identical rules to the original Nurikabe. 
 
-[6 rule set map images]
+Modern allows 2x2 walls but forbids 2x2 islands, creating a fresh map feel. 
+
+Strict adds wall junction restrictions to Classic - walls cannot have 3 or more neighbors - creating more constrained wall patterns. 
+
+Minimal removes the wall connectivity requirement and adds a restriction that all wall groups must be exactly 3 cells. 
+
+Orb requires each island to contain one purple orb and removes the wall connectivity requirement. 
+
+Finally, Yin-Yang removes numbers from islands but requires all walls to be connected, all islands to be connected, and forbids both 2x2 walls and 2x2 islands, creating map patterns resembling interlocking yin-yang symbols.
+
+![Map examples of Logic Islands' 6 Rule Sets](/images/nmg04.png)
 
 # Problems with 3 Rules
 
@@ -66,10 +76,11 @@ If everything had ended after creating the map generator, there wouldn't have be
 
 The issue with these rule sets was their inability to generate valid wall patterns. The puzzle generation order in my generator worked like this:
 
-[Simplified process]
+![Simplified process](/images/nmg05.png)
 
 For Modern, Minimal, and Yin-Yang, I implemented wall pattern generation using WFC.
 
-[Process using WFC for Modern, Minimal, Yin-Yang]
+![Process using WFC for Modern, Minimal, Yin-Yang](/images/nmg06.png)
 
 # Solving Problems with WFC in Detail
+
