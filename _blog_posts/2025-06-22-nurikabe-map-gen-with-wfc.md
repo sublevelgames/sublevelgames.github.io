@@ -92,13 +92,13 @@ If we can effectively express these two conditions with WFC, we can significantl
 
 For map generation, we commonly used Simple-Tiled WFC. Unlike the more complex Overlapping WFC, Simple-Tiled WFC stores each tile and its connection information, then uses this to generate outputs. In the figure below, Simple-Tiled WFC defines 7 types of tiles (a), uses the connection relationships where roads meet non-roads (b), and generates the result (c).
 
-![Example of Simple-Tiled WFC output generation. Source: https://ieeexplore.ieee.org/abstract/document/10443044/, Tileset: kenney](/images/nmg07.png)
+![Example of Simple-Tiled WFC output generation. Source: [https://ieeexplore.ieee.org/abstract/document/10443044/](https://ieeexplore.ieee.org/abstract/document/10443044/), Tileset: kenney](/images/nmg07.png)
 
 Now let's apply this model to creating wall patterns for Logic Islands. First, we need to define tiles. The basic tiles we'll use are these 15 types:
 
 ![15 types of tiles to use](/images/nmg08.png)
 
-I defined the tiles this way because I used a similar method when creating Flow Free game maps, and it was very effective. For those interested in more details, please refer to [this paper](https://www.researchgate.net/publication/378377175_Puzzle-Level_Generation_with_Simple-tiled_and_Graph-based_Wave_Function_Collapse_Algorithms), and also check out [this game](https://sublevelgames.github.io/dot-king/) and [this game](https://sublevelgames.github.io/dot-and-dot/).
+I defined the tiles this way because I used a similar method when creating [Flow Free](https://play.google.com/store/apps/details?id=com.bigduckgames.flow) game maps, and it was very effective. For those interested in more details, please refer to [this paper](https://www.researchgate.net/publication/378377175_Puzzle-Level_Generation_with_Simple-tiled_and_Graph-based_Wave_Function_Collapse_Algorithms), and also check out [this game](https://sublevelgames.github.io/dot-king/) and [this game](https://sublevelgames.github.io/dot-and-dot/).
 
 To briefly discuss Flow Free map generation, since all given node pairs must be connected and all given surfaces must be filled, we actively used constraints in WFC. After filling the entire game map, we completed the Flow Free map by giving each line a different color.
 
@@ -109,6 +109,7 @@ Now returning to Logic Islands, let me explain the tiles used here.
 Tiles 0 through 3 are terminal nodes. They connect in only one direction, with the other three directions being empty spaces. We can represent this in data as follows:
 
 ```javascript
+// left, up, right, down
 const tiles = {
  0: [0, null, null, null],
  1: [null, 0, null, null],
@@ -116,6 +117,44 @@ const tiles = {
  3: [null, null, null, 0]
 };
 ```
+
+Tile definitions consist of 4 values per tile. Each position represents connections from the current tile in the left, up, right, and down directions. 0 indicates a connection exists and represents the first color. null means no connection.
+
+Tiles 4 through 9 are 6 L-shaped tiles that connect in 2 directions. These can be represented in code as follows:
+
+```javascript
+// left, up, right, down
+const tiles = {
+ ...,
+ 4: [0, 0, null, null],
+ 5: [0, null, 0, null],
+ 6: [0, null, null, 0],
+ 7: [null, 0, 0, null],
+ 8: [null, 0, null, 0],
+ 9: [null, null, 0, 0]
+};
+```
+
+Tiles 10 through 13 are 4 T-shaped tiles that connect in 3 directions. Tile 14 is cross-shaped, connecting in all 4 directions. Tile 15 is empty space, which is essential for defining data and specifying constraints.
+
+```javascript
+// left, up, right, down
+const tiles = {
+  ...,
+  10: [0, 0, 0, null],
+  11: [0, 0, null, 0],
+  12: [0, null, 0, 0],
+  13: [null, 0, 0, 0],
+  14: [0, 0, 0, 0],
+  15: [null, null, null, null]
+};
+```
+
+Now that we've finished defining tiles, let's look at connection relationships. For connections, it seems we should connect tiles that have connections with each other, and tiles without connections with each other. Following this logic, Tile 0 would meet these tiles:
+
+![Tile 0's Left/Up/Right/Down connection relationships](/images/nmg10.png)
+
+
 
 
 
