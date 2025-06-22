@@ -1,6 +1,6 @@
 ---
 layout: blog_post
-title: "🏝️Nurikabe Map Generation with WFC algorithm"
+title: "🏝️Nurikabe Map Generation with WFC algorithm(DRAFT)"
 image: /images/nurikabe-map-gen.jpg
 excerpt: excerpt
 tags: ["🎮Game", "🧩Puzzle", "🤖Algorithm", "🎲PCG", "💻Game Dev"]
@@ -18,11 +18,11 @@ hidden: true
 
 # Background
 
-<Logic Islands>, released by sublevelgames on June 20, 2025, is a game where players place islands and walls according to predefined rule sets. The game features 6 different rule sets, and WFC was used to create stages for 3 of these rules. Today, I'd like to share the story behind this implementation.
+[Logic Islands](https://sublevelgames.github.io/logic-islands/), released by sublevelgames on June 20, 2025, is a game where players place islands and walls according to predefined rule sets. The game features 6 different rule sets, and WFC was used to create stages for 3 of these rules. Today, I'd like to share the story behind this implementation.
 
 ## WFC
 
-WFC (Wave Function Collapse) is a type of PCG (Procedural Contents Generation) algorithm that analyzes the connectivity patterns of source material to generate output with identical connectivity relationships. Texture Synthesis is the general term for this technique, which creates large result images from small source images.
+[WFC (Wave Function Collapse)](https://github.com/mxgmn/WaveFunctionCollapse) is a type of PCG (Procedural Contents Generation) algorithm that analyzes the connectivity patterns of source material to generate output with identical connectivity relationships. Texture Synthesis is the general term for this technique, which creates large result images from small source images.
 
 ![WFC creates large images from original images](/images/nmg01.png)
 
