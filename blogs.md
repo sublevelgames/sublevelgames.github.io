@@ -96,7 +96,7 @@ permalink: /blogs/
                   <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
                   {% if post.id %}
                   {% assign clean_id = post.id | replace: '/blogs/', '' | replace: '/', '-' %}
-                  <span class="category-views">(<span id="cat-views-{{ clean_id }}" data-post-id="{{ clean_id }}">0</span> views)</span>
+                  <span class="category-views">(<span id="cat-views-game-{{ clean_id }}" data-post-id="{{ clean_id }}">0</span> views)</span>
                   {% endif %}
                 </li>
               {% endif %}
@@ -113,7 +113,7 @@ permalink: /blogs/
                   <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
                   {% if post.id %}
                   {% assign clean_id = post.id | replace: '/blogs/', '' | replace: '/', '-' %}
-                  <span class="category-views">(<span id="cat-views-{{ clean_id }}" data-post-id="{{ clean_id }}">0</span> views)</span>
+                  <span class="category-views">(<span id="cat-views-data-{{ clean_id }}" data-post-id="{{ clean_id }}">0</span> views)</span>
                   {% endif %}
                 </li>
               {% endif %}
@@ -130,7 +130,7 @@ permalink: /blogs/
                   <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
                   {% if post.id %}
                   {% assign clean_id = post.id | replace: '/blogs/', '' | replace: '/', '-' %}
-                  <span class="category-views">(<span id="cat-views-{{ clean_id }}" data-post-id="{{ clean_id }}">0</span> views)</span>
+                  <span class="category-views">(<span id="cat-views-dev-{{ clean_id }}" data-post-id="{{ clean_id }}">0</span> views)</span>
                   {% endif %}
                 </li>
               {% endif %}
