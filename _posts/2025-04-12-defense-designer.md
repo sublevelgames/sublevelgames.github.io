@@ -19,4 +19,6 @@ colors: ["primary", "info", "info"]
 
 <a href="https://html5.gamemonetize.co/cuz9vjzfbtj01cyg3jbgqhypolcmzi5a/" class="btn btn-primary btn-lg">Play at ▶️gamemonetize.com</a>
 
+<a href="https://armorgames.com/defense-designer-game/19575" class="btn btn-primary btn-lg">Play at ⚔️armorgames.com</a>
+
 Defense Designer is a strategic tower defense game where you must protect your castle against waves of relentless enemies. Build and upgrade different types of towers, construct walls, and manage your resources wisely to survive increasingly difficult challenges.
