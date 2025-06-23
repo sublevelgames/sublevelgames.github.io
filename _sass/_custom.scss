@@ -19,3 +19,47 @@
 .card {
     position: relative;
 }
+
+/* Active navigation underline */
+.navbar-nav .nav-item.active .nav-link {
+    position: relative;
+    color: #333; /* 활성 링크 색상 */
+}
+
+.navbar-nav .nav-item.active .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #dc3545; /* 빨간색 밑줄 */
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for non-active items */
+.navbar-nav .nav-item:not(.active) .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    right: 50%;
+    height: 2px;
+    background-color: #dc3545;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-item:not(.active) .nav-link:hover::after {
+    opacity: 1;
+    left: 0;
+    right: 0;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .navbar-nav .nav-item.active .nav-link::after,
+    .navbar-nav .nav-item:not(.active) .nav-link::after {
+        bottom: 0;
+    }
+}
