@@ -15,7 +15,7 @@ permalink: /blogs/
 
       <div class="blog-posts">
         <div class="row">
-          {% for post in site.blog_posts %}
+          {% for post in site.blog_posts reversed %}
           {% unless post.hidden %}
             <div class="col-12 col-md-6 col-lg-4 mb-4">
              <a href="{{ post.url | prepend: site.baseurl }}" class="index-anchor">
@@ -89,7 +89,7 @@ permalink: /blogs/
         {% if categories.size > 0 %}
           <h3>🎮 Game Development</h3>
           <ul>
-            {% for post in blog_posts %}
+            {% for post in blog_posts reversed %}
             {% unless post.hidden %}
               {% if post.tags contains "🎮Game" %}
                 <li>
@@ -106,7 +106,7 @@ permalink: /blogs/
 
           <h3>📊 Data Analysis</h3>
           <ul>
-            {% for post in blog_posts %}
+            {% for post in blog_posts reversed %}
             {% unless post.hidden %}
               {% if post.tags contains "📊Data" %}
                 <li>
@@ -123,7 +123,7 @@ permalink: /blogs/
 
           <h3>🔧 Development Diary</h3>
           <ul>
-            {% for post in blog_posts %}
+            {% for post in blog_posts reversed %}
             {% unless post.hidden %}
               {% if post.tags contains "🔧Development" %}
                 <li>
@@ -154,7 +154,7 @@ permalink: /blogs/
 
       <!-- 인기 포스트를 위한 데이터 저장 -->
       <div id="posts-data" style="display:none;">
-        {% for post in site.blog_posts %}
+        {% for post in site.blog_posts reversed %}
         {% unless post.hidden %}
         {% if post.id %}
         {% assign clean_id = post.id | replace: '/blogs/', '' | replace: '/', '-' %}
