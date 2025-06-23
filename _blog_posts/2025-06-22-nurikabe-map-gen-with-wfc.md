@@ -1,13 +1,12 @@
 ---
 layout: blog_post
-title: "🏝️Nurikabe Map Generation with WFC algorithm(DRAFT)"
+title: "🏝️Nurikabe Map Generation with WFC algorithm"
 image: /images/nurikabe-map-gen.jpg
 excerpt: excerpt
 tags: ["🎮Game", "🧩Puzzle", "🤖Algorithm", "🎲PCG", "💻Game Dev"]
 colors: ["info", "info", "info", "info", "info"]
 id: nurikabe-map-gen-with-wfc
 comments: true
-hidden: true
 ---
 
 <span class="badge badge-info">🎮Game</span>
@@ -42,9 +41,9 @@ Nurikabe has many derivative rules, each existing as separate games.
 
 ![Islands of Insight's Logic Grid rule types](/images/nmg03.png)
 
-# Logic Islands' 6 Rule Sets
+# 6 Rule Sets of Logic Islands 
 
-Logic Islands' 6 rules are as follows:
+6 rules of Logic Islands are as follows:
 
 | Rule Set | Wall Connection | Island Connection | Island Separation | 2×2 Walls | 2×2 Islands | Special Rules |
 |------|---------|---------|---------|---------|---------|-----------|
@@ -221,4 +220,39 @@ With these configured connection relationships, wall patterns matching the Minim
 
 ## Yin-Yang
 
+Finally, the Yin-Yang ruleset is configured as follows:
+- Wall connection required
+- Island connection required
+- Island separation X
+- 2x2 walls forbidden
+- 2x2 islands forbidden
+- No numbers on islands
 
+Yin-Yang is the most different ruleset from original Nurikabe as islands have no numbers. Like the Eastern Taiji symbol, yin and yang are interlocked with each other.
+
+![Taiji pattern with interlocking yin and yang](/images/nmg21.jpg)
+
+We need 1 type each for islands and walls, and both require constraints for forbidden 2x2 walls and forbidden 2x2 islands, so this time we need to create both islands and walls as WFC lines. Since islands and walls must touch each other, we need to remove the processing that prevents lines from touching in the connection relationships.
+
+All tiles can be used, and connections between terminal-terminal, L-L, L-T, L-Cross, T-T, T-Cross, and Cross-Cross are all forbidden.
+
+Below are the connection relationships for tiles 4 and 10 (L tile and T tile) with these constraints applied. Compared to the Modern ruleset, the difference is that lines can attach to Tile 4's Right/Down and Tile 10's Down.
+
+![Connection relationships for Tile 4 and Tile 10 for Yin-Yang](/images/nmg22.png)
+
+When generating maps according to connection relationships, more lines appear in larger maps. We then select the 2 largest areas by size and turn the rest into blocked cells to make them unmodifiable. Starting from terminal nodes, we turn a certain number of tiles into blocked cells to add randomness to the map.
+
+![12x11 Yin-Yang ruleset map example](/images/nmg23.png)
+
+# Conclusion
+
+So far, we've examined successful cases of using WFC to generate maps for the Modern, Minimal, and Yin-Yang rulesets in Logic Islands, which previously failed to generate maps larger than 7x7 when creating game maps with 6 different rulesets.
+
+The key insights gained from this process are:
+- **Thinking about problems in reverse**: In Modern, we simplified the problem by generating islands instead of walls.
+- **Expressing constraints as connection relationships**: Complex rules like forbidden 2x2 patterns were naturally resolved just by restricting tile connections.
+- **Maximum effect with minimum tiles**: The Minimal ruleset satisfied the challenging condition "all wall areas must be exactly 3 cells" with only 11 tiles.
+
+WFC has shown that it can be a powerful solution for content generation in puzzle games with complex logical rules, beyond just being a tool for texture generation. While traditional backtracking methods slow down exponentially as rules become more complex, WFC could quickly generate large-scale maps with properly configured local constraints.
+
+Logic Islands can now stably generate maps up to 12x12 for all rulesets, allowing players to enjoy the unique challenges of each ruleset across various map sizes. Through this project, I learned that sometimes looking at problems from a different angle and simply changing what we're trying to generate can make the seemingly impossible become possible.
