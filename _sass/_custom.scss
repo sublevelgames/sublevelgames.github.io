@@ -20,40 +20,90 @@
     position: relative;
 }
 
-/* Active navigation underline */
-.navbar-nav .nav-item.active .nav-link {
-    position: relative;
-    color: #333; /* 활성 링크 색상 */
+/* Color variables for each menu */
+:root {
+  --games-color: #e74c3c;    /* Red */
+  --blogs-color: #3498db;    /* Blue */
+  --tags-color: #2ecc71;     /* Green */
+  --about-color: #f39c12;    /* Orange */
 }
 
-.navbar-nav .nav-item.active .nav-link::after {
+/* Base active navigation underline */
+.navbar-nav .nav-item.active .nav-link {
+    position: relative;
+    color: #333;
+}
+
+.navbar-nav .nav-item.active .nav-link::after,
+.navbar-nav .nav-item:not(.active) .nav-link::after {
     content: '';
     position: absolute;
     bottom: -2px;
     left: 0;
     right: 0;
     height: 2px;
-    background-color: #dc3545; /* 빨간색 밑줄 */
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
 }
 
-/* Hover effect for non-active items */
+/* Active state - full underline */
+.navbar-nav .nav-item.active .nav-link::after {
+    opacity: 1;
+}
+
+/* Hover state - expanding underline */
 .navbar-nav .nav-item:not(.active) .nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
     left: 50%;
     right: 50%;
-    height: 2px;
-    background-color: #dc3545;
     opacity: 0;
-    transition: all 0.3s ease;
 }
 
 .navbar-nav .nav-item:not(.active) .nav-link:hover::after {
     opacity: 1;
     left: 0;
     right: 0;
+}
+
+/* Individual colors for each menu */
+.nav-games.active .nav-link::after,
+.nav-games:not(.active) .nav-link:hover::after {
+    background-color: var(--games-color);
+}
+
+.nav-blogs.active .nav-link::after,
+.nav-blogs:not(.active) .nav-link:hover::after {
+    background-color: var(--blogs-color);
+}
+
+.nav-tags.active .nav-link::after,
+.nav-tags:not(.active) .nav-link:hover::after {
+    background-color: var(--tags-color);
+}
+
+.nav-about.active .nav-link::after,
+.nav-about:not(.active) .nav-link:hover::after {
+    background-color: var(--about-color);
+}
+
+/* Optional: Change text color on hover to match underline */
+.nav-games:hover .nav-link {
+    color: var(--games-color) !important;
+}
+
+.nav-blogs:hover .nav-link {
+    color: var(--blogs-color) !important;
+}
+
+.nav-tags:hover .nav-link {
+    color: var(--tags-color) !important;
+}
+
+.nav-about:hover .nav-link {
+    color: var(--about-color) !important;
+}
+
+/* Keep counter color consistent */
+.nav-link:hover .nav-counter {
+    color: inherit !important;
 }
 
 /* Mobile responsive */

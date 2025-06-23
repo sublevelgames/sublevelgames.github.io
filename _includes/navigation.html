@@ -77,21 +77,21 @@ Final version with:
     </div>
 
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item{% if page.url == '/' or page.url contains '/page' %} active{% endif %}">
+      <li class="nav-item nav-games{% if page.url == '/' or page.url contains '/page' %} active{% endif %}">
         <a class="nav-link" href={{"/" | relative_url}}>
           Games{% if new_games_count > 0 %}<small class="nav-counter">({{ new_games_count }})</small>{% elsif has_recent_games %}<small class="nav-counter">(1)</small>{% endif %}
           <span class="sr-only">(current)</span>
         </a>
       </li>
-      <li class="nav-item{% if page.url contains '/blogs' %} active{% endif %}">
+      <li class="nav-item nav-blogs{% if page.url contains '/blogs' %} active{% endif %}">
         <a class="nav-link" href={{"/blogs/" | relative_url}}>
           Blogs{% if new_blogs_count > 0 %}<small class="nav-counter">({{ new_blogs_count }})</small>{% elsif has_recent_blogs %}<small class="nav-counter">(1)</small>{% endif %}
         </a>
       </li>
-      <li class="nav-item{% if page.url contains '/tags' %} active{% endif %}">
+      <li class="nav-item nav-tags{% if page.url contains '/tags' %} active{% endif %}">
         <a class="nav-link" href={{"/tags/" | relative_url}}>Tags</a>
       </li>
-      <li class="nav-item{% if page.url contains '/about' %} active{% endif %}">
+      <li class="nav-item nav-about{% if page.url contains '/about' %} active{% endif %}">
         <a class="nav-link" href={{"/about/" | relative_url}}>About</a>
       </li>
     </ul>
