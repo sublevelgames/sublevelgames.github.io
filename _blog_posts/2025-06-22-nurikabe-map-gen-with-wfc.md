@@ -2,7 +2,7 @@
 layout: blog_post
 title: "🏝️Nurikabe Map Generation with WFC algorithm"
 image: /images/nurikabe-map-gen.jpg
-excerpt: excerpt
+excerpt: "Exploring how Wave Function Collapse (WFC) algorithm solved map generation failures for Logic Islands' Modern, Minimal, and Yin-Yang rulesets at sizes above 7x7. Learn how proper tile connections and constraints can automatically generate maps satisfying complex puzzle rules."
 tags: ["🎮Game", "🧩Puzzle", "🤖Algorithm", "🎲PCG", "💻Game Dev"]
 colors: ["info", "info", "info", "info", "info"]
 id: nurikabe-map-gen-with-wfc
