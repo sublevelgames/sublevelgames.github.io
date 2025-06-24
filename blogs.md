@@ -50,7 +50,7 @@ permalink: /blogs/
                           {% assign tag_text = tag | slice: 1, tag.size %}
                           {% assign tag_slug = tag_text | slugify %}
                           <a href="{{ site.baseurl }}/tags/{{ tag_slug }}/" class="tag-link">
-                            <span class="badge badge-{{ post.colors[forloop.index0] }}">{{ tag }}</span>
+                            <span class="badge badge-info">{{ tag }}</span>
                           </a>
                         {% endfor %}
                       {% endif %}
@@ -185,7 +185,7 @@ permalink: /blogs/
                   {% assign tag_posts = blog_posts | where: "tags", tag %}
                   {% assign tag_text = tag | slice: 1, tag.size %}
                   {% assign tag_slug = tag_text | slugify %}
-                  <li><a href="{{ site.baseurl }}/tags/{{ tag_slug }}/"><span class="badge badge-primary">{{ tag }}</span> ({{ tag_posts.size }})</a></li>
+                  <li><a href="{{ site.baseurl }}/tags/{{ tag_slug }}/"><span class="badge badge-info">{{ tag }}</span> ({{ tag_posts.size }})</a></li>
                 {% endfor %}
               </ul>
             </div>
