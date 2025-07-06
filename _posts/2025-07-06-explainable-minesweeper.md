@@ -4,13 +4,13 @@ title: "💣Explainable Minesweeper"
 categories: game
 image: /images/explainable-minesweeper.png
 excerpt: Nurikabe-like grid puzzle
-tags: ["🌐Web", "🧩Puzzle", "💣minesweeper"]
+tags: ["🌐Web", "🧩Puzzle", "💣Minesweeper"]
 colors: ["primary", "info", "info"]
 ---
 
 <span class="badge badge-primary">🌐Web</span>
 <span class="badge badge-info">🧩Puzzle</span>
-<span class="badge badge-info">💣minesweeper</span>
+<span class="badge badge-info">💣Minesweeper</span>
 
 <a href="https://sublevelgames.itch.io/explainable-minesweeper" class="btn btn-primary btn-lg">Play at 🎮itch.io</a>
 
