@@ -1,6 +1,6 @@
 ---
 layout: blog_post
-title: "💣Making Explainable Minesweeper(DRAFT)"
+title: "💣Making Explainable Minesweeper"
 image: /images/making-explainable-minesweeper.png
 excerpt: "Exploring how Wave Function Collapse (WFC) algorithm solved map generation failures for Logic Islands' Modern, Minimal, and Yin-Yang rulesets at sizes above 7x7. Learn how proper tile connections and constraints can automatically generate maps satisfying complex puzzle rules."
 tags: ["🎮Game", "🧩Puzzle", "💣Minesweeper", "🤖Algorithm", "💻Game Dev"]
