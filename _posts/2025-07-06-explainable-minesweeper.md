@@ -3,7 +3,7 @@ layout: post
 title: "💣Explainable Minesweeper"
 categories: game
 image: /images/explainable-minesweeper.png
-excerpt: Nurikabe-like grid puzzle
+excerpt: No 50/50. We will explain everything.
 tags: ["🌐Web", "🧩Puzzle", "💣Minesweeper"]
 colors: ["primary", "info", "info"]
 ---
