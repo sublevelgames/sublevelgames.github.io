@@ -1,5 +1,5 @@
 ---
 layout: tag
-tag: "💣minesweeper"
+tag: "💣Minesweeper"
 permalink: /tags/minesweeper/
 ---
