@@ -72,3 +72,35 @@ The completed level is shown below. It's a deducible Minesweeper level that does
 
 ![A deducible Minesweeper level that doesn't rely on luck](/images/ems08.png)
 
+# Organizing Deduction Rules
+
+So what deduction rules were used in map generation? Since my game [Explainable Minesweeper](https://sublevelgames.github.io/explainable-minesweeper/) uses the same deduction rules, let me summarize what happens when you press the hint button.
+
+![Process when pressing the hint button in Explainable Minesweeper](/images/ems09.png)
+
+First, there are 2 Global Patterns. If you've found all mines, the remaining cells must all be regular cells. Or if you've found all regular cells, the rest must obviously be mines. Note that in my game, for logical accuracy, not only revealing regular cells but also placing flags in the wrong place results in game over.
+
+![Situation where hints are found in Global Pattern](/images/ems10.png)
+
+Next, Simple Patterns are literally simple situations. When the number of unrevealed cells around a cell matches the cell's number, you can flag all those cells. Conversely, if you've already placed all the flags, you can safely reveal all remaining cells.
+
+![Situation where hints are found in Simple Pattern](/images/ems11.png)
+
+Finally, Advanced Patterns are probably the reason I wrote this article. Along with the **common area** mentioned earlier, you need to consider the **unique area** that each cell has separate from the common area.
+
+This pattern considers 2 numbers (note that [14 Minesweeper Variants](https://store.steampowered.com/app/1865060/14/) includes patterns involving 3 or more numbers, but I excluded them as they're too complex). When we call the first number A and the second number B, we compare the number of mines in the common and unique areas. When the difference is clear, we can determine whether the unique area is safe or contains mines.
+
+For example, in the image below, A is 1 and B is 3. B needs 3 mines but already has 1 flagged, so it only needs 2 more. However, we cannot place 2 or more mines in the common area with A, because A must have only 1 mine as a neighbor. We also can't place 0, because then there wouldn't be enough spaces to satisfy B's condition of 3 mines. Therefore, by placing 1 mine in B's unique area (4,5) and 1 mine in one of the 2 remaining common area cells, A's unique area becomes safe.
+
+![Determining unique area as safe](/images/ems12.png)
+
+Conversely, here's a case where the unique area is determined to contain mines. A has no unique area, and only B has a unique area. Since A must have 1 mine, exactly 1 must be placed in the common area, and in that case, we can see that the only option left for B's unique area is a mine.
+
+![Determining unique area as mine](/images/ems13.png)
+
+It's simpler logic than you might think, right? I can't believe I kept leaving Minesweeper to luck because I didn't know this. Of course, there are games in the original Minesweeper where you have to rely on luck even with logical deduction. But there are no such games in [Explainable Minesweeper](https://sublevelgames.github.io/explainable-minesweeper/)!
+
+# Conclusion
+
+Thank you for reading this long article. The method used here isn't extraordinary deduction and can be thought of with common sense, but I hadn't thought about it until now. I wrote this article and created the game thinking there might be others who could benefit like me. Since explanation is the main purpose, the game supports a total of 9 languages. If you'd like support for your language, please let me know here. And if possible, please let me know what you think about this method and the game. Thank you.
+
