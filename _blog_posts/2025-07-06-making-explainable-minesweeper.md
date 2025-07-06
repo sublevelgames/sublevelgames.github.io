@@ -7,7 +7,6 @@ tags: ["🎮Game", "🧩Puzzle", "💣Minesweeper", "🤖Algorithm", "💻Game D
 colors: ["info", "info", "info", "info", "info"]
 id: making-explainable-minesweeper
 comments: true
-hidden: true
 ---
 
 <span class="badge badge-info">🎮Game</span>
