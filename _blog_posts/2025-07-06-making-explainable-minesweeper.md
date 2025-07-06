@@ -18,7 +18,7 @@ hidden: true
 
 # Background
 
-I recently purchased and played a game called [14 Minesweeper Variants](https://store.steampowered.com/app/1865060/14/) during a Steam sale. It was a fun game. However, I became curious while looking at the hints provided in the game. What exactly are these?
+I recently purchased and played a game called [14 Minesweeper Variants](https://store.steampowered.com/app/1865060/14/) during a Steam Summer sale. It was a fun game. However, I became curious while looking at the hints provided in the game. What exactly are these?
 
 ![This is the screen when using hints. Can you figure out what this means?](/images/ems01.png)
 
@@ -48,4 +48,27 @@ Here's how to interpret this image. The purple square is the **common area** sha
 
 Now I've explained the ambiguous part. While it's relatively easy to understand when explained in natural language like this, that game, although excellent, shows this with symbols, which took me a long time to interpret. I thought I probably wasn't the only one. So what if there was a game that explained this in natural language? Wouldn't it be able to show many people that they can solve more problems by making one step of deduction in Minesweeper? With this thought, I decided to create a game.
 
+# Map Generation
+
+The maps provided in this game must be solvable only through intuitive results or deduction. To achieve this, I had the AI simulate solving puzzles from the player's perspective and keep only the successful maps. The process is illustrated in the diagram below:
+
+![Generating deducible Minesweeper maps using simulation](/images/ems06.png)
+
+Let me explain this process step by step.
+
+First, step 1 is generating a random board. A predetermined number of mines are randomly scattered on a board of a predetermined size.
+
+Next, step 2 is finding candidate starting positions. Cells with values of 0, 1, or 2 are good choices, especially cells with value 0 since they also open up surrounding cells as a bonus. We find cells with values 0, 1, and 2, prioritize cells with lower values, and determine candidate starting positions. Here, only 2 candidates are shown.
+
+Then in step 3, we actually try to solve the puzzle. At this point, the cell (0,0) marked with a red arrow gets stuck during the deduction process. It leads to the situation below:
+
+![Stuck situation when solving from cell (0,0)](/images/ems07.png)
+
+Even using all intuitive results and deduction rules, there are no certain cells. At this point, we abandon this starting point and try the next one. That's (4,0) with the blue arrow. By solving the problem using intuitive results and deduction rules, we were able to reveal all non-mine regular cells, so this map is usable.
+
+In step 4, we take the map found in step 3 and add some AI moves to make the map start in a slightly more revealed state than the beginning. The purpose is to make the difficulty slightly easier.
+
+The completed level is shown below. It's a deducible Minesweeper level that doesn't rely on luck!
+
+![A deducible Minesweeper level that doesn't rely on luck](/images/ems08.png)
 
