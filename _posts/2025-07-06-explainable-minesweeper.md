@@ -14,6 +14,7 @@ colors: ["primary", "info", "info"]
 
 <a href="https://sublevelgames.itch.io/explainable-minesweeper" class="btn btn-primary btn-lg">Play at 🎮itch.io</a>
 
+<a href="https://www.gamepix.com/play/explainable-minesweeper" class="btn btn-primary btn-lg">Play at ▶️gamepix.com</a>
 
 In the original Minesweeper, there are inevitable 50/50 moments. These are situations where you have to leave it to chance and click on one.
 

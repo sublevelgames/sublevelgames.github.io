@@ -17,6 +17,8 @@ colors: ["primary", "info", "info", "info"]
 
 <a href="https://www.gamepix.com/play/logic-islands" class="btn btn-primary btn-lg">Play at ▶️gamepix.com</a>
 
+<a href="https://html5.gamemonetize.co/xsocq2kafpyvurms2y1w7o3g3urm948t/" class="btn btn-primary btn-lg">Play at ▶️gamemonetize.com</a>
+
 <a href="https://playgama.com/game/logic-islands" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
 
 A logic puzzle game inspired by Nurikabe and Islands of Insight. Create islands with exact numbers while keeping walls connected. Navigate through 6 unique worlds with different rulesets - from Classic Nurikabe to advanced mechanics like Yin-Yang connectivity. Each world introduces new challenges with ice blocks, one-way arrows, and special orb mechanics across 240 hand-picked puzzles.
