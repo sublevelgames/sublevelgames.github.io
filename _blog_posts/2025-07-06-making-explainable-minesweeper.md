@@ -27,6 +27,10 @@ Actually, when I played Minesweeper, which was a default Windows game, I could s
 
 The numbers 1 and 2 indicate the number of mines in each cell's 8 neighbors (up, down, left, right, and diagonals). Empty cells mean there are no mines in their neighbors. However, in situations like the image above, it's not easy to figure out which squares have mines and which don't. It's also difficult to accurately guess the mine locations because there are too few mines.
 
+(Added on 10 July 2025) In fact, the ems02.png shown here as an example was not an ambiguous map. As several people pointed out sharply in the [hackernews post](https://news.ycombinator.com/item?id=44480852#44516326), due to the 1-2-1 pattern in the lower centre, the only places where 2 can have mines are at the top and bottom. This is because 1 cannot have two mines!
+
+![ems02.png was not an ambiguous map](/images/ems02_1.png)
+
 # 50/50 Situations
 
 Let's look at this situation. This image is from [this source](https://funnyjunk.com/funny_pictures/4582680/5050+chance/), and it's exactly a 50/50 probability. There's 1 mine left, and whichever of the two remaining squares you choose, there's a chance it could be a mine.
@@ -34,10 +38,6 @@ Let's look at this situation. This image is from [this source](https://funnyjunk
 ![Should I cut the red wire or the blue wire? What if I cut both?](/images/ems03.png)
 
 This situation occurs due to Minesweeper's map generation algorithm. The original Minesweeper usually doesn't let you step on a mine on your first click. This is because it places mines in locations other than the square the user selects on their first click. Since mines are placed at that moment, it can't perform enough calculations to prevent 50/50 situations. When I experimented, finding boards solvable only through logical deduction required about 250,000 attempts per level on a 9x9 board with 33 mines.
-
-(Added on 10 July 2025) In fact, the ems02.png shown here as an example was not an ambiguous map. As several people pointed out sharply in the [hackernews post](https://news.ycombinator.com/item?id=44480852#44516326), due to the 1-2-1 pattern in the lower centre, the only places where 2 can have mines are at the top and bottom. This is because 1 cannot have two mines!
-
-![ems02.png was not an ambiguous map](/images/ems02_1.png)
 
 # Situations Where Deduction is Possible
 
