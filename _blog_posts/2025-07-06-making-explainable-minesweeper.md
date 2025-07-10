@@ -35,6 +35,10 @@ Let's look at this situation. This image is from [this source](https://funnyjunk
 
 This situation occurs due to Minesweeper's map generation algorithm. The original Minesweeper usually doesn't let you step on a mine on your first click. This is because it places mines in locations other than the square the user selects on their first click. Since mines are placed at that moment, it can't perform enough calculations to prevent 50/50 situations. When I experimented, finding boards solvable only through logical deduction required about 250,000 attempts per level on a 9x9 board with 33 mines.
 
+(Added on 10 July 2025) In fact, the ems02.png shown here as an example was not an ambiguous map. As several people pointed out sharply in the [hackernews post](https://news.ycombinator.com/item?id=44480852#44516326), due to the 1-2-1 pattern in the lower centre, the only places where 2 can have mines are at the top and bottom. This is because 1 cannot have two mines!
+
+![ems02.png was not an ambiguous map](/images/ems02_1.png)
+
 # Situations Where Deduction is Possible
 
 However, there's a common mistake that beginners like my past self often make. They think it's a 50/50 situation and leave it to luck when deduction is actually possible! The [14 Minesweeper Variants](https://store.steampowered.com/app/1865060/14/) I mentioned earlier provides hints for such situations. Let's go back to the previous image:
