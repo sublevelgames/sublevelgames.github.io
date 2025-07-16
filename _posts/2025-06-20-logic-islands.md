@@ -6,6 +6,7 @@ image: /images/logic-islands.png
 excerpt: Nurikabe-like grid puzzle
 tags: ["🌐Web", "🧩Puzzle", "🖇️Connect", "🏝️Nurikabe"]
 colors: ["primary", "info", "info", "info"]
+comments: false
 ---
 
 <span class="badge badge-primary">🌐Web</span>

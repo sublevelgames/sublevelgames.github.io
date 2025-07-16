@@ -6,6 +6,7 @@ image: /images/line-sudoku-1.png
 excerpt: sudoku + stream 
 tags: ["📱Mobile", "🧩Puzzle", "🔢Sudoku"]
 colors: ["danger", "info", "info"]
+comments: false
 ---
 
 <span class="badge badge-danger">📱Mobile</span>

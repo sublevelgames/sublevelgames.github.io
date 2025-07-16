@@ -6,6 +6,7 @@ image: /images/sokomatch.png
 excerpt: Classic Sokoban + 3-Match!
 tags: ["🌐Web", "🧩Puzzle", "📦Sokoban", "🍭Match-3"]
 colors: ["primary", "info", "info", "info"]
+comments: false
 ---
 
 <span class="badge badge-primary">🌐Web</span>

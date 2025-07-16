@@ -6,6 +6,7 @@ image: /images/explainable-minesweeper.png
 excerpt: No 50/50. We will explain everything.
 tags: ["🌐Web", "🧩Puzzle", "💣Minesweeper"]
 colors: ["primary", "info", "info"]
+comments: false
 ---
 
 <span class="badge badge-primary">🌐Web</span>

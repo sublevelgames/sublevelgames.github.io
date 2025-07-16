@@ -6,6 +6,7 @@ image: /images/othello-five.png
 excerpt: Classic Othello + Five-in-a-row!
 tags: ["🌐Web", "♟️Strategy"]
 colors: ["primary", "info"]
+comments: false
 ---
 
 <span class="badge badge-primary">🌐Web</span>

@@ -6,6 +6,7 @@ image: /images/paint-tomato.png
 excerpt: Paint Tomato is a captivating game where your task is to paint tomatoes, beginning from the top left corner, to match the color of their adjacent companions.
 tags: ["🌐Web", "🧩Puzzle", "➕Merge"]
 colors: ["primary", "info", "info"]
+comments: false
 ---
 
 <span class="badge badge-primary">🌐Web</span>

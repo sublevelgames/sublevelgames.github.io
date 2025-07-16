@@ -6,6 +6,7 @@ image: /images/cookie-match.png
 excerpt: Cookie Match is a sliding puzzle game where you must match each cookie to its corresponding cutter.
 tags: ["📱Mobile", "🦾Steam", "🌐Web", "🧩Puzzle", "🛷Slide"]
 colors: ["danger", "success", "primary", "info", "info"]
+comments: false
 ---
 
 <span class="badge badge-danger">📱Mobile</span>

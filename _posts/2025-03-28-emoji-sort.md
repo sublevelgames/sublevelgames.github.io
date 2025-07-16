@@ -6,6 +6,7 @@ image: /images/emoji-sort.png
 excerpt: Emoji Sort is a pattern recognition puzzle game where players must fill in empty cells with the correct emojis. Each puzzle presents a grid with missing emojis that follow specific patterns - such as categories, sequences, or associations. 
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🧠Logic"]
 colors: ["danger", "primary", "info", "info"]
+comments: false
 ---
 
 <span class="badge badge-danger">📱Mobile</span>

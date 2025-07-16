@@ -6,6 +6,7 @@ image: /images/line-sudoku.png
 excerpt: Fill a grid with unique numbers in rows, columns, and streams of connected cells.
 tags: ["🌐Web", "🧩Puzzle", "🔢Sudoku"]
 colors: ["primary", "info", "info"]
+comments: false
 ---
 
 <span class="badge badge-primary">🌐Web</span>

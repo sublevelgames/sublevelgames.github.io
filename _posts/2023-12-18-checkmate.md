@@ -6,6 +6,7 @@ image: /images/checkmate.png
 excerpt: Checkmate, a strategic chess-inspired game featuring 500 unique maps and 24 challenging achievements.
 tags: ["🌐Web", "🧩Puzzle", "🏁Chess"]
 colors: ["primary", "info", "info"]
+comments: false
 ---
 
 <span class="badge badge-primary">🌐Web</span>

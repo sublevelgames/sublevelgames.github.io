@@ -6,6 +6,7 @@ image: /images/pipe-match.png
 excerpt: Pipe Match is a rotating card game where the goal is to connect all pipes to the end.
 tags: ["🌐Web", "🧩Puzzle", "🙃Rotate"]
 colors: ["primary", "info", "info"]
+comments: false
 ---
 
 <span class="badge badge-primary">🌐Web</span>

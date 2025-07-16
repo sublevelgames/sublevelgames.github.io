@@ -6,6 +6,7 @@ image: /images/find-the-set.png
 excerpt: Match three cards by matching or having all different attributes.
 tags: ["🌐Web", "🧩Puzzle", "🍭Match-3"]
 colors: ["primary", "info", "info"]
+comments: false
 ---
 
 <span class="badge badge-primary">🌐Web</span>

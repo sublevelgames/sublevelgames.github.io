@@ -6,6 +6,7 @@ image: /images/dot-and-dot.png
 excerpt: Dot and Dot is a vibrant puzzle game where players connect matching dots without crossing paths. With 1000 challenging levels, features like hints, auto-complete, and right-click line removal enhance the experience, testing your logic and spatial skills.
 tags: ["🌐Web", "🧩Puzzle", "🖇️Connect"]
 colors: ["primary", "info", "info"]
+comments: false
 ---
 
 <span class="badge badge-primary">🌐Web</span>
