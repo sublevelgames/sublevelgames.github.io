@@ -4,13 +4,16 @@ title: 🥝Fruits Match
 categories: game
 image: /images/fruits-match.png
 excerpt: Fruits Match is a match-three game where you collect three matching tiles to clear them.
-tags: ["🌐Web", "🧩Puzzle", "🍭Match-3"]
-colors: ["primary", "info", "info"]
+tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🍭Match-3"]
+colors: ["danger", "primary", "info", "info"]
 ---
 
+<span class="badge badge-danger">📱Mobile</span>
 <span class="badge badge-primary">🌐Web</span>
 <span class="badge badge-info">🧩Puzzle</span>
 <span class="badge badge-info">🍭Match-3</span>
+
+<a href="https://play.google.com/store/apps/details?id=com.sublevelgames.fruitmatch" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
 
 <a href="https://lagged.com/play/6140/" class="btn btn-primary btn-lg">Play at 🎯lagged.com</a>
 - This version is mobile-optimized.
