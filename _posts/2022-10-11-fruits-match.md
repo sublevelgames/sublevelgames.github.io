@@ -6,6 +6,7 @@ image: /images/fruits-match.png
 excerpt: Fruits Match is a match-three game where you collect three matching tiles to clear them.
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🍭Match-3"]
 colors: ["danger", "primary", "info", "info"]
+comments: false
 ---
 
 <span class="badge badge-danger">📱Mobile</span>
