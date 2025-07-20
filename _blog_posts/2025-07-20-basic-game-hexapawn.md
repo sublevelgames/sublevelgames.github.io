@@ -74,14 +74,14 @@ First, unlike modern programming languages, BASIC requires you to write line num
 
 For example, a BASIC code that receives a value A and immediately prints it would look like this:
 
-```
+```vb
 10 INPUT A
 20 PRINT A
 ```
 
 In BASIC syntax, `DATA` is a command that pre-stores constant values to be used during program execution. During execution, these data can be read sequentially through the `READ` command.
 
-```
+```vb
 10 READ A, B
 20 PRINT A, B
 30 DATA 100, 200
@@ -91,7 +91,7 @@ In BASIC syntax, `DATA` is a command that pre-stores constant values to be used 
 
 The code stores the board in `B` as a two-dimensional array:
 
-```
+```vb
 40 FOR I=1 TO 19: FOR J=1 TO 9: READ B(I,J): NEXT J: NEXT I
 ```
 
@@ -119,7 +119,7 @@ However, horizontally flipped states are not stored here. For example, State 1T,
 
 The code stores actions in `M` as a two-dimensional array like `B`:
 
-```
+```vb
 45 FOR I=1 TO 19: FOR J=1 TO 4: READ M(I,J): NEXT J: NEXT I
 ```
 
@@ -127,7 +127,7 @@ The code stores actions in `M` as a two-dimensional array like `B`:
 
 Now we need to match these defined boards with the current game board state. After all, we need to select one of the predetermined actions. The code for matching boards is here. Since there's a triple `FOR` loop, I've added indentation not present in the original to aid understanding:
 
-```
+```vb
 350 FOR I=1 TO 19
 360 　FOR J=1 TO 3
 370 　　FOR K=3 TO 1 STEP -1
@@ -164,7 +164,7 @@ As an aside, line 511 is entered when it fails to find matching values with the 
 
 Now when we get to line 540, the index of the selected board is stored in `X`, `I` is used again as a FOR loop index, and it looks for non-zero values among the possible actions `M(X)`. Non-zero values are possible actions, so if it finds such a value, it goes to line 600 and exits the loop. If it can't exit the loop, meaning all values are 0, the AI has no moves to make and resigns.
 
-```
+```vb
 540 X=I
 550 FOR I=1 TO 4
 560 IF M(X,I)<>0 THEN 600
@@ -177,7 +177,7 @@ Now when we get to line 540, the index of the selected board is stored in `X`, `
 
 In lines 600 and 601, the AI uses the `RND()` function to return a random value between 0 and 1, multiplies it by 4, adds 1, and converts it to an integer to store one of the values 1, 2, 3, 4 in `Y`. This is repeated until the action value `M(X,Y)` is not 0.
 
-```
+```vb
 600 Y=INT(RND(1)*4+1)
 601 IF M(X,Y)=0 THEN 600
 610 IF R<>0 THEN 630
@@ -194,7 +194,7 @@ In lines 600 and 601, the AI uses the `RND()` function to return a random value 
 
 Line 610 sends to line 630 if `R=1` (flipped board), otherwise it performs the move in lines 620, 622, 623. Here the `FNM` function is probably an abbreviation for FuNction Modulo. The `FNM` function appears in line 30 and extracts only the ones digit from a two-digit number through modulo 10 operation. And `INT(M(X,Y)/10)` extracts the tens digit, so we can see it defines the starting and ending points of the action.
 
-```
+```vb
 30 DEF FNM(Y)=Y-INT(Y/10)*10
 ```
 
@@ -204,7 +204,7 @@ After the move is complete, it goes to line 640 and uses `GOSUB` to go to line 1
 
 Actions on a flipped board are a bit more complex, using a function called `FNR` and the `FNS` function it calls. These are probably abbreviations for FuNction Reverse and FuNction Same.
 
-```
+```vb
 20 DEF FNR(X)=-3*(X=1)-(X=3)-4*(X=6)-6*(X=4)-7*(X=9)-9*(X=7)+FNS(X)
 25 DEF FNS(X)=-X*(X=2 OR X=5 OR X=8)
 ```
@@ -229,14 +229,14 @@ What the source code initially provides is all possible actions from all states.
 
 As a result of the game, the AI can win or lose. If a human reaches the top row, the human wins, and conversely, if the computer reaches the bottom row, the computer wins.
 
-```
+```vb
 210 IF S(1)=1 OR S(2)=1 OR S(3)=1 THEN 820
 641 IF S(7)=-1 OR S(8)=-1 OR S(9)=-1 THEN 870
 ```
 
 When the computer wins - that is, at line 870, it doesn't take any special action other than increasing `W`, which represents the number of wins, but at line 830 following line 820, it erases the action. The action erased here is the action the AI just performed. In other words, it deletes the last action that was the direct cause of the behavior leading to defeat.
 
-```
+```vb
 820 PRINT "YOU WIN."
 830 M(X,Y)=0
 840 L=L+1
