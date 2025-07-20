@@ -42,7 +42,7 @@ The complete source code for Hexapawn from BASIC Computer Games can be found [he
 
 The most difficult part of the source code was lines 900 through 970:
 
-```
+```vb
 870 PRINT "I WIN."
 880 W=W+1
 890 GOTO 850
