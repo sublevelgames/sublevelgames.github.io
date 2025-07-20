@@ -42,7 +42,7 @@ The complete source code for Hexapawn from BASIC Computer Games can be found [he
 
 The most difficult part of the source code was lines 900 through 970:
 
-```basic
+```
 870 PRINT "I WIN."
 880 W=W+1
 890 GOTO 850
@@ -105,17 +105,17 @@ When all the data from lines 900-945 are represented as boards:
 
 Now let's see what lines 950-970 mean. These are about state transitions. Each square on the 3x3 board can be represented as 1-9 from top to bottom.
 
-![Number mapping on the 3x3 board](/image/bhp05.png)
+![Number mapping on the 3x3 board](/images/bhp05.png)
 
 This defines the actions the computer can take. For example, state 1 is `-1,-1,-1,1,0,0,0,1,1` as shown above, where the computer (black) can move pawns at positions 2 and 3. Pawn 2 can capture the white pawn at position 4 or move to position 5, and pawn 3 can move to position 6. Since there are no other actions, the remaining action slots (up to 4 maximum) are filled with 0. This is represented by the first four numbers in line 950: `24,25,36,0`.
 
-![State transition table from state 1](/image/bhp06.png)
+![State transition table from state 1](/images/bhp06.png)
 
 Did you notice that the states shown here are not in lines 900-945? The computer doesn't need to have these states. For states resulting from the computer's actions, the human will respond with some action, and the computer only needs to have the results - that is, the states the computer can face. The states the computer can encounter on its turn are only the 19 states in lines 900-945.
 
 However, horizontally flipped states are not stored here. For example, State 1T, which is the flip of State 1, is not included. But since these states can naturally occur in the game, the code directly flips them horizontally using an array called `T` to find them.
 
-![State 1 and its horizontally flipped State 1T](/image/bhp07.png)
+![State 1 and its horizontally flipped State 1T](/images/bhp07.png)
 
 The code stores actions in `M` as a two-dimensional array like `B`:
 
@@ -152,7 +152,7 @@ Now we need to match these defined boards with the current game board state. Aft
 
 Here, `I` loops through the 19 states in the outermost loop. In the first inner `FOR` loop, the original board array `B(I,1~9)` is horizontally flipped and stored in `T(1~9)`. `J` is the row and `K` is the column.
 
-![State 1 stored in B(1) being flipped to T](/image/bhp08.png)
+![State 1 stored in B(1) being flipped to T](/images/bhp08.png)
 
 The second inner FOR loop checks if all values of the current game state `S` and the board `B` being traversed are the same. `<>` is the not-equal operator, which can still be found in Excel, VBA, and SQL today. If all 9 values of `S` and `B` are the same, it sets `R=0` and sends program execution to line 540 using the `GOTO` statement. The `GOTO` statement was commonly used in programming languages in the past, and here it's used to exit the entire loop immediately without going through the next loop after the inner loop ends. In modern languages, something like a `break` statement would be similar.
 
