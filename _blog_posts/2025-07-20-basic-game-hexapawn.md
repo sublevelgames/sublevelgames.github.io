@@ -1,6 +1,6 @@
 ---
 layout: blog_post
-title: "💣Solving a Childhood Mystery: How BASIC Games Learned to Win"
+title: "♙Solving a Childhood Mystery: How BASIC Games Learned to Win"
 image: /images/basic-game-hexapawn.jpg
 excerpt: "As a teenager, I discovered incomprehensible code in a book called BASIC Computer Games. Lines 900 through 970 filled with cryptic numbers - it was the secret of how HEXAPAWN's AI learned. 50 years ago, an AI that could improve itself was created with just 19 game states and simple rules. Following the history of machine learning that started with matchboxes and beads, I finally solve a mystery from my childhood."
 tags: ["🎮Game", "♟️Strategy", "🏁Chess", "🤖Algorithm", "💻Game Dev"]
