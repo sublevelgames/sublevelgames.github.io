@@ -247,6 +247,8 @@ When the computer wins - that is, at line 870, it doesn't take any special actio
 890 GOTO 850
 ```
 
+![The computer deletes the action that led to defeat](/images/bhp12.png)
+
 This is the secret of AI learning. The AI gets stronger and stronger. So how strong does it get? According to Martin Gardner, who first proposed this game, it plays perfectly after losing 11 out of 36 games. In fact, this is a [solved game](https://en.wikipedia.org/wiki/Solved_game) where black, who moves later, always wins, and if both play perfectly, black always wins in 3 moves. In the [original article](https://www.scientificamerican.com/article/mathematical-games-1962-03/), Martin Gardner said that this method would be possible for mini-checkers with 2 checker pieces each on a 4x4 board, but minichess would be too complex to be possible. In fact, Martin Gardner introduced Donald Michie's MENACE (Matchbox Educable Noughts And Crosses Engine) as the origin of Matchbox learning machines. Created in 1960, MENACE was a machine that learned tic-tac-toe with 304 matchboxes.
 
 ![MENACE](/images/bhp10.png)
