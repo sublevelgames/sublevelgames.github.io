@@ -19,4 +19,7 @@ comments: false
 
 <a href="https://playgama.com/game/dot-and-dot" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
 
+<a href="https://www.y8.com/games/dot_and_dot" class="btn btn-primary btn-lg">Play at 🕹️y8.com</a>
+
 Dot and Dot is a vibrant puzzle game where players connect matching dots without crossing paths. With 500~2000 challenging levels, features like hints, auto-complete, and right-click line removal enhance the experience, testing your logic and spatial skills.
+
