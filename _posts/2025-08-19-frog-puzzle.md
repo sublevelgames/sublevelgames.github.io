@@ -17,6 +17,8 @@ comments: false
 
 <a href="https://play.google.com/store/apps/details?id=com.sublevelgames.frog" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
 
+<a href="https://sublevelgames.itch.io/frog-puzzle" class="btn btn-primary btn-lg">Play at 🎮itch.io</a>
+
 🐸 Frog Puzzle - A Strategic Lily Pad Game 🐸
 
 Challenge your mind in this unique puzzle game where you must prevent frogs from reaching the walkway by strategically removing lily pads.
