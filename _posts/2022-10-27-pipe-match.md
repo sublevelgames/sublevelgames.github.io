@@ -4,14 +4,17 @@ title: 💧Pipe Match
 categories: game
 image: /images/pipe-match.png
 excerpt: Pipe Match is a rotating card game where the goal is to connect all pipes to the end.
-tags: ["🌐Web", "🧩Puzzle", "🙃Rotate"]
-colors: ["primary", "info", "info"]
+tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🙃Rotate"]
+colors: ["danger", "primary", "info", "info"]
 comments: false
 ---
 
+<span class="badge badge-danger">📱Mobile</span>
 <span class="badge badge-primary">🌐Web</span>
 <span class="badge badge-info">🧩Puzzle</span>
 <span class="badge badge-info">🙃Rotate</span>
+
+<a href="https://play.google.com/store/apps/details?id=com.sublevelgames.pipematch" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
 
 <a href="https://www.coolmathgames.com/0-daily-pipe-match" class="btn btn-primary btn-lg">Play at 🧮coolmathgames.com</a>
 - This version offers daily puzzles. To play previous puzzles, click on the calendar and choose a past day.

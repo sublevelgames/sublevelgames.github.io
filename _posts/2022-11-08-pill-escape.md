@@ -4,14 +4,17 @@ title: 💊Pill Escape
 categories: game
 image: /images/pill-escape.png
 excerpt: Pill Escape is a puzzle game inspired by the rush-hour style, where your goal is to slide the blue pill to the exit.
-tags: ["🌐Web", "🧩Puzzle", "🛷Slide"]
-colors: ["primary", "info", "info"]
+tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🛷Slide"]
+colors: ["danger", "primary", "info", "info"]
 comments: false
 ---
 
+<span class="badge badge-danger">📱Mobile</span>
 <span class="badge badge-primary">🌐Web</span>
 <span class="badge badge-info">🧩Puzzle</span>
 <span class="badge badge-info">🛷Slide</span>
+
+<a href="https://play.google.com/store/apps/details?id=com.sublevelgames.pillescape" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
 
 <a href="https://lagged.com/play/6096/" class="btn btn-primary btn-lg">Play at 🎯lagged.com</a>
 

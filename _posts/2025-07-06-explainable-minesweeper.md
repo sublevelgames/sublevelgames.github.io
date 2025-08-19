@@ -4,14 +4,17 @@ title: "💣Explainable Minesweeper"
 categories: game
 image: /images/explainable-minesweeper.png
 excerpt: No 50/50. We will explain everything.
-tags: ["🌐Web", "🧩Puzzle", "💣Minesweeper"]
-colors: ["primary", "info", "info"]
+tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "💣Minesweeper"]
+colors: ["danger", "primary", "info", "info"]
 comments: false
 ---
 
+<span class="badge badge-danger">📱Mobile</span>
 <span class="badge badge-primary">🌐Web</span>
 <span class="badge badge-info">🧩Puzzle</span>
 <span class="badge badge-info">💣Minesweeper</span>
+
+<a href="https://play.google.com/store/apps/details?id=com.sublevelgames.minesweeper" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
 
 <a href="https://sublevelgames.itch.io/explainable-minesweeper" class="btn btn-primary btn-lg">Play at 🎮itch.io</a>
 

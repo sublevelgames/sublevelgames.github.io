@@ -4,11 +4,12 @@ title: "🔼Find the Set"
 categories: game
 image: /images/find-the-set.png
 excerpt: Match three cards by matching or having all different attributes.
-tags: ["🌐Web", "🧩Puzzle", "🍭Match-3"]
-colors: ["primary", "info", "info"]
+tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🍭Match-3"]
+colors: ["danger", "primary", "info", "info"]
 comments: false
 ---
 
+<span class="badge badge-danger">📱Mobile</span>
 <span class="badge badge-primary">🌐Web</span>
 <span class="badge badge-info">🧩Puzzle</span>
 <span class="badge badge-info">🍭Match-3</span>

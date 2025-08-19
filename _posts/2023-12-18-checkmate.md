@@ -4,14 +4,17 @@ title: "♞Checkmate"
 categories: game
 image: /images/checkmate.png
 excerpt: Checkmate, a strategic chess-inspired game featuring 500 unique maps and 24 challenging achievements.
-tags: ["🌐Web", "🧩Puzzle", "🏁Chess"]
-colors: ["primary", "info", "info"]
+tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🏁Chess"]
+colors: ["danger", "primary", "info", "info"]
 comments: false
 ---
 
+<span class="badge badge-danger">📱Mobile</span>
 <span class="badge badge-primary">🌐Web</span>
 <span class="badge badge-info">🧩Puzzle</span>
 <span class="badge badge-info">🏁Chess</span>
+
+<a href="https://play.google.com/store/apps/details?id=com.sublevelgames.checkmate" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
 
 <a href="https://lagged.com/play/6631/" class="btn btn-primary btn-lg">Play at 🎯lagged.com</a>
 
