@@ -15,6 +15,8 @@ comments: false
 
 <a href="https://play.google.com/store/apps/details?id=com.sublevelgames.twoblocks" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
 
+<a href="https://www.gamepix.com/play/two-blocks" class="btn btn-primary btn-lg">Play at ▶️gamepix.com</a>
+
 Two Blocks - A Fresh Take on Block Puzzles
 
 Match blocks of the same color by dragging them together. Simple concept, challenging execution!
