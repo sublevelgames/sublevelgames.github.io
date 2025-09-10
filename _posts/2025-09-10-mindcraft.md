@@ -2,7 +2,7 @@
 layout: post
 title: 🧊Mindcraft
 categories: game
-image: /images/mindcraft.png
+image: /images/mindcraft.jpg
 excerpt: Do you like Bloxorz? We have more gimmicks and blocks.
 tags: ["🦾Steam", "🌐Web", "🧩Puzzle", "🙃Rotate"]
 colors: ["success", "primary", "info", "info"]
