@@ -22,5 +22,7 @@ comments: false
 
 <a href="https://playgama.com/game/logic-islands" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
 
+<a href="https://www.y8.com/games/logic_islands" class="btn btn-primary btn-lg">Play at 🕹️y8.com</a>
+
 A logic puzzle game inspired by Nurikabe and Islands of Insight. Create islands with exact numbers while keeping walls connected. Navigate through 6 unique worlds with different rulesets - from Classic Nurikabe to advanced mechanics like Yin-Yang connectivity. Each world introduces new challenges with ice blocks, one-way arrows, and special orb mechanics across 240 hand-picked puzzles.
 

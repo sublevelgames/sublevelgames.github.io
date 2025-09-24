@@ -26,4 +26,6 @@ comments: false
 
 <a href="https://playgama.com/game/emoji-sort" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
 
+<a href="https://www.y8.com/games/emoji_sort_" class="btn btn-primary btn-lg">Play at 🕹️y8.com</a>
+
 Emoji Sort is a pattern recognition puzzle game where players must fill in empty cells with the correct emojis. Each puzzle presents a grid with missing emojis that follow specific patterns - such as categories, sequences, or associations. Players analyze the existing emojis to identify the pattern (animals, food chains, transportation types, etc.) and select the appropriate emojis to complete the grid.
