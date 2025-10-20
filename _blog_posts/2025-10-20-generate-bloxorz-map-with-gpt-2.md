@@ -32,7 +32,9 @@ The infinite possibilities when LLM is applied to other fields, combined with th
 
 # Bloxorz
 
-Bloxorz is a classic puzzle game famous for its simple rules and high difficulty, which gained great popularity during the Adobe Flash era in the mid-2000s.
+[Bloxorz](https://www.crazygames.com/game/bloxorz) is a classic puzzle game famous for its simple rules and high difficulty, which gained great popularity during the Adobe Flash era in the mid-2000s.
+
+![Bloxorz screenshot](/images/gpt2b02.png)
 
 Players must roll a 1x1x2 rectangular block with arrow keys to fit it precisely into a designated hole. The floor has various gimmicks, including bridges that can be created or removed, orange blocks that collapse unless weight is distributed, and switches that temporarily split the block into two pieces.
 
