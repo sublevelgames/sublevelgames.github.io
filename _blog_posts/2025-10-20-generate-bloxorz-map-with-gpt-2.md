@@ -17,6 +17,9 @@ hidden: true
 <span class="badge badge-info">💻Game Dev</span>
 
 
+![Mindcraft on Steam](/images/mindcraft.jpg)
+
+
 Want to try the game first? You can play the [web demo version](https://sublevelgames.itch.io/mindcraft-demo) here. Don't forget to add it to your [Steam wishlist](https://store.steampowered.com/app/3974510/Mindcraft/)!
 
 This blog post explores how to generate Bloxorz game maps using GPT-2, a topic that has not been addressed with LLM + PCG techniques before.
