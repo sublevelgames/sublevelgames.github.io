@@ -24,6 +24,7 @@ Want to try the game first? You can play the [web demo version](https://sublevel
 
 This blog post explores how to generate Bloxorz game maps using GPT-2, a topic that has not been addressed with LLM + PCG techniques before.
 
+
 # Why LLM+PCG
 
 In modern video game development, producing game design content is a representative bottleneck that requires high costs and time investment. The market is changing rapidly, and notably, more games are being released on the Steam platform every year. [^1] Among all games released on Steam in 2024, 98.9% were indie games [^2], showing an overwhelming proportion of small-scale developers. The smaller the development company, the more limited the manpower and resources, which increases the burden of game design content production. Recently, in the fields of game art and marketing assets, various content production has become possible with tools like Stable Diffusion, Midjourney, and Veo3, but specialized content production tools and techniques targeting game design are still lacking.
@@ -32,6 +33,7 @@ The infinite possibilities when LLM is applied to other fields, combined with th
 
 ![VGDL game generation prompt example](/images/gpt2b01.png)  
 *Prompt structure for VGDL (Videogame Description Language)-based simultaneous generation of games and rules/levels. It learns game rules and level structures together.[^4]*
+
 
 # Bloxorz
 
@@ -42,6 +44,7 @@ The infinite possibilities when LLM is applied to other fields, combined with th
 Players must roll a 1x1x2 rectangular block with arrow keys to fit it precisely into a designated hole. The floor has various gimmicks, including bridges that can be created or removed, orange blocks that collapse unless weight is distributed, and switches that temporarily split the block into two pieces.
 
 The controls are very easy and responsive, but the game requires players to think about many elements, such as moving a 3D block to progress and facing game over with a single mistake, which creates an engaging gaming experience.
+
 
 # Traditional Puzzle Design Method: Backward Reasoning
 
@@ -85,6 +88,7 @@ This is called search-based generation technique. What's the problem? First, cod
 
 Additionally, as the search space grows, the number of nodes to search increases exponentially. While effective search techniques can be used to prune as much as possible, otherwise problems such as infinite loops may occur. If you present "a problem that requires at least 20 moves on a 12x12 map," the backward reasoning technique may or may not be effective. And having more tools in the toolbox is always better than having fewer. The tool newly attracting attention from PCG researchers is LLM.
 
+
 # GPT-2
 
 GPT-2 is the second version of OpenAI's large-scale artificial intelligence language model released in 2019. The parameters, which are used as a unit almost equivalent to LLM performance, range from 117M to 1.5B in various sizes. The successor model GPT-3 had a significantly increased parameter size of 175B, and as of 2025, LLMs have parameters ranging from tens of billions to hundreds of billions. In short, GPT-2 has lower performance than current LLMs.
@@ -104,6 +108,7 @@ A research example that uses GPT-2 to create practical game levels is "Level gen
 
 While the research also covers GPT-3, GPT-2 can generate maps that are suitable for use, and crucially, it is appropriate for training on a local computer with around 8GB of GPU RAM, so we will continue to use GPT-2 here.
 
+
 # Generating Mindcraft Game Levels Using GPT-2
 
 This blog covers how to generate game levels by adapting the above research and [code base](https://github.com/gdrtodd/lm-pcg) to change the game domain to Mindcraft.
@@ -114,6 +119,7 @@ Mindcraft is a block-rotating puzzle game heavily influenced by Bloxorz, featuri
 
 ![Mindcraft gameplay screenshot](/images/gpt2b11.png)  
 *Initial state and near-completion state of a map with the bridge gimmick*
+
 
 ## Original Data
 
@@ -167,7 +173,12 @@ To summarize the symbols used in the maps:
 ![Example of a map with five switches](/images/gpt2b16.png)  
 *Example of a map with five switches. It's complex, with a minimum move count of around 27.*
 
+
 ## Fine-tuning GPT-2 Using LoRA
+
+**Demo Video 2: Generating Regular Maps Without Gimmicks with GPT-2**
+
+[![Generating Regular Maps Without Gimmicks with GPT-2](https://img.youtube.com/vi/UO0A8WHytWM/0.jpg)](https://www.youtube.com/watch?v=UO0A8WHytWM)
 
 Now, let's train GPT-2 using the original data. Simply training GPT-2 would take a significant amount of time even on a 16GB RAM GPU like the RTX 4080, so we proceed with PEFT (Parameter-Efficient Fine-Tuning), specifically using the LoRA (Low-Rank Adaptation) method. Compared to training all parameters, multiple studies have shown that LoRA enables training even in limited memory environments, with faster training time and virtually no degradation in performance.
 
@@ -336,13 +347,52 @@ If you change one tile near the goal point in the above map from ground to empty
 ![Changing one tile near the goal point to empty space in the map](/images/gpt2b23.png)  
 *Changing one tile near the goal point to empty space in the map*
 
+Now, by changing the experiment name to glass, we can verify whether the LLM can learn and generate maps with gimmicks as well. Enter the following command to start training.
+
+```
+python train_simple.py model=gpt2-xl lora=True exp_name=glass num_train_steps=10000
+```
+
+One of the maps generated after training produces a solution well as shown below. The Move length is 8, which differs by only 1 from the given input value of 7.
+
+```
+🎯 GENERATED SAMPLE AT STEP 9000:
+Grid size: 9x5
+Block types: 2
+Glass tiles: 20
+Switches: 0
+Bridges: 0
+Collectables: 1
+Move length: 7
+Difficulty: easy
+**.*..._
+.*.*g..*
+...*.*.*
+*..*..*_
+_..*..__
+**.*...*
+**.*.*.1
+
+📊 VALIDATION RESULTS:
+  Novel: True (distance: 19)
+  Valid: True
+  Accurate: False
+  grid_w: 8
+  grid_h: 7
+  glass_tiles: 21
+  valid: True
+```
+
+![Visualization and solution of a glass map generated by gpt2-xl](/images/gpt2b24.png)  
+*Visualization and solution of a glass map generated by gpt2-xl*
+
+![The map generated by gpt2-xl placed in the actual game. The glass gimmick is represented with tiles that look fragile](/images/gpt2b25.png)  
+*The map generated by gpt2-xl placed in the actual game. The glass gimmick is represented with tiles that look fragile*
 
 
 ## Verifying Map Generation Results
 
-**Demo Video 2: Generating Regular Maps Without Gimmicks with GPT-2**
 
-[![Generating Regular Maps Without Gimmicks with GPT-2](https://img.youtube.com/vi/UO0A8WHytWM/0.jpg)](https://www.youtube.com/watch?v=UO0A8WHytWM)
 
 
 
