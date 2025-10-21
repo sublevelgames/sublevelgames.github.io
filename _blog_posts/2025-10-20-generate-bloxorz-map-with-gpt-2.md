@@ -198,7 +198,7 @@ The first `START` indicates the beginning of the input. The subsequent inputs ha
 | Bridges | Number of bridge gimmicks | |
 | Collectables | Number of collectible items | |
 | Move length | Number of moves required for solution | |
-| Difficulty | easy/medium/hard | easy if move length < 10\medium if < 20\hard if ≥ 20 |
+| Difficulty | easy/medium/hard | easy if move length < 10<br>medium if < 20<br>hard if ≥ 20 |
 
 
 
