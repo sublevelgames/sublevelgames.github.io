@@ -91,6 +91,12 @@ GPT-2 is the second version of OpenAI's large-scale artificial intelligence lang
 
 ![GPT-2, auto-regressive model](/images/gpt2b08.gif)
 
+GPT-2 is auto-regressive. This characteristic means that generated tokens are added to the input sequence at the next step, becoming new input. Game levels have sequential dependencies—when a block is placed, there's a high probability that related blocks will be placed next to it—which makes auto-regressive generation a useful feature for game level generation. For example, in Super Mario, if you place a block at a certain position, the adjacent space must be within jumpable distance and there must be a platform to land on.
+
+![Image showing sequential dependencies in Mario](/images/gpt2b09.gif)  
+[Image Source Link](https://medium.com/@eway/using-a-generative-adversarial-network-to-author-playable-super-mario-bros-levels-223736bd4ce)
+
+
 
 
 
