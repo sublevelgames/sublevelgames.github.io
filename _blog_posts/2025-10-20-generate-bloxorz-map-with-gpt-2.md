@@ -31,7 +31,7 @@ In modern video game development, producing game design content is a representat
 The infinite possibilities when LLM is applied to other fields, combined with the fact that no remarkable achievements have been made in this area yet, are attracting game developers and researchers to game design content production. Recent major research includes Sokoban level generation through direct level data learning [^3], VGDL (Videogame Description Language)-based simultaneous game and rule/level generation [^4], and automatic PuzzleScript game generation and testing [^5].
 
 ![VGDL game generation prompt example](/images/gpt2b01.png)  
-Prompt structure for VGDL (Videogame Description Language)-based simultaneous generation of games and rules/levels. It learns game rules and level structures together.[^4]
+*Prompt structure for VGDL (Videogame Description Language)-based simultaneous generation of games and rules/levels. It learns game rules and level structures together.[^4]*
 
 # Bloxorz
 
@@ -93,8 +93,16 @@ GPT-2 is the second version of OpenAI's large-scale artificial intelligence lang
 
 GPT-2 is auto-regressive. This characteristic means that generated tokens are added to the input sequence at the next step, becoming new input. Game levels have sequential dependencies—when a block is placed, there's a high probability that related blocks will be placed next to it—which makes auto-regressive generation a useful feature for game level generation. For example, in Super Mario, if you place a block at a certain position, the adjacent space must be within jumpable distance and there must be a platform to land on.
 
-![Image showing sequential dependencies in Mario](/images/gpt2b09.gif)  
-[Image Source Link](https://medium.com/@eway/using-a-generative-adversarial-network-to-author-playable-super-mario-bros-levels-223736bd4ce)
+![Image showing sequential dependencies in Mario](/images/gpt2b09.png)  
+*[Image Source Link](https://medium.com/@eway/using-a-generative-adversarial-network-to-author-playable-super-mario-bros-levels-223736bd4ce)*
+
+A research example that uses GPT-2 to create practical game levels is "Level generation through large language models"[^3]. This 2023 study from New York University generates Sokoban levels. Sokoban is a puzzle game released in 1982 by Japanese software company Thinking Rabbit, where players must push boxes in a warehouse to designated locations. Countless games have been influenced by it, including [Baba is You](https://store.steampowered.com/app/736260/Baba_Is_You/) and [Monster's Expedition](https://store.steampowered.com/app/1052990/A_Monsters_Expedition/), making Sokoban recognized as its own genre. Due to its high difficulty, it functions as one of the benchmarks for level generation algorithms.
+
+![Level generation results from "Level generation through large language models"](/images/gpt2b10.png)  
+*The above results demonstrate that the LLM didn't simply memorize the original data by generating levels with GPT-2 and then comparing them with the levels in the original Boxoban dataset that have the closest edit distance.*
+
+
+
 
 
 
