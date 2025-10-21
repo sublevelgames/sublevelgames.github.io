@@ -101,11 +101,13 @@ A research example that uses GPT-2 to create practical game levels is "Level gen
 ![Level generation results from "Level generation through large language models"](/images/gpt2b10.png)  
 *The above results demonstrate that the LLM didn't simply memorize the original data by generating levels with GPT-2 and then comparing them with the levels in the original Boxoban dataset that have the closest edit distance.*
 
+While the research also covers GPT-3, GPT-2 can generate maps that are suitable for use, and crucially, it is appropriate for training on a local computer with around 8GB of GPU RAM, so we will continue to use GPT-2 here.
+
 # Generating Mindcraft Game Levels Using GPT-2
 
 This blog covers how to generate game levels by adapting the above research and [code base](https://github.com/gdrtodd/lm-pcg) to change the game domain to Mindcraft.
 
-The code covered in this blog can be found [here](https://github.com/sublevelgames/lm-pcg).
+The code covered in this blog can be found [here](https://github.com/sublevelgames/lm-pcg). Testing was completed on Windows 11, and it has not been tested on other operating systems.
 
 Mindcraft is a block-rotating puzzle game heavily influenced by Bloxorz, featuring about 10 gimmicks not present in the original, 198 completely new maps, and 7 beautiful world themes.
 
@@ -118,6 +120,20 @@ Here, we verify whether new levels can be generated for cases with no gimmicks i
 - puzzle_bridge_all.json
 - puzzle_glass_all.json
 - puzzle_switch_all.json
+
+To view the original maps, you can run visualizer.html located in the same folder. To run it on a web server, follow these steps:
+
+1. Download the Windows Installer from the Simple Webserver site.
+![](/images/gpt2b12.png)
+
+2. Register the path where visualizer.html is located as a new entry in the web server.
+![](/images/gpt2b13.png)
+
+3. Enter the web server address in the address bar or click the generated local web server's Web Server URL to access the local web server.
+![](/images/gpt2b14.png)
+
+4. Click visualizer.html to launch the visualization tool.
+![](/images/gpt2b15.png)
 
 
 
