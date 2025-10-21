@@ -392,14 +392,55 @@ _..*..__
 
 ## Verifying Map Generation Results
 
+Now, let's generate multiple actual levels with the trained LLM and evaluate how well the levels meet the Novel, Valid, and Accurate criteria.
 
+Enter the following command to generate and evaluate 100 maps using the GPT-2 base model trained on maps without gimmicks.
 
+```
+python evaluate_simple.py ./logs/no_gimmick_gpt2_lora
+```
 
+And do the same with the gpt2-xl model as well.
+
+```
+python evaluate_simple.py ./logs/no_gimmick_gpt2-xl_lora
+```
+
+The results are as follows. The gpt2-xl model's results after running the same number of train steps are generally superior to the gpt2 base model, with the proportion of Novel+Valid maps that can be used directly in the game reaching 22%. It can also be confirmed that at the 10,000 train step level, it is difficult to generate maps that satisfy all three criteria: Novel+Valid+Accurate.
+
+| Language Model | Train Steps | Novel | Valid | Accurate | N+V | N+V+A |
+|----------------|-------------|-------|-------|----------|-----|-------|
+| GPT-2          | 10,000      | 96%   | 0%    | 2%       | 0%  | 0%    |
+| GPT-2 XL       | 10,000      | 92%   | 25%   | 5%       | 22% | 0%    |
+
+*Comparison of map generation results between GPT-2 (124M) and GPT-2 XL (1.5B)*
+
+Maps with gimmicks can also be generated and evaluated. Enter the following command to generate and evaluate 100 maps using the gpt2-xl model trained to generate glass gimmicks.
+
+```
+python evaluate_simple.py ./logs/glass_gpt2-xl_lora
+```
+
+| Language Model | Train Steps | Novel | Valid | Accurate | N+V | N+V+A |
+|----------------|-------------|-------|-------|----------|-----|-------|
+| GPT-2 XL       | 10,000      | 100%  | 50%   | 1%       | 50% | 0%    |
+| GPT-2 XL       | 50,000      | 100%  | 64%   | 6%       | 64% | 5%    |
+| GPT-2 XL       | 100,000     | 100%  | 61%   | 2%       | 61% | 2%    |
+
+*Comparison of map generation results according to GPT-2 XL's train step variations*
+
+When increasing the train steps to 50,000~100,000, you can see that the Valid ratio increases, but the Accurate ratio does not increase significantly. However, since Novel+Valid alone is sufficient for use directly in the game, the model's ability to generate new maps can be considered somewhat validated.
 
 
 # Conclusion
 
+This blog covered how to automatically generate levels for the Mindcraft game using GPT-2. Through efficient fine-tuning using the LoRA technique, we confirmed that practical map generation is possible even in limited GPU environments.
 
+Experimental results showed that while the GPT-2 base model (124M) struggled to generate valid maps, the GPT-2 XL (1.5B) model was able to generate 22% Novel+Valid maps with just 10,000 training steps. For maps containing the glass gimmick, 64% Novel+Valid maps were generated with 50,000 training steps, demonstrating that complex maps with gimmicks can also be effectively learned.
+
+Particularly noteworthy is that the LLM generates solvable maps even though solution information was not included in the input. This means that the LLM inherently learns the game's rules and playability during the training process.
+
+Although the Accurate metric was low, maps that can be directly used in the game can be generated with just the Novel+Valid criteria, confirming the potential as a practical level generation tool. It is expected that the Accurate ratio can also be improved in the future by using more train steps and larger models, or by improving prompt engineering.
 
 
 <hr/>
