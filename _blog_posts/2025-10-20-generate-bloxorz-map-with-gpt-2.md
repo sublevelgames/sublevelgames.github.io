@@ -88,13 +88,13 @@ GPT-2 is the second version of OpenAI's large-scale artificial intelligence lang
 
 
 
-[^1]: https://steamdb.info/stats/releases/
+[^1]: [Steam Game Releases](https://steamdb.info/stats/releases/)
 
-[^2]: https://80.lv/articles/indie-games-market-reached-unprecedented-success-in-2024
+[^2]: [Indie Games Market Reached Unprecedented Success in 2024, 80lv](https://80.lv/articles/indie-games-market-reached-unprecedented-success-in-2024)
 
-[^3]: https://arxiv.org/abs/2302.05817
+[^3]: [Todd, Graham, et al. "Level generation through large language models." Proceedings of the 18th International Conference on the Foundations of Digital Games. 2023.](https://arxiv.org/abs/2302.05817)
 
-[^4]: https://arxiv.org/abs/2404.08706
+[^4]: [Hu, Chengpeng, Yunlong Zhao, and Jialin Liu. "Game generation via large language models." 2024 IEEE Conference on Games (CoG). IEEE, 2024.](https://arxiv.org/abs/2404.08706)
 
-[^5]: https://arxiv.org/abs/2506.06524
+[^5]: [Earle, Sam, et al. "ScriptDoctor: Automatic Generation of PuzzleScript Games via Large Language Models and Tree Search." arXiv preprint arXiv:2506.06524 (2025).](https://arxiv.org/abs/2506.06524)
 
