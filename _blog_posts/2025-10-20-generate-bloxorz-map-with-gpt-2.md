@@ -135,11 +135,35 @@ To view the original maps, you can run visualizer.html located in the same folde
 4. Click visualizer.html to launch the visualization tool.
 ![](/images/gpt2b15.png)
 
+We have prepared over 2,000 maps for each type, and you can sort the maps by solution length (corresponding to difficulty) and switch count (which only applies to the switch gimmick).
+
+To summarize the symbols used in the maps:
+
+`_`: Empty space. If any part of the block is positioned on this, it falls down and the game is over.
+
+`.`: Ground. The block can be positioned here.
+
+`1`: Starting position of the player block.
+
+`g`: Goal point. The game is cleared when the player block reaches this in a vertical (standing upright) state.
+
+`h`: Bridge activation switch. Can only be pressed once.
+
+`H`: The actual bridge that is activated when the bridge activation switch is pressed. Before activation, it functions the same as empty space—if positioned on it, the block falls down and the game is over.
+
+`*`: Glass gimmick. Works similarly to ground, but if the player block reaches it in a vertical state, the weight is not distributed and it falls down, resulting in game over.
+
+`a`, `b`, `c`, `d`, `e`: Switches. Each corresponds to a wall of the same uppercase letter. Can only be pressed once.
+
+`A`, `B`, `C`, `D`, `E`: Walls that move when switches are pressed. When a switch is pressed, the wall lowers and functions the same as ground.
+
+![Example of a map with five switches](/images/gpt2b16.png)
+*Example of a map with five switches. It's complex, with a minimum move count of around 27.*
 
 
 
 
-
+<hr/>
 
 [^1]: [Steam Game Releases](https://steamdb.info/stats/releases/)
 
