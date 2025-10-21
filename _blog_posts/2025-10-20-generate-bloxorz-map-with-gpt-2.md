@@ -7,7 +7,7 @@ tags: ["🎮Game", "🧩Puzzle", "🤖Algorithm", "🎲PCG", "💻Game Dev"]
 colors: ["info", "info", "info", "info", "info"]
 id: generating-bloxorz-gpt2
 comments: true
-hidden: true
+hidden: false
 ---
 
 <span class="badge badge-info">🎮Game</span>
@@ -28,6 +28,9 @@ This blog post explores how to generate Bloxorz game maps using GPT-2, a topic t
 # Why LLM+PCG
 
 In modern video game development, producing game design content is a representative bottleneck that requires high costs and time investment. The market is changing rapidly, and notably, more games are being released on the Steam platform every year. [^1] Among all games released on Steam in 2024, 98.9% were indie games [^2], showing an overwhelming proportion of small-scale developers. The smaller the development company, the more limited the manpower and resources, which increases the burden of game design content production. Recently, in the fields of game art and marketing assets, various content production has become possible with tools like Stable Diffusion, Midjourney, and Veo3, but specialized content production tools and techniques targeting game design are still lacking.
+
+![Statistics on the number of games released on Steam each year](/images/gpt2b00.png)  
+*Statistics on the number of games released on Steam each year*
 
 The infinite possibilities when LLM is applied to other fields, combined with the fact that no remarkable achievements have been made in this area yet, are attracting game developers and researchers to game design content production. Recent major research includes Sokoban level generation through direct level data learning [^3], VGDL (Videogame Description Language)-based simultaneous game and rule/level generation [^4], and automatic PuzzleScript game generation and testing [^5].
 
