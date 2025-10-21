@@ -30,8 +30,8 @@ In modern video game development, producing game design content is a representat
 
 The infinite possibilities when LLM is applied to other fields, combined with the fact that no remarkable achievements have been made in this area yet, are attracting game developers and researchers to game design content production. Recent major research includes Sokoban level generation through direct level data learning [^3], VGDL (Videogame Description Language)-based simultaneous game and rule/level generation [^4], and automatic PuzzleScript game generation and testing [^5].
 
-![VGDL game generation prompt example](/images/gpt2b01.png)
-[Hu, Chengpeng, Yunlong Zhao, and Jialin Liu. "Game generation via large language models." 2024 IEEE Conference on Games (CoG). IEEE, 2024.](https://arxiv.org/abs/2404.08706)
+![VGDL game generation prompt example](/images/gpt2b01.png)  
+Prompt structure for VGDL (Videogame Description Language)-based simultaneous generation of games and rules/levels. It learns game rules and level structures together.[^4]
 
 # Bloxorz
 
@@ -88,6 +88,8 @@ Additionally, as the search space grows, the number of nodes to search increases
 # GPT-2
 
 GPT-2 is the second version of OpenAI's large-scale artificial intelligence language model released in 2019. The parameters, which are used as a unit almost equivalent to LLM performance, range from 117M to 1.5B in various sizes. The successor model GPT-3 had a significantly increased parameter size of 175B, and as of 2025, LLMs have parameters ranging from tens of billions to hundreds of billions. In short, GPT-2 has lower performance than current LLMs.
+
+![GPT-2, auto-regressive model](/images/gpt2b08.gif)
 
 
 
