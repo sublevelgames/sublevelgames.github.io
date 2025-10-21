@@ -114,6 +114,8 @@ Mindcraft is a block-rotating puzzle game heavily influenced by Bloxorz, featuri
 ![Mindcraft gameplay screenshot](/images/gpt2b11.png)  
 *Initial state and near-completion state of a map with the bridge gimmick*
 
+## Original Data
+
 Here, we verify whether new levels can be generated for cases with no gimmicks in the map, only the glass gimmick, only the bridge gimmick, and only the switch gimmick. The original maps are located under the data/bloxorz folder and are as follows:
 
 - puzzle_no_gimmick_all.json
@@ -157,10 +159,55 @@ To summarize the symbols used in the maps:
 
 `A`, `B`, `C`, `D`, `E`: Walls that move when switches are pressed. When a switch is pressed, the wall lowers and functions the same as ground.
 
-![Example of a map with five switches](/images/gpt2b16.png)
+![Example of a map with five switches](/images/gpt2b16.png)  
 *Example of a map with five switches. It's complex, with a minimum move count of around 27.*
 
+## Fine-tuning GPT-2 Using LoRA
 
+Now, let's train GPT-2 using the original data. Simply training GPT-2 would take a significant amount of time even on a 16GB RAM GPU like the RTX 4080, so we proceed with PEFT (Parameter-Efficient Fine-Tuning), specifically using the LoRA (Low-Rank Adaptation) method. Compared to training all parameters, multiple studies have shown that LoRA enables training even in limited memory environments, with faster training time and virtually no degradation in performance.
+
+The training structure is as follows. The overall structure uses a supervised learning approach that trains on input and output text pairs, teaching the model to produce the corresponding output when given an input.
+
+![Learning phase and generation phase](/images/gpt2b17.png)
+
+In the learning phase, the pre-trained LLM's parameters are frozen while only the LoRA adapter's parameters are updated during training. At this time, the input and output texts are processed from pre-prepared map data.
+
+In the generation phase, we randomly generate new input text that was not seen during the learning phase and verify whether appropriate new output text is produced. The criteria for "appropriate" here are Novel, Valid, and Accurate, which will be discussed later.
+
+The input text follows this format:
+```
+START
+Grid size: 7x6
+Block types: 3
+Glass tiles: 0
+Switches: 0
+Bridges: 0
+Collectables: 0
+Move length: 5
+Difficulty: easy
+```
+
+The first `START` indicates the beginning of the input. The subsequent inputs have the following meanings:
+
+| Item | Meaning | Notes |
+|------|---------|-------|
+| Grid size | Width x height of the level | |
+| Block types | Number of different block states used in the solution | |
+| Glass tiles | Number of glass tile gimmicks | |
+| Switches | Number of switch gimmicks | |
+| Bridges | Number of bridge gimmicks | |
+| Collectables | Number of collectible items | |
+| Move length | Number of moves required for solution | |
+| Difficulty | easy/medium/hard | easy if move length < 10\medium if < 20\hard if ≥ 20 |
+
+
+
+
+## Verifying Map Generation Results
+
+
+
+# Conclusion
 
 
 <hr/>
