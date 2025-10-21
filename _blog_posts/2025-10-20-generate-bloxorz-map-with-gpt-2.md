@@ -116,6 +116,10 @@ Mindcraft is a block-rotating puzzle game heavily influenced by Bloxorz, featuri
 
 ## Original Data
 
+**Demo Video 1: Mindcraft Puzzle Visualizer**
+
+[![Mindcraft Puzzle Visualizer](https://img.youtube.com/vi/svIeRR9ws44/0.jpg)](https://www.youtube.com/watch?v=svIeRR9ws44)
+
 Here, we verify whether new levels can be generated for cases with no gimmicks in the map, only the glass gimmick, only the bridge gimmick, and only the switch gimmick. The original maps are located under the data/bloxorz folder and are as follows:
 
 - puzzle_no_gimmick_all.json
@@ -176,8 +180,7 @@ In the generation phase, we randomly generate new input text that was not seen d
 
 The input text follows this format:
 ```
-START
-Grid size: 7x6
+STARTGrid size: 7x6
 Block types: 3
 Glass tiles: 0
 Switches: 0
@@ -199,6 +202,25 @@ The first `START` indicates the beginning of the input. The subsequent inputs ha
 | Collectables | Number of collectible items | |
 | Move length | Number of moves required for solution | |
 | Difficulty | easy/medium/hard | easy if move length < 10<br>medium if < 20<br>hard if ≥ 20 |
+
+And we train it to output text in the following format:
+
+```
+._1__..
+....___
+_....._
+_......
+_....g.
+.......END
+```
+
+`END` indicates the end of the output.
+
+The figure below is a visualization of the above map data.
+
+![](/images/gpt2b18.png)
+
+A notable point in this process is that solution information is not included in the input. This was also the case when creating Sokoban maps in the original paper—even without including solution information, the LLM consistently produces solvable maps with solutions as it continues to learn.
 
 
 
