@@ -101,7 +101,23 @@ A research example that uses GPT-2 to create practical game levels is "Level gen
 ![Level generation results from "Level generation through large language models"](/images/gpt2b10.png)  
 *The above results demonstrate that the LLM didn't simply memorize the original data by generating levels with GPT-2 and then comparing them with the levels in the original Boxoban dataset that have the closest edit distance.*
 
+# Generating Mindcraft Game Levels Using GPT-2
 
+This blog covers how to generate game levels by adapting the above research and [code base](https://github.com/gdrtodd/lm-pcg) to change the game domain to Mindcraft.
+
+The code covered in this blog can be found [here](https://github.com/sublevelgames/lm-pcg).
+
+Mindcraft is a block-rotating puzzle game heavily influenced by Bloxorz, featuring about 10 gimmicks not present in the original, 198 completely new maps, and 7 beautiful world themes.
+
+![Mindcraft gameplay screenshot](/images/gpt2b11.png)  
+*Initial state and near-completion state of a map with the bridge gimmick*
+
+Here, we verify whether new levels can be generated for cases with no gimmicks in the map, only the glass gimmick, only the bridge gimmick, and only the switch gimmick. The original maps are located under the data/bloxorz folder and are as follows:
+
+- puzzle_no_gimmick_all.json
+- puzzle_bridge_all.json
+- puzzle_glass_all.json
+- puzzle_switch_all.json
 
 
 
