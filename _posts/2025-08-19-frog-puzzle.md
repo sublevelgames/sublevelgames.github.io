@@ -21,6 +21,8 @@ comments: false
 
 <a href="https://www.gamepix.com/play/frog-puzzle" class="btn btn-primary btn-lg">Play at ▶️gamepix.com</a>
 
+<a href="https://www.geekgirlauthority.com/frog-puzzle-video-game-review-sublevelgames/" class="btn btn-info btn-lg">📰 Geek Girl Authority Review</a>
+
 🐸 Frog Puzzle - A Strategic Lily Pad Game 🐸
 
 Challenge your mind in this unique puzzle game where you must prevent frogs from reaching the walkway by strategically removing lily pads.
