@@ -1,7 +1,7 @@
 ---
 layout: blog_post
 title: ""
-image: /images/generating_bloxorz_gpt2.png
+image: /images/pxj00.png
 excerpt: ""
 tags: ["🎮Game", "🧩Puzzle", "🎲PCG", "💻Game Dev", "🔧Development", "⏱️Jam"]
 colors: ["info", "info", "info", "info", "info"]
@@ -57,3 +57,38 @@ The X-Mas Things Jam hosted by Playgama this time had a total prize pool of $1,0
 3. Mandatory integration of Playgama Bridge SDK
 
 These rules indicate that this game jam also serves the purpose of discovering new titles that can be served on the Playgama platform. The theme was the conflict between darkness and light, requiring participants to define dark and light elements and show them in opposition.
+
+
+# My Attempt
+
+I had a game I'd wanted to make for two years but hadn't yet created. It was inspired by the legendary puzzle game Cosmic Express and the popular mobile puzzle game RGB Express. When I lacked the technical skills to make a game similar to these, I created [Pick & Go!](https://sublevelgames.github.io/pick-n-go/) as a compromise.
+
+![](/images/pxj03.png)
+*Cosmic Express, RGB Express*
+
+![](/images/pxj04.png)
+*Pick & Go!*
+
+I had been particularly wanting to make a seasonal game, thinking it would be great to create a Christmas-themed game where Santa Claus delivers presents. I wanted to make it last Christmas too, but it was pushed back by other work priorities. This year, I was just thinking about making it when I saw the announcement for this game jam. Realizing that if I didn't make it now, I'd have to wait another year, I decided to give it my best shot despite having a trip planned in a few days.
+
+The game's rules involve moving along a path to pick up presents and deliver them to houses that match each color. The presents are picked up in a cart that follows the character, and delivered from the cart. Presents are picked up when they are one space adjacent to the cart in any of the four directions, and delivered when the destination house hasn't received a present yet and the cart contains the appropriate present. No more than two presents can be delivered to one house, and the cart cannot hold more than two presents at once.
+
+I decided to use the title I'd thought of before: CPR: Christmas Present Rush. It felt like a title that would catch people's attention while clearly conveying the theme. I used the Candy Cane font as the main font.
+
+![](/images/pxj05.png)
+*CPR Screenshot*
+
+While searching for assets suitable for the Christmas theme, I found the [Christmas Village Asset Pack](https://murphysdad.itch.io/christmas-village-asset-pack). It had snow-covered paths, coniferous trees, houses, and even a cute boy character that fit the background, making it perfect for the game. I used this as the main theme, and to express a village shrouded in darkness at the start (for the theme of conflict between darkness and light), I slightly lowered the brightness of the tiles. Then, to have the boy character move instead of Santa Claus, I created a very simple narrative—Santa has disappeared and the boy must deliver the presents.
+
+For the important assets of presents and houses, I used the [Admurin's Holiday: Christmas Items](https://admurin.itch.io/admurins-christmas-items) asset for presents and drew the houses myself. Since it's a puzzle game, the visibility of the gimmicks was crucial, so I focused on making them simple while ensuring the colors that pair with the presents were clearly visible.
+
+![](/images/pxj06.png)
+*Game Screen*
+
+Maps were generated using the BFS algorithm. BFS (Breadth-First Search) is a search algorithm that starts from the root node, explores all reachable nodes at the current depth, then proceeds to explore nodes at the next depth. While it always finds the shortest path, it has the disadvantage of taking a long time to search because it checks all possible cases. However, since the maximum puzzle size provided in this game was 8x8, BFS was sufficient to search within the desired time, so I used BFS without any additional optimization.
+
+I created 3 types of present-house pairs, allowed up to 2 carts to follow the character, and set the total number of presents to n. The maximum number of moves was n, and the minimum number of moves was n. I initially planned to generate and provide 50 maps, but since there seemed to be no tutorial, I created a very simple text-based tutorial and made one 4x4 map, reducing the existing maps by one. As a result, I provided 1+49=50 maps for service.
+
+![](/images/pxj07.png)
+*Game map visualization. White is the starting point, black is the ending point, small circles are presents, large hollow circles are houses to deliver presents to, and pink lines represent the solution moves*
+
