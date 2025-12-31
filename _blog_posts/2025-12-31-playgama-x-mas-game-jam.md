@@ -115,6 +115,23 @@ After various trials and tribulations, once I implemented the dual grid, quite a
 *Dual grid applied to CPR*
 
 
+## First Version (v1.0.0)
+
+There were about 4 days left until the deadline. I decided to first create a working version and then fix the problems. I selected 49 game maps, created the tutorial map to be shown first, and made the stage playable from start to finish. In other words, I implemented present pickup -> present delivery -> victory condition check.
+
+Unexpected problems occurred with present pickup and delivery. Unlike when creating the maps, when actually playing, I discovered that after a present left (was delivered from) a cart, you couldn't pick up a present with the same cart. So I modified it to allow pickup after delivery until there were no more candidates remaining next to the cart. To capture the winter atmosphere, I added a snow-falling effect, and also added toast messages to guide users when they performed incorrect actions. I also added a confetti effect to celebrate users who cleared all stages.
+
+![](/images/pxj11.gif)  
+*Snow-falling effect*
+
+I belatedly realized I hadn't drawn any obstacles, so I hurriedly searched for a rock image among free assets and added it. I also implemented saving and loading of user progress. Since background music and sound are considered important in almost all game jams, I searched for and added mainly free assets, added UI buttons to turn background music and sound on/off, and made the arrow UI representing the character's movement path move sensibly. I also added more detailed tutorial text to the first map.
+
+There were other minor bugs, but I fixed many parts and uploaded the first version to itch.io. I then discovered that the game wasn't yet uploaded to the game jam. When I clicked the submit button on the game jam, I could select from already registered games, so I selected and added it. My game was added as the third submission, which was very early compared to other entries.
+
+![](/images/pxj12.png)  
+*Submit result. Submitted as 3rd place.*
+
+
 
 
 
