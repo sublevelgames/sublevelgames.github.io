@@ -1,13 +1,13 @@
 ---
 layout: blog_post
-title: ""
+title: "Christmas Present Rush - My Game Jam Award Story"
 image: /images/pxj00.png
-excerpt: ""
+excerpt: "After two years of wanting to create a puzzle game inspired by Cosmic Express and RGB Express, I finally brought it to life during the Playgama X-Mas Things Jam. Despite tight deadlines, implementing dual grid systems, and discovering critical bugs just before a vacation, CPR (Christmas Present Rush) won 2nd place in the jury's choice, fulfilling a long-held bucket list item of winning a game jam award."
 tags: ["🎮Game", "🧩Puzzle", "🎲PCG", "💻Game Dev", "🔧Development", "⏱️Jam"]
 colors: ["info", "info", "info", "info", "info"]
 id: playgama-x-mas-game-jam
 comments: true
-hidden: true
+hidden: false
 ---
 
 <span class="badge badge-info">🎮Game</span>
@@ -150,4 +150,51 @@ It was quite a lot of content, but without difficulties like dual grid, I was ab
 ![](/images/pxj13.png)  
 *Sergiu's name added to special thanks to*
 
+![](/images/pxj14.png)  
+*Hard Mode Unlocked
 
+
+## Final Version (v1.1.1)
+
+Until this point, I really thought everything was finished, but while playing alone, I discovered that I absolutely could not clear stage 1 of hard mode. What on earth was happening? My heart sank.
+
+Upon closer inspection, there was still a bug related to pickup and delivery. After picking up, if delivery was possible from the same cart, it should be able to deliver immediately, but that part wasn't working, which was causing the problem. The correct answer calculated by the map generation script was designed on the basis that the cart after pickup would not deliver immediately, while the actual game, as improved through multiple revisions from the first version, checked until there was nothing left to pick up or deliver next to the cart. So it was a map without errors in the map generation script, but errors occurred in the actual game.
+
+![](/images/pxj15.png)  
+*The map where the problem occurred*
+
+There were about two days left until the game jam submission deadline, but I had to catch a flight to Vienna for vacation, and there were about 12 hours left until the flight departure. Large-scale modifications were impossible, but the hard mode I had just added was completely unplayable. First, I wondered if there were many such stages, so I created a validation script to verify, and fortunately, out of 50 hard stages, only stages 1 and 21 were unclearable, and the rest were clearable. It was only a 4% probability, but fortunately I discovered the unclearable map while playing. By the way, the normal mode stages all safely passed the validation script, perhaps because they were simpler.
+
+Then the solution was simple. I just needed to serve only safe maps that passed the validation script among the originally created maps. So I ran the validation script again, selected 50 safe hard mode maps again, and uploaded that as the final version. There were about 9 hours left until the flight departure. During the remaining time, I kept playing hard mode maps and then slept. Hoping there would be no more bugs...
+
+![](/images/pxj16.png)  
+*100% passed script validation*
+
+
+## Evaluation Phase
+
+After arriving in Vienna, the game jam submission period ended and the evaluation phase began. It's a time for participants to play each other's games, evaluate them, and exchange constructive feedback. During my last game jam participation, it was also a time when I gained many insights I hadn't thought of. Since I had greatly improved the game by receiving feedback between the first and second versions, I thought I could gain insights on what direction would be good for future updates, even though it wouldn't be for the game jam version.
+
+Issues regarding fraudulent participants were also actively discussed on Discord. The game jam had fewer than 50 participants. Several participants on Discord reported cases of fraudulent behavior where people created multiple bot accounts, made games for each account, participated in the game jam, gave low scores to other participants' games and high scores to their own games. Naturally, the smaller the number of participants, the more effective this is. If there are rewards, they can obtain them, and even without rewards, achieving good results in a game jam would be a plus for one's career. With the advancement of generative AI, games that look like proper games can be made quickly, so it felt bitter that the environment has become easier for such fraudulent activities.
+
+![](/images/pxj17.png)  
+*Reports about fraudulent participants on Discord*
+
+Another form of fraud was when previously made games that had participated in other game jams and even won awards were submitted to this game jam. Some were made by the submitter themselves, and some seemed not to be. Several entries were exposed by other participants and removed from the participation list. Still, it was a positive factor that self-purification was working.
+
+At the end, there were cases where the number of ratings suddenly increased without comments, and some participants raised suspicions that this was also voting using multiple bot accounts. In cases like [Gamedev.js Jam 2025](https://itch.io/jam/gamedevjs-2025) which had 408 submissions, a few bot accounts would be difficult to change the situation, but the Playgama X-Mas Things Jam with 38 submissions (some disqualified by the organizers) seemed vulnerable to this structure.
+
+
+
+## Results Announcement
+
+After voting ended, it was time for the results announcement. Heated debates continued until the end about which games were fraudulent entries, so the organizers didn't announce the results immediately and waited a bit before announcing them. I waited for the results while eating trdelník at Prague's Christmas market in the cold. About 30 minutes later, the final results came out, and surprisingly, I won 2nd place in the jury's choice. For reference, I was 4th in participant evaluation. Considering that top 3 placements were awarded, I received good scores in public evaluation as well.
+
+![](/images/pxj18.png)  
+*Discord announcement, CPR's final score*
+
+I was grateful to place and receive a prize of $150. Winning an award at a game jam was one of my bucket list items, and I was very happy to achieve it this time.
+
+The area where I scored the lowest was the theme, and I thought perhaps others also noticed that I had a game I wanted to make and attached the theme later. I have some regret that it might have been better if I had strengthened the theme more, such as by lighting up houses when they received presents.
+
+I was so proud to actually make a game I had wanted to make for a long time, and I was even happier to unexpectedly receive an award. I plan to further develop this game and release it for mobile and web. If possible, I think it would be an even better game if I add more gimmicks and improve the graphics a bit more.
