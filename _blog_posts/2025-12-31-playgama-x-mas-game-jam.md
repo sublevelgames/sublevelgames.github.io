@@ -37,7 +37,7 @@ Game jams are held both offline and online, organized by various entities includ
 
 Game jams serve as a venue to test the potential of ideas. The famous indie game [Baba is You](https://hempuli.itch.io/baba) also started as a [game jam version](https://hempuli.itch.io/baba-is-you).
 
-![](/images/pxj01.png)
+![](/images/pxj01.png)  
 *Comparison of Baba is You's Jam Build and Actual Build*
 
 
@@ -47,7 +47,7 @@ Playgama is an HTML5 platform and distributor that boasts 300 million monthly vi
 
 [Playgama has hosted 4 game jams so far](https://itch.io/search?q=playgama%20jam&type=jams), and this X-Mas Things Jam is the fifth. Except for the [Green Web Jam](https://itch.io/jam/green-web-game-jam-playgama), all have offered rewards, and game jams with rewards had at least twice as many submissions.
 
-![](/images/pxj02.png)
+![](/images/pxj02.png)  
 *List of Game Jams Hosted by Playgama*
 
 The X-Mas Things Jam hosted by Playgama this time had a total prize pool of $1,000, with $250, $150, and $100 awarded to the 1st, 2nd, and 3rd place games selected by both participant voting and organizer selection. Notable rules for this game jam include:
@@ -63,10 +63,10 @@ These rules indicate that this game jam also serves the purpose of discovering n
 
 I had a game I'd wanted to make for two years but hadn't yet created. It was inspired by the legendary puzzle game Cosmic Express and the popular mobile puzzle game RGB Express. When I lacked the technical skills to make a game similar to these, I created [Pick & Go!](https://sublevelgames.github.io/pick-n-go/) as a compromise.
 
-![](/images/pxj03.png)
+![](/images/pxj03.png)  
 *Cosmic Express, RGB Express*
 
-![](/images/pxj04.png)
+![](/images/pxj04.png)  
 *Pick & Go!*
 
 I had been particularly wanting to make a seasonal game, thinking it would be great to create a Christmas-themed game where Santa Claus delivers presents. I wanted to make it last Christmas too, but it was pushed back by other work priorities. This year, I was just thinking about making it when I saw the announcement for this game jam. Realizing that if I didn't make it now, I'd have to wait another year, I decided to give it my best shot despite having a trip planned in a few days.
@@ -75,20 +75,46 @@ The game's rules involve moving along a path to pick up presents and deliver the
 
 I decided to use the title I'd thought of before: CPR: Christmas Present Rush. It felt like a title that would catch people's attention while clearly conveying the theme. I used the Candy Cane font as the main font.
 
-![](/images/pxj05.png)
+![](/images/pxj05.png)  
 *CPR Screenshot*
 
 While searching for assets suitable for the Christmas theme, I found the [Christmas Village Asset Pack](https://murphysdad.itch.io/christmas-village-asset-pack). It had snow-covered paths, coniferous trees, houses, and even a cute boy character that fit the background, making it perfect for the game. I used this as the main theme, and to express a village shrouded in darkness at the start (for the theme of conflict between darkness and light), I slightly lowered the brightness of the tiles. Then, to have the boy character move instead of Santa Claus, I created a very simple narrative—Santa has disappeared and the boy must deliver the presents.
 
 For the important assets of presents and houses, I used the [Admurin's Holiday: Christmas Items](https://admurin.itch.io/admurins-christmas-items) asset for presents and drew the houses myself. Since it's a puzzle game, the visibility of the gimmicks was crucial, so I focused on making them simple while ensuring the colors that pair with the presents were clearly visible.
 
-![](/images/pxj06.png)
+![](/images/pxj06.png)  
 *Game Screen*
 
 Maps were generated using the BFS algorithm. BFS (Breadth-First Search) is a search algorithm that starts from the root node, explores all reachable nodes at the current depth, then proceeds to explore nodes at the next depth. While it always finds the shortest path, it has the disadvantage of taking a long time to search because it checks all possible cases. However, since the maximum puzzle size provided in this game was 8x8, BFS was sufficient to search within the desired time, so I used BFS without any additional optimization.
 
 I created 3 types of present-house pairs, allowed up to 2 carts to follow the character, and set the total number of presents to n. The maximum number of moves was n, and the minimum number of moves was n. I initially planned to generate and provide 50 maps, but since there seemed to be no tutorial, I created a very simple text-based tutorial and made one 4x4 map, reducing the existing maps by one. As a result, I provided 1+49=50 maps for service.
 
-![](/images/pxj07.png)
+![](/images/pxj07.png)  
 *Game map visualization. White is the starting point, black is the ending point, small circles are presents, large hollow circles are houses to deliver presents to, and pink lines represent the solution moves*
+
+
+## Dual Grid
+
+One of the parts where I spent the most time was implementing Dual Grid on the tile map. A few years ago, I had encountered Marching Squares while implementing the WFC algorithm in 3D voxel space, so I thought it would be easy. However, as I progressed with the work, I realized that I had never actually implemented Dual Grid on 2D tiles myself.
+
+Dual Grid refers to two overlapping grids. When the first grid represents the space actually used in the game—where characters move, obstacles are placed, etc.—you can create a new grid using the center of each cell that composes that grid as vertices, and this is the Dual Grid. By placing tiles on the Dual Grid, you can achieve visually smooth transitions.
+
+![](/images/pxj08.jpg)  
+*[Example of dual grid applied to a tilemap](https://github.com/GlitchedinOrbit/dual-grid-tilemap-system-godot-gdscript)*
+
+Another reason to use Dual Grid is that it uses fewer tiles. In a [2-corner tileset](https://www.boristhebrave.com/permanent/24/06/cr31/stagecast/wang/2corn.html) where each tile's corners are painted in one of two colors, while 47 tiles would be needed without using Dual Grid, it can be covered with just 15 tiles.
+
+![](/images/pxj09.png)  
+*[Comparison of tile count when using and not using dual grid](https://www.youtube.com/watch?v=jEWFSv3ivTg)*
+
+If rotation is also possible, it can be covered with just 5 tiles. However, in 2D, rotation is often impossible because shadow effects need to be applied.
+
+After various trials and tribulations, once I implemented the dual grid, quite a bit of time had passed. To be precise, I spent about a day on it.
+
+![](/images/pxj10.gif)  
+*Dual grid applied to CPR*
+
+
+
+
 
