@@ -18,6 +18,8 @@ hidden: true
 <span class="badge badge-info">⏱️Jam</span>
 
 
+![](/images/pxj00.png)
+
 # What is a Game Jam?
 
 Since I started developing games, participating in a game jam has always been on my wishlist. The term "Game Jam" originates from the jazz culture of "jamming," where musicians improvise together spontaneously. Similarly, game jams are events where developers create games improvisationally within a short timeframe based on a given theme.
@@ -39,3 +41,19 @@ Game jams serve as a venue to test the potential of ideas. The famous indie game
 *Comparison of Baba is You's Jam Build and Actual Build*
 
 
+# Playgama X-Mas Things Jam
+
+Playgama is an HTML5 platform and distributor that boasts 300 million monthly visitors. By simply integrating the Playgama SDK, developers can publish their games across various networks including y8.com, lagged.com, MSN, and Xiaomi Game Center. Of course, not all games can be published everywhere—Playgama adds networks where games will be published based on certain criteria. Sublevelgames has launched 8 games on Playgama. I believe Playgama is developing faster than other web game platforms, and communication with game managers and community managers through Discord is also smooth.
+
+[Playgama has hosted 4 game jams so far](https://itch.io/search?q=playgama%20jam&type=jams), and this X-Mas Things Jam is the fifth. Except for the [Green Web Jam](https://itch.io/jam/green-web-game-jam-playgama), all have offered rewards, and game jams with rewards had at least twice as many submissions.
+
+![](/images/pxj02.png)
+*List of Game Jams Hosted by Playgama*
+
+The X-Mas Things Jam hosted by Playgama this time had a total prize pool of $1,000, with $250, $150, and $100 awarded to the 1st, 2nd, and 3rd place games selected by both participant voting and organizer selection. Notable rules for this game jam include:
+
+1. HTML5/Web only
+2. Build size under 100MB
+3. Mandatory integration of Playgama Bridge SDK
+
+These rules indicate that this game jam also serves the purpose of discovering new titles that can be served on the Playgama platform. The theme was the conflict between darkness and light, requiring participants to define dark and light elements and show them in opposition.
