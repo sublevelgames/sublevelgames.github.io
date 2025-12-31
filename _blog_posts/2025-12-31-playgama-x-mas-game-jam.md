@@ -132,6 +132,22 @@ There were other minor bugs, but I fixed many parts and uploaded the first versi
 *Submit result. Submitted as 3rd place.*
 
 
+## Second Version (v1.1.0)
 
+Until this point, I thought everything was finished, but after posting an introduction about the game on Thinkygames.com's Discord for promotion, I received a large amount of feedback. Certainly, unlike when making a game alone, when someone views the game from an external perspective, you discover many areas that need correction. In particular, Sergiu, who gave the feedback, is a contributor to Thinkygames.com, so his feedback on puzzle games was accurate and made sense.
+
+I applied most of Sergiu's feedback to the second version, and the game's revision history was as follows:
+
+- Added hard mode. Unlocked after clearing all 50 stages in normal mode
+- Fixed the issue where the game could be cleared even if the path didn't end at the target point, fixed the issue where you could pass the target
+- Fixed the issue where spacebar input reset the game map draw state
+- Made spacebar work like pressing the next button when clearing a stage
+- Changed from Candy Cane font to Arial for readability of some text
+- Enabled path modification with keyboard controls such as arrow keys and WASD
+
+It was quite a lot of content, but without difficulties like dual grid, I was able to work on it within a few hours. After applying the changes, I upgraded to version 1.1.0, and as a gesture of gratitude, I added the name of the person who gave feedback to the Credits section as Special Thanks to.
+
+![](/images/pxj13.png)  
+*Sergiu's name added to special thanks to*
 
 
