@@ -1,6 +1,6 @@
 ---
 layout: blog_post
-title: "Christmas Present Rush - My Game Jam Award Story"
+title: "🎄Christmas Present Rush - My Game Jam Award Story"
 image: /images/pxj00.png
 excerpt: "After two years of wanting to create a puzzle game inspired by Cosmic Express and RGB Express, I finally brought it to life during the Playgama X-Mas Things Jam. Despite tight deadlines, implementing dual grid systems, and discovering critical bugs just before a vacation, CPR (Christmas Present Rush) won 2nd place in the jury's choice, fulfilling a long-held bucket list item of winning a game jam award."
 tags: ["🎮Game", "🧩Puzzle", "🎲PCG", "💻Game Dev", "🔧Development", "⏱️Jam"]
