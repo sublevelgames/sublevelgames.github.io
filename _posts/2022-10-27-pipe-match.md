@@ -19,6 +19,8 @@ comments: false
 <a href="https://www.coolmathgames.com/0-daily-pipe-match" class="btn btn-primary btn-lg">Play at 🧮coolmathgames.com</a>
 - This version offers daily puzzles. To play previous puzzles, click on the calendar and choose a past day.
 
+<a href="https://minion.toss.im/t1Md0l8A" class="btn btn-primary btn-lg">Play at 💙Toss</a>
+
 <a href="https://lagged.com/play/6142/" class="btn btn-primary btn-lg">Play at 🎯lagged.com</a>
 
 <a href="https://www.newgrounds.com/portal/view/861345" class="btn btn-primary btn-lg">Play at 🎨newgrounds.com</a>

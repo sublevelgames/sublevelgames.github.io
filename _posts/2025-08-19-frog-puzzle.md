@@ -17,6 +17,8 @@ comments: false
 
 <a href="https://play.google.com/store/apps/details?id=com.sublevelgames.frog" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
 
+<a href="https://minion.toss.im/ZX3JJR3a" class="btn btn-primary btn-lg">Play at 💙Toss</a>
+
 <a href="https://sublevelgames.itch.io/frog-puzzle" class="btn btn-primary btn-lg">Play at 🎮itch.io</a>
 
 <a href="https://www.gamepix.com/play/frog-puzzle" class="btn btn-primary btn-lg">Play at ▶️gamepix.com</a>

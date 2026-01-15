@@ -16,6 +16,8 @@ comments: false
 
 <a href="https://play.google.com/store/apps/details?id=com.sublevelgames.linesudoku1" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
 
+<a href="https://minion.toss.im/VsmmlgKg" class="btn btn-primary btn-lg">Play at 💙Toss</a>
+
 <a href="https://lagged.com/play/6861/" class="btn btn-primary btn-lg">Play at 🎯lagged.com</a>
 
 <a href="https://www.coolmathgames.com/0-line-sudoku" class="btn btn-primary btn-lg">Play at 🧮coolmathgames.com</a>

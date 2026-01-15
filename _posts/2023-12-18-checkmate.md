@@ -16,6 +16,8 @@ comments: false
 
 <a href="https://play.google.com/store/apps/details?id=com.sublevelgames.checkmate" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
 
+<a href="https://minion.toss.im/DxC9eIFw" class="btn btn-primary btn-lg">Play at 💙Toss</a>
+
 <a href="https://lagged.com/play/6631/" class="btn btn-primary btn-lg">Play at 🎯lagged.com</a>
 
 <a href="https://html5.gamemonetize.co/j13roxrdn6y423o4vzdjudcmapuox7em/" class="btn btn-primary btn-lg">Play at ▶️gamemonetize.com</a>

@@ -16,6 +16,8 @@ comments: false
 
 <a href="https://play.google.com/store/apps/details?id=com.sublevelgames.dicepuzzle" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
 
+<a href="https://minion.toss.im/7iLby9Ap" class="btn btn-primary btn-lg">Play at 💙Toss</a>
+
 <a href="https://www.reddit.com/r/dicepuzzle/" class="btn btn-primary btn-lg">Play at 🤖Reddit</a>
 
 Challenge your brain with Dice Puzzle! Click cells to cycle through dice values (1, 2, 3) and solve clever logic puzzles.

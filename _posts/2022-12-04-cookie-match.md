@@ -21,6 +21,8 @@ comments: false
 <a href="https://store.steampowered.com/app/2268310/Cookie_Match_Enhanced_Edition/" class="btn btn-primary btn-lg">Play at 🦾Steam</a>
 - This is the Enhanced Edition of the game, featuring new gameplay elements and a total of 200 new maps.
 
+<a href="https://minion.toss.im/3uRWJBj5" class="btn btn-primary btn-lg">Play at 💙Toss</a>
+
 <a href="https://cookiematch.netlify.app/" class="btn btn-primary btn-lg">Play at 🌐website(demo)</a>
 
 <a href="https://www.coolmathgames.com/0-cookie-match" class="btn btn-primary btn-lg">Play at 🧮coolmathgames.com</a>

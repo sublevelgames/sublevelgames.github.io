@@ -15,6 +15,8 @@ comments: false
 
 <a href="https://play.google.com/store/apps/details?id=com.sublevelgames.arrowescape" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
 
+<a href="https://minion.toss.im/VQR9MLit" class="btn btn-primary btn-lg">Play at 💙Toss</a>
+
 Arrows are trapped in a grid. Your job? Get them out.
 
 Each arrow can only escape in the direction it points. But there's a catch - other arrows might be blocking the way. Figure out the right order to clear them all.

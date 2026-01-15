@@ -16,6 +16,8 @@ comments: false
 
 <a href="https://play.google.com/store/apps/details?id=com.sublevelgames.minesweeper" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
 
+<a href="https://minion.toss.im/xsXnqSOD" class="btn btn-primary btn-lg">Play at 💙Toss</a>
+
 <a href="https://sublevelgames.itch.io/explainable-minesweeper" class="btn btn-primary btn-lg">Play at 🎮itch.io</a>
 
 <a href="https://www.gamepix.com/play/explainable-minesweeper" class="btn btn-primary btn-lg">Play at ▶️gamepix.com</a>

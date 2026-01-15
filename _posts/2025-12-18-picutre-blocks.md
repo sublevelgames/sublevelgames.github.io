@@ -15,6 +15,8 @@ comments: false
 
 <a href="https://play.google.com/store/apps/details?id=com.sublevelgames.pictureblocks" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
 
+<a href="https://minion.toss.im/Fi0hwJjt" class="btn btn-primary btn-lg">Play at 💙Toss</a>
+
 🍎 FRUIT BLOCKS - A Fresh Puzzle Experience! 🍇
 
 Slide colorful blocks and match pairs to make them disappear! 

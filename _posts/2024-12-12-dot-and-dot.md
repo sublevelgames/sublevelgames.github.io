@@ -16,6 +16,8 @@ comments: false
 
 <a href="https://play.google.com/store/apps/details?id=com.sublevelgames.dotanddot" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
 
+<a href="https://minion.toss.im/xoyWEEl3" class="btn btn-primary btn-lg">Play at 💙Toss</a>
+
 <a href="https://html5.gamemonetize.co/pi17f968llgbytljvd391tql0csmwmkb/" class="btn btn-primary btn-lg">Play at ▶️gamemonetize.com</a>
 
 <a href="https://www.gamepix.com/play/dot-and-dot" class="btn btn-primary btn-lg">Play at ▶️gamepix.com</a>
