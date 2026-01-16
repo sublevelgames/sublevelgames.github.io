@@ -15,6 +15,8 @@ comments: false
 
 <a href="https://play.google.com/store/apps/details?id=com.sublevelgames.chessgo" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
 
+<a href="https://minion.toss.im/FqrVhnP3" class="btn btn-primary btn-lg">Play at 💙Toss</a>
+
 Easy Chess is a strategic puzzle game where you control Black pieces to capture the White King.
 
 🎯 FEATURES
