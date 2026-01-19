@@ -17,6 +17,8 @@ comments: false
 
 <a href="https://minion.toss.im/FqrVhnP3" class="btn btn-primary btn-lg">Play at 💙Toss</a>
 
+<a href="https://playgama.com/game/easy-chess" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
+
 Easy Chess is a strategic puzzle game where you control Black pieces to capture the White King.
 
 🎯 FEATURES
