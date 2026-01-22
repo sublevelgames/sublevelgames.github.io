@@ -4,12 +4,13 @@ title: "♔Easy Chess"
 categories: game
 image: /images/easy-chess.png
 excerpt: You move multiple times.
-tags: ["📱Mobile", "🧩Puzzle", "🏁Chess"]
-colors: ["danger", "info", "info"]
+tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🏁Chess"]
+colors: ["danger", "primary", "info", "info"]
 comments: false
 ---
 
 <span class="badge badge-danger">📱Mobile</span>
+<span class="badge badge-primary">🌐Web</span>
 <span class="badge badge-info">🧩Puzzle</span>
 <span class="badge badge-info">🏁Chess</span>
 
