@@ -4,18 +4,21 @@ title: "🍓Picture Blocks"
 categories: game
 image: /images/picture-blocks.png
 excerpt: Match fruit blocks! 1+1=0
-tags: ["📱Mobile", "🧩Puzzle", "➕Merge"]
-colors: ["danger", "info", "info"]
+tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "➕Merge"]
+colors: ["danger", "primary", "info", "info"]
 comments: false
 ---
 
 <span class="badge badge-danger">📱Mobile</span>
+<span class="badge badge-primary">🌐Web</span>
 <span class="badge badge-info">🧩Puzzle</span>
 <span class="badge badge-info">➕Merge</span>
 
 <a href="https://play.google.com/store/apps/details?id=com.sublevelgames.pictureblocks" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
 
 <a href="https://minion.toss.im/Fi0hwJjt" class="btn btn-primary btn-lg">Play at 💙Toss</a>
+
+<a href="https://playgama.com/game/picture-blocks" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
 
 🍎 FRUIT BLOCKS - A Fresh Puzzle Experience! 🍇
 
