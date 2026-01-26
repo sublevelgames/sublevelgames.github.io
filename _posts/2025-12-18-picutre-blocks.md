@@ -20,6 +20,8 @@ comments: false
 
 <a href="https://playgama.com/game/picture-blocks" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
 
+<a href="https://www.y8.com/games/picture_blocks" class="btn btn-primary btn-lg">Play at 🕹️y8.com</a>
+
 🍎 FRUIT BLOCKS - A Fresh Puzzle Experience! 🍇
 
 Slide colorful blocks and match pairs to make them disappear! 
