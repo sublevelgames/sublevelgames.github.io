@@ -3,7 +3,7 @@ layout: post
 title: "🧱Block Sudoku"
 categories: game
 image: /images/block-sudoku.png
-excerpt: Connect colored dots to fill the entire grid.
+excerpt: Place colorful number blocks on the grid following Sudoku rules.
 tags: ["📱Mobile", "🧩Puzzle", "🔢Sudoku"]
 colors: ["danger", "info", "info"]
 comments: false
