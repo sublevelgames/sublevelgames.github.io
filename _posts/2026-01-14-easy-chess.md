@@ -20,6 +20,8 @@ comments: false
 
 <a href="https://playgama.com/game/easy-chess" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
 
+<a href="https://www.gamepix.com/play/easy-chess" class="btn btn-primary btn-lg">Play at ▶️gamepix.com</a>
+
 Easy Chess is a strategic puzzle game where you control Black pieces to capture the White King.
 
 🎯 FEATURES
