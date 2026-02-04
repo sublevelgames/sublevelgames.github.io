@@ -15,6 +15,10 @@ comments: false
 
 <a href="https://play.google.com/store/apps/details?id=com.sublevelgames.blocksudoku" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
 
+<a href="https://minion.toss.im/xz6KEzO5" class="btn btn-primary btn-lg">Play at 💙Toss</a>
+
+<a href="https://playgama.com/game/block-sudoku" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
+
 A unique blend of block puzzle and Sudoku! Place colorful number blocks on the grid following Sudoku rules. Each color-coded block must fit perfectly while ensuring no duplicate numbers appear in any row or column segment. Complete special hint challenges for extra brain-teasing fun!
 
 Drag and Drop: Drag blocks from the bottom panel onto the grid
