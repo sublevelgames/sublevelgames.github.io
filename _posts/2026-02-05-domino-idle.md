@@ -4,7 +4,7 @@ title: "🁅Domino Idle"
 categories: game
 image: /images/domino-idle.png
 excerpt: Place dominoes, knock them down, earn coins.
-ags: ["🌐Web", "📈Idle", "📊Simulation"]
+tags: ["🌐Web", "📈Idle", "📊Simulation"]
 colors: ["primary", "info", "info"]
 comments: false
 ---
