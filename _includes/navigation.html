@@ -91,6 +91,9 @@ Final version with:
       <li class="nav-item nav-tags{% if page.url contains '/tags' %} active{% endif %}">
         <a class="nav-link" href={{"/tags/" | relative_url}}>Tags</a>
       </li>
+      <li class="nav-item nav-publishers{% if page.url contains '/publishers' %} active{% endif %}">
+        <a class="nav-link" href={{"/publishers/" | relative_url}}>Publishers</a>
+      </li>
       <li class="nav-item nav-about{% if page.url contains '/about' %} active{% endif %}">
         <a class="nav-link" href={{"/about/" | relative_url}}>About</a>
       </li>

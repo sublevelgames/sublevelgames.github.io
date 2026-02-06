@@ -19,6 +19,18 @@ layout: default
             ><span itemprop="name">{{ page.author }}</span></span
           >{% endif %}
         </p>
+
+        {% if page.publisher %}
+          <p class="post-publishers mb-2">
+            {% for publisher in page.publisher %}
+              {% assign publisher_text = publisher | slice: 1, publisher.size %}
+              {% assign publisher_slug = publisher_text | slugify %}
+              <a href="{{ site.baseurl }}/publishers/{{ publisher_slug }}/" class="publisher-link">
+                <span class="badge badge-secondary">{{ publisher }}</span>
+              </a>
+            {% endfor %}
+          </p>
+        {% endif %}
         
         {% comment %}
         <!-- 

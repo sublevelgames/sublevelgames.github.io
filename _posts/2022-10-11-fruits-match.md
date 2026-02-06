@@ -4,6 +4,7 @@ title: 🥝Fruits Match
 categories: game
 image: /images/fruits-match.png
 excerpt: Fruits Match is a match-three game where you collect three matching tiles to clear them.
+publisher: ["📱GooglePlay", "💙Toss", "🎯lagged", "🎨newgrounds", "🎮itch.io", "🕹️y8", "▶️gamemonetize", "▶️gamedistribution", "▶️gamepix"]
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🍭Match-3"]
 colors: ["danger", "primary", "info", "info"]
 comments: false

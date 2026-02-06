@@ -66,6 +66,9 @@ collections:
   tags:
     output: true
     permalink: /tags/:path/
+  publishers:
+    output: true
+    permalink: /publishers/:path/
   blog_posts:
     output: true
     permalink: /blogs/:name/
@@ -76,6 +79,11 @@ defaults:
       type: tags
     values:
       layout: tag
+  - scope:
+      path: ""
+      type: publishers
+    values:
+      layout: publisher
   - scope:
       path: ""
       type: blog_posts

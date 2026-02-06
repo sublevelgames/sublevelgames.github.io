@@ -1,0 +1,57 @@
+---
+layout: default
+---
+
+<div class="home py-4 py-md-5">
+  <h1 class="page-title">Games from: {{ page.publisher }}</h1>
+  
+  <div class="row">
+    {% assign publisher_without_emoji = page.publisher | slice: 1, page.publisher.size %}
+    {% for post in site.posts %}
+      {% if post.publisher %}
+        {% for post_publisher in post.publisher %}
+          {% assign post_publisher_without_emoji = post_publisher | slice: 1, post_publisher.size %}
+          {% if post_publisher_without_emoji == publisher_without_emoji %}
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+             <a href="{{ post.url | prepend: site.baseurl }}" class="index-anchor">
+              <div class="card rounded overflow-hidden h-100 shadow-sm">
+                {% assign now = 'now' | date: '%s' %}
+                {% assign two_weeks = 1209600 %}
+                {% assign post_date = post.date | date: '%s' | plus: 0 %}
+                {% assign date_diff = now | minus: post_date %}
+                {% if date_diff < two_weeks %}
+                  <div class="new-badge">NEW</div>
+                {% endif %}
+                <div class="image">
+                  {% if post.image %}
+                  <img src="{{post.image | relative_url}}" alt="{{post.title}}" class="card-img-top">
+                  {% endif %}
+                  <div class="card-body">
+                    <h2 class="card-title h5">{{ post.title | truncate: 25 }}</h2>
+                    <p class="p-0 my-1 mx-0"><span class="post-meta"><small>{{ post.date | date: "%b %-d, %Y" }}</small></span></p>
+                    {% if post.tags %}
+                      <div class="mb-2">
+                      {% for tag in post.tags %}
+                        <span class="badge badge-{{ post.colors[forloop.index0] }}">{{ tag }}</span>
+                      {% endfor %}
+                      </div>
+                    {% endif %}
+                    <p class="card-text">{{ post.excerpt | strip_html | strip_newlines | truncate: 150 }}</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+            </div>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <div class="row justify-content-center mt-4">
+    <div class="col-md-4">
+      <a href="{{ '/' | relative_url }}" class="btn btn-primary">All Posts</a>
+      <a href="{{ '/publishers/' | relative_url }}" class="btn btn-outline-primary">All Publishers</a>
+    </div>
+  </div>
+</div>
