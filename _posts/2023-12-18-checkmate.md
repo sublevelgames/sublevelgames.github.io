@@ -4,6 +4,7 @@ title: "♞Checkmate"
 categories: game
 image: /images/checkmate.png
 excerpt: Checkmate, a strategic chess-inspired game featuring 500 unique maps and 24 challenging achievements.
+publisher: ["📱GooglePlay", "💙Toss", "🎯lagged", "▶️gamemonetize", "🧮coolmathgames", "▶️gamepix"]
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🏁Chess"]
 colors: ["danger", "primary", "info", "info"]
 comments: false

@@ -4,6 +4,7 @@ title: "🔢Line Sudoku!"
 categories: game
 image: /images/line-sudoku-1.png
 excerpt: sudoku + stream 
+publisher: ["🍎AppStore"]
 tags: ["📱Mobile", "🧩Puzzle", "🔢Sudoku"]
 colors: ["danger", "info", "info"]
 comments: false

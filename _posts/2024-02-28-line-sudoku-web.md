@@ -4,6 +4,7 @@ title: "🔢Line Sudoku"
 categories: game
 image: /images/line-sudoku.png
 excerpt: Fill a grid with unique numbers in rows, columns, and streams of connected cells.
+publisher: ["📱GooglePlay", "💙Toss", "🎯lagged", "🧮coolmathgames", "▶️gamepix"]
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🔢Sudoku"]
 colors: ["danger", "primary", "info", "info"]
 comments: false

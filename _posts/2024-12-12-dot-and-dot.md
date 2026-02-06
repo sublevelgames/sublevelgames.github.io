@@ -4,6 +4,7 @@ title: "📍Dot and Dot"
 categories: game
 image: /images/dot-and-dot.png
 excerpt: Dot and Dot is a vibrant puzzle game where players connect matching dots without crossing paths. With 1000 challenging levels, features like hints, auto-complete, and right-click line removal enhance the experience, testing your logic and spatial skills.
+publisher: ["📱GooglePlay", "💙Toss", "▶️gamemonetize", "▶️gamepix", "💜playgama", "🕹️y8", "🎯lagged"]
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🖇️Connect"]
 colors: ["danger", "primary", "info", "info"]
 comments: false
