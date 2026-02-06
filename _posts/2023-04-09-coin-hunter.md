@@ -4,6 +4,7 @@ title: 🟡Coin Hunter
 categories: game
 image: /images/coin-hunter.png
 excerpt: Coin Hunter is an idle game where you can upgrade robots and boards to collect more coins.
+publisher: ["🎨newgrounds", "🎮itch.io", "🕹️y8"]
 tags: ["🌐Web", "📈Idle", "📊Simulation"]
 colors: ["primary", "info", "info"]
 comments: false

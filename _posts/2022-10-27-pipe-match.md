@@ -4,6 +4,7 @@ title: 💧Pipe Match
 categories: game
 image: /images/pipe-match.png
 excerpt: Pipe Match is a rotating card game where the goal is to connect all pipes to the end.
+publisher: ["📱GooglePlay", "🧮coolmathgames", "💙Toss", "🎯lagged", "🎨newgrounds", "🎮itch.io", "🕹️y8", "▶️gamemonetize", "🔥addictinggames"]
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🙃Rotate"]
 colors: ["danger", "primary", "info", "info"]
 comments: false

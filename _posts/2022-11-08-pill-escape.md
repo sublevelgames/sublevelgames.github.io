@@ -4,6 +4,7 @@ title: 💊Pill Escape
 categories: game
 image: /images/pill-escape.png
 excerpt: Pill Escape is a puzzle game inspired by the rush-hour style, where your goal is to slide the blue pill to the exit.
+publisher: ["📱GooglePlay", "💙Toss", "🎯lagged", "🎨newgrounds", "🎮itch.io", "🕹️y8", "▶️gamemonetize"]
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🛷Slide"]
 colors: ["danger", "primary", "info", "info"]
 comments: false
