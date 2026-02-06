@@ -4,6 +4,7 @@ title: "🁅Domino Idle"
 categories: game
 image: /images/domino-idle.png
 excerpt: Place dominoes, knock them down, earn coins.
+publisher: ["🎮itch.io", "🎮crazygames"]
 tags: ["🌐Web", "📈Idle", "📊Simulation"]
 colors: ["primary", "info", "info"]
 comments: false

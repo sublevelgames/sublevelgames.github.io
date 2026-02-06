@@ -4,6 +4,7 @@ title: "🧱Block Sudoku"
 categories: game
 image: /images/block-sudoku.png
 excerpt: Place colorful number blocks on the grid following Sudoku rules.
+publisher: ["📱GooglePlay", "💙Toss", "💜playgama"]
 tags: ["📱Mobile", "🧩Puzzle", "🔢Sudoku"]
 colors: ["danger", "info", "info"]
 comments: false

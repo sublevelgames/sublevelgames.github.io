@@ -4,6 +4,7 @@ title: "🏝️Logic Islands"
 categories: game
 image: /images/logic-islands.png
 excerpt: Nurikabe-like grid puzzle
+publisher: ["🎮itch.io", "▶️gamepix", "▶️gamemonetize", "💜playgama", "🕹️y8"]
 tags: ["🌐Web", "🧩Puzzle", "🖇️Connect", "🏝️Nurikabe"]
 colors: ["primary", "info", "info", "info"]
 comments: false

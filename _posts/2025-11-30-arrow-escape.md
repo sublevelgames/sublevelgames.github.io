@@ -4,6 +4,7 @@ title: "➡️Arrow Escape"
 categories: game
 image: /images/arrow-escape.png
 excerpt: Tap arrows to escape!
+publisher: ["📱GooglePlay", "💙Toss"]
 tags: ["📱Mobile", "🧩Puzzle", "♟️Strategy"]
 colors: ["danger", "info", "info"]
 comments: false

@@ -4,6 +4,7 @@ title: "🎲Dice Puzzle"
 categories: game
 image: /images/dice-puzzle.png
 excerpt: Click cells to cycle through dice values (1, 2, 3) and solve logic puzzles.
+publisher: ["📱GooglePlay", "💙Toss", "🤖Reddit"]
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "📐Math"]
 colors: ["danger", "primary", "info", "info"]
 comments: false

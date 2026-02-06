@@ -4,6 +4,7 @@ title: "➕Number Sum"
 categories: game
 image: /images/number-sum.png
 excerpt: Match all target sums.
+publisher: ["📱GooglePlay", "💙Toss", "🎮itch.io", "▶️gamepix"]
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "📐Math"]
 colors: ["danger", "primary", "info", "info"]
 comments: false
