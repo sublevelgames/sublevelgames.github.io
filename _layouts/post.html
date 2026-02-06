@@ -26,7 +26,7 @@ layout: default
               {% assign publisher_text = publisher | slice: 1, publisher.size %}
               {% assign publisher_slug = publisher_text | slugify %}
               <a href="{{ site.baseurl }}/publishers/{{ publisher_slug }}/" class="publisher-link">
-                <span class="badge badge-secondary">{{ publisher }}</span>
+                <span class="badge publisher-badge {{ publisher_slug }}-badge">{{ publisher }}</span>
               </a>
             {% endfor %}
           </p>
