@@ -10,12 +10,6 @@ colors: ["danger", "primary", "info", "info", "info"]
 comments: false
 ---
 
-<span class="badge badge-danger">📱Mobile</span>
-<span class="badge badge-primary">🌐Web</span>
-<span class="badge badge-info">🧩Puzzle</span>
-<span class="badge badge-info">🗺️Pathfinding</span>
-<span class="badge badge-info">🛡️Defense</span>
-
 <a href="https://play.google.com/store/apps/details?id=com.sublevelgames.frog" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
 
 <a href="https://minion.toss.im/ZX3JJR3a" class="btn btn-primary btn-lg">Play at 💙Toss</a>

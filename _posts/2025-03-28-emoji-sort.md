@@ -10,11 +10,6 @@ colors: ["danger", "primary", "info", "info"]
 comments: false
 ---
 
-<span class="badge badge-danger">📱Mobile</span>
-<span class="badge badge-primary">🌐Web</span>
-<span class="badge badge-info">🧩Puzzle</span>
-<span class="badge badge-info">🧠Logic</span>
-
 <a href="https://play.google.com/store/apps/details?id=com.DefaultCompany.EmojiSort" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
 
 <a href="https://apps.apple.com/us/app/emoji-sort-quiz/id6745425234" class="btn btn-primary btn-lg">Play at 🍎App Store</a>

@@ -10,11 +10,6 @@ colors: ["danger", "primary", "info", "info"]
 comments: false
 ---
 
-<span class="badge badge-danger">📱Mobile</span>
-<span class="badge badge-primary">🌐Web</span>
-<span class="badge badge-info">♟️Strategy</span>
-<span class="badge badge-info">⚡Short</span>
-
 <a href="https://play.google.com/store/apps/details?id=com.sublevelgames.chopsticks" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
 
 <a href="https://minion.toss.im/joxpLt8y" class="btn btn-primary btn-lg">Play at 💙Toss</a>

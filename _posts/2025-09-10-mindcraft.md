@@ -10,12 +10,6 @@ colors: ["success", "primary", "info", "info"]
 comments: false
 ---
 
-<span class="badge badge-success">🦾Steam</span>
-<span class="badge badge-primary">🌐Web</span>
-<span class="badge badge-info">🧩Puzzle</span>
-<span class="badge badge-info">🙃Rotate</span>
-
-
 <a href="https://store.steampowered.com/app/3974510/Mindcraft/" class="btn btn-primary btn-lg">Play at 🦾Steam</a>
 
 <a href="https://sublevelgames.itch.io/mindcraft-demo" class="btn btn-primary btn-lg">Play at 🎮itch.io (Demo)</a>

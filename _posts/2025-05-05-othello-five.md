@@ -10,10 +10,6 @@ colors: ["primary", "info"]
 comments: false
 ---
 
-<span class="badge badge-primary">🌐Web</span>
-<span class="badge badge-info">♟️Strategy</span>
-
-
 <a href="https://sublevelgames.itch.io/othello-five" class="btn btn-primary btn-lg">Play at 🎮itch.io</a>
 
 <a href="https://www.gamepix.com/play/othello-five" class="btn btn-primary btn-lg">Play at ▶️gamepix.com</a>

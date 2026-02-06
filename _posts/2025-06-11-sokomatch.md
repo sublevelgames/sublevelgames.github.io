@@ -10,11 +10,6 @@ colors: ["primary", "info", "info", "info"]
 comments: false
 ---
 
-<span class="badge badge-primary">🌐Web</span>
-<span class="badge badge-info">🧩Puzzle</span>
-<span class="badge badge-info">📦Sokoban</span>
-<span class="badge badge-info">🍭Match-3</span>
-
 <a href="https://sublevelgames.itch.io/sokomatch" class="btn btn-primary btn-lg">Play at 🎮itch.io</a>
 
 <a href="https://www.gamepix.com/play/sokomatch" class="btn btn-primary btn-lg">Play at ▶️gamepix.com</a>

@@ -10,10 +10,6 @@ colors: ["primary", "info", "info"]
 comments: false
 ---
 
-<span class="badge badge-primary">🌐Web</span>
-<span class="badge badge-info">📈Idle</span>
-<span class="badge badge-info">📊Simulation</span>
-
 <a href="https://www.newgrounds.com/portal/view/880263" class="btn btn-primary btn-lg">Play at 🎨newgrounds.com</a>
 
 <a href="https://sublevelgames.itch.io/coin-hunter" class="btn btn-primary btn-lg">Play at 🎮itch.io</a>

@@ -10,11 +10,6 @@ colors: ["primary", "info", "info"]
 comments: false
 ---
 
-<span class="badge badge-primary">🌐Web</span>
-<span class="badge badge-info">🛡️Defense</span>
-<span class="badge badge-info">♟️Strategy</span>
-
-
 <a href="https://sublevelgames.itch.io/defense-designer" class="btn btn-primary btn-lg">Play at 🎮itch.io</a>
 
 <a href="https://www.gamepix.com/play/defense-designer" class="btn btn-primary btn-lg">Play at ▶️gamepix.com</a>

@@ -10,11 +10,6 @@ colors: ["primary", "info", "info", "info"]
 comments: false
 ---
 
-<span class="badge badge-primary">🌐Web</span>
-<span class="badge badge-info">🧩Puzzle</span>
-<span class="badge badge-info">🖇️Connect</span>
-<span class="badge badge-info">🏝️Nurikabe</span>
-
 <a href="https://sublevelgames.itch.io/logic-islands" class="btn btn-primary btn-lg">Play at 🎮itch.io</a>
 
 <a href="https://www.gamepix.com/play/logic-islands" class="btn btn-primary btn-lg">Play at ▶️gamepix.com</a>

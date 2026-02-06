@@ -10,11 +10,6 @@ colors: ["danger", "info", "info"]
 comments: false
 ---
 
-<span class="badge badge-danger">📱Mobile</span>
-<span class="badge badge-info">🧩Puzzle</span>
-<span class="badge badge-info">🔢Sudoku</span>
-
-
 <a href="https://apps.apple.com/us/app/line-sudoku/id6745803906" class="btn btn-primary btn-lg">Play at 🍎App Store</a>
 
 

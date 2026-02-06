@@ -10,12 +10,6 @@ colors: ["danger", "success", "primary", "info", "info"]
 comments: false
 ---
 
-<span class="badge badge-danger">📱Mobile</span>
-<span class="badge badge-success">🦾Steam</span>
-<span class="badge badge-primary">🌐Web</span>
-<span class="badge badge-info">🧩Puzzle</span>
-<span class="badge badge-info">🛷Slide</span>
-
 <a href="https://play.google.com/store/apps/details?id=com.sublevelgames.cookiematch" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
 - This is a mobile version of the game that doubles the maps from the Steam version (200 → 400) and makes the difficulty easier.
 

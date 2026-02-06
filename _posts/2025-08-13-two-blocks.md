@@ -10,10 +10,6 @@ colors: ["danger", "info", "info"]
 comments: false
 ---
 
-<span class="badge badge-danger">📱Mobile</span>
-<span class="badge badge-info">🧩Puzzle</span>
-<span class="badge badge-info">➕Merge</span>
-
 <a href="https://play.google.com/store/apps/details?id=com.sublevelgames.twoblocks" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
 
 <a href="https://minion.toss.im/f1YcXLwm" class="btn btn-primary btn-lg">Play at 💙Toss</a>

@@ -10,11 +10,6 @@ colors: ["danger", "primary", "info", "info"]
 comments: false
 ---
 
-<span class="badge badge-danger">📱Mobile</span>
-<span class="badge badge-primary">🌐Web</span>
-<span class="badge badge-info">🧩Puzzle</span>
-<span class="badge badge-info">🍭Match-3</span>
-
 <a href="https://play.google.com/store/apps/details?id=com.sublevelgames.cardset" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
 
 <a href="https://minion.toss.im/T08h4fbv" class="btn btn-primary btn-lg">Play at 💙Toss</a>
