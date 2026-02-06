@@ -25,6 +25,7 @@
   --games-color: #e74c3c;    /* Red */
   --blogs-color: #3498db;    /* Blue */
   --tags-color: #2ecc71;     /* Green */
+  --publishers-color: #9b59b6; /* Purple */
   --about-color: #f39c12;    /* Orange */
 }
 
@@ -79,6 +80,11 @@
     background-color: var(--tags-color);
 }
 
+.nav-publishers.active .nav-link::after,
+.nav-publishers:not(.active) .nav-link:hover::after {
+    background-color: var(--publishers-color);
+}
+
 .nav-about.active .nav-link::after,
 .nav-about:not(.active) .nav-link:hover::after {
     background-color: var(--about-color);
@@ -95,6 +101,10 @@
 
 .nav-tags:hover .nav-link {
     color: var(--tags-color) !important;
+}
+
+.nav-publishers:hover .nav-link {
+    color: var(--publishers-color) !important;
 }
 
 .nav-about:hover .nav-link {
