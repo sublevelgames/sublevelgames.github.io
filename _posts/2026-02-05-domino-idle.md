@@ -10,10 +10,6 @@ colors: ["primary", "info", "info"]
 comments: false
 ---
 
-<span class="badge badge-primary">🌐Web</span>
-<span class="badge badge-info">📈Idle</span>
-<span class="badge badge-info">📊Simulation</span>
-
 <a href="https://sublevelgames.itch.io/domino-idle" class="btn btn-primary btn-lg">Play at 🎮itch.io</a>
 
 <a href="https://www.crazygames.com/game/domino-idle" class="btn btn-primary btn-lg">Play at 🎮crazygames.com</a>
