@@ -4,7 +4,7 @@ title: 🍪Cookie Match
 categories: game
 image: /images/cookie-match.png
 excerpt: Cookie Match is a sliding puzzle game where you must match each cookie to its corresponding cutter.
-publisher: ["📱GooglePlay", "🦾Steam", "💙Toss", "🧮coolmathgames", "🎯lagged", "🎨newgrounds", "🎮itch.io", "🕹️y8", "▶️gamemonetize"]
+publisher: ["📱GooglePlay", "🦾Steam", "💙Toss", "🧮coolmathgames", "💜playgama", "🎯lagged", "🎨newgrounds", "🎮itch.io", "🕹️y8", "▶️gamemonetize"]
 tags: ["📱Mobile", "🦾Steam", "🌐Web", "🧩Puzzle", "🛷Slide"]
 colors: ["danger", "success", "primary", "info", "info"]
 comments: false
@@ -21,6 +21,8 @@ comments: false
 <a href="https://cookiematch.netlify.app/" class="btn btn-primary btn-lg">Play at 🌐website(demo)</a>
 
 <a href="https://www.coolmathgames.com/0-cookie-match" class="btn btn-primary btn-lg">Play at 🧮coolmathgames.com</a>
+
+<a href="https://playgama.com/game/cookie-match" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
 
 <a href="https://lagged.com/play/6069/" class="btn btn-primary btn-lg">Play at 🎯lagged.com</a>
 - We've added 100 new maps, and the difficulty progression is now smoother.
