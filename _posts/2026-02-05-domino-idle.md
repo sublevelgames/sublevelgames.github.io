@@ -4,7 +4,7 @@ title: "🁅Domino Idle"
 categories: game
 image: /images/domino-idle.png
 excerpt: Place dominoes, knock them down, earn coins.
-publisher: ["🎮itch.io", "🎮crazygames"]
+publisher: ["🎮itch.io", "🎮crazygames", "💜playgama"]
 tags: ["🌐Web", "📈Idle", "📊Simulation"]
 colors: ["primary", "info", "info"]
 comments: false
@@ -13,6 +13,8 @@ comments: false
 <a href="https://sublevelgames.itch.io/domino-idle" class="btn btn-primary btn-lg">Play at 🎮itch.io</a>
 
 <a href="https://www.crazygames.com/game/domino-idle" class="btn btn-primary btn-lg">Play at 🎮crazygames.com</a>
+
+<a href="https://playgama.com/game/domino-idle" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
 
 Place dominoes, knock them down, earn coins. Simple puzzle mechanics meet idle progression.
 
