@@ -14,7 +14,7 @@ comments: false
 
 <a href="https://minion.toss.im/Fi0hwJjt" class="btn btn-primary btn-lg">Play at 💙Toss</a>
 
-<a href="https://playgama.com/game/picture-blocks" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
+<a href="https://playgama.com/game/picture-blocks?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
 
 <a href="https://www.y8.com/games/picture_blocks" class="btn btn-primary btn-lg">Play at 🕹️y8.com</a>
 

@@ -22,7 +22,7 @@ comments: false
 
 <a href="https://www.coolmathgames.com/0-cookie-match" class="btn btn-primary btn-lg">Play at 🧮coolmathgames.com</a>
 
-<a href="https://playgama.com/game/cookie-match" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
+<a href="https://playgama.com/game/cookie-match?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
 
 <a href="https://lagged.com/play/6069/" class="btn btn-primary btn-lg">Play at 🎯lagged.com</a>
 - We've added 100 new maps, and the difficulty progression is now smoother.

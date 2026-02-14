@@ -16,7 +16,7 @@ comments: false
 
 <a href="https://html5.gamemonetize.co/xsocq2kafpyvurms2y1w7o3g3urm948t/" class="btn btn-primary btn-lg">Play at ▶️gamemonetize.com</a>
 
-<a href="https://playgama.com/game/logic-islands" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
+<a href="https://playgama.com/game/logic-islands?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
 
 <a href="https://www.y8.com/games/logic_islands" class="btn btn-primary btn-lg">Play at 🕹️y8.com</a>
 

@@ -14,7 +14,7 @@ comments: false
 
 <a href="https://minion.toss.im/FqrVhnP3" class="btn btn-primary btn-lg">Play at 💙Toss</a>
 
-<a href="https://playgama.com/game/easy-chess" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
+<a href="https://playgama.com/game/easy-chess?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
 
 <a href="https://www.gamepix.com/play/easy-chess" class="btn btn-primary btn-lg">Play at ▶️gamepix.com</a>
 

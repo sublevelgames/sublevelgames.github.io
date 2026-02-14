@@ -18,7 +18,7 @@ comments: false
 
 <a href="https://www.gamepix.com/play/dot-and-dot" class="btn btn-primary btn-lg">Play at ▶️gamepix.com</a>
 
-<a href="https://playgama.com/game/dot-and-dot" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
+<a href="https://playgama.com/game/dot-and-dot?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
 
 <a href="https://www.y8.com/games/dot_and_dot" class="btn btn-primary btn-lg">Play at 🕹️y8.com</a>
 

@@ -12,7 +12,7 @@ comments: false
 
 <a href="https://www.gamepix.com/play/mini-janggi" class="btn btn-primary btn-lg">Play at ▶️gamepix.com</a>
 
-<a href="https://playgama.com/game/mini-janggi" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
+<a href="https://playgama.com/game/mini-janggi?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
 
 <a href="https://www.y8.com/games/mini_janggi" class="btn btn-primary btn-lg">Play at 🕹️y8.com</a>
 

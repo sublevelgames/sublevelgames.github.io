@@ -14,7 +14,7 @@ comments: false
 
 <a href="https://minion.toss.im/xz6KEzO5" class="btn btn-primary btn-lg">Play at 💙Toss</a>
 
-<a href="https://playgama.com/game/block-sudoku" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
+<a href="https://playgama.com/game/block-sudoku?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
 
 A unique blend of block puzzle and Sudoku! Place colorful number blocks on the grid following Sudoku rules. Each color-coded block must fit perfectly while ensuring no duplicate numbers appear in any row or column segment. Complete special hint challenges for extra brain-teasing fun!
 
