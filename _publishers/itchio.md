@@ -1,5 +1,5 @@
 ---
 layout: publisher
 publisher: "🎮itch.io"
-permalink: /publishers/itchio/
+permalink: /publishers/itch-io/
 ---
