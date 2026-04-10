@@ -4,13 +4,15 @@ title: "🚂Choo Choo Express"
 categories: game
 image: /images/choo-choo-express.png
 excerpt: cozy route-planning puzzle game.
-publisher: ["💜playgama"]
-tags: ["🌐Web", "🧩Puzzle", "🗺️Pathfinding"]
-colors: ["primary", "info", "info"]
+publisher: ["💜playgama", "1️⃣OneStore"]
+tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🗺️Pathfinding"]
+colors: ["danger", "primary", "info", "info"]
 comments: false
 ---
 
 <a href="https://playgama.com/game/choo-choo-express?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
+
+<a href="https://m.onestore.co.kr/v2/ko-kr/app/0001005263" class="btn btn-primary btn-lg">Play at 1️⃣OneStore</a>
 
 Choo Choo Express is a cozy route-planning puzzle game. Draw a path for the train, pick up presents along the way, and deliver them to the right houses before the route is complete.
 
