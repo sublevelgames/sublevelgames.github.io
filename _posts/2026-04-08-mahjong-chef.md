@@ -4,11 +4,13 @@ title: "🍳Mahjong Chef"
 categories: game
 image: /images/mahjong-chef.png
 excerpt: Match pairs. Clear boards.
-publisher: ["💜playgama", "1️⃣OneStore", "💙Toss"]
+publisher: ["📱GooglePlay", "💜playgama", "1️⃣OneStore", "💙Toss"]
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🀄Mahjong"]
 colors: ["danger", "primary", "info", "info"]
 comments: false
 ---
+
+<a href="https://play.google.com/store/apps/details?id=com.sublevelgames.mahjongchef" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
 
 <a href="https://playgama.com/game/mahjong-chef?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
 
