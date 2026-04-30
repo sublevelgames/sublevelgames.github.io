@@ -4,7 +4,7 @@ title: "♔Easy Chess"
 categories: game
 image: /images/easy-chess.png
 excerpt: You move multiple times.
-publisher: ["📱GooglePlay", "💙Toss", "💜playgama", "▶️gamepix"]
+publisher: ["📱GooglePlay", "💙Toss", "💜playgama", "▶️gamepix", "🐜Kongregate"]
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🏁Chess"]
 colors: ["danger", "primary", "info", "info"]
 comments: false
@@ -17,6 +17,8 @@ comments: false
 <a href="https://playgama.com/game/easy-chess?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
 
 <a href="https://www.gamepix.com/play/easy-chess" class="btn btn-primary btn-lg">Play at ▶️gamepix.com</a>
+
+<a href="https://www.kongregate.com/en/games/sublevelgames/easy-chess" class="btn btn-primary btn-lg">Play at 🐜kongregate.com</a>
 
 Easy Chess is a strategic puzzle game where you control Black pieces to capture the White King.
 
