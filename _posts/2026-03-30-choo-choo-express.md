@@ -4,7 +4,7 @@ title: "🚂Choo Choo Express"
 categories: game
 image: /images/choo-choo-express.png
 excerpt: cozy route-planning puzzle game.
-publisher: ["💜playgama", "1️⃣OneStore", "💙Toss", "🕹️y8"]
+publisher: ["💜playgama", "1️⃣OneStore", "💙Toss", "🕹️y8", "🐜Kongregate"]
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🗺️Pathfinding"]
 colors: ["danger", "primary", "info", "info"]
 comments: false
@@ -17,6 +17,8 @@ comments: false
 <a href="https://minion.toss.im/hhQXj3Fn" class="btn btn-primary btn-lg">Play at 💙Toss</a>
 
 <a href="https://www.y8.com/games/choo_choo_express" class="btn btn-primary btn-lg">Play at 🕹️y8.com</a>
+
+<a href="https://www.kongregate.com/en/games/sublevelgames/choo-choo-express" class="btn btn-primary btn-lg">Play at 🐜kongregate.com</a>
 
 Choo Choo Express is a cozy route-planning puzzle game. Draw a path for the train, pick up presents along the way, and deliver them to the right houses before the route is complete.
 
