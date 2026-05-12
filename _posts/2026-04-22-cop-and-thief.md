@@ -14,7 +14,7 @@ comments: false
 
 <a href="https://minion.toss.im/vg9BNUe4" class="btn btn-primary btn-lg">Play at 💙Toss</a>
 
-<a href="" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
+<a href="https://playgama.com/game/cop--thief?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
 
 <a href="https://www.kongregate.com/en/games/sublevelgames/cop-thief" class="btn btn-primary btn-lg">Play at 🐜kongregate.com</a>
 
