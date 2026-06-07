@@ -5,7 +5,7 @@ categories: game
 image: /images/floor-plan.png
 excerpt: A clean logic puzzle about rooms and rules.
 publisher: ["📱GooglePlay"]
-tags: ["📱Mobile", "🧩Puzzle"]
+tags: ["📱Mobile", "🧩Puzzle", "🖇️Connect", "📐Math", "🏝️Nurikabe"]
 colors: ["danger", "info"]
 comments: false
 ---
