@@ -4,13 +4,15 @@ title: "🏠Floor Plan"
 categories: game
 image: /images/floor-plan.png
 excerpt: A clean logic puzzle about rooms and rules.
-publisher: ["📱GooglePlay"]
+publisher: ["📱GooglePlay", "💙Toss"]
 tags: ["📱Mobile", "🧩Puzzle", "🖇️Connect", "📐Math", "🏝️Nurikabe"]
 colors: ["danger", "info"]
 comments: false
 ---
 
-<a href="https://play.google.com/store/apps/details?id=com.sublevelgames.janggipuzzle" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
+<a href="https://play.google.com/store/apps/details?id=com.sublevelgames.floorplan" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
+
+<a href="https://minion.toss.im/luKzE94t" class="btn btn-primary btn-lg">Play at 💙Toss</a>
 
 Floor Plan is a minimalist logic puzzle inspired by architectural blueprints.
 
