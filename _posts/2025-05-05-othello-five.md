@@ -4,7 +4,7 @@ title: "⚫️Othello Five"
 categories: game
 image: /images/othello-five.png
 excerpt: Classic Othello + Five-in-a-row!
-publisher: ["🎮itch.io", "▶️gamepix", "▶️gamemonetize", "💜playgama"]
+platform: ["🎮itch.io", "▶️gamepix", "▶️gamemonetize", "💜playgama"]
 tags: ["🌐Web", "♟️Strategy"]
 colors: ["primary", "info"]
 comments: false

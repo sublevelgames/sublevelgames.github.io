@@ -4,7 +4,7 @@ title: "➡️Arrow Escape 3D"
 categories: game
 image: /images/arrow-escape-3d.png
 excerpt: Tap arrows to escape, 3D!
-publisher: ["📱GooglePlay"]
+platform: ["📱GooglePlay"]
 tags: ["📱Mobile", "🧩Puzzle", "♟️Strategy"]
 colors: ["danger", "info", "info"]
 comments: false

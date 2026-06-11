@@ -20,13 +20,13 @@ layout: default
           >{% endif %}
         </p>
 
-        {% if page.publisher %}
-          <p class="post-publishers mb-2">
-            {% for publisher in page.publisher %}
-              {% assign publisher_text = publisher | slice: 1, publisher.size %}
-              {% assign publisher_slug = publisher_text | slugify %}
-              <a href="{{ site.baseurl }}/publishers/{{ publisher_slug }}/" class="publisher-link">
-                <span class="badge publisher-badge {{ publisher_slug }}-badge">{{ publisher }}</span>
+        {% if page.platform %}
+          <p class="post-platforms mb-2">
+            {% for platform in page.platform %}
+              {% assign platform_text = platform | slice: 1, platform.size %}
+              {% assign platform_slug = platform_text | slugify %}
+              <a href="{{ site.baseurl }}/platforms/{{ platform_slug }}/" class="platform-link">
+                <span class="badge platform-badge {{ platform_slug }}-badge">{{ platform }}</span>
               </a>
             {% endfor %}
           </p>

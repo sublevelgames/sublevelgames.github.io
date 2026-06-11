@@ -4,7 +4,7 @@ title: "🐸Frog Puzzle"
 categories: game
 image: /images/frog-puzzle.png
 excerpt: Stop frogs from reaching the walkway by removing lily pads.
-publisher: ["📱GooglePlay", "💙Toss", "🎮itch.io", "▶️gamepix"]
+platform: ["📱GooglePlay", "💙Toss", "🎮itch.io", "▶️gamepix"]
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🗺️Pathfinding", "🛡️Defense"]
 colors: ["danger", "primary", "info", "info", "info"]
 comments: false

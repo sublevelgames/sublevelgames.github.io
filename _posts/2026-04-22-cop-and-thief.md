@@ -4,7 +4,7 @@ title: "👮Cop & Thief"
 categories: game
 image: /images/cop-thief.png
 excerpt: Trap the thief before they slip away.
-publisher: ["📱GooglePlay", "💜playgama", "💙Toss", "🐜Kongregate", "🕹️y8"]
+platform: ["📱GooglePlay", "💜playgama", "💙Toss", "🐜Kongregate", "🕹️y8"]
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🗺️Pathfinding", "🛡️Defense"]
 colors: ["danger", "primary", "info", "info", "info"]
 comments: false

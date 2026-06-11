@@ -4,7 +4,7 @@ title: "💣Explainable Minesweeper"
 categories: game
 image: /images/explainable-minesweeper.png
 excerpt: No 50/50. We will explain everything.
-publisher: ["📱GooglePlay", "💙Toss", "🎮itch.io", "▶️gamepix"]
+platform: ["📱GooglePlay", "💙Toss", "🎮itch.io", "▶️gamepix"]
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "💣Minesweeper"]
 colors: ["danger", "primary", "info", "info"]
 comments: false

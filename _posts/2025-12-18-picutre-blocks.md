@@ -4,7 +4,7 @@ title: "🍓Picture Blocks"
 categories: game
 image: /images/picture-blocks.png
 excerpt: Match fruit blocks! 1+1=0
-publisher: ["📱GooglePlay", "💙Toss", "💜playgama", "🕹️y8"]
+platform: ["📱GooglePlay", "💙Toss", "💜playgama", "🕹️y8"]
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "➕Merge"]
 colors: ["danger", "primary", "info", "info"]
 comments: false

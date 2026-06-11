@@ -4,7 +4,7 @@ title: "🏰Defense Designer"
 categories: game
 image: /images/defense-designer.png
 excerpt: Defense Designer is a strategic tower defense game where you must protect your castle against waves of relentless enemies. Build and upgrade different types of towers, construct walls, and manage your resources wisely to survive increasingly difficult challenges.
-publisher: ["🎮itch.io", "▶️gamepix", "▶️gamemonetize", "⚔️armorgames", "🔥addictinggames"]
+platform: ["🎮itch.io", "▶️gamepix", "▶️gamemonetize", "⚔️armorgames", "🔥addictinggames"]
 tags: ["🌐Web", "🛡️Defense", "♟️Strategy"]
 colors: ["primary", "info", "info"]
 comments: false

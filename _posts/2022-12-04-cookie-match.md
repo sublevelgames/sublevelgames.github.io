@@ -4,7 +4,7 @@ title: 🍪Cookie Match
 categories: game
 image: /images/cookie-match.png
 excerpt: Cookie Match is a sliding puzzle game where you must match each cookie to its corresponding cutter.
-publisher: ["📱GooglePlay", "🦾Steam", "💙Toss", "🧮coolmathgames", "💜playgama", "🎯lagged", "🎨newgrounds", "🎮itch.io", "🕹️y8", "▶️gamemonetize"]
+platform: ["📱GooglePlay", "🦾Steam", "💙Toss", "🧮coolmathgames", "💜playgama", "🎯lagged", "🎨newgrounds", "🎮itch.io", "🕹️y8", "▶️gamemonetize"]
 tags: ["📱Mobile", "🦾Steam", "🌐Web", "🧩Puzzle", "🛷Slide"]
 colors: ["danger", "success", "primary", "info", "info"]
 comments: false

@@ -41,45 +41,45 @@ task :generate_tags do
   puts 'Tag pages generated!'
 end
 
-desc 'Generate publisher pages'
-task :generate_publishers do
-  puts 'Generating publisher pages...'
+desc 'Generate platform pages'
+task :generate_platforms do
+  puts 'Generating platform pages...'
   
-  # Create publisher directory if it doesn't exist
-  Dir.mkdir('_publishers') unless Dir.exist?('_publishers')
+  # Create platform directory if it doesn't exist
+  Dir.mkdir('_platforms') unless Dir.exist?('_platforms')
 
-  # Get all publishers from posts
-  all_publishers = []
+  # Get all platforms from posts
+  all_platforms = []
   Dir.glob('_posts/*').each do |post_file|
     front_matter = File.read(post_file).split('---')[1]
     if front_matter
       yaml = YAML.safe_load(front_matter)
-      if yaml['publisher']
-        publishers = yaml['publisher']
-        all_publishers.concat(publishers)
+      if yaml['platform']
+        platforms = yaml['platform']
+        all_platforms.concat(platforms)
       end
     end
   end
 
-  # Process each unique publisher
-  all_publishers.uniq.each do |publisher|
-    # 첫 글자(이모지)를 제외한 퍼블리셔 텍스트 추출
-    publisher_without_emoji = publisher[1..-1]
-    # 퍼블리셔 슬러그 생성
-    publisher_slug = publisher_without_emoji.strip.gsub(/\s+/, '-').gsub(/[^\w\-]/, '').downcase
+  # Process each unique platform
+  all_platforms.uniq.each do |platform|
+    # 첫 글자(이모지)를 제외한 플랫폼 텍스트 추출
+    platform_without_emoji = platform[1..-1]
+    # 플랫폼 슬러그 생성
+    platform_slug = platform_without_emoji.strip.gsub(/\s+/, '-').gsub(/[^\w\-]/, '').downcase
     
-    # Create publisher page if it doesn't exist
-    publisher_file = "_publishers/#{publisher_slug}.md"
+    # Create platform page if it doesn't exist
+    platform_file = "_platforms/#{platform_slug}.md"
     
-    unless File.exist?(publisher_file)
-      File.open(publisher_file, 'w') do |file|
-        file.write("---\nlayout: publisher\npublisher: \"#{publisher}\"\npermalink: /publishers/#{publisher_slug}/\n---\n")
+    unless File.exist?(platform_file)
+      File.open(platform_file, 'w') do |file|
+        file.write("---\nlayout: platform\nplatform: \"#{platform}\"\npermalink: /platforms/#{platform_slug}/\n---\n")
       end
-      puts "Created publisher page for: #{publisher} (slug: #{publisher_slug})"
+      puts "Created platform page for: #{platform} (slug: #{platform_slug})"
     end
   end
   
-  puts 'Publisher pages generated!'
+  puts 'Platform pages generated!'
 end
 
 desc 'Build site with tag pages'

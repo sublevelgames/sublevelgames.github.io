@@ -1,6 +1,6 @@
-// Styles for publisher pages and publisher links
+// Styles for platform pages and platform links
 
-.publisher-link {
+.platform-link {
   text-decoration: none;
   display: inline-block;
   margin-right: 4px;
@@ -14,12 +14,12 @@
   }
 }
 
-.post-publishers {
+.post-platforms {
   margin-bottom: 15px;
 }
 
-// Prevent publisher links from inheriting parent card link styles
-.card .publisher-link {
+// Prevent platform links from inheriting parent card link styles
+.card .platform-link {
   color: inherit;
 
   &:hover {
@@ -27,15 +27,15 @@
   }
 }
 
-// Publishers collection page styling
-.publishers-container {
+// Platforms collection page styling
+.platforms-container {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
   margin-top: 30px;
 }
 
-.publisher-card {
+.platform-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -53,7 +53,7 @@
   }
 }
 
-.publisher-name {
+.platform-name {
   font-size: 1.1rem;
   font-weight: 500;
   padding: 8px 15px;
@@ -63,7 +63,7 @@
   background-color: #9b59b6; // 기본 색상 (Purple)
 }
 
-.publisher-count {
+.platform-count {
   background: white;
   color: black;
   border-radius: 50%;
@@ -77,101 +77,101 @@
   margin: 0 10px;
 }
 
-// 퍼블리셔 색상 정의 - 특정 퍼블리셔만 별도 색상 적용
-.itch-io-publisher {
+// 플랫폼 색상 정의 - 특정 플랫폼만 별도 색상 적용
+.itch-io-platform {
   background-color: #fa5c5c;
 }
 
-.crazygames-publisher {
+.crazygames-platform {
   background-color: #6B4C9A;
 }
 
-.toss-publisher {
+.toss-platform {
   background-color: #0064ff;
 }
 
-.googleplay-publisher {
+.googleplay-platform {
   background-color: #34A853;
 }
 
-.steam-publisher {
+.steam-platform {
   background-color: #1b2838;
 }
 
-.web-publisher {
+.web-platform {
   background-color: #007bff;
 }
 
-.gamedistribution-publisher {
+.gamedistribution-platform {
   background-color: #6c757d;
 }
 
-.gamemonetize-publisher {
+.gamemonetize-platform {
   background-color: #17a2b8;
 }
 
-.gamepix-publisher {
+.gamepix-platform {
   background-color: #ffc107;
 }
 
-.newgrounds-publisher {
+.newgrounds-platform {
   background-color: #fd7e14;
 }
 
-.tagged-publisher {
+.tagged-platform {
   background-color: #e83e8c;
 }
 
-.lagged-publisher {
+.lagged-platform {
   background-color: #8B44AC;
 }
 
-.y8-publisher {
+.y8-platform {
   background-color: #28a745;
 }
 
-.steam-publisher {
+.steam-platform {
   background-color: #1b2838;
 }
 
-.coolmathgames-publisher {
+.coolmathgames-platform {
   background-color: #0077cc;
 }
 
-.addictinggames-publisher {
+.addictinggames-platform {
   background-color: #ff4500;
 }
 
-.playgama-publisher {
+.playgama-platform {
   background-color: #9b59b6;
 }
 
-.msstore-publisher {
+.msstore-platform {
   background-color: #00A4EF;
 }
 
-.appstore-publisher {
+.appstore-platform {
   background-color: #0071E3;
 }
 
-.armorgames-publisher {
+.armorgames-platform {
   background-color: #F4A825;
 }
 
-.reddit-publisher {
+.reddit-platform {
   background-color: #FF4500;
 }
 
-.onestore-publisher {
+.onestore-platform {
   background-color: #492C82;
 }
 
-.kongregate-publisher {
+.kongregate-platform {
   background-color: #C8102E;
 }
 
-// 퍼블리셔 배지 색상 (포스트 페이지용)
-.publisher-badge {
+// 플랫폼 배지 색상 (포스트 페이지용)
+.platform-badge {
   color: white !important;
   font-weight: 500;
 }

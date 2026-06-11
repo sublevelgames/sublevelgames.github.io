@@ -60,15 +60,16 @@ plugins:
   - jekyll-paginate
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-redirect-from
 
 # Collections
 collections:
   tags:
     output: true
     permalink: /tags/:path/
-  publishers:
+  platforms:
     output: true
-    permalink: /publishers/:path/
+    permalink: /platforms/:path/
   blog_posts:
     output: true
     permalink: /blogs/:name/
@@ -81,9 +82,9 @@ defaults:
       layout: tag
   - scope:
       path: ""
-      type: publishers
+      type: platforms
     values:
-      layout: publisher
+      layout: platform
   - scope:
       path: ""
       type: blog_posts

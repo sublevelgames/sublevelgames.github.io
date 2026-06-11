@@ -4,7 +4,7 @@ title: "🚂Choo Choo Express"
 categories: game
 image: /images/choo-choo-express.png
 excerpt: cozy route-planning puzzle game.
-publisher: ["💜playgama", "1️⃣OneStore", "💙Toss", "🕹️y8", "🐜Kongregate", "🎯lagged"]
+platform: ["💜playgama", "1️⃣OneStore", "💙Toss", "🕹️y8", "🐜Kongregate", "🎯lagged"]
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🗺️Pathfinding"]
 colors: ["danger", "primary", "info", "info"]
 comments: false

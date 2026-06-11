@@ -3,15 +3,15 @@ layout: default
 ---
 
 <div class="home py-4 py-md-5">
-  <h1 class="page-title">Games on {{ page.publisher }}</h1>
+  <h1 class="page-title">Games on {{ page.platform }}</h1>
   
   <div class="row">
-    {% assign publisher_without_emoji = page.publisher | slice: 1, page.publisher.size %}
+    {% assign platform_without_emoji = page.platform | slice: 1, page.platform.size %}
     {% for post in site.posts %}
-      {% if post.publisher %}
-        {% for post_publisher in post.publisher %}
-          {% assign post_publisher_without_emoji = post_publisher | slice: 1, post_publisher.size %}
-          {% if post_publisher_without_emoji == publisher_without_emoji %}
+      {% if post.platform %}
+        {% for post_platform in post.platform %}
+          {% assign post_platform_without_emoji = post_platform | slice: 1, post_platform.size %}
+          {% if post_platform_without_emoji == platform_without_emoji %}
             <div class="col-12 col-md-6 col-lg-4 mb-4">
              <a href="{{ post.url | prepend: site.baseurl }}" class="index-anchor">
               <div class="card rounded overflow-hidden h-100 shadow-sm">
@@ -51,7 +51,7 @@ layout: default
   <div class="row justify-content-center mt-4">
     <div class="col-md-4">
       <a href="{{ '/' | relative_url }}" class="btn btn-primary">All Posts</a>
-      <a href="{{ '/publishers/' | relative_url }}" class="btn btn-outline-primary">All Publishers</a>
+      <a href="{{ '/platforms/' | relative_url }}" class="btn btn-outline-primary">All Platforms</a>
     </div>
   </div>
 </div>

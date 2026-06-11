@@ -4,7 +4,7 @@ title: "🔼Find the Set"
 categories: game
 image: /images/find-the-set.png
 excerpt: Match three cards by matching or having all different attributes.
-publisher: ["📱GooglePlay", "💙Toss", "🎯lagged", "▶️gamepix", "▶️gamemonetize"]
+platform: ["📱GooglePlay", "💙Toss", "🎯lagged", "▶️gamepix", "▶️gamemonetize"]
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🍭Match-3"]
 colors: ["danger", "primary", "info", "info"]
 comments: false

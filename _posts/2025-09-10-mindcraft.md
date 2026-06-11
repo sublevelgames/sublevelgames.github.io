@@ -4,7 +4,7 @@ title: 🧊Mindcraft
 categories: game
 image: /images/mindcraft.jpg
 excerpt: Do you like Bloxorz? We have more gimmicks and blocks.
-publisher: ["🦾Steam", "🎮itch.io"]
+platform: ["🦾Steam", "🎮itch.io"]
 tags: ["🦾Steam", "🌐Web", "🧩Puzzle", "🙃Rotate"]
 colors: ["success", "primary", "info", "info"]
 comments: false

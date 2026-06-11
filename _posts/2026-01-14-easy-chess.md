@@ -4,7 +4,7 @@ title: "♔Easy Chess"
 categories: game
 image: /images/easy-chess.png
 excerpt: You move multiple times.
-publisher: ["📱GooglePlay", "💙Toss", "💜playgama", "▶️gamepix", "🐜Kongregate"]
+platform: ["📱GooglePlay", "💙Toss", "💜playgama", "▶️gamepix", "🐜Kongregate"]
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🏁Chess"]
 colors: ["danger", "primary", "info", "info"]
 comments: false

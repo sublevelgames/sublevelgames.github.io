@@ -4,7 +4,7 @@ title: "🏠Floor Plan"
 categories: game
 image: /images/floor-plan.png
 excerpt: A clean logic puzzle about rooms and rules.
-publisher: ["📱GooglePlay", "💙Toss", "💜playgama"]
+platform: ["📱GooglePlay", "💙Toss", "💜playgama"]
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🖇️Connect", "📐Math", "🏝️Nurikabe"]
 colors: ["danger", "primary", "info", "info", "info", "info"]
 comments: false

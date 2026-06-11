@@ -4,7 +4,7 @@ title: "🍳Mahjong Chef"
 categories: game
 image: /images/mahjong-chef.png
 excerpt: Match pairs. Clear boards.
-publisher: ["📱GooglePlay", "💜playgama", "1️⃣OneStore", "💙Toss", "🕹️y8", "🎯lagged"]
+platform: ["📱GooglePlay", "💜playgama", "1️⃣OneStore", "💙Toss", "🕹️y8", "🎯lagged"]
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🀄Mahjong"]
 colors: ["danger", "primary", "info", "info"]
 comments: false

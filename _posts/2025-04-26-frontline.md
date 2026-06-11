@@ -4,7 +4,7 @@ title: "🪖Frontline"
 categories: game
 image: /images/frontline.png
 excerpt: A hex-based turn strategy game about finding the perfect balance. This is a Gamedev.js Jam 2025 submission.
-publisher: ["🎮itch.io"]
+platform: ["🎮itch.io"]
 tags: ["🌐Web", "⏱️Jam", "♟️Strategy"]
 colors: ["primary", "warning", "info"]
 comments: false

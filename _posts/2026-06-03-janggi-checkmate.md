@@ -4,7 +4,7 @@ title: "🈲Janggi Checkmate"
 categories: game
 image: /images/janggi-checkmate.png
 excerpt: Korean Chess (장기) checkmate puzzles.
-publisher: ["📱GooglePlay", "💙Toss", "💜playgama"]
+platform: ["📱GooglePlay", "💙Toss", "💜playgama"]
 tags: ["📱Mobile", "🌐Web", "♟️Strategy", "🏁Chess"]
 colors: ["danger", "primary", "info", "info"]
 comments: false

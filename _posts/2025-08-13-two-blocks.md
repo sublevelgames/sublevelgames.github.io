@@ -4,7 +4,7 @@ title: "🧱Two Blocks"
 categories: game
 image: /images/two-blocks.png
 excerpt: Match colorful two blocks in this puzzle game with unique mechanics.
-publisher: ["📱GooglePlay", "💙Toss", "▶️gamepix"]
+platform: ["📱GooglePlay", "💙Toss", "▶️gamepix"]
 tags: ["📱Mobile", "🧩Puzzle", "➕Merge"]
 colors: ["danger", "info", "info"]
 comments: false

@@ -4,7 +4,7 @@ title: "💡Neural Break"
 categories: game
 image: /images/neural-break.png
 excerpt: Hack everything.
-publisher: ["📱GooglePlay", "💜playgama", "💙Toss"]
+platform: ["📱GooglePlay", "💜playgama", "💙Toss"]
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle"]
 colors: ["danger", "primary", "info"]
 comments: false

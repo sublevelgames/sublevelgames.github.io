@@ -4,7 +4,7 @@ title: "🎰Gacha Hero"
 categories: game
 image: /images/gacha-hero.png
 excerpt: Pull 3 hero cards every day.
-publisher: ["📱GooglePlay", "💙Toss"]
+platform: ["📱GooglePlay", "💙Toss"]
 tags: ["📱Mobile", "⚡Short"]
 colors: ["danger", "info"]
 comments: false
