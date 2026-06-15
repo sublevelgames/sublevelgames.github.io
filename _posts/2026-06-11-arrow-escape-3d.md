@@ -4,13 +4,15 @@ title: "➡️Arrow Escape 3D"
 categories: game
 image: /images/arrow-escape-3d.png
 excerpt: Tap arrows to escape, 3D!
-platform: ["📱GooglePlay", "💜playgama"]
+platform: ["📱GooglePlay", "💙Toss", "💜playgama"]
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "♟️Strategy"]
 colors: ["danger", "primary", "info", "info"]
 comments: false
 ---
 
 <a href="https://play.google.com/store/apps/details?id=com.sublevelgames.floorplan" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
+
+<a href="https://minion.toss.im/Rl5ljxA6" class="btn btn-primary btn-lg">Play at 💙Toss</a>
 
 <a href="https://playgama.com/game/arrow-escape-3d?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
 
