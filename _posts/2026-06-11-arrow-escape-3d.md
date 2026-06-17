@@ -10,7 +10,7 @@ colors: ["danger", "primary", "info", "info"]
 comments: false
 ---
 
-<a href="https://play.google.com/store/apps/details?id=com.sublevelgames.floorplan" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
+<a href="https://play.google.com/store/apps/details?id=com.sublevelgames.arrowescape3d" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
 
 <a href="https://minion.toss.im/Rl5ljxA6" class="btn btn-primary btn-lg">Play at 💙Toss</a>
 
