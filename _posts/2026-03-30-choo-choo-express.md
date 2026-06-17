@@ -4,11 +4,13 @@ title: "🚂Choo Choo Express"
 categories: game
 image: /images/choo-choo-express.png
 excerpt: cozy route-planning puzzle game.
-platform: ["💜playgama", "1️⃣OneStore", "💙Toss", "🕹️y8", "🐜Kongregate", "🎯lagged"]
+platform: ["📱GooglePlay", "💜playgama", "1️⃣OneStore", "💙Toss", "🕹️y8", "🐜Kongregate", "🎯lagged"]
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🗺️Pathfinding"]
 colors: ["danger", "primary", "info", "info"]
 comments: false
 ---
+
+<a href="https://play.google.com/store/apps/details?id=com.sublevelgames.cce" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
 
 <a href="https://playgama.com/game/choo-choo-express?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
 
