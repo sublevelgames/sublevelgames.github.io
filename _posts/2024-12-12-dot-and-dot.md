@@ -4,7 +4,7 @@ title: "📍Dot and Dot"
 categories: game
 image: /images/dot-and-dot.png
 excerpt: Dot and Dot is a vibrant puzzle game where players connect matching dots without crossing paths. With 1000 challenging levels, features like hints, auto-complete, and right-click line removal enhance the experience, testing your logic and spatial skills.
-platform: ["📱GooglePlay", "💙Toss", "▶️gamemonetize", "▶️gamepix", "💜playgama", "🕹️y8", "🎯lagged"]
+platform: ["📱GooglePlay", "💙Toss", "▶️gamemonetize", "▶️gamepix", "💜playgama", "🕹️y8", "🎯lagged", "🫙getjar"]
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🖇️Connect"]
 colors: ["danger", "primary", "info", "info"]
 comments: false
@@ -23,6 +23,8 @@ comments: false
 <a href="https://www.y8.com/games/dot_and_dot" class="btn btn-primary btn-lg">Play at 🕹️y8.com</a>
 
 <a href="https://lagged.com/en/g/dot-and-dot" class="btn btn-primary btn-lg">Play at 🎯lagged.com</a>
+
+<a href="https://getjar.com/games/puzzle/dot-and-dot" class="btn btn-primary btn-lg">Play at 🫙getjar.com</a>
 
 Dot and Dot is a vibrant puzzle game where players connect matching dots without crossing paths. With 500~2000 challenging levels, features like hints, auto-complete, and right-click line removal enhance the experience, testing your logic and spatial skills.
 
