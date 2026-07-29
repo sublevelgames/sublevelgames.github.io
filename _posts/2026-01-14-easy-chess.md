@@ -4,13 +4,15 @@ title: "♔Easy Chess"
 categories: game
 image: /images/easy-chess.png
 excerpt: You move multiple times.
-platform: ["📱GooglePlay", "💙Toss", "💜playgama", "▶️gamepix", "🐜Kongregate"]
+platform: ["📱GooglePlay", "💎GalaxyStore", "💙Toss", "💜playgama", "▶️gamepix", "🐜Kongregate"]
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🏁Chess"]
 colors: ["danger", "primary", "info", "info"]
 comments: false
 ---
 
 <a href="https://play.google.com/store/apps/details?id=com.sublevelgames.chessgo" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
+
+<a href="https://galaxystore.samsung.com/detail/com.sublevelgames.chessgo" class="btn btn-primary btn-lg">Play at 💎Galaxy Store</a>
 
 <a href="https://minion.toss.im/FqrVhnP3" class="btn btn-primary btn-lg">Play at 💙Toss</a>
 
