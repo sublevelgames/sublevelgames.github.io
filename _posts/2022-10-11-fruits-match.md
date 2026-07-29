@@ -4,7 +4,7 @@ title: 🥝Fruits Match
 categories: game
 image: /images/fruits-match.png
 excerpt: Fruits Match is a match-three game where you collect three matching tiles to clear them.
-platform: ["📱GooglePlay", "💙Toss", "🎯lagged", "🎨newgrounds", "🎮itch.io", "🕹️y8", "▶️gamemonetize", "▶️gamedistribution", "▶️gamepix"]
+platform: ["📱GooglePlay", "💙Toss", "💎GalaxyStore", "🎯lagged", "🎨newgrounds", "🎮itch.io", "🕹️y8", "▶️gamemonetize", "▶️gamedistribution", "▶️gamepix"]
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🍭Match-3"]
 colors: ["danger", "primary", "info", "info"]
 comments: false
@@ -13,6 +13,8 @@ comments: false
 <a href="https://play.google.com/store/apps/details?id=com.sublevelgames.fruitmatch" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
 
 <a href="https://minion.toss.im/xuE7Kkyg" class="btn btn-primary btn-lg">Play at 💙Toss</a>
+
+<a href="https://galaxystore.samsung.com/detail/com.sublevelgames.fruitmatch" class="btn btn-primary btn-lg">Play at 💎Galaxy Store</a>
 
 <a href="https://lagged.com/play/6140/" class="btn btn-primary btn-lg">Play at 🎯lagged.com</a>
 - This version is mobile-optimized.
