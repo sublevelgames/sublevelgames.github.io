@@ -4,7 +4,7 @@ title: "👮Cop & Thief"
 categories: game
 image: /images/cop-thief.png
 excerpt: Trap the thief before they slip away.
-platform: ["📱GooglePlay", "💜playgama", "💙Toss", "🐜Kongregate", "🕹️y8", "🫙getjar"]
+platform: ["📱GooglePlay", "💎GalaxyStore", "💜playgama", "💙Toss", "🐜Kongregate", "🕹️y8", "🫙getjar"]
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🗺️Pathfinding", "🛡️Defense"]
 colors: ["danger", "primary", "info", "info", "info"]
 comments: false
@@ -13,6 +13,8 @@ comments: false
 <a href="https://play.google.com/store/apps/details?id=com.sublevelgames.copthief" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
 
 <a href="https://minion.toss.im/vg9BNUe4" class="btn btn-primary btn-lg">Play at 💙Toss</a>
+
+<a href="https://galaxystore.samsung.com/detail/com.sublevelgames.copthief" class="btn btn-primary btn-lg">Play at 💎Galaxy Store</a>
 
 <a href="https://playgama.com/game/cop--thief?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
 
