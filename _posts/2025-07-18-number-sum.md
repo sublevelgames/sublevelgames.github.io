@@ -4,7 +4,7 @@ title: "➕Number Sum"
 categories: game
 image: /images/number-sum.png
 excerpt: Match all target sums.
-platform: ["📱GooglePlay", "💙Toss", "🎮itch.io", "▶️gamepix", "💜playgama", "🫙getjar"]
+platform: ["📱GooglePlay", "💙Toss", "💎GalaxyStore", "🎮itch.io", "▶️gamepix", "💜playgama", "🫙getjar"]
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "📐Math"]
 colors: ["danger", "primary", "info", "info"]
 comments: false
@@ -13,6 +13,8 @@ comments: false
 <a href="https://play.google.com/store/apps/details?id=com.sublevelgames.numbersums" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
 
 <a href="https://minion.toss.im/FrHEHfv5" class="btn btn-primary btn-lg">Play at 💙Toss</a>
+
+<a href="https://galaxystore.samsung.com/detail/com.sublevelgames.numbersums" class="btn btn-primary btn-lg">Play at 💎Galaxy Store</a>
 
 <a href="https://sublevelgames.itch.io/number-sum" class="btn btn-primary btn-lg">Play at 🎮itch.io</a>
 
