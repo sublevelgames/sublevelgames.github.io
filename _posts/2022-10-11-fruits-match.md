@@ -4,7 +4,7 @@ title: 🥝Fruits Match
 categories: game
 image: /images/fruits-match.png
 excerpt: Fruits Match is a match-three game where you collect three matching tiles to clear them.
-platform: ["📱GooglePlay", "💙Toss", "💎GalaxyStore", "🎯lagged", "🎨newgrounds", "🎮itch.io", "🕹️y8", "▶️gamemonetize", "▶️gamedistribution", "▶️gamepix"]
+platform: ["📱GooglePlay", "💙Toss", "💎GalaxyStore", "🫙getjar", "🎯lagged", "🎨newgrounds", "🎮itch.io", "🕹️y8", "▶️gamemonetize", "▶️gamedistribution", "▶️gamepix"]
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🍭Match-3"]
 colors: ["danger", "primary", "info", "info"]
 comments: false
@@ -16,8 +16,9 @@ comments: false
 
 <a href="https://galaxystore.samsung.com/detail/com.sublevelgames.fruitmatch" class="btn btn-primary btn-lg">Play at 💎Galaxy Store</a>
 
+<a href="https://getjar.com/games/puzzle/fruits-match" class="btn btn-primary btn-lg">Play at 🫙getjar.com</a>
+
 <a href="https://lagged.com/play/6140/" class="btn btn-primary btn-lg">Play at 🎯lagged.com</a>
-- This version is mobile-optimized.
 
 <a href="https://www.newgrounds.com/portal/view/859761" class="btn btn-primary btn-lg">Play at 🎨newgrounds.com</a>
 
@@ -26,13 +27,10 @@ comments: false
 <a href="https://y8.com/games/fruits_match_tiles" class="btn btn-primary btn-lg">Play at 🕹️y8.com</a>
 
 <a href="https://html5.gamemonetize.co/vos6pgamgcwxmmgnnb0ri7te4gscn20q/" class="btn btn-primary btn-lg">Play at ▶️gamemonetize.com</a>
-- This version is mobile-optimized.
 
 <a href="https://gamedistribution.com/games/fruits-match" class="btn btn-primary btn-lg">Play at ▶️gamedistribution.com</a>
-- This version is mobile-optimized.
 
 <a href="https://www.gamepix.com/play/fruit-match" class="btn btn-primary btn-lg">Play at ▶️gamepix.com</a>
-- This version is mobile-optimized.
 
 Fruits Match is a match-three game where you collect three matching tiles to clear them.
 
