@@ -4,14 +4,15 @@ title: "🧊Ice & Sand"
 categories: game
 image: /images/ice-sand.png
 excerpt: Summer is the worst possible season to build a castle out of ice. Build one anyway. This is a Playgama AFK Summer Jam 2026 submission.
-platform: ["🎮itch.io"]
-tags: ["🌐Web", "⏱️Jam", "🧩Puzzle", "➕Merge"]
-colors: ["primary", "warning", "info", "info"]
+platform: ["📱GooglePlay", "🎮itch.io"]
+tags: ["📱Mobile", "🌐Web", "⏱️Jam", "🧩Puzzle", "➕Merge"]
+colors: ["danger", "primary", "warning", "info", "info"]
 comments: false
 ---
 
 <a href="https://sublevelgames.itch.io/ice-sand" class="btn btn-primary btn-lg">Play at 🎮itch.io</a>
 
+<a href="https://play.google.com/store/apps/details?id=com.sublevelgames.iceandsand" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
 
 This is a Playgama AFK Summer Jam 2026 submission.
 
