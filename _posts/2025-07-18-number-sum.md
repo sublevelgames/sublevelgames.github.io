@@ -4,11 +4,13 @@ title: "➕Number Sum"
 categories: game
 image: /images/number-sum.png
 excerpt: Match all target sums.
-platform: ["📱GooglePlay", "💙Toss", "💎GalaxyStore", "🎮itch.io", "▶️gamepix", "💜playgama", "🫙getjar"]
+platform: ["📺Youtube", "📱GooglePlay", "💙Toss", "💎GalaxyStore", "🎮itch.io", "▶️gamepix", "💜playgama", "🫙getjar"]
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "📐Math"]
 colors: ["danger", "primary", "info", "info"]
 comments: false
 ---
+
+<a href="https://youtube.com/playables/UgkxeYgdIX8nKlRBVN5soYTbBPDtLF-moqm1?si=x6WYxq1RqRMw7_ke" class="btn btn-primary btn-lg">Play at 📺Youtube Playables</a>
 
 <a href="https://play.google.com/store/apps/details?id=com.sublevelgames.numbersums" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
 
