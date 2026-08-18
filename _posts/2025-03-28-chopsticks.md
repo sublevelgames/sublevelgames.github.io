@@ -4,11 +4,13 @@ title: "✌️Chopsticks"
 categories: game
 image: /images/chopsticks.png
 excerpt: Chopsticks is a fun and strategic two-handed finger battle game where players must outmaneuver their opponents using simple yet deep mechanics. Each player starts with two hands, each showing a single raised finger. The goal is to eliminate all of your opponent’s hands while keeping at least one of yours in play.
-platform: ["📱GooglePlay", "💙Toss", "🎮itch.io", "▶️gamemonetize", "▶️gamepix", "💜playgama"]
+platform: ["📺Youtube", "📱GooglePlay", "💙Toss", "🎮itch.io", "▶️gamemonetize", "▶️gamepix", "💜playgama"]
 tags: ["📱Mobile", "🌐Web", "♟️Strategy", "⚡Short"]
 colors: ["danger", "primary", "info", "info"]
 comments: false
 ---
+
+<a href="https://youtube.com/playables/UgkxmP8q8Z3swbqsl91MYrURw_M8z-7MeOyf?si=S9LaiCaIIhQqw_Ij" class="btn btn-primary btn-lg">Play at 📺Youtube Playables</a>
 
 <a href="https://play.google.com/store/apps/details?id=com.sublevelgames.chopsticks" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
 
