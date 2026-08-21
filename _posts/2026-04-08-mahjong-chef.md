@@ -4,11 +4,13 @@ title: "🍳Mahjong Chef"
 categories: game
 image: /images/mahjong-chef.png
 excerpt: Match pairs. Clear boards.
-platform: ["📱GooglePlay", "💜playgama", "1️⃣OneStore", "💙Toss", "🕹️y8", "🎯lagged"]
+platform: ["📺Youtube", "📱GooglePlay", "💜playgama", "1️⃣OneStore", "💙Toss", "🕹️y8", "🎯lagged"]
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🀄Mahjong"]
 colors: ["danger", "primary", "info", "info"]
 comments: false
 ---
+
+<a href="https://youtube.com/playables/UgkxOr7xaFxfWyPqFZ5cH6pPSWCLZU2vQThi?si=GZ4iD3O_dD2fbW1V" class="btn btn-primary btn-lg">Play at 📺Youtube Playables</a>
 
 <a href="https://play.google.com/store/apps/details?id=com.sublevelgames.mahjongchef" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
 
