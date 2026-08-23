@@ -4,7 +4,7 @@ title: "🏠Floor Plan"
 categories: game
 image: /images/floor-plan.png
 excerpt: A clean logic puzzle about rooms and rules.
-platform: ["📱GooglePlay", "💙Toss", "💜playgama"]
+platform: ["📱GooglePlay", "💙Toss", "💜playgama", "🎯lagged"]
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🖇️Connect", "📐Math", "🏝️Nurikabe"]
 colors: ["danger", "primary", "info", "info", "info", "info"]
 comments: false
@@ -15,6 +15,8 @@ comments: false
 <a href="https://minion.toss.im/luKzE94t" class="btn btn-primary btn-lg">Play at 💙Toss</a>
 
 <a href="https://playgama.com/game/floor-plan?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
+
+<a href="https://lagged.com/en/g/floor-plan" class="btn btn-primary btn-lg">Play at 🎯lagged.com</a>
 
 Floor Plan is a minimalist logic puzzle inspired by architectural blueprints.
 
