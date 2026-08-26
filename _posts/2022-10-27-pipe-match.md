@@ -4,11 +4,14 @@ title: 💧Pipe Match
 categories: game
 image: /images/pipe-match.png
 excerpt: Pipe Match is a rotating card game where the goal is to connect all pipes to the end.
-platform: ["📱GooglePlay", "🧮coolmathgames", "💙Toss", "🎯lagged", "🎨newgrounds", "🎮itch.io", "🕹️y8", "▶️gamemonetize", "🔥addictinggames"]
+platform: ["📺Youtube", "📱GooglePlay", "🧮coolmathgames", "💙Toss", "🫙getjar", "🎯lagged", "🎨newgrounds", "🎮itch.io", "🕹️y8", "▶️gamemonetize", "🔥addictinggames"]
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🙃Rotate"]
 colors: ["danger", "primary", "info", "info"]
 comments: false
 ---
+
+<a href="https://youtube.com/playables/UgkxQE2AUzbooFOwp_QjIXk9YTdQdW0rr6B6?si=pBWWcUDfNZ4pz4ck" class="btn btn-primary btn-lg">Play at 📺Youtube Playables</a>
+- This version offers daily puzzles. To play previous puzzles, click on the calendar and choose a past day.
 
 <a href="https://play.google.com/store/apps/details?id=com.sublevelgames.pipematch" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
 
@@ -16,6 +19,9 @@ comments: false
 - This version offers daily puzzles. To play previous puzzles, click on the calendar and choose a past day.
 
 <a href="https://minion.toss.im/t1Md0l8A" class="btn btn-primary btn-lg">Play at 💙Toss</a>
+
+<a href="https://getjar.com/games/daily-games/daily-pipe-match" class="btn btn-primary btn-lg">Play at 🫙getjar.com</a>
+- This version offers daily puzzles. To play previous puzzles, click on the calendar and choose a past day.
 
 <a href="https://lagged.com/play/6142/" class="btn btn-primary btn-lg">Play at 🎯lagged.com</a>
 
