@@ -4,11 +4,13 @@ title: "♝Mini Chess"
 categories: game
 image: /images/mini-chess.png
 excerpt: Mini Chess is a fast-paced take on the classic game, played on 4×4 to 6×6 boards. It offers quick yet deep strategic play, with varying difficulties for all skill levels. Perfect for short, tactical matches on any device.
-platform: ["▶️gamepix", "🎮itch.io"]
+platform: ["💜playgama", "▶️gamepix", "🎮itch.io"]
 tags: ["🌐Web", "♟️Strategy", "🏁Chess"]
 colors: ["primary", "info", "info"]
 comments: false
 ---
+
+<a href="https://playgama.com/game/mini-chess?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
 
 <a href="https://www.gamepix.com/play/minichess" class="btn btn-primary btn-lg">Play at ▶️gamepix.com</a>
 
