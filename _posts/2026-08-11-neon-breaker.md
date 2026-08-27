@@ -5,8 +5,8 @@ categories: game
 image: /images/neon-breaker.png
 excerpt: A vertical arcade space shooter with a roguelite heart.
 platform: ["📱GooglePlay", "💙Toss", "💜playgama"]
-tags: ["📱Mobile", "🚀Space", "🔫Shooting", "🕹️Arcade", "🎲Roguelike"]
-colors: ["danger", "info", "info", "info", "info"]
+tags: ["📱Mobile", "🌐Web", "🚀Space", "🔫Shooting", "🕹️Arcade", "🎲Roguelike"]
+colors: ["danger", "primary", "info", "info", "info", "info"]
 comments: false
 ---
 
