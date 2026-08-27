@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "🐧Merge Champions"
+title: "🏆Merge Champions"
 categories: game
 image: /images/merge-champions.png
 excerpt: a merge auto-battler
