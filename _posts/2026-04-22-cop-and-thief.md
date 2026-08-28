@@ -4,11 +4,13 @@ title: "👮Cop & Thief"
 categories: game
 image: /images/cop-thief.png
 excerpt: Trap the thief before they slip away.
-platform: ["📱GooglePlay", "💎GalaxyStore", "💜playgama", "💙Toss", "🐜Kongregate", "🕹️y8", "🫙getjar"]
+platform: ["📺Youtube", "📱GooglePlay", "💎GalaxyStore", "💜playgama", "💙Toss", "🐜Kongregate", "🕹️y8", "🫙getjar"]
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🗺️Pathfinding", "🛡️Defense"]
 colors: ["danger", "primary", "info", "info", "info"]
 comments: false
 ---
+
+<a href="https://youtube.com/playables/UgkxQAxgclLjtp-fx01WVIX79xRuWtMhLzEs?si=4nOWbVUMVaM0eLHV" class="btn btn-primary btn-lg">Play at 📺Youtube Playables</a>
 
 <a href="https://play.google.com/store/apps/details?id=com.sublevelgames.copthief" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
 
