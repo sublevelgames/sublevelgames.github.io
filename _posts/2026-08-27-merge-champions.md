@@ -4,11 +4,13 @@ title: "🏆Merge Champions"
 categories: game
 image: /images/merge-champions.png
 excerpt: a merge auto-battler
-platform: ["🫙getjar"]
+platform: ["💜playgama", "🫙getjar"]
 tags: ["🌐Web", "➕Merge", "⚔️Battle", "🛡️Defense"]
 colors: ["primary", "info", "info", "info"]
 comments: false
 ---
+
+<a href="https://playgama.com/game/merge-champions?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
 
 <a href="https://getjar.com/games/arcade/merge-champions" class="btn btn-primary btn-lg">Play at 🫙getjar.com</a>
 
