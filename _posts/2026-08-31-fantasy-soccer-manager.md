@@ -4,11 +4,13 @@ title: "⚽Fantasy Soccer Manager"
 categories: game
 image: /images/fsm.png
 excerpt: a lightweight 7-a-side football management game
-platform: ["🫙getjar"]
+platform: ["💜playgama", "🫙getjar"]
 tags: ["🌐Web", "🏅Sports", "⚽Soccer", "📊Simulation", "♟️Strategy"]
 colors: ["primary", "info", "info", "info", "info"]
 comments: false
 ---
+
+<a href="https://playgama.com/game/fantasy-soccer-manager?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
 
 <a href="https://getjar.com/games/arcade/fantasy-soccer-manager" class="btn btn-primary btn-lg">Play at 🫙getjar.com</a>
 
