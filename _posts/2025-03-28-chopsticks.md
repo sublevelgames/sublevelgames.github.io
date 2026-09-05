@@ -4,7 +4,7 @@ title: "✌️Chopsticks"
 categories: game
 image: /images/chopsticks.png
 excerpt: Chopsticks is a fun and strategic two-handed finger battle game where players must outmaneuver their opponents using simple yet deep mechanics. Each player starts with two hands, each showing a single raised finger. The goal is to eliminate all of your opponent’s hands while keeping at least one of yours in play.
-platform: ["📺Youtube", "📱GooglePlay", "💙Toss", "🎮itch.io", "▶️gamemonetize", "▶️gamepix", "💜playgama"]
+platform: ["📺Youtube", "📱GooglePlay", "💙Toss", "🎮itch.io", "▶️gamemonetize", "▶️gamepix", "💜playgama", "🫙getjar"]
 tags: ["📱Mobile", "🌐Web", "♟️Strategy", "⚡Short"]
 colors: ["danger", "primary", "info", "info"]
 comments: false
@@ -23,5 +23,7 @@ comments: false
 <a href="https://www.gamepix.com/play/chopsticks" class="btn btn-primary btn-lg">Play at ▶️gamepix.com</a>
 
 <a href="https://playgama.com/game/chopsticks?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
+
+<a href="https://getjar.com/games/strategy/chopsticks" class="btn btn-primary btn-lg">Play at 🫙getjar.com</a>
 
 Chopsticks is a fun and strategic two-handed finger battle game where players must outmaneuver their opponents using simple yet deep mechanics. Each player starts with two hands, each showing a single raised finger. The goal is to eliminate all of your opponent’s hands while keeping at least one of yours in play.
