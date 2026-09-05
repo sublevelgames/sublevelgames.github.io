@@ -4,7 +4,7 @@ title: "🍳Mahjong Chef"
 categories: game
 image: /images/mahjong-chef.png
 excerpt: Match pairs. Clear boards.
-platform: ["📺Youtube", "📱GooglePlay", "💜playgama", "1️⃣OneStore", "💙Toss", "🕹️y8", "🎯lagged"]
+platform: ["📺Youtube", "📱GooglePlay", "💜playgama", "🫙getjar", "1️⃣OneStore", "💙Toss", "🕹️y8", "🎯lagged"]
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🀄Mahjong"]
 colors: ["danger", "primary", "info", "info"]
 comments: false
@@ -15,6 +15,8 @@ comments: false
 <a href="https://play.google.com/store/apps/details?id=com.sublevelgames.mahjongchef" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
 
 <a href="https://playgama.com/game/mahjong-chef?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
+
+<a href="https://getjar.com/games/puzzle/mahjong-chef" class="btn btn-primary btn-lg">Play at 🫙getjar.com</a>
 
 <a href="https://m.onestore.co.kr/v2/ko-kr/app/0001005261" class="btn btn-primary btn-lg">Play at 1️⃣OneStore</a>
 
