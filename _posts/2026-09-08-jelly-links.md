@@ -4,11 +4,13 @@ title: "🍡Jelly Links"
 categories: game
 image: /images/jelly-links.png
 excerpt: sudoku + stream 
-platform: ["💜playgama", "🫙getjar"]
-tags: ["🌐Web", "🧩Puzzle", "🔢Sudoku"]
-colors: ["primary", "info", "info"]
+platform: ["📱GooglePlay", "💜playgama", "🫙getjar"]
+tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🔢Sudoku"]
+colors: ["danger", "primary", "info", "info"]
 comments: false
 ---
+
+<a href="https://play.google.com/store/apps/details?id=com.sublevelgames.jellylinks" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
 
 <a href="https://playgama.com/game/jelly-links?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
 
