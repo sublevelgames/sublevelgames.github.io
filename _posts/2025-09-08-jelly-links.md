@@ -4,13 +4,15 @@ title: "🍡Jelly Links"
 categories: game
 image: /images/jelly-links.png
 excerpt: sudoku + stream 
-platform: ["💜playgama"]
+platform: ["💜playgama", "🫙getjar"]
 tags: ["🌐Web", "🧩Puzzle", "🔢Sudoku"]
 colors: ["primary", "info", "info"]
 comments: false
 ---
 
 <a href="https://playgama.com/game/jelly-links?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
+
+<a href="https://getjar.com/games/puzzle/jelly-links" class="btn btn-primary btn-lg">Play at 🫙getjar.com</a>
 
 A jelly-bright take on Sudoku. Every row, every column and every connected line must hold each number exactly once. 1000 puzzles from gentle 4x4 warm-ups to 12x12 boards that really make you think, plus a 500-stage Sandbox. No timer, no lives — just you and the logic.
 
