@@ -4,11 +4,13 @@ title: "😊Emoji Sort"
 categories: game
 image: /images/emoji-sort.png
 excerpt: Emoji Sort is a pattern recognition puzzle game where players must fill in empty cells with the correct emojis. Each puzzle presents a grid with missing emojis that follow specific patterns - such as categories, sequences, or associations. 
-platform: ["📱GooglePlay", "🍎AppStore", "🫙getjar", "▶️gamemonetize", "🎮itch.io", "▶️gamepix", "💜playgama", "🕹️y8"]
+platform: ["📺Youtube", "📱GooglePlay", "🍎AppStore", "🫙getjar", "▶️gamemonetize", "🎮itch.io", "▶️gamepix", "💜playgama", "🕹️y8"]
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🧠Logic"]
 colors: ["danger", "primary", "info", "info"]
 comments: false
 ---
+
+<a href="https://youtube.com/playables/Ugkx2OqjJl4EroTUadpn07gN64by_3q-oX1X?si=wKZI4-MUGS9Z4PEA" class="btn btn-primary btn-lg">Play at 📺Youtube Playables</a>
 
 <a href="https://play.google.com/store/apps/details?id=com.DefaultCompany.EmojiSort" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
 
