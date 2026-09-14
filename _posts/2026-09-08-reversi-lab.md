@@ -4,13 +4,15 @@ title: "☯Reversi Lab"
 categories: game
 image: /images/reversi-lab.png
 excerpt: what happens if you change one rule?
-platform: ["📱GooglePlay", "🫙getjar"]
+platform: ["📱GooglePlay", "💙Toss", "🫙getjar"]
 tags: ["📱Mobile", "🌐Web", "♟️Strategy", "🏛️Classic"]
 colors: ["danger", "primary", "info", "info"]
 comments: false
 ---
 
 <a href="https://play.google.com/store/apps/details?id=com.sublevelgames.reversilab" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
+
+<a href="https://minion.toss.im/bqltaS5a" class="btn btn-primary btn-lg">Play at 💙Toss</a>
 
 <a href="https://getjar.com/games/strategy/reversi-lab" class="btn btn-primary btn-lg">Play at 🫙getjar.com</a>
 
