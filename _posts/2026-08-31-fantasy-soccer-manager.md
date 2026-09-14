@@ -4,13 +4,15 @@ title: "⚽Fantasy Soccer Manager"
 categories: game
 image: /images/fsm.png
 excerpt: a lightweight 7-a-side football management game
-platform: ["📱GooglePlay", "💜playgama", "🫙getjar"]
+platform: ["📱GooglePlay", "💙Toss", "💜playgama", "🫙getjar"]
 tags: ["📱Mobile", "🌐Web", "🏅Sports", "⚽Soccer", "📊Simulation", "♟️Strategy"]
 colors: ["danger", "primary", "info", "info", "info", "info"]
 comments: false
 ---
 
 <a href="https://play.google.com/store/apps/details?id=com.sublevelgames.fsm" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
+
+<a href="https://minion.toss.im/Pq72Ir2d" class="btn btn-primary btn-lg">Play at 💙Toss</a>
 
 <a href="https://playgama.com/game/fantasy-soccer-manager?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
 
