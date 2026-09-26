@@ -4,13 +4,15 @@ title: "🗝️Magic Tower: Key of Fate"
 categories: game
 image: /images/magic-tower.png
 excerpt: A turn-based puzzle roguelike.
-platform: ["📱GooglePlay"]
+platform: ["📱GooglePlay", "🫙getjar"]
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🎲Roguelike", "🏰Dungeon"]
 colors: ["danger", "primary", "info", "info", "info"]
 comments: false
 ---
 
 <a href="https://play.google.com/store/apps/details?id=com.sublevelgames.magictower" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
+
+<a href="https://getjar.com/games/puzzle/magic-tower-key-of-fate" class="btn btn-primary btn-lg">Play at 🫙getjar.com</a>
 
 Magic Tower: Key of Fate is a turn-based puzzle roguelike. There is no reflex, no timer — only the floor in front of you and the question of whether you can survive it.
 
