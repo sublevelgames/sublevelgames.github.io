@@ -4,7 +4,7 @@ title: "🈲Janggi Checkmate"
 categories: game
 image: /images/janggi-checkmate.png
 excerpt: Korean Chess (장기) checkmate puzzles.
-platform: ["📱GooglePlay", "💙Toss", "💜playgama", "🕹️y8"]
+platform: ["📱GooglePlay", "💙Toss", "💜playgama", "🎯lagged", "🕹️y8"]
 tags: ["📱Mobile", "🌐Web", "♟️Strategy", "🏁Chess"]
 colors: ["danger", "primary", "info", "info"]
 comments: false
@@ -15,6 +15,8 @@ comments: false
 <a href="https://minion.toss.im/VCLnY936" class="btn btn-primary btn-lg">Play at 💙Toss</a>
 
 <a href="https://playgama.com/game/janggi-checkmate?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
+
+<a href="https://lagged.com/en/g/janggi-checkmate" class="btn btn-primary btn-lg">Play at 🎯lagged.com</a>
 
 <a href="https://www.y8.com/games/janggi_checkmate" class="btn btn-primary btn-lg">Play at 🕹️y8.com</a>
 
