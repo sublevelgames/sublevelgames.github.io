@@ -4,13 +4,15 @@ title: "🗝️Magic Tower: Key of Fate"
 categories: game
 image: /images/magic-tower.png
 excerpt: A turn-based puzzle roguelike.
-platform: ["📱GooglePlay", "1️⃣OneStore", "🫙getjar"]
+platform: ["📱GooglePlay", "💎GalaxyStore", "1️⃣OneStore", "🫙getjar"]
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🎲Roguelike", "🏰Dungeon"]
 colors: ["danger", "primary", "info", "info", "info"]
 comments: false
 ---
 
 <a href="https://play.google.com/store/apps/details?id=com.sublevelgames.magictower" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
+
+<a href="https://galaxystore.samsung.com/detail/com.sublevelgames.magictower" class="btn btn-primary btn-lg">Play at 💎Galaxy Store</a>
 
 <a href="https://m.onestore.co.kr/v2/ko-kr/app/0001009296" class="btn btn-primary btn-lg">Play at 1️⃣OneStore</a>
 
