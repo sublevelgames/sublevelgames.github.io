@@ -4,7 +4,7 @@ title: "🏆Merge Champions"
 categories: game
 image: /images/merge-champions.png
 excerpt: a merge auto-battler
-platform: ["📱GooglePlay", "💙Toss", "💜playgama", "🫙getjar", "🎯lagged", "🕹️y8"]
+platform: ["📱GooglePlay", "💙Toss", "💜playgama", "💜Standalone", "🫙getjar", "🎯lagged", "🕹️y8"]
 tags: ["📱Mobile", "🌐Web", "➕Merge", "⚔️Battle", "🛡️Defense"]
 colors: ["danger", "primary", "info", "info", "info"]
 comments: false
@@ -15,6 +15,8 @@ comments: false
 <a href="https://minion.toss.im/Lo3hZGMr" class="btn btn-primary btn-lg">Play at 💙Toss</a>
 
 <a href="https://playgama.com/game/merge-champions?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
+
+<a href="https://mc.sublevelgames.com/" class="btn btn-primary btn-lg">Play at 💜Standalone site</a>
 
 <a href="https://getjar.com/games/arcade/merge-champions" class="btn btn-primary btn-lg">Play at 🫙getjar.com</a>
 
