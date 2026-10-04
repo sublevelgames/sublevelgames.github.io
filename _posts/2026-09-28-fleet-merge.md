@@ -4,13 +4,15 @@ title: "🚀Fleet Merge: Radar Command"
 categories: game
 image: /images/fleet-merge.jpg
 excerpt: Command a fleet of starships in this merge auto-battler.
-platform: ["📱GooglePlay", "💜playgama", "🫙getjar"]
+platform: ["📱GooglePlay", "💙Toss", "💜playgama", "🫙getjar"]
 tags: ["📱Mobile", "🌐Web", "♟️Strategy", "➕Merge", "⚔️Battle", "🚀Space"]
 colors: ["danger", "primary", "info", "info", "info", "info"]
 comments: false
 ---
 
 <a href="https://play.google.com/store/apps/details?id=com.sublevelgames.fleetmerge" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
+
+<a href="https://minion.toss.im/zTrDXwya" class="btn btn-primary btn-lg">Play at 💙Toss</a>
 
 <a href="https://playgama.com/game/fleet-merge?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
 
