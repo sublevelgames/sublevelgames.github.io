@@ -5,9 +5,10 @@ categories: game
 image: /images/word-sudoku.png
 excerpt: A relaxing crossword puzzle played with wooden letter blocks.
 links:
+  - { platform: googleplay, url: "https://play.google.com/store/apps/details?id=com.sublevelgames.wordsudoku" }
   - { platform: getjar, url: "https://getjar.com/games/puzzle/word-sudoku" }
-tags: ["🌐Web", "🧩Puzzle", "🔢Sudoku", "🔤Word"]
-colors: ["primary", "info", "info", "info"]
+tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🔢Sudoku", "🔤Word"]
+colors: ["danger", "primary", "info", "info", "info"]
 comments: false
 ---
 
