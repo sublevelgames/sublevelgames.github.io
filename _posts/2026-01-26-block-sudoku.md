@@ -4,17 +4,14 @@ title: "🧱Block Sudoku"
 categories: game
 image: /images/block-sudoku.png
 excerpt: Place colorful number blocks on the grid following Sudoku rules.
-platform: ["📱GooglePlay", "💙Toss", "💜playgama"]
+links:
+  - { platform: googleplay, url: "https://play.google.com/store/apps/details?id=com.sublevelgames.blocksudoku" }
+  - { platform: toss, url: "https://minion.toss.im/xz6KEzO5" }
+  - { platform: playgama, url: "https://playgama.com/game/block-sudoku?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" }
 tags: ["📱Mobile", "🧩Puzzle", "🔢Sudoku"]
 colors: ["danger", "info", "info"]
 comments: false
 ---
-
-<a href="https://play.google.com/store/apps/details?id=com.sublevelgames.blocksudoku" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
-
-<a href="https://minion.toss.im/xz6KEzO5" class="btn btn-primary btn-lg">Play at 💙Toss</a>
-
-<a href="https://playgama.com/game/block-sudoku?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
 
 A unique blend of block puzzle and Sudoku! Place colorful number blocks on the grid following Sudoku rules. Each color-coded block must fit perfectly while ensuring no duplicate numbers appear in any row or column segment. Complete special hint challenges for extra brain-teasing fun!
 

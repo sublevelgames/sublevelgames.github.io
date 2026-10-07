@@ -4,13 +4,12 @@ title: "🔠Word Sudoku"
 categories: game
 image: /images/word-sudoku.png
 excerpt: A relaxing crossword puzzle played with wooden letter blocks.
-platform: ["🫙getjar"]
+links:
+  - { platform: getjar, url: "https://getjar.com/games/puzzle/word-sudoku" }
 tags: ["🌐Web", "🧩Puzzle", "🔢Sudoku", "🔤Word"]
 colors: ["primary", "info", "info", "info"]
 comments: false
 ---
-
-<a href="https://getjar.com/games/puzzle/word-sudoku" class="btn btn-primary btn-lg">Play at 🫙getjar.com</a>
 
 Word Sudoku is a relaxing crossword puzzle played with wooden letter blocks. Each board is a small crossword with its answers broken into colored blocks. Drag every block into the slot of the same color and shape so that every row and column spells a real English word.
 

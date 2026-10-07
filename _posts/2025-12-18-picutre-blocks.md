@@ -4,19 +4,15 @@ title: "🍓Picture Blocks"
 categories: game
 image: /images/picture-blocks.png
 excerpt: Match fruit blocks! 1+1=0
-platform: ["📱GooglePlay", "💙Toss", "💜playgama", "🕹️y8"]
+links:
+  - { platform: googleplay, url: "https://play.google.com/store/apps/details?id=com.sublevelgames.pictureblocks" }
+  - { platform: toss, url: "https://minion.toss.im/Fi0hwJjt" }
+  - { platform: playgama, url: "https://playgama.com/game/picture-blocks?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" }
+  - { platform: y8, url: "https://www.y8.com/games/picture_blocks" }
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "➕Merge"]
 colors: ["danger", "primary", "info", "info"]
 comments: false
 ---
-
-<a href="https://play.google.com/store/apps/details?id=com.sublevelgames.pictureblocks" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
-
-<a href="https://minion.toss.im/Fi0hwJjt" class="btn btn-primary btn-lg">Play at 💙Toss</a>
-
-<a href="https://playgama.com/game/picture-blocks?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
-
-<a href="https://www.y8.com/games/picture_blocks" class="btn btn-primary btn-lg">Play at 🕹️y8.com</a>
 
 🍎 FRUIT BLOCKS - A Fresh Puzzle Experience! 🍇
 
@@ -46,4 +42,3 @@ Simple mechanics, endless fun.
 - Training your brain while having fun
 
 Download now and start matching!
-

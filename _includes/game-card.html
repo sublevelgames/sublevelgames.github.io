@@ -1,0 +1,32 @@
+{% comment %}
+  게임 카드. 사용: {% include game-card.html post=post wide=false compact=false %}
+  - 카드 전체가 상세 페이지 링크(stretched-link), 태그/플레이 버튼은 그 위에서 따로 클릭된다.
+{% endcomment %}
+{% assign p = include.post %}
+{% assign now_s = 'now' | date: '%s' | plus: 0 %}
+{% assign post_s = p.date | date: '%s' | plus: 0 %}
+{% assign age = now_s | minus: post_s %}
+<div class="game-card card rounded overflow-hidden h-100{% if include.wide %} game-card-wide{% endif %}{% if include.compact %} game-card-compact{% endif %}">
+  {% if age < 1209600 %}<div class="new-badge">NEW</div>{% endif %}
+  {% if include.wide %}<div class="pick-badge">&#9733; PICK</div>{% endif %}
+  <div class="game-card-img">
+    {% if p.image %}<img src="{{ p.image | relative_url }}" alt="{{ p.title | strip_html | escape }}" loading="lazy">{% endif %}
+  </div>
+  <div class="card-body">
+    <h2 class="panel-title"><a href="{{ p.url | relative_url }}" class="stretched-link">{{ p.title | truncate: 30 }}</a></h2>
+    {% unless include.compact %}
+    {% if p.tags %}
+    <div class="game-card-tags">
+      {% for tag in p.tags %}
+        {% assign tag_text = tag | slice: 1, tag.size %}
+        <a href="{{ site.baseurl }}/tags/{{ tag_text | slugify }}/" class="tag-link"><span class="badge badge-{{ p.colors[forloop.index0] }}">{{ tag }}</span></a>
+      {% endfor %}
+    </div>
+    {% endif %}
+    <p class="game-card-excerpt">{{ p.excerpt | strip_html | strip_newlines | truncate: 150 }}</p>
+    {% endunless %}
+    <div class="game-card-actions">
+      {% include play-buttons.html post=p placement="card" %}
+    </div>
+  </div>
+</div>

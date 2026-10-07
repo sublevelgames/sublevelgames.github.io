@@ -4,23 +4,17 @@ title: "♔Easy Chess"
 categories: game
 image: /images/easy-chess.png
 excerpt: You move multiple times.
-platform: ["📱GooglePlay", "💎GalaxyStore", "💙Toss", "💜playgama", "▶️gamepix", "🐜Kongregate"]
+links:
+  - { platform: googleplay, url: "https://play.google.com/store/apps/details?id=com.sublevelgames.chessgo" }
+  - { platform: galaxystore, url: "https://galaxystore.samsung.com/detail/com.sublevelgames.chessgo" }
+  - { platform: toss, url: "https://minion.toss.im/FqrVhnP3" }
+  - { platform: playgama, url: "https://playgama.com/game/easy-chess?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" }
+  - { platform: gamepix, url: "https://www.gamepix.com/play/easy-chess" }
+  - { platform: kongregate, url: "https://www.kongregate.com/en/games/sublevelgames/easy-chess" }
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🏁Chess"]
 colors: ["danger", "primary", "info", "info"]
 comments: false
 ---
-
-<a href="https://play.google.com/store/apps/details?id=com.sublevelgames.chessgo" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
-
-<a href="https://galaxystore.samsung.com/detail/com.sublevelgames.chessgo" class="btn btn-primary btn-lg">Play at 💎Galaxy Store</a>
-
-<a href="https://minion.toss.im/FqrVhnP3" class="btn btn-primary btn-lg">Play at 💙Toss</a>
-
-<a href="https://playgama.com/game/easy-chess?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
-
-<a href="https://www.gamepix.com/play/easy-chess" class="btn btn-primary btn-lg">Play at ▶️gamepix.com</a>
-
-<a href="https://www.kongregate.com/en/games/sublevelgames/easy-chess" class="btn btn-primary btn-lg">Play at 🐜kongregate.com</a>
 
 Easy Chess is a strategic puzzle game where you control Black pieces to capture the White King.
 
@@ -35,4 +29,3 @@ Easy Chess is a strategic puzzle game where you control Black pieces to capture 
 Each pack introduces new mechanics that change how you approach the puzzles. Master the fundamentals in Basic pack, then tackle advanced challenges with special tiles and moving enemies!
 
 Perfect for chess lovers and puzzle fans alike.
-

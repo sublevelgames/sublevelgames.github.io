@@ -4,17 +4,14 @@ title: "🧱Two Blocks"
 categories: game
 image: /images/two-blocks.png
 excerpt: Match colorful two blocks in this puzzle game with unique mechanics.
-platform: ["📱GooglePlay", "💙Toss", "▶️gamepix"]
+links:
+  - { platform: googleplay, url: "https://play.google.com/store/apps/details?id=com.sublevelgames.twoblocks" }
+  - { platform: toss, url: "https://minion.toss.im/f1YcXLwm" }
+  - { platform: gamepix, url: "https://www.gamepix.com/play/two-blocks" }
 tags: ["📱Mobile", "🧩Puzzle", "➕Merge"]
 colors: ["danger", "info", "info"]
 comments: false
 ---
-
-<a href="https://play.google.com/store/apps/details?id=com.sublevelgames.twoblocks" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
-
-<a href="https://minion.toss.im/f1YcXLwm" class="btn btn-primary btn-lg">Play at 💙Toss</a>
-
-<a href="https://www.gamepix.com/play/two-blocks" class="btn btn-primary btn-lg">Play at ▶️gamepix.com</a>
 
 Two Blocks - A Fresh Take on Block Puzzles
 

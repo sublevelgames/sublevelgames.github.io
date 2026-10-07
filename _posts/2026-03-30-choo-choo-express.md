@@ -4,27 +4,19 @@ title: "🚂Choo Choo Express"
 categories: game
 image: /images/choo-choo-express.png
 excerpt: cozy route-planning puzzle game.
-platform: ["📺Youtube", "📱GooglePlay", "💜playgama", "1️⃣OneStore", "💙Toss", "🕹️y8", "🐜Kongregate", "🎯lagged"]
+links:
+  - { platform: youtube, url: "https://youtube.com/playables/UgkxZ1oL2IlXWgcCjwk0N9aoNsu3GCvAnPyU?si=q_ahUA-iFeRiF4PN" }
+  - { platform: googleplay, url: "https://play.google.com/store/apps/details?id=com.sublevelgames.cce" }
+  - { platform: playgama, url: "https://playgama.com/game/choo-choo-express?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" }
+  - { platform: onestore, url: "https://m.onestore.co.kr/v2/ko-kr/app/0001005263" }
+  - { platform: toss, url: "https://minion.toss.im/hhQXj3Fn" }
+  - { platform: y8, url: "https://www.y8.com/games/choo_choo_express" }
+  - { platform: kongregate, url: "https://www.kongregate.com/en/games/sublevelgames/choo-choo-express" }
+  - { platform: lagged, url: "https://lagged.com/en/g/choo-choo-express" }
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🗺️Pathfinding"]
 colors: ["danger", "primary", "info", "info"]
 comments: false
 ---
-
-<a href="https://youtube.com/playables/UgkxZ1oL2IlXWgcCjwk0N9aoNsu3GCvAnPyU?si=q_ahUA-iFeRiF4PN" class="btn btn-primary btn-lg">Play at 📺Youtube Playables</a>
-
-<a href="https://play.google.com/store/apps/details?id=com.sublevelgames.cce" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
-
-<a href="https://playgama.com/game/choo-choo-express?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
-
-<a href="https://m.onestore.co.kr/v2/ko-kr/app/0001005263" class="btn btn-primary btn-lg">Play at 1️⃣OneStore</a>
-
-<a href="https://minion.toss.im/hhQXj3Fn" class="btn btn-primary btn-lg">Play at 💙Toss</a>
-
-<a href="https://www.y8.com/games/choo_choo_express" class="btn btn-primary btn-lg">Play at 🕹️y8.com</a>
-
-<a href="https://www.kongregate.com/en/games/sublevelgames/choo-choo-express" class="btn btn-primary btn-lg">Play at 🐜kongregate.com</a>
-
-<a href="https://lagged.com/en/g/choo-choo-express" class="btn btn-primary btn-lg">Play at 🎯lagged.com</a>
 
 Choo Choo Express is a cozy route-planning puzzle game. Draw a path for the train, pick up presents along the way, and deliver them to the right houses before the route is complete.
 

@@ -4,19 +4,15 @@ title: "⚽Fantasy Soccer Manager"
 categories: game
 image: /images/fsm.png
 excerpt: a lightweight 7-a-side football management game
-platform: ["📱GooglePlay", "💙Toss", "💜playgama", "🫙getjar"]
+links:
+  - { platform: googleplay, url: "https://play.google.com/store/apps/details?id=com.sublevelgames.fsm" }
+  - { platform: toss, url: "https://minion.toss.im/Pq72Ir2d" }
+  - { platform: playgama, url: "https://playgama.com/game/fantasy-soccer-manager?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" }
+  - { platform: getjar, url: "https://getjar.com/games/arcade/fantasy-soccer-manager" }
 tags: ["📱Mobile", "🌐Web", "🏅Sports", "⚽Soccer", "📊Simulation", "♟️Strategy"]
 colors: ["danger", "primary", "info", "info", "info", "info"]
 comments: false
 ---
-
-<a href="https://play.google.com/store/apps/details?id=com.sublevelgames.fsm" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
-
-<a href="https://minion.toss.im/Pq72Ir2d" class="btn btn-primary btn-lg">Play at 💙Toss</a>
-
-<a href="https://playgama.com/game/fantasy-soccer-manager?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
-
-<a href="https://getjar.com/games/arcade/fantasy-soccer-manager" class="btn btn-primary btn-lg">Play at 🫙getjar.com</a>
 
 Fantasy Soccer Manager is a lightweight 7-a-side football management game set in a night league where four peoples — Humans, Orcs, Elves and the Undead — settled an ancient war with a fixture list instead of a battlefield. Pick a club from four divisions, build a squad of 13–20 players, and climb from the bottom to the top over a 3-, 5- or 10-season career.
 

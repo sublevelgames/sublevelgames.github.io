@@ -15,17 +15,11 @@ redirect_from: /publishers/
   
   {% assign post_count = 0 %}
   {% for post in site.posts %}
-    {% if post.platform %}
-      {% for post_platform in post.platform %}
-        {% assign post_platform_without_emoji = post_platform | slice: 1, post_platform.size %}
-        {% if post_platform_without_emoji == platform_without_emoji %}
-          {% assign post_count = post_count | plus: 1 %}
-        {% endif %}
-      {% endfor %}
-    {% endif %}
+    {% assign hit = post.links | where: "platform", platform_page.key | first %}
+    {% if hit %}{% assign post_count = post_count | plus: 1 %}{% endif %}
   {% endfor %}
   
-  {% assign platform_info = platform | append: "#" | append: platform_without_emoji | append: "#" | append: post_count %}
+  {% assign platform_info = platform | append: "#" | append: platform_without_emoji | append: "#" | append: post_count | append: "#" | append: platform_page.url %}
   {% assign platform_data = platform_data | push: platform_info %}
 {% endfor %}
 
@@ -52,7 +46,7 @@ redirect_from: /publishers/
     {% assign platform_slug = platform_without_emoji | slugify %}
     
     {% if count == current_count %}
-      <a href="{{ site.baseurl }}/platforms/{{ platform_slug }}/" class="platform-card">
+      <a href="{{ parts[3] | relative_url }}" class="platform-card">
         <div class="platform-name {{ platform_slug }}-platform">{{ platform }}</div>
         <div class="platform-count">{{ count }}</div>
       </a>

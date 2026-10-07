@@ -4,15 +4,13 @@ title: "➡️Arrow Escape"
 categories: game
 image: /images/arrow-escape.png
 excerpt: Tap arrows to escape!
-platform: ["📱GooglePlay", "💙Toss"]
+links:
+  - { platform: googleplay, url: "https://play.google.com/store/apps/details?id=com.sublevelgames.arrowescape" }
+  - { platform: toss, url: "https://minion.toss.im/VQR9MLit" }
 tags: ["📱Mobile", "🧩Puzzle", "♟️Strategy"]
 colors: ["danger", "info", "info"]
 comments: false
 ---
-
-<a href="https://play.google.com/store/apps/details?id=com.sublevelgames.arrowescape" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
-
-<a href="https://minion.toss.im/VQR9MLit" class="btn btn-primary btn-lg">Play at 💙Toss</a>
 
 Arrows are trapped in a grid. Your job? Get them out.
 
@@ -27,4 +25,3 @@ Features:
 - Hint system when you're stuck
 
 Free to play. No internet required.
-

@@ -4,19 +4,15 @@ title: "🎲Dice Puzzle"
 categories: game
 image: /images/dice-puzzle.png
 excerpt: Click cells to cycle through dice values (1, 2, 3) and solve logic puzzles.
-platform: ["📱GooglePlay", "💙Toss", "🤖Reddit", "🫙getjar"]
+links:
+  - { platform: googleplay, url: "https://play.google.com/store/apps/details?id=com.sublevelgames.dicepuzzle" }
+  - { platform: toss, url: "https://minion.toss.im/7iLby9Ap" }
+  - { platform: reddit, url: "https://www.reddit.com/r/dicepuzzle/" }
+  - { platform: getjar, url: "https://getjar.com/games/puzzle/dice-puzzle" }
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "📐Math"]
 colors: ["danger", "primary", "info", "info"]
 comments: false
 ---
-
-<a href="https://play.google.com/store/apps/details?id=com.sublevelgames.dicepuzzle" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
-
-<a href="https://minion.toss.im/7iLby9Ap" class="btn btn-primary btn-lg">Play at 💙Toss</a>
-
-<a href="https://www.reddit.com/r/dicepuzzle/" class="btn btn-primary btn-lg">Play at 🤖Reddit</a>
-
-<a href="https://getjar.com/games/puzzle/dice-puzzle" class="btn btn-primary btn-lg">Play at 🫙getjar.com</a>
 
 Challenge your brain with Dice Puzzle! Click cells to cycle through dice values (1, 2, 3) and solve clever logic puzzles.
 

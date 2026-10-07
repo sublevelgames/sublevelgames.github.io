@@ -4,29 +4,20 @@ title: "➕Number Sum"
 categories: game
 image: /images/number-sum.png
 excerpt: Match all target sums.
-platform: ["📺Youtube", "📱GooglePlay", "💙Toss", "💎GalaxyStore", "🎮itch.io", "▶️gamepix", "💜playgama", "🫙getjar"]
+links:
+  - { platform: youtube, url: "https://youtube.com/playables/UgkxeYgdIX8nKlRBVN5soYTbBPDtLF-moqm1?si=x6WYxq1RqRMw7_ke" }
+  - { platform: googleplay, url: "https://play.google.com/store/apps/details?id=com.sublevelgames.numbersums" }
+  - { platform: toss, url: "https://minion.toss.im/FrHEHfv5" }
+  - { platform: galaxystore, url: "https://galaxystore.samsung.com/detail/com.sublevelgames.numbersums" }
+  - { platform: itchio, url: "https://sublevelgames.itch.io/number-sum" }
+  - { platform: gamepix, url: "https://www.gamepix.com/play/number-sum" }
+  - { platform: playgama, url: "https://playgama.com/game/number--sums?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" }
+  - { platform: getjar, url: "https://getjar.com/games/brain-teasers/number-sums" }
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "📐Math"]
 colors: ["danger", "primary", "info", "info"]
 comments: false
 ---
 
-<a href="https://youtube.com/playables/UgkxeYgdIX8nKlRBVN5soYTbBPDtLF-moqm1?si=x6WYxq1RqRMw7_ke" class="btn btn-primary btn-lg">Play at 📺Youtube Playables</a>
-
-<a href="https://play.google.com/store/apps/details?id=com.sublevelgames.numbersums" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
-
-<a href="https://minion.toss.im/FrHEHfv5" class="btn btn-primary btn-lg">Play at 💙Toss</a>
-
-<a href="https://galaxystore.samsung.com/detail/com.sublevelgames.numbersums" class="btn btn-primary btn-lg">Play at 💎Galaxy Store</a>
-
-<a href="https://sublevelgames.itch.io/number-sum" class="btn btn-primary btn-lg">Play at 🎮itch.io</a>
-
-<a href="https://www.gamepix.com/play/number-sum" class="btn btn-primary btn-lg">Play at ▶️gamepix.com</a>
-
-<a href="https://playgama.com/game/number--sums?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
-
-<a href="https://getjar.com/games/brain-teasers/number-sums" class="btn btn-primary btn-lg">Play at 🫙getjar.com</a>
-
 Number Sum is a challenging logic puzzle game where players must match target sums for each row and column by selecting the correct cells in a grid.
 
 Challenge your mind with 5000 levels of addictive number puzzles. Can you master them all?
-

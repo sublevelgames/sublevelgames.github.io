@@ -1,0 +1,32 @@
+# 플랫폼 정의 — 게임 포스트의 links[].platform 값은 아래 키 중 하나여야 합니다.
+#   label : 기존 배지/플랫폼 페이지에 쓰던 표기 (이모지 포함)
+#   icon  : 버튼·카드·목록에 이름 앞에 붙는 이모지
+#   name  : 버튼에 보이는 이름
+#   kind  : web(브라우저에서 바로 플레이) / store(앱 스토어) / app(앱인앱)
+#   os    : any / android / ios / desktop / mobile — 방문자 기기별 메인 버튼 선택에 사용
+#   color : 브랜드 색, text: 버튼 글자색(밝은 배경일 때만 지정)
+#   page  : 플랫폼 페이지 주소
+googleplay: { label: "📱GooglePlay", icon: "📱",      name: "Google Play",      kind: store, os: android, color: "#34A853", page: /platforms/googleplay/ }
+galaxystore: { label: "💎GalaxyStore", icon: "💎",     name: "Galaxy Store",     kind: store, os: android, color: "#1428A0", page: /platforms/galaxystore/ }
+onestore: { label: "1️⃣OneStore", icon: "1️⃣",        name: "ONE store",        kind: store, os: android, color: "#492C82", page: /platforms/onestore/ }
+appstore: { label: "🍎AppStore", icon: "🍎",        name: "App Store",        kind: store, os: ios,     color: "#0071E3", page: /platforms/appstore/ }
+steam: { label: "🦾Steam", icon: "🦾",           name: "Steam",            kind: store, os: desktop, color: "#1b2838", page: /platforms/steam/ }
+msstore: { label: "🪟MSStore", icon: "🪟",         name: "Microsoft Store",  kind: store, os: desktop, color: "#00A4EF", page: /platforms/msstore/ }
+toss: { label: "💙Toss", icon: "💙",            name: "Toss",             kind: app,   os: mobile,  color: "#0064ff", page: /platforms/toss/ }
+playgama: { label: "💜playgama", icon: "💜",        name: "Playgama",         kind: web,   os: any,     color: "#9b59b6", page: /platforms/playgama/ }
+getjar: { label: "🫙getjar", icon: "🫙",          name: "GetJar",           kind: web,   os: any,     color: "#F5A623", text: "#212529", page: /platforms/getjar/ }
+itchio: { label: "🎮itch.io", icon: "🎮",         name: "itch.io",          kind: web,   os: any,     color: "#FA5C5C", page: /platforms/itch-io/ }
+youtube: { label: "📺Youtube", icon: "📺",         name: "YouTube Playables",kind: web,   os: any,     color: "#E62117", page: /platforms/youtube/ }
+crazygames: { label: "🎮crazygames", icon: "🎮",      name: "CrazyGames",       kind: web,   os: any,     color: "#6B4C9A", page: /platforms/crazygames/ }
+gamepix: { label: "▶️gamepix", icon: "▶️",         name: "GamePix",          kind: web,   os: any,     color: "#ffc107", text: "#212529", page: /platforms/gamepix/ }
+y8: { label: "🕹️y8", icon: "🕹️",              name: "Y8",               kind: web,   os: any,     color: "#28a745", page: /platforms/y8/ }
+lagged: { label: "🎯lagged", icon: "🎯",          name: "Lagged",           kind: web,   os: any,     color: "#8B44AC", page: /platforms/lagged/ }
+gamemonetize: { label: "▶️gamemonetize", icon: "▶️",    name: "GameMonetize",     kind: web,   os: any,     color: "#17a2b8", page: /platforms/gamemonetize/ }
+newgrounds: { label: "🎨newgrounds", icon: "🎨",      name: "Newgrounds",       kind: web,   os: any,     color: "#fd7e14", page: /platforms/newgrounds/ }
+coolmathgames: { label: "🧮coolmathgames", icon: "🧮",   name: "Coolmath Games",   kind: web,   os: any,     color: "#0077cc", page: /platforms/coolmathgames/ }
+kongregate: { label: "🐜Kongregate", icon: "🐜",      name: "Kongregate",       kind: web,   os: any,     color: "#C8102E", page: /platforms/kongregate/ }
+addictinggames: { label: "🔥addictinggames", icon: "🔥",  name: "Addicting Games",  kind: web,   os: any,     color: "#ff4500", page: /platforms/addictinggames/ }
+armorgames: { label: "⚔️armorgames", icon: "⚔️",      name: "Armor Games",      kind: web,   os: any,     color: "#F4A825", text: "#212529", page: /platforms/armorgames/ }
+gamedistribution: { label: "▶️gamedistribution", icon: "▶️", name: "GameDistribution", kind: web, os: any,   color: "#6c757d", page: /platforms/gamedistribution/ }
+reddit: { label: "🤖Reddit", icon: "🤖",          name: "Reddit",           kind: web,   os: any,     color: "#FF4500", page: /platforms/reddit/ }
+standalone: { label: "💜Standalone", icon: "💜",      name: "Official site",    kind: web,   os: any,     color: "#6c5ce7", page: /platforms/standalone/ }

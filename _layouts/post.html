@@ -2,78 +2,108 @@
 layout: default
 ---
 
-<div class="row">
-  <div class="col-md-8">
-    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          {{ page.title }}
-        </h1>
-        <p class="post-meta">
-          <time
-            datetime="{{ page.date | date_to_xmlschema }}"
-            itemprop="datePublished"
-            >{{ page.date | date: "%b %-d, %Y" }}</time
-          >{% if page.author %} •
-          <span itemprop="author" itemscope itemtype="http://schema.org/Person"
-            ><span itemprop="name">{{ page.author }}</span></span
-          >{% endif %}
-        </p>
-
-        {% if page.platform %}
-          <p class="post-platforms mb-2">
-            {% for platform in page.platform %}
-              {% assign platform_text = platform | slice: 1, platform.size %}
-              {% assign platform_slug = platform_text | slugify %}
-              <a href="{{ site.baseurl }}/platforms/{{ platform_slug }}/" class="platform-link">
-                <span class="badge platform-badge {{ platform_slug }}-badge">{{ platform }}</span>
-              </a>
-            {% endfor %}
-          </p>
-        {% endif %}
-        
-        {% if page.tags %}
-          <p class="post-tags">
-            {% for tag in page.tags %}
-              {% assign tag_text = tag | slice: 1, tag.size %}
-              {% assign tag_slug = tag_text | slugify %}
-              <a href="{{ site.baseurl }}/tags/{{ tag_slug }}/" class="tag-link">
-                <span class="badge badge-{{ page.colors[forloop.index0] }}">{{ tag }}</span>
-              </a>
-            {% endfor %}
-          </p>
-        {% endif %}
-        
-      </header>
-      <div class="post-content" itemprop="articleBody">{{ content }}</div>
-    </article>
-
-    <div class="next-previous-articles">
-      <nav aria-label="">
-        <ul class="pagination">
-          {% if page.next.url %}
-          <li class="page-item">
-            <a class="page-link" href="{{page.next.url}}" tabindex="-1"
-              >&laquo; {{page.next.title}}</a
-            >
-          </li>
-          {% endif %} {% if page.previous.url %}
-          <li class="page-item">
-            <a class="page-link" href="{{page.previous.url}}"
-              >{{page.previous.title}} &raquo;</a
-            >
-          </li>
-          {% endif %}
-        </ul>
-      </nav>
+<article class="game-page" itemscope itemtype="https://schema.org/VideoGame">
+  <section class="game-hero">
+    <div class="game-hero-img">
+      {% if page.image %}<img src="{{ page.image | relative_url }}" alt="{{ page.title | strip_html | escape }}" itemprop="image">{% endif %}
     </div>
+    <div class="game-hero-info">
+      {% if page.tags %}
+      <div class="game-card-tags">
+        {% for tag in page.tags %}{% assign tag_text = tag | slice: 1, tag.size %}<a href="{{ site.baseurl }}/tags/{{ tag_text | slugify }}/" class="tag-link"><span class="badge badge-{{ page.colors[forloop.index0] }}">{{ tag }}</span></a> {% endfor %}
+      </div>
+      {% endif %}
+      <h1 class="post-title" itemprop="name">{{ page.title }}</h1>
+      <p class="game-pitch" itemprop="description">{{ page.pitch | default: page.excerpt | strip_html | strip_newlines }}</p>
+      {% include play-buttons.html post=page placement="detail" %}
+      <p class="post-meta mt-3 mb-0"><small>Released <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time> &middot; by <span itemprop="author">sublevelgames</span></small></p>
+    </div>
+  </section>
 
-    <div class="">
-      {% if site.disqus-shortname %} {% include disqus.html %} {% endif %}
+  {% if page.trailer %}
+  <section class="game-trailer">
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/{{ page.trailer }}" title="{{ page.title | strip_html | escape }} trailer" loading="lazy" allowfullscreen></iframe>
+    </div>
+  </section>
+  {% endif %}
+
+  {% if page.screenshots %}
+  <section class="game-shots" aria-label="Screenshots">
+    {% for s in page.screenshots %}<img src="{{ s | relative_url }}" alt="{{ page.title | strip_html | escape }} screenshot {{ forloop.index }}" loading="lazy">{% endfor %}
+  </section>
+  {% endif %}
+
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="post-content" itemprop="articleBody">{{ content }}</div>
+    </div>
+    <div class="col-lg-4">
+      {% if page.links %}
+      <div class="game-side">
+        <h2>Available on</h2>
+        <ul>
+          {% for l in page.links %}{% assign pd = site.data.platforms[l.platform] %}{% if pd %}
+          <li><a href="{{ pd.page | relative_url }}">{{ pd.icon }} {{ pd.name }}</a> <a class="go" href="{{ l.url }}" rel="noopener">Play &rarr;</a></li>
+          {% endif %}{% endfor %}
+        </ul>
+      </div>
+      {% endif %}
     </div>
   </div>
 
-  {% include sidebar.html %}
-</div>
+  {% comment %} 같은 장르(첫 번째 장르 태그) 게임 4개 {% endcomment %}
+  {% assign genre = "" %}
+  {% for t in page.tags %}
+    {% unless t contains "Mobile" or t contains "Web" %}{% if genre == "" %}{% assign genre = t %}{% endif %}{% endunless %}
+  {% endfor %}
+  {% if genre != "" %}
+  <section class="more-games">
+    <h2>More {{ genre }} games</h2>
+    <div class="row">
+      {% assign shown = 0 %}
+      {% for post in site.posts %}
+        {% if post.url != page.url and post.tags contains genre %}
+          <div class="col-6 col-lg-3 mb-4">{% include game-card.html post=post compact=true %}</div>
+          {% assign shown = shown | plus: 1 %}
+          {% if shown >= 4 %}{% break %}{% endif %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <div class="next-previous-articles">
+    <nav aria-label="">
+      <ul class="pagination">
+        {% if page.next.url %}
+        <li class="page-item"><a class="page-link" href="{{ page.next.url | relative_url }}">&laquo; {{ page.next.title }}</a></li>
+        {% endif %}
+        {% if page.previous.url %}
+        <li class="page-item"><a class="page-link" href="{{ page.previous.url | relative_url }}">{{ page.previous.title }} &raquo;</a></li>
+        {% endif %}
+      </ul>
+    </nav>
+  </div>
+
+  {% if site.disqus-shortname %}{% include disqus.html %}{% endif %}
+</article>
+
+{% if page.links %}<div class="play-sticky" aria-hidden="true"></div>{% endif %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": {{ page.title | strip_html | jsonify }},
+  "description": {{ page.excerpt | strip_html | strip_newlines | jsonify }},
+  "url": {{ page.url | absolute_url | jsonify }},
+  {% if page.image %}"image": {{ page.image | absolute_url | jsonify }},{% endif %}
+  "datePublished": {{ page.date | date: "%Y-%m-%d" | jsonify }},
+  "author": { "@type": "Organization", "name": "sublevelgames", "url": {{ site.url | jsonify }} },
+  "genre": {{ page.tags | jsonify }},
+  "sameAs": [{% for l in page.links %}{{ l.url | jsonify }}{% unless forloop.last %}, {% endunless %}{% endfor %}]
+}
+</script>
 
 {% include fb-script.html %}

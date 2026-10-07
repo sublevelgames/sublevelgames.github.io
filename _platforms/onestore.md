@@ -1,5 +1,6 @@
 ---
 layout: platform
+key: onestore
 platform: "1️⃣OneStore"
 permalink: /platforms/onestore/
 redirect_from: /publishers/onestore/

@@ -4,17 +4,14 @@ title: "🚀Neon Breaker"
 categories: game
 image: /images/neon-breaker.png
 excerpt: A vertical arcade space shooter with a roguelite heart.
-platform: ["📱GooglePlay", "💙Toss", "💜playgama"]
+links:
+  - { platform: googleplay, url: "https://play.google.com/store/apps/details?id=com.sublevelgames.neonbreaker" }
+  - { platform: toss, url: "https://minion.toss.im/JLJv5IeA" }
+  - { platform: playgama, url: "https://playgama.com/game/neon-breaker?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" }
 tags: ["📱Mobile", "🌐Web", "🚀Space", "🔫Shooting", "🕹️Arcade", "🎲Roguelike"]
 colors: ["danger", "primary", "info", "info", "info", "info"]
 comments: false
 ---
-
-<a href="https://play.google.com/store/apps/details?id=com.sublevelgames.neonbreaker" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
-
-<a href="https://minion.toss.im/JLJv5IeA" class="btn btn-primary btn-lg">Play at 💙Toss</a>
-
-<a href="https://playgama.com/game/neon-breaker?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
 
 NEON BREAKER is a vertical arcade space shooter with a roguelite heart, drawn in
 glowing vector neon straight out of a classic arcade monitor.

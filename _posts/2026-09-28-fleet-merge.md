@@ -4,19 +4,15 @@ title: "🚀Fleet Merge: Radar Command"
 categories: game
 image: /images/fleet-merge.jpg
 excerpt: Command a fleet of starships in this merge auto-battler.
-platform: ["📱GooglePlay", "💙Toss", "💜playgama", "🫙getjar"]
+links:
+  - { platform: googleplay, url: "https://play.google.com/store/apps/details?id=com.sublevelgames.fleetmerge" }
+  - { platform: toss, url: "https://minion.toss.im/zTrDXwya" }
+  - { platform: playgama, url: "https://playgama.com/game/fleet-merge?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" }
+  - { platform: getjar, url: "https://getjar.com/games/strategy/fleet-merge-radar-command" }
 tags: ["📱Mobile", "🌐Web", "♟️Strategy", "➕Merge", "⚔️Battle", "🚀Space"]
 colors: ["danger", "primary", "info", "info", "info", "info"]
 comments: false
 ---
-
-<a href="https://play.google.com/store/apps/details?id=com.sublevelgames.fleetmerge" class="btn btn-primary btn-lg">Play at 📱Google Play</a>
-
-<a href="https://minion.toss.im/zTrDXwya" class="btn btn-primary btn-lg">Play at 💙Toss</a>
-
-<a href="https://playgama.com/game/fleet-merge?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
-
-<a href="https://getjar.com/games/strategy/fleet-merge-radar-command" class="btn btn-primary btn-lg">Play at 🫙getjar.com</a>
 
 Command a fleet of starships in this merge auto-battler. Buy Line ships, Artillery and Lancers, then merge identical ships to build stronger ones. Your dock is your battle formation: every ship deploys exactly where you place it.
 

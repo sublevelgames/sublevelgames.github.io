@@ -1,0 +1,196 @@
+// 게임 카드 · 히어로 · 플레이 버튼
+
+// ---------- 플레이 버튼 ----------
+.play-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+.play-btn {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  line-height: 1.15;
+  text-decoration: none !important;
+  border-radius: 10px;
+  transition: transform .12s ease, box-shadow .12s ease;
+  &:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0, 0, 0, .18); }
+  em { font-style: normal; opacity: .8; font-size: .85em; }
+}
+.play-main {
+  background: var(--pc);
+  color: var(--pt) !important;
+  padding: 12px 24px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  .play-cta { font-size: .72rem; font-weight: 500; opacity: .9; }
+}
+.play-icon { margin-right: 5px; }
+
+.play-sub {
+  flex-direction: row;
+  align-items: center;
+  background: #fff;
+  color: #1d2330 !important;
+  border: 1px solid #dfe3e8;
+  padding: 6px 12px;
+  font-size: .85rem;
+  font-weight: 600;
+  .play-cta { display: none; }
+}
+.play-more {
+  flex-basis: 100%;
+  font-size: .78rem;
+  color: #6b7280;
+  margin-top: 6px;
+}
+
+// 카드 안: 메인 버튼 하나만
+.play-card {
+  .play-sub, .play-more { display: none; }
+  .play-main {
+    flex-direction: row;
+    align-items: center;
+    padding: 7px 14px;
+    font-size: .9rem;
+    border-radius: 8px;
+    .play-cta { font-size: .9rem; font-weight: 700; opacity: 1; margin-right: 4px; }
+  }
+}
+
+// 모바일 하단 고정 버튼(상세 페이지)
+.play-sticky {
+  display: none;
+  @media (max-width: 767.98px) {
+    display: block;
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 30;
+    padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+    background: rgba(255, 255, 255, .96);
+    border-top: 1px solid #e5e7eb;
+    transform: translateY(110%);
+    transition: transform .2s ease;
+    &.show { transform: none; }
+    .play-main { width: 100%; align-items: center; padding: 10px 16px; font-size: 1.05rem; }
+  }
+}
+
+// ---------- 게임 카드 ----------
+.game-card {
+  margin-bottom: 0;
+  .game-card-img {
+    aspect-ratio: 16 / 9;
+    background: #eef0f3;
+    overflow: hidden;
+    img { width: 100%; height: 100%; object-fit: cover; }
+  }
+  .card-body { display: flex; flex-direction: column; gap: 6px; padding: 14px 16px 16px; }
+  .panel-title { margin: 0; font-size: 1.15rem; a { color: inherit; text-decoration: none; } }
+  // stretched-link 위로 올라와야 따로 클릭되는 요소들
+  .tag-link, .play-group { position: relative; z-index: 2; }
+  .game-card-excerpt { font-size: .88rem; color: #6b7280; margin: 0; }
+  .game-card-actions { margin-top: auto; padding-top: 6px; }
+}
+.game-card-tags { display: flex; flex-wrap: wrap; gap: 3px; .tag-link { margin: 0; } }
+
+.pick-badge {
+  position: absolute; top: 10px; right: 10px; z-index: 10;
+  background: #111827; color: #ffd84d;
+  font-size: 12px; font-weight: 800; border-radius: 3px; padding: 4px 8px;
+}
+
+// 2칸 카드(featured: 2, 3)
+.game-card-wide {
+  @media (min-width: 768px) {
+    flex-direction: row;
+    .game-card-img { flex: 1.25; aspect-ratio: auto; min-height: 260px; }
+    .card-body { flex: 1; }
+    .panel-title { font-size: 1.5rem; }
+  }
+}
+
+// 상세 페이지 하단 "More games"
+.game-card-compact {
+  .panel-title { font-size: .95rem; }
+  .card-body { padding: 10px 12px 12px; }
+  .play-card .play-main { padding: 5px 10px; font-size: .8rem; .play-cta { font-size: .8rem; } }
+}
+
+// ---------- 홈 히어로(featured: 1) ----------
+.featured-hero {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .1);
+  margin-bottom: 2rem;
+  .featured-hero-img {
+    display: block; background: #1b1530; min-height: 320px;
+    img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  }
+  .featured-hero-info { padding: 28px 30px; display: flex; flex-direction: column; gap: 12px; justify-content: center; }
+  .featured-ribbon {
+    align-self: flex-start;
+    background: #ffe8a3; color: #7a5b00;
+    font-size: 12px; font-weight: 800; border-radius: 999px; padding: 4px 10px;
+  }
+  .featured-title { font-size: 2rem; font-weight: 800; margin: 0; a { color: inherit; text-decoration: none; } }
+  .featured-pitch { color: #4b5563; font-size: 1.05rem; margin: 0; }
+  .featured-more { font-size: .9rem; color: #6b7280; }
+  @media (max-width: 767.98px) {
+    grid-template-columns: 1fr;
+    .featured-hero-img { min-height: 0; aspect-ratio: 16 / 9; }
+    .featured-hero-info { padding: 20px; }
+    .featured-title { font-size: 1.5rem; }
+  }
+}
+
+// ---------- 상세 페이지 ----------
+.game-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  background: #fff;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, .07);
+  margin: 1.5rem 0 2rem;
+  .game-hero-img img { width: 100%; border-radius: 12px; display: block; }
+  .game-hero-info { display: flex; flex-direction: column; justify-content: center; gap: 10px; }
+  .post-title { margin: 0; font-weight: 800; }
+  .game-pitch { color: #4b5563; font-size: 1.1rem; margin: 0 0 6px; }
+  @media (max-width: 767.98px) {
+    grid-template-columns: 1fr;
+    padding: 14px;
+    gap: 14px;
+    margin-top: .5rem;
+  }
+}
+.game-trailer { margin-bottom: 2rem; }
+.game-shots {
+  display: flex; gap: 10px; overflow-x: auto; margin-bottom: 2rem; padding-bottom: 6px;
+  scroll-snap-type: x mandatory;
+  img { height: 320px; width: auto; max-width: none; border-radius: 12px; scroll-snap-align: start; }
+  @media (max-width: 767.98px) { img { height: 240px; } }
+}
+.game-page .post-content {
+  h3 { font-size: 1.05rem; font-weight: 800; letter-spacing: .02em; margin-top: 1.6rem; }
+}
+.game-side {
+  border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px 18px; background: #fff;
+  h2 { font-size: 1rem; font-weight: 800; margin-bottom: 10px; }
+  ul { list-style: none; padding: 0; margin: 0; }
+  li { display: flex; align-items: center; justify-content: space-between; padding: 5px 0; border-bottom: 1px solid #f1f3f5; }
+  li:last-child { border-bottom: 0; }
+  .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 8px; }
+  a { color: #1d2330; }
+  .go { font-size: .85rem; font-weight: 700; }
+}
+.more-games { margin-top: 2.5rem; h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: 1rem; } }
+
+.game-hero .post-title { text-decoration: none; border: 0; }
+@media (max-width: 767.98px) {
+  .game-page { padding-bottom: 72px; } // 하단 고정 버튼에 가리지 않도록
+}

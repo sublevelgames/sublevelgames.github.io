@@ -4,20 +4,15 @@ title: "⚫️Othello Five"
 categories: game
 image: /images/othello-five.png
 excerpt: Classic Othello + Five-in-a-row!
-platform: ["🎮itch.io", "▶️gamepix", "▶️gamemonetize", "💜playgama"]
+links:
+  - { platform: itchio, url: "https://sublevelgames.itch.io/othello-five" }
+  - { platform: gamepix, url: "https://www.gamepix.com/play/othello-five" }
+  - { platform: gamemonetize, url: "https://html5.gamemonetize.co/wdff7m73hqjk029wulmw15id0tcjkz43/" }
+  - { platform: playgama, url: "https://playgama.com/game/othello-five?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" }
 tags: ["🌐Web", "♟️Strategy"]
 colors: ["primary", "info"]
 comments: false
 ---
-
-<a href="https://sublevelgames.itch.io/othello-five" class="btn btn-primary btn-lg">Play at 🎮itch.io</a>
-
-<a href="https://www.gamepix.com/play/othello-five" class="btn btn-primary btn-lg">Play at ▶️gamepix.com</a>
-
-<a href="https://html5.gamemonetize.co/wdff7m73hqjk029wulmw15id0tcjkz43/" class="btn btn-primary btn-lg">Play at ▶️gamemonetize.com</a>
-
-<a href="https://playgama.com/game/othello-five?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" class="btn btn-primary btn-lg">Play at 💜playgama.com</a>
-
 
 Classic Othello with a twist - get 5 in a row to win! 🏆
 
@@ -35,6 +30,5 @@ Modern interface with animations
 Play against AI or a friend  
 See AI's thinking process  
 Track your stats
-
 
 Perfect for quick games or deep strategy sessions.  
