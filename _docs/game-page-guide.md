@@ -76,17 +76,29 @@ links:
 ```
 
 - `platform` 값은 `_data/platforms.yml`의 키여야 합니다. 오타가 있으면 그 버튼은 조용히 빠지므로, 빌드 후 꼭 확인하세요.
-- **적는 순서가 곧 우선순위입니다.** 같은 그룹 안에서는 위에 적은 것이 먼저 나옵니다.
-- 방문자 기기에 따라 메인 버튼(크고 색 있는 버튼)이 자동으로 정해집니다(`js/play.js`).
+- **적는 순서는 상관없습니다.** 버튼 순서와 메인 버튼은 `_data/platforms.yml`에 적힌 순서(= 플랫폼 우선순위)로 정해집니다.
+- **메인 버튼(크고 색 있는 버튼)은 바로 플레이할 수 있는 웹 플랫폼이 우선입니다.** 모든 기기에 똑같이 적용됩니다.
 
-| 방문자 기기 | 메인 버튼 우선순위 |
+| 순위 | 플랫폼 |
 |---|---|
-| Android | Google Play / Galaxy Store / ONE store → 웹 포털 → Toss |
-| iPhone·iPad | App Store → 웹 포털 → Toss |
-| PC | 웹 포털(Playgama, GetJar, itch.io …) → Steam / MS Store → 모바일 스토어 |
+| 1 | 📺 YouTube Playables |
+| 2 | 💜 Playgama |
+| 3 | 🫙 GetJar |
+| 4 | 🎮 CrazyGames |
+| 5 | 🎮 itch.io |
+| 6 | 🕹️ Y8 |
+| 7 | ▶️ GamePix |
+| 8 | 🎯 Lagged |
+| 9 | 🧮 Coolmath Games |
+| 10 | 🐜 Kongregate |
+| 11 | 🎨 Newgrounds |
+| 12 | ⚔️ Armor Games · 🔥 Addicting Games |
+| 13 | 💜 Official site |
+| 메인 제외 | ▶️ GameMonetize · ▶️ GameDistribution · 🤖 Reddit (`main: false` — 작은 버튼으로만 표시) |
+| 웹 링크가 없을 때 | 기기별로 정합니다. Android → Google Play / Galaxy Store / ONE store, iPhone → App Store, PC → Steam / MS Store. 그다음이 💙 Toss |
 
-  예를 들어 Google Play와 Playgama가 둘 다 있으면 Android 방문자에게는 Google Play가, PC 방문자에게는 Playgama가 메인으로 보입니다. 나머지는 "Also available on" 아래 작은 버튼으로 표시됩니다.
-- 가장 밀고 싶은 웹 플랫폼을 웹 플랫폼 중 맨 위에, 가장 밀고 싶은 스토어를 스토어 중 맨 위에 두세요.
+  예를 들어 YouTube, Playgama, Google Play가 있는 게임이면 어떤 기기에서든 YouTube Playables가 메인이고, 나머지는 "Also available on" 아래 작은 버튼으로 보입니다. Google Play와 Toss만 있는 게임이면 Android에서는 Google Play가 메인입니다.
+- 우선순위를 바꾸려면 `_data/platforms.yml`에서 줄 순서를 바꾸면 됩니다.
 
 ### 사용 가능한 플랫폼 키
 
@@ -101,7 +113,7 @@ links:
 
 ### 새 플랫폼 추가
 
-1. `_data/platforms.yml`에 한 줄을 추가합니다. `icon`은 버튼·카드·목록에서 이름 앞에 항상 붙는 이모지이고, `label`의 이모지와 같은 것을 씁니다. `kind`와 `os`가 메인 버튼 선택 규칙을 정합니다. 배경이 밝은 색이면 `text: "#212529"`도 넣으세요.
+1. `_data/platforms.yml`에 한 줄을 추가합니다. **넣는 위치가 곧 우선순위**입니다. `icon`은 버튼·카드·목록에서 이름 앞에 항상 붙는 이모지이고, `label`의 이모지와 같은 것을 씁니다. `kind`와 `os`가 메인 버튼 선택 규칙을 정합니다. 배경이 밝은 색이면 `text: "#212529"`도 넣으세요.
 2. `_platforms/<키>.md`를 만듭니다.
    ```yaml
    ---

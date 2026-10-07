@@ -43,9 +43,9 @@ layout: default
       <div class="game-side">
         <h2>Available on</h2>
         <ul>
-          {% for l in page.links %}{% assign pd = site.data.platforms[l.platform] %}{% if pd %}
-          <li><a href="{{ pd.page | relative_url }}">{{ pd.icon }} {{ pd.name }}</a> <a class="go" href="{{ l.url }}" rel="noopener">Play &rarr;</a></li>
-          {% endif %}{% endfor %}
+          {% for e in site.data.platforms %}{% assign pd = e[1] %}{% assign hits = page.links | where: "platform", e[0] %}{% for l in hits %}
+          <li><a href="{{ pd.page | relative_url }}">{{ pd.icon }} {{ pd.name }}{% if l.note %} ({{ l.note }}){% endif %}</a> <a class="go" href="{{ l.url }}" rel="noopener">Play &rarr;</a></li>
+          {% endfor %}{% endfor %}
         </ul>
       </div>
       {% endif %}

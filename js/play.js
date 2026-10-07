@@ -4,17 +4,22 @@
   var isIOS = /iPhone|iPad|iPod/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
   var device = /Android/i.test(ua) ? 'android' : isIOS ? 'ios' : /Mobi/i.test(ua) ? 'mobile' : 'desktop';
 
-  // 숫자가 작을수록 먼저. os 값은 _data/platforms.yml 참고
+  // 숫자가 작을수록 먼저.
+  // 0: 바로 플레이 가능한 웹(우선순위는 서버가 _data/platforms.yml 순서로 이미 정렬)
+  // 그다음: 웹 링크가 없을 때 기기에 맞는 스토어/앱
   var RANK = {
-    android: { android: 0, any: 1, mobile: 2, desktop: 8, ios: 9 },
-    ios:     { ios: 0, any: 1, mobile: 2, desktop: 8, android: 9 },
-    mobile:  { any: 0, mobile: 1, android: 2, ios: 2, desktop: 8 },
-    desktop: { any: 0, desktop: 1, android: 2, ios: 3, mobile: 4 }
+    android: { android: 1, mobile: 2, desktop: 7, ios: 8 },
+    ios:     { ios: 1, mobile: 2, desktop: 7, android: 8 },
+    mobile:  { mobile: 1, android: 3, ios: 3, desktop: 7 },
+    desktop: { desktop: 1, android: 3, ios: 4, mobile: 6 }
   }[device];
 
   function rank(btn) {
+    if (btn.getAttribute('data-kind') === 'web') {
+      return btn.getAttribute('data-main') === 'false' ? 5 : 0; // main: false 웹은 스토어 뒤
+    }
     var r = RANK[btn.getAttribute('data-os')];
-    return r === undefined ? 5 : r;
+    return r === undefined ? 6 : r;
   }
 
   var groups = document.querySelectorAll('.play-group');

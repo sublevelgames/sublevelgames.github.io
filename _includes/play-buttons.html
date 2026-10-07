@@ -2,22 +2,45 @@
   플랫폼 플레이 버튼 묶음.
   사용: {% include play-buttons.html post=page placement="detail" %}
   placement: hero | detail | card
-  - 서버 렌더링에서는 links의 첫 항목이 메인 버튼.
-  - js/play.js가 방문자 기기(Android/iOS/PC)에 맞춰 메인 버튼을 다시 고르고, 클릭을 GA4로 보낸다.
+  - 버튼 순서는 _data/platforms.yml의 순서(= 우선순위)를 따른다. 포스트의 links 순서와 무관.
+  - 메인 버튼: 우선순위가 가장 높은 웹 플랫폼(main: false 제외). 웹이 없으면 js/play.js가 기기에 맞는 스토어를 고른다.
 {% endcomment %}
 {% assign p = include.post %}
 {% if p.links %}
+  {% assign main_url = "" %}
+  {% for e in site.data.platforms %}
+    {% if main_url == "" and e[1].kind == "web" and e[1].main != false %}
+      {% assign hit = p.links | where: "platform", e[0] | first %}
+      {% if hit %}{% assign main_url = hit.url %}{% endif %}
+    {% endif %}
+  {% endfor %}
+  {% if main_url == "" %}
+    {% for e in site.data.platforms %}
+      {% if main_url == "" %}
+        {% assign hit = p.links | where: "platform", e[0] | first %}
+        {% if hit %}{% assign main_url = hit.url %}{% endif %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
 <div class="play-group play-{{ include.placement }}" data-placement="{{ include.placement }}" data-game="{{ p.title | strip_html | escape }}">
-  {% for l in p.links %}
-    {% assign pd = site.data.platforms[l.platform] %}
-    {% if pd %}
-    <a class="play-btn {% if forloop.first %}play-main{% else %}play-sub{% endif %}" href="{{ l.url }}" rel="noopener"
-       data-platform="{{ l.platform }}" data-os="{{ pd.os }}" style="--pc:{{ pd.color }};--pt:{{ pd.text | default: '#fff' }}">
+  {% for pass in (1..2) %}
+  {% for e in site.data.platforms %}
+    {% assign pd = e[1] %}
+    {% assign hits = p.links | where: "platform", e[0] %}
+    {% for l in hits %}
+      {% assign show = false %}
+      {% if pass == 1 %}{% if l.url == main_url %}{% assign show = true %}{% endif %}{% else %}{% if l.url != main_url %}{% assign show = true %}{% endif %}{% endif %}
+      {% if show %}
+    <a class="play-btn {% if pass == 1 %}play-main{% else %}play-sub{% endif %}" href="{{ l.url }}" rel="noopener"
+       data-platform="{{ e[0] }}" data-kind="{{ pd.kind }}" data-os="{{ pd.os }}"{% if pd.main == false %} data-main="false"{% endif %}
+       style="--pc:{{ pd.color }};--pt:{{ pd.text | default: '#fff' }}">
       <span class="play-cta">{% if pd.kind == 'web' %}&#9654; Play on{% elsif pd.kind == 'store' %}Get it on{% else %}Open in{% endif %}</span>
       <span class="play-name"><span class="play-icon">{{ pd.icon }}</span>{{ pd.name }}{% if l.note %} <em>({{ l.note }})</em>{% endif %}</span>
     </a>
-    {% if forloop.first and include.placement != 'card' and forloop.length > 1 %}<span class="play-more">Also available on</span>{% endif %}
-    {% endif %}
+        {% if pass == 1 and include.placement != 'card' and p.links.size > 1 %}<span class="play-more">Also available on</span>{% endif %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
   {% endfor %}
 </div>
 {% endif %}
