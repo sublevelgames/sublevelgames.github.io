@@ -6,6 +6,7 @@ image: /images/fsm.png
 excerpt: a lightweight 7-a-side football management game
 links:
   - { platform: googleplay, url: "https://play.google.com/store/apps/details?id=com.sublevelgames.fsm" }
+  - { platform: galaxystore, url: "https://galaxystore.samsung.com/detail/com.sublevelgames.fsm" }
   - { platform: toss, url: "https://minion.toss.im/Pq72Ir2d" }
   - { platform: playgama, url: "https://playgama.com/game/fantasy-soccer-manager?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" }
   - { platform: getjar, url: "https://getjar.com/games/arcade/fantasy-soccer-manager" }

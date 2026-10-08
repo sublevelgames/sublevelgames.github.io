@@ -6,6 +6,7 @@ image: /images/jelly-links.png
 excerpt: sudoku + stream 
 links:
   - { platform: googleplay, url: "https://play.google.com/store/apps/details?id=com.sublevelgames.jellylinks" }
+  - { platform: galaxystore, url: "https://galaxystore.samsung.com/detail/com.sublevelgames.jellylinks" }
   - { platform: toss, url: "https://minion.toss.im/jyJMQ2Ve" }
   - { platform: playgama, url: "https://playgama.com/game/jelly-links?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" }
   - { platform: getjar, url: "https://getjar.com/games/puzzle/jelly-links" }
