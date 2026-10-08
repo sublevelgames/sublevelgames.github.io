@@ -9,6 +9,7 @@ links:
   - { platform: toss, url: "https://minion.toss.im/luKzE94t" }
   - { platform: playgama, url: "https://playgama.com/game/floor-plan?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" }
   - { platform: lagged, url: "https://lagged.com/en/g/floor-plan" }
+  - { platform: y8, url: "https://y8.com/games/floor_plan" }
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🖇️Connect", "📐Math", "🏝️Nurikabe"]
 colors: ["danger", "primary", "info", "info", "info", "info"]
 comments: false
