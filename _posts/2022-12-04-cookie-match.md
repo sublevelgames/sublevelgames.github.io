@@ -21,14 +21,6 @@ colors: ["danger", "success", "primary", "info", "info"]
 comments: false
 ---
 
-- This is a mobile version of the game that doubles the maps from the Steam version (200 → 400) and makes the difficulty easier.
-
-- This is the Enhanced Edition of the game, featuring new gameplay elements and a total of 200 new maps.
-
-- We've added 100 new maps, and the difficulty progression is now smoother.
-
-- We've added 150 new maps, and the difficulty progression is now smoother.
-
 Cookie Match is a sliding puzzle game where you must match each cookie to its corresponding cutter.
 
 If you move the cookies off the edge of the board or into knives, they'll be destroyed. Use the tubs of butter as barriers to keep the cookies in one piece.
