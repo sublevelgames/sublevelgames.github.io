@@ -7,6 +7,7 @@ excerpt: Match pairs. Clear boards.
 links:
   - { platform: youtube, url: "https://youtube.com/playables/UgkxOr7xaFxfWyPqFZ5cH6pPSWCLZU2vQThi?si=GZ4iD3O_dD2fbW1V" }
   - { platform: googleplay, url: "https://play.google.com/store/apps/details?id=com.sublevelgames.mahjongchef" }
+  - { platform: galaxystore, url: "https://galaxystore.samsung.com/detail/com.sublevelgames.mahjongchef" }
   - { platform: playgama, url: "https://playgama.com/game/mahjong-chef?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" }
   - { platform: getjar, url: "https://getjar.com/games/puzzle/mahjong-chef" }
   - { platform: onestore, url: "https://m.onestore.co.kr/v2/ko-kr/app/0001005261" }

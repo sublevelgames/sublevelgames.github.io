@@ -7,6 +7,7 @@ excerpt: Chopsticks is a fun and strategic two-handed finger battle game where p
 links:
   - { platform: youtube, url: "https://youtube.com/playables/UgkxmP8q8Z3swbqsl91MYrURw_M8z-7MeOyf?si=S9LaiCaIIhQqw_Ij" }
   - { platform: googleplay, url: "https://play.google.com/store/apps/details?id=com.sublevelgames.chopsticks" }
+  - { platform: galaxystore, url: "https://galaxystore.samsung.com/detail/com.sublevelgames.chopsticks" }
   - { platform: toss, url: "https://minion.toss.im/joxpLt8y" }
   - { platform: itchio, url: "https://sublevelgames.itch.io/chopsticks" }
   - { platform: gamemonetize, url: "https://html5.gamemonetize.co/modt6aduzt73c8pup01fl3l1zi0vpt6x/" }
