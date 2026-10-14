@@ -8,6 +8,7 @@ links:
   - { platform: googleplay, url: "https://play.google.com/store/apps/details?id=com.sublevelgames.wordsudoku" }
   - { platform: galaxystore, url: "https://galaxystore.samsung.com/detail/com.sublevelgames.wordsudoku" }
   - { platform: toss, url: "https://minion.toss.im/ZkgRXZo2" }
+  - { platform: playgama, url: "https://playgama.com/game/word-sudoku?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" }
   - { platform: getjar, url: "https://getjar.com/games/puzzle/word-sudoku" }
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🔢Sudoku", "🔤Word"]
 colors: ["danger", "primary", "info", "info", "info"]
