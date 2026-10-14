@@ -7,6 +7,7 @@ excerpt: what happens if you change one rule?
 links:
   - { platform: googleplay, url: "https://play.google.com/store/apps/details?id=com.sublevelgames.reversilab" }
   - { platform: toss, url: "https://minion.toss.im/bqltaS5a" }
+  - { platform: playgama, url: "https://playgama.ai/play/kaumby2zkc" }
   - { platform: getjar, url: "https://getjar.com/games/strategy/reversi-lab" }
 tags: ["📱Mobile", "🌐Web", "♟️Strategy", "🏛️Classic"]
 colors: ["danger", "primary", "info", "info"]
