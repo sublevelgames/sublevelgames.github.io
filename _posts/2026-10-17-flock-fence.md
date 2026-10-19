@@ -5,9 +5,10 @@ categories: game
 image: /images/flock-fence.png
 excerpt: Help the sheepdog guard the flock in Flock Fence.
 links:
+  - { platform: googleplay, url: "https://play.google.com/store/apps/details?id=com.sublevelgames.flockfence" }
   - { platform: getjar, url: "https://getjar.com/games/puzzle/flock-fence" }
-tags: ["🌐Web", "🧩Puzzle", "🖇️Connect"]
-colors: ["primary", "info", "info"]
+tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🖇️Connect"]
+colors: ["danger", "primary", "info", "info"]
 comments: false
 ---
 
