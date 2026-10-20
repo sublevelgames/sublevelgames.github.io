@@ -5,6 +5,7 @@ categories: game
 image: /images/patchwise.png
 excerpt: a calm logic puzzle about bojagi, the Korean art of sewing scraps of cloth into one wrapping cloth.
 links:
+  - { platform: playgama, url: "https://playgama.com/game/patchwise?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" }
   - { platform: getjar, url: "https://getjar.com/games/puzzle/patchwise" }
 tags: ["🌐Web", "🧩Puzzle", "✏️Draw"]
 colors: ["primary", "info", "info"]
