@@ -8,8 +8,8 @@ links:
   - { platform: googleplay, url: "https://play.google.com/store/apps/details?id=com.sublevelgames.patchwise" }
   - { platform: playgama, url: "https://playgama.com/game/patchwise?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" }
   - { platform: getjar, url: "https://getjar.com/games/puzzle/patchwise" }
-tags: ["🌐Web", "🧩Puzzle", "✏️Draw"]
-colors: ["primary", "info", "info"]
+tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "✏️Draw"]
+colors: ["danger", "primary", "info", "info"]
 comments: false
 ---
 
