@@ -12,6 +12,7 @@ links:
   - { platform: toss, url: "https://minion.toss.im/hhQXj3Fn" }
   - { platform: y8, url: "https://www.y8.com/games/choo_choo_express" }
   - { platform: kongregate, url: "https://www.kongregate.com/en/games/sublevelgames/choo-choo-express" }
+  - { platform: getjar, url: "https://getjar.com/games/puzzle/choo-choo-express" }
   - { platform: lagged, url: "https://lagged.com/en/g/choo-choo-express" }
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🗺️Pathfinding"]
 colors: ["danger", "primary", "info", "info"]
