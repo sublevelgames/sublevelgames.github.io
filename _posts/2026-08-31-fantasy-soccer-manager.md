@@ -10,6 +10,7 @@ links:
   - { platform: toss, url: "https://minion.toss.im/Pq72Ir2d" }
   - { platform: playgama, url: "https://playgama.com/game/fantasy-soccer-manager?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" }
   - { platform: getjar, url: "https://getjar.com/games/arcade/fantasy-soccer-manager" }
+  - { platform: y8, url: "https://y8.com/games/fantasy_soccer_manager" }
 tags: ["📱Mobile", "🌐Web", "🏅Sports", "⚽Soccer", "📊Simulation", "♟️Strategy"]
 colors: ["danger", "primary", "info", "info", "info", "info"]
 comments: false

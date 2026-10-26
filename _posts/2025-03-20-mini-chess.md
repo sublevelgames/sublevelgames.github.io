@@ -8,6 +8,7 @@ links:
   - { platform: googleplay, url: "https://play.google.com/store/apps/details?id=com.sublevelgames.minichess" }
   - { platform: playgama, url: "https://playgama.com/game/mini-chess?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" }
   - { platform: getjar, url: "https://getjar.com/games/strategy/mini-chess" }
+  - { platform: y8, url: "y8.com/games/mini_chess" }
   - { platform: gamepix, url: "https://www.gamepix.com/play/minichess" }
   - { platform: itchio, url: "https://sublevelgames.itch.io/mini-chess" }
 tags: ["📱Mobile", "🌐Web", "♟️Strategy", "🏁Chess"]
