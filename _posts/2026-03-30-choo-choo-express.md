@@ -7,6 +7,7 @@ excerpt: cozy route-planning puzzle game.
 links:
   - { platform: youtube, url: "https://youtube.com/playables/UgkxZ1oL2IlXWgcCjwk0N9aoNsu3GCvAnPyU?si=q_ahUA-iFeRiF4PN" }
   - { platform: googleplay, url: "https://play.google.com/store/apps/details?id=com.sublevelgames.cce" }
+  - { platform: galaxystore, url: "https://galaxystore.samsung.com/detail/com.sublevelgames.cce" } 
   - { platform: playgama, url: "https://playgama.com/game/choo-choo-express?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" }
   - { platform: onestore, url: "https://m.onestore.co.kr/v2/ko-kr/app/0001005263" }
   - { platform: toss, url: "https://minion.toss.im/hhQXj3Fn" }
