@@ -5,6 +5,7 @@ categories: game
 image: /images/ice-sand.png
 excerpt: Summer is the worst possible season to build a castle out of ice. Build one anyway. This is a Playgama AFK Summer Jam 2026 submission.
 links:
+  - { platform: youtube, url: "https://youtube.com/playables/UgkxwA42gmnfZ1cuhCil3Tng_pr3gMdwwisF?si=PvRygDIUaf865Bwe" }
   - { platform: googleplay, url: "https://play.google.com/store/apps/details?id=com.sublevelgames.iceandsand" }
   - { platform: galaxystore, url: "https://galaxystore.samsung.com/detail/com.sublevelgames.iceandsand" }
   - { platform: toss, url: "https://minion.toss.im/PfwjRKXk" }
