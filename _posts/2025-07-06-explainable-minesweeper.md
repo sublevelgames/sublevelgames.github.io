@@ -8,6 +8,7 @@ links:
   - { platform: googleplay, url: "https://play.google.com/store/apps/details?id=com.sublevelgames.minesweeper" }
   - { platform: toss, url: "https://minion.toss.im/xsXnqSOD" }
   - { platform: itchio, url: "https://sublevelgames.itch.io/explainable-minesweeper" }
+  - { platform: getjar, url: "https://getjar.com/games/puzzle/explainable-minesweeper" }
   - { platform: gamepix, url: "https://www.gamepix.com/play/explainable-minesweeper" }
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "💣Minesweeper"]
 colors: ["danger", "primary", "info", "info"]
