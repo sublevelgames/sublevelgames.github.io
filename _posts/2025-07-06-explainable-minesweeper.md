@@ -6,6 +6,7 @@ image: /images/explainable-minesweeper.png
 excerpt: No 50/50. We will explain everything.
 links:
   - { platform: googleplay, url: "https://play.google.com/store/apps/details?id=com.sublevelgames.minesweeper" }
+  - { platform: playgama, url: "https://playgama.com/game/explainable-minesweeper?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" }
   - { platform: toss, url: "https://minion.toss.im/xsXnqSOD" }
   - { platform: itchio, url: "https://sublevelgames.itch.io/explainable-minesweeper" }
   - { platform: getjar, url: "https://getjar.com/games/puzzle/explainable-minesweeper" }
