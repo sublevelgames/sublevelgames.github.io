@@ -6,8 +6,8 @@ image: /images/marble-derby.png
 excerpt: A candy-glass marble race where perfect timing is pure speed.
 links:
   - { platform: itchio, url: "https://sublevelgames.itch.io/marble-derby" }
-tags: ["🌐Web", "⏱️Jam", "⚡Short", "🏎️Racing"]
-colors: ["primary", "warning", "info", "info"]
+tags: ["🌐Web", "⏱️Jam", "⚡Short", "🏎️Racing", "🎱Physics"]
+colors: ["primary", "warning", "info", "info", "info"]
 comments: false
 ---
 
