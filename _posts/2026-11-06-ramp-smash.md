@@ -6,6 +6,7 @@ image: /images/ramp-smash.png
 excerpt: Drop marbles, flip the ramps and smash the ice to free the trapped critters.
 links:
   - { platform: googleplay, url: "https://play.google.com/store/apps/details?id=com.sublevelgames.rampsmash" }
+  - { platform: playgama, url: "https://playgama.com/game/ramp-smash?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" }
   - { platform: getjar, url: "https://getjar.com/games/puzzle/ramp-smash" }
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🎱Physics"]
 colors: ["danger", "primary", "info", "info"]
