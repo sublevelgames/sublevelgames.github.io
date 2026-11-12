@@ -61,7 +61,7 @@ law or Google Play policies; the current version is always the one published on 
 
 The reward is delivered through Google Play using your Google account. We do not receive
 your name, email address, or payment details. See our
-[Privacy Policy](https://sublevelgames.github.io/privacy_policy/) for how the Game handles data.
+[Privacy Policy](https://sublevelgames.com/privacy_policy/) for how the Game handles data.
 
 ### 7. Contact
 

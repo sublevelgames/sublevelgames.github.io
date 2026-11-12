@@ -62,7 +62,7 @@
 
 서비스 이용과 관련된 문의사항은 다음 연락처로 문의해 주시기 바랍니다:
 - 이메일: [sublevelgames@gmail.com]
-- 웹사이트: https://sublevelgames.github.io
+- 웹사이트: https://sublevelgames.com
 
 ---
 
@@ -130,4 +130,4 @@ The Company may restrict service use if a user violates these Terms.
 
 For inquiries related to service use, please contact us at:
 - Email: [sublevelgames@gmail.com]
-- Website: https://sublevelgames.github.io
+- Website: https://sublevelgames.com

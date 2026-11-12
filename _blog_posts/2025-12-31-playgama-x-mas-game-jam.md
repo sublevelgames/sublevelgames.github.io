@@ -61,7 +61,7 @@ These rules indicate that this game jam also serves the purpose of discovering n
 
 # My Attempt
 
-I had a game I'd wanted to make for two years but hadn't yet created. It was inspired by the legendary puzzle game Cosmic Express and the popular mobile puzzle game RGB Express. When I lacked the technical skills to make a game similar to these, I created [Pick & Go!](https://sublevelgames.github.io/pick-n-go/) as a compromise.
+I had a game I'd wanted to make for two years but hadn't yet created. It was inspired by the legendary puzzle game Cosmic Express and the popular mobile puzzle game RGB Express. When I lacked the technical skills to make a game similar to these, I created [Pick & Go!](/pick-n-go/) as a compromise.
 
 ![](/images/pxj03.png)  
 *Cosmic Express, RGB Express*

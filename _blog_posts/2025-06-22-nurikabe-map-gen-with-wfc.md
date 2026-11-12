@@ -17,7 +17,7 @@ comments: true
 
 # Background
 
-[Logic Islands](https://sublevelgames.github.io/logic-islands/), released by sublevelgames on June 20, 2025, is a game where players place islands and walls according to predefined rule sets. The game features 6 different rule sets, and WFC was used to create stages for 3 of these rules. Today, I'd like to share the story behind this implementation.
+[Logic Islands](/logic-islands/), released by sublevelgames on June 20, 2025, is a game where players place islands and walls according to predefined rule sets. The game features 6 different rule sets, and WFC was used to create stages for 3 of these rules. Today, I'd like to share the story behind this implementation.
 
 ## WFC
 
@@ -97,7 +97,7 @@ Now let's apply this model to creating wall patterns for Logic Islands. First, w
 
 ![15 types of tiles to use](/images/nmg08.png)
 
-I defined the tiles this way because I used a similar method when creating [Flow Free](https://play.google.com/store/apps/details?id=com.bigduckgames.flow) game maps, and it was very effective. For those interested in more details, please refer to [this paper](https://www.researchgate.net/publication/378377175_Puzzle-Level_Generation_with_Simple-tiled_and_Graph-based_Wave_Function_Collapse_Algorithms), and also check out [this game](https://sublevelgames.github.io/dot-king/) and [this game](https://sublevelgames.github.io/dot-and-dot/).
+I defined the tiles this way because I used a similar method when creating [Flow Free](https://play.google.com/store/apps/details?id=com.bigduckgames.flow) game maps, and it was very effective. For those interested in more details, please refer to [this paper](https://www.researchgate.net/publication/378377175_Puzzle-Level_Generation_with_Simple-tiled_and_Graph-based_Wave_Function_Collapse_Algorithms), and also check out [this game](/dot-king/) and [this game](/dot-and-dot/).
 
 To briefly discuss Flow Free map generation, since all given node pairs must be connected and all given surfaces must be filled, we actively used constraints in WFC. After filling the entire game map, we completed the Flow Free map by giving each line a different color.
 

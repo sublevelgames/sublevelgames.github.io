@@ -77,7 +77,7 @@ The completed level is shown below. It's a deducible Minesweeper level that does
 
 # Organizing Deduction Rules
 
-So what deduction rules were used in map generation? Since my game [Explainable Minesweeper](https://sublevelgames.github.io/explainable-minesweeper/) uses the same deduction rules, let me summarize what happens when you press the hint button.
+So what deduction rules were used in map generation? Since my game [Explainable Minesweeper](/explainable-minesweeper/) uses the same deduction rules, let me summarize what happens when you press the hint button.
 
 ![Process when pressing the hint button in Explainable Minesweeper](/images/ems09.png)
 
@@ -101,7 +101,7 @@ Conversely, here's a case where the unique area is determined to contain mines. 
 
 ![Determining unique area as mine](/images/ems13.png)
 
-It's simpler logic than you might think, right? I can't believe I kept leaving Minesweeper to luck because I didn't know this. Of course, there are games in the original Minesweeper where you have to rely on luck even with logical deduction. But there are no such games in [Explainable Minesweeper](https://sublevelgames.github.io/explainable-minesweeper/)!
+It's simpler logic than you might think, right? I can't believe I kept leaving Minesweeper to luck because I didn't know this. Of course, there are games in the original Minesweeper where you have to rely on luck even with logical deduction. But there are no such games in [Explainable Minesweeper](/explainable-minesweeper/)!
 
 # Conclusion
 

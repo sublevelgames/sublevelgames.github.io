@@ -29,7 +29,7 @@ Opening this book brought back an old mystery from the depths of my memory. It w
 
 # Hexapawn
 
-Let's first understand what this game is about. It's a type of [minichess](https://en.wikipedia.org/wiki/Minichess). Minichess is a chess variant played on a board smaller than the standard 8x8 chessboard, usually with fewer pieces. The game becomes simpler and more concise than regular chess, and is often used for educational purposes or as a proof of concept. I recently created a [minichess](https://sublevelgames.github.io/mini-chess/) game with three different game modes.
+Let's first understand what this game is about. It's a type of [minichess](https://en.wikipedia.org/wiki/Minichess). Minichess is a chess variant played on a board smaller than the standard 8x8 chessboard, usually with fewer pieces. The game becomes simpler and more concise than regular chess, and is often used for educational purposes or as a proof of concept. I recently created a [minichess](/mini-chess/) game with three different game modes.
 
 As the name suggests, this game features 6 pawns, with two players each having 3. The goal is to either eliminate all of the opponent's pieces or reach the end of the board (the opponent's starting line) before they do.
 
