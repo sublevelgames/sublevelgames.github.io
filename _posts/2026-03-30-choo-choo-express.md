@@ -15,8 +15,8 @@ links:
   - { platform: kongregate, url: "https://www.kongregate.com/en/games/sublevelgames/choo-choo-express" }
   - { platform: getjar, url: "https://getjar.com/games/puzzle/choo-choo-express" }
   - { platform: lagged, url: "https://lagged.com/en/g/choo-choo-express" }
-tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🗺️Pathfinding"]
-colors: ["danger", "primary", "info", "info"]
+tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🗺️Pathfinding", "✏️Draw"]
+colors: ["danger", "primary", "info", "info", "info"]
 comments: false
 ---
 
