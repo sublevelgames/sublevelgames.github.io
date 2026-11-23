@@ -5,6 +5,7 @@ categories: game
 image: /images/track-puzzle.png
 excerpt: A relaxing logic puzzle about building railways.
 links:
+  - { platform: googleplay, url: "https://play.google.com/store/apps/details?id=com.sublevelgames.trackpuzzle" }
   - { platform: playgama, url: "https://playgama.com/game/track-puzzle?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" }
   - { platform: getjar, url: "https://getjar.com/games/puzzle/track-puzzle" }
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🔢Sudoku", "🗺️Pathfinding", "✏️Draw"]
