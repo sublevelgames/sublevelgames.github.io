@@ -18,6 +18,7 @@ itchio: { label: "🎮itch.io", icon: "🎮",         name: "itch.io",          
 y8: { label: "🕹️y8", icon: "🕹️",              name: "Y8",               kind: web,   os: any,     color: "#28a745", page: /platforms/y8/ }
 gamepix: { label: "▶️gamepix", icon: "▶️",         name: "GamePix",          kind: web,   os: any,     color: "#ffc107", text: "#212529", page: /platforms/gamepix/ }
 lagged: { label: "🎯lagged", icon: "🎯",          name: "Lagged",           kind: web,   os: any,     color: "#8B44AC", page: /platforms/lagged/ }
+jogos: { label: "🎲Jogos", icon: "🎲",           name: "Jogos",            kind: web,   os: any,     color: "#7B6CF6", page: /platforms/jogos/ }
 coolmathgames: { label: "🧮coolmathgames", icon: "🧮",   name: "Coolmath Games",   kind: web,   os: any,     color: "#0077cc", page: /platforms/coolmathgames/ }
 kongregate: { label: "🐜Kongregate", icon: "🐜",      name: "Kongregate",       kind: web,   os: any,     color: "#C8102E", page: /platforms/kongregate/ }
 newgrounds: { label: "🎨newgrounds", icon: "🎨",      name: "Newgrounds",       kind: web,   os: any,     color: "#fd7e14", page: /platforms/newgrounds/ }

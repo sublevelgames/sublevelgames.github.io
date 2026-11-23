@@ -108,7 +108,7 @@ links:
 | `appstore` | App Store | iOS 스토어 |
 | `steam` `msstore` | Steam, Microsoft Store | PC 스토어 |
 | `toss` | Toss | 앱인앱 |
-| `playgama` `getjar` `itchio` `youtube` `crazygames` `gamepix` `y8` `lagged` `gamemonetize` `newgrounds` `coolmathgames` `kongregate` `addictinggames` `armorgames` `gamedistribution` `reddit` | 각 포털 | 웹(바로 플레이) |
+| `playgama` `getjar` `itchio` `youtube` `crazygames` `gamepix` `y8` `lagged` `jogos` `gamemonetize` `newgrounds` `coolmathgames` `kongregate` `addictinggames` `armorgames` `gamedistribution` `reddit` | 각 포털 | 웹(바로 플레이) |
 | `standalone` | Official site | 자체 사이트 |
 
 ### 새 플랫폼 추가

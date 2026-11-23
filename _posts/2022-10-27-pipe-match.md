@@ -14,6 +14,7 @@ links:
   - { platform: newgrounds, url: "https://www.newgrounds.com/portal/view/861345" }
   - { platform: itchio, url: "https://sublevelgames.itch.io/pipe-match" }
   - { platform: y8, url: "https://y8.com/games/pipe_match" }
+  - { platform: jogos, url: "https://www.jogos.com/en/game/daily-pipe-match/" }
   - { platform: gamemonetize, url: "https://html5.gamemonetize.co/pyke54t83mxkyomgt8bi4pz51rgkymi3/" }
   - { platform: addictinggames, url: "https://www.addictinggames.com/puzzle/daily-pipe-match" }
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🙃Rotate"]

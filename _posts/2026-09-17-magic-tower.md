@@ -11,6 +11,7 @@ links:
   - { platform: toss, url: "https://minion.toss.im/ZvmrAczp" }
   - { platform: playgama, url: "https://playgama.com/game/magic-tower-key-of-fate?clid=p_a9f58a80-a7d9-448a-9f29-ea6c123ff83b" }
   - { platform: getjar, url: "https://getjar.com/games/puzzle/magic-tower-key-of-fate" }
+  - { platform: jogos, url: "https://www.jogos.com/en/game/magic-tower---key-of-fate/" }
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🎲Roguelike", "🏰Dungeon"]
 colors: ["danger", "primary", "info", "info", "info"]
 comments: false

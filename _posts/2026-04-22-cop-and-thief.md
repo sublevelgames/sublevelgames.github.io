@@ -13,6 +13,7 @@ links:
   - { platform: kongregate, url: "https://www.kongregate.com/en/games/sublevelgames/cop-thief" }
   - { platform: y8, url: "https://www.y8.com/games/cop_thief" }
   - { platform: getjar, url: "https://getjar.com/games/brain-teasers/cop-and-thief" }
+  - { platform: jogos, url: "https://www.jogos.com/en/game/cop-and-thief/" }
 tags: ["📱Mobile", "🌐Web", "🧩Puzzle", "🗺️Pathfinding", "🛡️Defense"]
 colors: ["danger", "primary", "info", "info", "info"]
 comments: false
